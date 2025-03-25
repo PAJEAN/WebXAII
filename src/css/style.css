@@ -1,0 +1,40 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.background {
+    background-image: linear-gradient(to right top, #5ffbf1, #41e9fd, #4ad5ff, #69bff8, #86a8e7);
+    color: rgb(var(--on-background-color));
+}
+
+/* UTILITY CLASSES */
+
+.flex {
+    /* Avoid inheritance */
+    --f__fd: row;
+    --f__ai: stretch;
+    --f__jc: flex-start;
+    --f__g:  0;
+    display: flex;
+    flex-direction:  var(--f__fd, row);
+    align-items:     var(--f__ai, stretch); /* Align vertically */
+    justify-content: var(--f__jc, flex-start); /* Align horizontally */
+    gap:             var(--f__g, 0);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

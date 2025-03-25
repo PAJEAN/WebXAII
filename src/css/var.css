@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+    /*** Variables ***/
+    --pixel-size: 5px;
+
+    --col-number: 1; /* Number of columns */
+    
+    --bar-cell-content-width: 20px;
+    --bar-cell-margin: 15px;
+    --bar-height: 25px;
+    --bar-cell-width: calc(var(--bar-cell-content-width) + calc(2 * var(--bar-cell-margin)));
+    --bar-pixel-height: 4;
+    --bar-cell-height: calc(var(--pixel-size) * var(--bar-pixel-height));
+
+    --pixel-box-shadow: calc(-0.5 * var(--pixel-size)) 0 0 0 white,
+                        calc(0.5 * var(--pixel-size)) 0 0 0 white,
+                        0 calc(-0.5 * var(--pixel-size)) 0 0 white,
+                        0 calc(0.5 * var(--pixel-size)) 0 0 white;
+    --box-shadow: 5px 5px 7px 0.5px rgb(0 0 0 / 20%);
+
+    /* Dark theme */
+    /* Background colors */
+    --background-color: 0, 166, 224;
+    --surface-color: 255, 255, 255, .15;
+    --primary-color: 230, 164, 80;
+    --secondary-color: 46, 230, 158;
+    --error-color: 207, 102, 121;
+    /* Text colors (according to the background) */
+    --on-background-color: 0, 0, 0;
+    --on-surface-color: 255, 255, 255;
+    --on-primary-color: 0, 0, 0;
+    --on-secondary-color: 0, 0, 0;
+    --on-error-color: 0, 0, 0;
+    /* Alpha values */
+    --high-emphasis: 0.87;
+    --medium-emphasis: 0.60;
+    --disabled: 0.38;
+}

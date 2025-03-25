@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <app-router>
+
+        <app-route
+            path = "/"
+            title = "Connexion"
+            component = "page-authentication"
+            is-default>
+        </app-route>
+
+        <app-route
+            path = "/app"
+            title = "Application"
+            component = "page-app">
+            <!-- roles="user"> -->
+        </app-route>
+        
+        <app-route
+            path = "/regles"
+            title = "Règles"
+            component = "page-rules">
+            <!-- roles="user"> -->
+        </app-route>
+
+        <app-outlet></app-outlet>
+    </app-router>
+</body>
+</html>
