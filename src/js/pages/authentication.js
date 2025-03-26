@@ -1,11 +1,9 @@
-/* CSS */
-import css from 'CSS/style.css';
 /* Lib */
 import { login } from '../lib/authentication.js';
 /* Store */
 import { store } from 'JS/store/index';
-import { keys as a_keys } from 'JS/store/modules/common';
-import { keys as p_keys } from 'JS/store/modules/preferences';
+// import { keys as a_keys } from 'JS/store/modules/common';
+// import { keys as p_keys } from 'JS/store/modules/preferences';
 
 try {
     (function() {
@@ -22,9 +20,6 @@ try {
                 /* Text */
                 /* Other */
 
-                /* Import base css */
-                ${css.toString()}
-
                 #main-page {
                     min-height: 100vh;
                 }
@@ -39,7 +34,6 @@ try {
                     padding: 30px;
                     /* Color */  
                     background-color: rgba(var(--surface-color));
-                    backdrop-filter: blur(5px);
                 }
                 .deconnexion {
                     /* Display & Box Model */
@@ -54,76 +48,48 @@ try {
                     letter-spacing: 3px;
                 }
                 .sub-title {
-                    /* Display & Box Model */
-                    padding: 10px 0 25px 0;
                     /* Text */
                     text-align: center;
                     font-size: 20px;
-                    letter-spacing: 3px;
-                }
-                .fields {
-                    padding: 20px 0;
-                    width: 100%;
-                }
-                .fields input {
-                    /* Display & Box Model */
-                    border-radius: 10px;
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                    padding: 15px 10px 15px 50px;
-                    /* Text */
-                    font-size: 20px;
+                    letter-spacing: 2px;
                 }
                 .icon {
-                    /* Positioning */
-                    position: absolute;
-                    /* Display & Box Model */
-                    width: 25px;
-                    margin: 0 10px;
-                }
-                .error {
-                    /* Display & Box Model */
-                    padding: 10px 5px;
-                    /* Text */
-                    text-align: center;
-                    /* Color */
-                    color: red;
+                    width: 20px;
                 }
                 .signout {
                     margin: 20px 0;
                 }
             </style>
 
-            <div id="main-page" class="${css.locals.flex} ${css.locals.background}" style="--f__ai: center; --f__jc: center;">
+            <div id="main-page" class="d-flex justify-content-center align-items-center">
                 <div class="loading">
                     <wc-loading></wc-loading>
                 </div>
-                <div class="container connexion">
-                    <div class="title">Connexion</div>
-                    <div class="sub-title">${store.state[p_keys.s_name_app]}</div>
 
-                    <div class="fields">
-                        <div class="password ${css.locals.flex}" style="--f__ai: center;">
+                <div class="container connexion">
+                    <div class="title">Welcome</div>
+                    <div class="sub-title">xaipatimg</div>
+
+                    <div class="input-group my-4">
+                        <span class="input-group-text">
                             <img src="assets/img/locked.png" alt="Cadena" class="icon">
-                            <input type="text" placeholder="Saisissez votre identifiant">
+                        </span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                            <label for="floatingInputGroup1">Identifier</label>
                         </div>
                     </div>
 
-                    <div class="signin">
-                        <wc-button data-text="Connexion" id="connexion-btn"></wc-button>
-                    </div>
+                    <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Connexion</button>
 
-                    <div class="error"></div>
+                    <div id="error" class="text-center text-danger mt-4"></div>
                 </div>
 
                 <div class="container deconnexion">
                     <div>Vous êtes déja connecté. Voulez-vous vous déconnecter ?</div>
 
-                    <div class="signout">
-                        <wc-button data-text="Déconnexion" id="deconnexion-btn"></wc-button>
-                    </div>
-
+                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Connexion</button>
+                    
                     <a href="#/app">Revenir à l'application</a>
                 </div>
             </div>
@@ -175,8 +141,8 @@ try {
                     let logout_button = this.content.querySelector('#deconnexion-btn');
                     /* Behaviors */
                     logout_button.addEventListener('click', () => {
-                        store.dispatch(a_keys.a_logout,  {});
-                        store.dispatch(p_keys.a_clear_ordering, {});
+                        // store.dispatch(a_keys.a_logout,  {});
+                        // store.dispatch(p_keys.a_clear_ordering, {});
                     });
                 }
             }
@@ -185,7 +151,7 @@ try {
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
                 /* HTML tags */
-                this.error_tag = this.content.querySelector('.error');
+                this.error_tag = this.content.querySelector('#error');
                 /* Setup the page */
                 this._init();
                 /* Update UI */

@@ -1,1 +1,1 @@
-export const PREFERENCES = '_p';
+export const TASK = '_p';

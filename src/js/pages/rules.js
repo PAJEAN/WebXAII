@@ -1,8 +1,7 @@
+
 /* CSS */
 import css from 'CSS/style.css';
-/* Store */
-import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/preferences';
+import test from 'CSS/var.css';
 
 try {
     (function() {
@@ -21,6 +20,9 @@ try {
 
                 /* Import base css */
                 ${css.toString()}
+
+                /* Import more */
+                ${test.toString()}
 
                 :root {
                     --container-width: 460px;
@@ -58,15 +60,15 @@ try {
                 }
             </style>
 
-            <div id="main-page" class="${css.locals.flex} ${css.locals.background}" style="--f__ai: center; --f__jc: center;">
+            <div id="main-page" class="d-flex justify-content-center align-items-center">
                 <div class="container">
-                    <div class="title">Bienvenue au jeu ${store.state[keys.s_name_app]} !</div>
-                    Votre mission dans le jeu : classer ${store.state[keys.g_profils_length] - 2} profils et évaluer les différences entre les profils !
+                    <div class="title backtest">Rules !</div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu sem pulvinar, ullamcorper elit lobortis, facilisis neque. Vestibulum viverra ligula neque, at facilisis ante maximus non. Nulla feugiat aliquam imperdiet.
                     <br><br>
-                    Cet exercice va vous demander concentration et réflexion. Merci par avance de "jouer le jeu" et pour le temps précieux que vous y consacrerez.
+                    Ut in est quis dui dapibus dapibus at eu nisl. Pellentesque a gravida diam, eu hendrerit ex. Etiam molestie eu libero vitae feugiat. Aenean id nulla in purus elementum convallis
                     <br><br>
                     <div class="center">
-                        <a href="#/app"><wc-button data-text="Lancez le jeu"></wc-button></a>
+                        <a href="#/app"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Lancez le jeu</button></a>
                     </div>
                 </div>
             </div>
