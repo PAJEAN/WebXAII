@@ -7,6 +7,7 @@ import 'JS/lib/router';
 import 'JS/pages/app';
 import 'JS/pages/rules';
 import 'JS/pages/authentication';
+import 'JS/pages/score';
 
 /*** CSS ***/
 (function() {

@@ -75,8 +75,8 @@ try {
                 </div>
 
                 <div class="container d-flex justify-content-between pt-4" style="gap: 1em">
-                        <button id="valid-btn" type="button" class="btn btn-success btn-lg text-uppercase w-100">Valid</button>
-                        <button id="not-valid-btn" type="button" class="btn btn-danger btn-lg text-uppercase w-100">Not valid</button>
+                    <button id="valid-btn" type="button" class="btn btn-success btn-lg text-uppercase w-100">Valid</button>
+                    <button id="not-valid-btn" type="button" class="btn btn-danger btn-lg text-uppercase w-100">Not valid</button>
                 </div>
             </div>
 
@@ -191,7 +191,11 @@ try {
                 if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length]) {
                     // End.
                 } else {
-                    this._init();
+                    if (store.state[keys.s_current_index_item] == 0) {
+                        // Score page.
+                    } else {
+                        this._init();
+                    }
                 }
             }
 
@@ -232,7 +236,11 @@ try {
                 this._init();
             }
           
-            disconnectedCallback () {}
+            disconnectedCallback () {
+                if(this.timer) {
+                    clearInterval(this.timer);
+                }
+            }
         });
     })();
 }
