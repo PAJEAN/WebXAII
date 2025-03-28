@@ -1,7 +1,8 @@
-
 /* CSS */
 import css from 'CSS/style.css';
-import test from 'CSS/var.css';
+/* Store */
+import { store } from 'JS/store/index';
+import { keys } from 'JS/store/modules/task';
 
 try {
     (function() {
@@ -21,13 +22,6 @@ try {
                 /* Import base css */
                 ${css.toString()}
 
-                /* Import more */
-                ${test.toString()}
-
-                :root {
-                    --container-width: 460px;
-                    --container-height: 300px;
-                }
                 #main-page {
                     height: 100vh;
                 }
@@ -38,16 +32,10 @@ try {
                     margin-bottom: 15px;
                 }
                 .container {
-                    width: var(--container-width);
-                    padding: 30px;
-                    background-color: rgba(var(--surface-color));
-                    backdrop-filter: blur(5px);
-                    box-shadow: var(--box-shadow);
-                    border-radius: 10px;
-                    text-align: justify;
+                    width: 50%;
                 }
-                i {
-                    font-size: 14px;
+                .card {
+                    box-shadow: var(--box-shadow);
                 }
                 a {
                     text-decoration: none;
@@ -58,19 +46,27 @@ try {
                 .center {
                     text-align: center;
                 }
+                @media (max-width: 768px) {
+                    .container {
+                        width: 75%;
+                    }
+                }
             </style>
 
             <div id="main-page" class="d-flex justify-content-center align-items-center">
                 <div class="container">
-                    <div class="title backtest">Rules !</div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu sem pulvinar, ullamcorper elit lobortis, facilisis neque. Vestibulum viverra ligula neque, at facilisis ante maximus non. Nulla feugiat aliquam imperdiet.
-                    <br><br>
-                    Ut in est quis dui dapibus dapibus at eu nisl. Pellentesque a gravida diam, eu hendrerit ex. Etiam molestie eu libero vitae feugiat. Aenean id nulla in purus elementum convallis
-                    <br><br>
-                    <div class="center">
-                        <a href="#/app"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Lancez le jeu</button></a>
+                    <div class="card m-auto">
+                        <div class="card-body">
+                            <h3 id="rule-title" class="card-title text-uppercase text-center">Task</h3>
+                            <div id="rule-text" class="text-center mt-3">Rule</div>
+                            <div class="mt-3">
+                                <a href="#/app"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </div>    
+            
+                
             </div>
 
         `;
@@ -79,10 +75,18 @@ try {
             constructor() {
                 super();
             }
+
+            _init() {
+                let tag_title = this.content.querySelector('#rule-title');
+                tag_title.textContent = `Task n°${store.state[keys.s_current_index_task] + 1}`;
+                let tag_text = this.content.querySelector('#rule-text');
+                tag_text.textContent = `Rule : ${store.state[keys.s_task][store.state[keys.s_current_index_task]]['rule']}`;
+            }
          
             connectedCallback () {
                 this.appendChild(TEMPLATE.content.cloneNode(true));
-                this.content = this.querySelector('#main');
+                this.content = this.querySelector('#main-page');
+                this._init();
             }
           
             disconnectedCallback () {}

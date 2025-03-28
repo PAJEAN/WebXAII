@@ -188,15 +188,11 @@ try {
                 }
                 store.dispatch(keys.a_update_annotated_item, {value: value, time: Math.max(this.current_time, 0)});
                 store.dispatch(keys.a_update_current_index_item, {});
-                if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length]) {
-                    // End.
+                if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length] || store.state[keys.s_current_index_item] == 0) {
+                    window.location.hash = '#/score';
                 } else {
-                    if (store.state[keys.s_current_index_item] == 0) {
-                        // Score page.
-                    } else {
-                        this._init();
-                    }
-                }
+                    this._init();
+                }                
             }
 
             _init() {

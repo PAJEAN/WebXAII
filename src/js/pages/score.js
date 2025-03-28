@@ -23,6 +23,9 @@ try {
                 .score {
                     font-size: 5em;
                 }
+                .card {
+                    box-shadow: var(--box-shadow);
+                }
             </style>
 
             <div id="main-page" class="container d-flex justify-content-center align-items-center">
@@ -32,7 +35,7 @@ try {
                             <h3 id="score-title" class="card-title text-uppercase text-center">Your score</h3>
                             <div id="score-value" class="text-center score">80%</div>
                             <div class="mt-4">
-                                <button id="valid-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Next task</button>
+                                <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Next task</button>
                             </div>
                         </div>
                     </div>
@@ -46,12 +49,25 @@ try {
                 super();
             }
 
-            _init() {
+            _title() {
                 let tag = this.content.querySelector('#score-title');
-                tag.textContent = `Your score for task n°${store.state[keys.s_current_index_task]}`;
-                // Update score.
-                // Init button.
-                // Return to app or end.
+                tag.textContent = `Your score for task n°${store.state[keys.s_current_index_task] + 1}`;
+            }
+
+            _nextBtn() {
+                let tag = this.content.querySelector('#next-btn');
+                tag.addEventListener('click', () => {
+                    if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length]) {
+                        // END.
+                    } else {
+                        window.location.hash = '#/app'; // Or rules.
+                    }
+                });
+            }
+
+            _init() {
+                this._title();
+                this._nextBtn();
             }
          
             connectedCallback () {
