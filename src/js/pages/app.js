@@ -156,7 +156,13 @@ try {
 
             _task() {
                 let tag = this.content.querySelector('#task');
-                tag.textContent = `Task n°${store.state[keys.s_current_index_task] + 1}`;
+                let text = '';
+                if (store.state[keys.s_current_index_task] == 0) {
+                    text = `Training task`;
+                } else {
+                    text = `Task n°${store.state[keys.s_current_index_task]}`;
+                }
+                tag.textContent = text;
             }
 
             _timer() {

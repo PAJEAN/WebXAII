@@ -5,8 +5,10 @@ import 'JS/lib/router';
 
 /*** Pages ***/
 import 'JS/pages/app';
-import 'JS/pages/rules';
 import 'JS/pages/authentication';
+import 'JS/pages/countdown';
+import 'JS/pages/end';
+import 'JS/pages/rules';
 import 'JS/pages/score';
 
 /*** CSS ***/

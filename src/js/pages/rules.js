@@ -60,7 +60,7 @@ try {
                             <h3 id="rule-title" class="card-title text-uppercase text-center">Task</h3>
                             <div id="rule-text" class="text-center mt-3">Rule</div>
                             <div class="mt-3">
-                                <a href="#/app"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button></a>
+                                <a href="#/avancement"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button></a>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,13 @@ try {
 
             _init() {
                 let tag_title = this.content.querySelector('#rule-title');
-                tag_title.textContent = `Task n°${store.state[keys.s_current_index_task] + 1}`;
+                let text = '';
+                if (store.state[keys.s_current_index_task] == 0) {
+                    text = `Training task`;
+                } else {
+                    text = `Task n°${store.state[keys.s_current_index_task]}`;
+                }
+                tag_title.textContent = text;
                 let tag_text = this.content.querySelector('#rule-text');
                 tag_text.textContent = `Rule : ${store.state[keys.s_task][store.state[keys.s_current_index_task]]['rule']}`;
             }

@@ -113,6 +113,11 @@ try {
                     window.location.hash = '#/regles';
                 })
                 .catch((err) => {
+
+                    // TEST.
+                    window.location.hash = '#/regles';
+                    //
+
                     login_content.style.display = 'block';
                     loading.style.display = 'none';
                     this.error_tag.innerHTML = `Oups... Une erreur s'est produite !`;
