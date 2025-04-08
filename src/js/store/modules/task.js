@@ -5,11 +5,13 @@ export const keys = {
     s_task:               `${NS}_task`,
     s_current_index_task: `${NS}_current_index_task`,
     s_current_index_item: `${NS}_current_index_item`,
+    s_current_task_index: `${NS}_current_task_index`, // Annotation task index.
     s_annotated_task:     `${NS}_annotated_task`, // Store user values and time for each item.
     s_task_score:         `${NS}_annotated_task`, // Compute score for each task.
     s_max_timer:          `${NS}_max_timer`, // Time for one item.
     // ACTIONS.
     a_get_task:                  `${NS}_randomize_profils`,
+    a_increment_view_index:      `${NS}_increment_view_index`, // Increment task index by 1.
     a_update_annotated_item:     `${NS}_update_item`, // Put a new annotated item.
     a_update_current_index_item: `${NS}_update_current_index_task`,
     // GETTERS.
@@ -18,11 +20,53 @@ export const keys = {
     g_current_item: `${NS}_current_item`,
 }
 
+
+// TODO: Changer les nom par view/task/item.
+
 export const module = {
     state: {
         [keys.s_task]: [
+            {}, // Authentication.
+            // {
+            //     type: 'rules'
+            // },
+            {
+                type: 'form',
+                questions: [
+                    {
+                        type: 'radio',
+                        title: '',
+                        sub_title: 'Voici un sous texte plus long !',
+                        answers: [
+                            'choix1',
+                            'choix2',
+                        ]
+                    },
+                    {
+                        type: 'checkbox',
+                        title: 'Title 2',
+                        sub_title: 'Sub title 2',
+                        answers: [
+                            'choix1',
+                            'choix2',
+                        ]
+                    },
+                    {
+                        type: 'radio',
+                        title: 'Title 3',
+                        sub_title: 'Sub title 3',
+                        answers: [
+                            'choix1',
+                            'choix2',
+                        ]
+                    }
+                ]
+            },
             {
                 rule: 'Exactly 3 squares',
+                type: 'annotation',
+                is_training: true, // opt.
+                time: '',
                 items: [
                     {
                         card: 'assets/datasets/2.jpg',
@@ -50,6 +94,36 @@ export const module = {
                     }
                 ]
             },
+            // {
+            //     type: 'formulaire',
+            //     questions: [
+            //         {
+            //             type: 'radio/checkbox',
+            //             title: '',
+            //             answers: [
+            //                 'choix1',
+            //                 'choix2',
+            //             ]
+            //         },
+            //         {
+            //             card: 'assets/img/warning.png',
+            //             expected: 0
+            //         }
+            //     ]
+            // },
+            // {
+            //     type: 'score',
+            //     items: [
+            //         {
+            //             card: 'assets/img/warning.png',
+            //             expected: 0
+            //         },
+            //         {
+            //             card: 'assets/img/warning.png',
+            //             expected: 0
+            //         }
+            //     ]
+            // },
             {
                 rule: 'lorem ipsum',
                 items: [
@@ -65,6 +139,7 @@ export const module = {
             }
         ],
         [keys.s_current_index_task]: 0,
+        [keys.s_current_task_index]: 0,
         [keys.s_current_index_item]: 0,
         [keys.s_annotated_task]: [
             [
@@ -115,15 +190,19 @@ export const module = {
                 });
             });
         },
+        [keys.a_increment_view_index](context, payload) {
+            let current_view_index = context.state[keys.s_current_index_task];
+            context.commit(`${NS}_INCREMENT_VIEW_INDEX`, {index: current_view_index + 1});
+        },
         [keys.a_update_annotated_item](context, payload) {
             context.commit(`${NS}_UPDATE_ANNOTATED_ITEM`, payload);
         },
         [keys.a_update_current_index_item](context, payload) {
-            let annotated_task = context.state[keys.s_annotated_task];
-            let current_index_task = context.state[keys.s_current_index_task];
+            let view = context.state[keys.s_task];
+            let current_index_view = context.state[keys.s_current_index_task];
             let current_index_item = context.state[keys.s_current_index_item];
-            if (current_index_item + 1 >= annotated_task[current_index_task].length) {
-                context.commit(`${NS}_UPDATE_INDEX_TASK`, {index: current_index_task + 1});
+            if (current_index_item + 1 >= view[current_index_view]['items'].length) {
+                context.commit(`${NS}_INCREMENT_VIEW_INDEX`, {index: current_index_task + 1});
                 context.commit(`${NS}_UPDATE_INDEX_ITEM`, {index: 0});
             } else {
                 context.commit(`${NS}_UPDATE_INDEX_ITEM`, {index: current_index_item + 1});
@@ -135,9 +214,9 @@ export const module = {
             state[keys.s_task] = payload.task;
         },
         [`${NS}_UPDATE_ANNOTATED_ITEM`](state, payload) {
-            state[keys.s_annotated_task][state[keys.s_current_index_task]][state[keys.s_current_index_item]] = payload;
+            state[keys.s_annotated_task][state[keys.s_current_task_index]][state[keys.s_current_index_item]] = payload;
         },
-        [`${NS}_UPDATE_INDEX_TASK`](state, payload) {
+        [`${NS}_INCREMENT_VIEW_INDEX`](state, payload) {
             state[keys.s_current_index_task] = payload.index;
         },
         [`${NS}_UPDATE_INDEX_ITEM`](state, payload) {

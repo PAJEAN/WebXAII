@@ -1,3 +1,5 @@
+/* Lib */
+import { nextPage } from '../lib/next_page.js';
 /* CSS */
 import css from 'CSS/style.css';
 /* Store */
@@ -60,15 +62,12 @@ try {
                             <h3 id="rule-title" class="card-title text-uppercase text-center">Task</h3>
                             <div id="rule-text" class="text-center mt-3">Rule</div>
                             <div class="mt-3">
-                                <a href="#/avancement"><button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button></a>
+                                <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button>
                             </div>
                         </div>
                     </div>
-                </div>    
-            
-                
+                </div>
             </div>
-
         `;
 
         window.customElements.define(PAGE_NAME, class extends HTMLElement {
@@ -87,6 +86,9 @@ try {
                 tag_title.textContent = text;
                 let tag_text = this.content.querySelector('#rule-text');
                 tag_text.textContent = `Rule : ${store.state[keys.s_task][store.state[keys.s_current_index_task]]['rule']}`;
+
+                let btn = this.content.querySelector('#connexion-btn');
+                btn.addEventListener('click', nextPage);
             }
          
             connectedCallback () {

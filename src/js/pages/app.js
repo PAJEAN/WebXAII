@@ -1,5 +1,3 @@
-/* Components */
-import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/task';
@@ -106,9 +104,9 @@ try {
             _currentStatus() {
                 let tag = this.content.querySelector('#current-status');
                 tag.textContent = '';
-                let current_index_task = store.state[keys.s_current_index_task];
+                let current_task_index = store.state[keys.s_current_task_index];
                 // Annotated items is init with same format than each item task.
-                let items = store.state[keys.s_annotated_task][current_index_task];
+                let items = store.state[keys.s_annotated_task][current_task_index];
                 for (let i = 0; i < items.length; i++) {
                     let div = document.createElement('div');
                     div.classList.add('mx-1');

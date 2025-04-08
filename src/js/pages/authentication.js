@@ -1,5 +1,6 @@
 /* Lib */
 import { login } from '../lib/authentication.js';
+import { nextPage } from '../lib/next_page.js';
 /* Store */
 import { store } from 'JS/store/index';
 // import { keys as a_keys } from 'JS/store/modules/common';
@@ -89,8 +90,6 @@ try {
                     <div>Vous êtes déja connecté. Voulez-vous vous déconnecter ?</div>
 
                     <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Connexion</button>
-                    
-                    <a href="#/app">Revenir à l'application</a>
                 </div>
             </div>
 
@@ -110,12 +109,14 @@ try {
 
                 login(uid)
                 .then(() => {
-                    window.location.hash = '#/regles';
+                    // window.location.hash = '#/regles';
+                    // nextPage();
                 })
                 .catch((err) => {
 
                     // TEST.
-                    window.location.hash = '#/regles';
+                    // window.location.hash = '#/regles';
+                    nextPage();
                     //
 
                     login_content.style.display = 'block';

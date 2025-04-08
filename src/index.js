@@ -2,6 +2,7 @@
 import 'JS/lib/router';
 
 /*** Components ***/
+import 'JS/components/form';
 
 /*** Pages ***/
 import 'JS/pages/app';
@@ -10,6 +11,7 @@ import 'JS/pages/countdown';
 import 'JS/pages/end';
 import 'JS/pages/rules';
 import 'JS/pages/score';
+import 'JS/pages/test';
 
 /*** CSS ***/
 (function() {
