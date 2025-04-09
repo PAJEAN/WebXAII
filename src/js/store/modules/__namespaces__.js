@@ -1,1 +1,1 @@
-export const TASK = '_p';
+export const VIEW = '_v';

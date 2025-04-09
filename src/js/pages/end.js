@@ -1,7 +1,3 @@
-/* Store */
-import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
-
 try {
     (function() {
         const PAGE_NAME = 'page-end';

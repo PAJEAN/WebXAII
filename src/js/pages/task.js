@@ -1,10 +1,16 @@
+// @ts-check
+
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
+/* Lib */
+import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
+import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
-        const PAGE_NAME = 'page-app';
+        const PAGE_NAME = PAGE_NAMES.TASK;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
@@ -53,7 +59,7 @@ try {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-lg">
                             <div class="card">
                                 <img src="assets/img/pouce-en-lair.png" class="card-img-top icon" alt="...">
                                 <div class="card-body">
@@ -61,14 +67,7 @@ try {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm">
-                            <div class="card">
-                                <img src="assets/datasets/2target_0.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">Explanatory image</h5>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -83,6 +82,23 @@ try {
         window.customElements.define(PAGE_NAME, class extends HTMLElement {
             constructor() {
                 super();
+            }
+
+            _createCardB(img_path, body_text) {
+                let content_tag = /* html */`
+                <div class="col-sm">
+                    <div class="card">
+                        <img src="${img_path}" class="card-img-top icon m-auto" alt="">
+                        <img src="${img_path}" class="card-img-top icon m-auto" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">${body_text}</h5>
+                        </div>
+                    </div>
+                </div>`;
+                let div = document.createElement('div');
+                div.classList.add('col-sm');
+                div.innerHTML = content_tag;
+                return div;
             }
 
             _createCard(img_path, body_text) {
@@ -104,13 +120,11 @@ try {
             _currentStatus() {
                 let tag = this.content.querySelector('#current-status');
                 tag.textContent = '';
-                let current_task_index = store.state[keys.s_current_task_index];
-                // Annotated items is init with same format than each item task.
-                let items = store.state[keys.s_annotated_task][current_task_index];
-                for (let i = 0; i < items.length; i++) {
+                let subtask = store.state[keys.s_task_completed][store.state[keys.s_current_task_index]];
+                for (let i = 0; i < subtask.length; i++) {
                     let div = document.createElement('div');
                     div.classList.add('mx-1');
-                    switch(items[i]['value']) {
+                    switch(subtask[i]['value']) {
                         case 0: // Bad answer.
                             div.textContent = '🔴';
                             break;
@@ -130,35 +144,37 @@ try {
             _dataset() {
                 let tag = this.content.querySelector('#dataset');
                 tag.textContent = '';
-                let current_item = store.state[keys.g_current_item];
-                if (current_item.hasOwnProperty('card')) {
-                    let div = this._createCard(current_item['card'], 'Source');
+                let task = store.state[keys.g_current_view];
+                let subtask = task['sub_task'][store.state[keys.s_current_subtask_index]];
+                
+                if (subtask.hasOwnProperty('card')) {
+                    let div = this._createCard(subtask['card'], 'Source');
                     tag.appendChild(div);
                 }
-                if (current_item.hasOwnProperty('model')) {
-                    let path = current_item['model'] == 0 ? 'assets/img/pouce-vers-le-bas.png': 'assets/img/pouce-en-lair.png';
+                if (subtask.hasOwnProperty('model')) {
+                    let path = subtask['model'] == 0 ? 'assets/img/pouce-vers-le-bas.png': 'assets/img/pouce-en-lair.png';
                     let div = this._createCard(path, 'Model prediction');
                     tag.appendChild(div);
                 }
-                if (current_item.hasOwnProperty('explicability')) {
-                    let div = this._createCard(current_item['explicability'], 'Explanation');
+                if (subtask.hasOwnProperty('explicability')) {
+                    let div = this._createCardB(subtask['explicability'], 'Explanation');
                     tag.appendChild(div);
                 }
             }
 
             _rule() {
                 let tag = this.content.querySelector('#rule');
-                let current_task = store.state[keys.g_current_task];                
-                tag.textContent = `Rule : ${current_task['rule']}`;
+                let task = store.state[keys.g_current_view];
+                tag.textContent = `Rule : ${task['rule']}`;
             }
 
             _task() {
                 let tag = this.content.querySelector('#task');
                 let text = '';
-                if (store.state[keys.s_current_index_task] == 0) {
+                if (store.state[keys.s_current_task_index] == 0) {
                     text = `Training task`;
                 } else {
-                    text = `Task n°${store.state[keys.s_current_index_task]}`;
+                    text = `Task n°${store.state[keys.s_current_task_index]}`;
                 }
                 tag.textContent = text;
             }
@@ -167,7 +183,7 @@ try {
                 let tag = this.content.querySelector('#timer');
                 tag.textContent = this.current_time.toFixed(2);
                 let delta_time = 1000;
-                this.timer = setInterval(() => {
+                this._timer_count = window.setInterval(() => {
                     this.current_time -= delta_time/1000;
                     tag.textContent = (Math.round(this.current_time * 100) / 100).toFixed(2);
                     if (this.current_time <= 0) {
@@ -181,22 +197,30 @@ try {
                 valid_btn.removeEventListener('click', this._validBound);
                 let not_valid_btn = this.content.querySelector('#not-valid-btn');
                 not_valid_btn.removeEventListener('click', this._notValidBound);
-                clearInterval(this.timer);
+
+                clearInterval(this._timer_count);
+
+                let task = store.state[keys.g_current_view];
+                let subtask = task['sub_task'][store.state[keys.s_current_subtask_index]];
 
                 let value = -1;
                 if (is_time_exceeded) {
                     value = 2;
                 } else {
-                    let current_index = store.state[keys.g_current_item];
-                    value = current_index['expected'] == response ? 1: 0;
+                    value = subtask['expected'] == response ? 1: 0;
                 }
-                store.dispatch(keys.a_update_annotated_item, {value: value, time: Math.max(this.current_time, 0)});
-                store.dispatch(keys.a_update_current_index_item, {});
-                if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length] || store.state[keys.s_current_index_item] == 0) {
-                    window.location.hash = '#/score';
+                store.dispatch(keys.a_update_completed_task, {value: value, time: Math.max(this.current_time, 0)});
+
+                console.log(store.state[keys.s_current_subtask_index], task['sub_task'].length)
+
+                if (store.state[keys.s_current_subtask_index] + 1 >= task['sub_task'].length) {
+                    store.dispatch(keys.a_update_current_subtask_index, {index: 0});
+                    store.dispatch(keys.a_update_task_index, {index: store.state[keys.s_current_task_index] + 1});
+                    nextView();
                 } else {
+                    store.dispatch(keys.a_update_current_subtask_index, {index: store.state[keys.s_current_subtask_index] + 1});
                     this._init();
-                }                
+                }      
             }
 
             _init() {
@@ -205,8 +229,8 @@ try {
                 this._currentStatus();
                 this._rule();
                 this._task();
-                this._dataset();
-                this._timer();
+                // this._dataset();
+                // this._timer();
             }
             
             _valid() {
@@ -225,11 +249,14 @@ try {
             }
             
             connectedCallback () {
+                guardView(PAGE_NAMES.TASK);
+
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
                 /* Attributes */                
                 this.current_time = store.state[keys.s_max_timer];
-                this.timer;
+                /** @type {number | undefined} */
+                this._timer_count = undefined;
                 this._validBound = this._valid.bind(this); // Bind to remove listener (otherwise bind create a new function).
                 this._notValidBound = this._notValid.bind(this);
                 /* Init */
@@ -237,8 +264,8 @@ try {
             }
           
             disconnectedCallback () {
-                if(this.timer) {
-                    clearInterval(this.timer);
+                if(this._timer_count) {
+                    clearInterval(this._timer_count);
                 }
             }
         });

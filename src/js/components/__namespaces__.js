@@ -1,3 +1,4 @@
 export const COMPONENT_NAMES = {
-    FORM: 'wc-form'
+    FORM:    'wc-form',
+    LOADING: 'wc-loading',
 }

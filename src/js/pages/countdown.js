@@ -1,6 +1,6 @@
 /* Store */
 import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
+import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
@@ -49,7 +49,7 @@ try {
             _title() {
                 let tag = this.content.querySelector('#task-number');
                 let text = '';
-                let index_task = store.state[keys.s_current_index_task];
+                let index_task = store.state[keys.s_current_task_index];
                 if (index_task == 0) {
                     text = 'Training task 1/1';
                 } else {

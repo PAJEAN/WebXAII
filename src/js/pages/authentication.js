@@ -1,6 +1,10 @@
+// @ts-check
+
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
-import { login } from '../lib/authentication.js';
-import { nextPage } from '../lib/next_page.js';
+import { login } from 'JS/lib/authentication';
+import { nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 // import { keys as a_keys } from 'JS/store/modules/common';
@@ -8,7 +12,7 @@ import { store } from 'JS/store/index';
 
 try {
     (function() {
-        const PAGE_NAME = 'page-authentication';
+        const PAGE_NAME = PAGE_NAMES.AUTHENTICATION;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
@@ -35,13 +39,6 @@ try {
                     padding: 30px;
                     /* Color */  
                     background-color: rgba(var(--surface-color));
-                }
-                .deconnexion {
-                    /* Display & Box Model */
-                    display: none;
-                    width: 400px;
-                    /* Text */
-                    text-align:center;
                 }
                 .title {
                     text-align: center;
@@ -101,9 +98,11 @@ try {
             }
 
             _connectUser(uid) {
+                /** @type {HTMLElement} */
                 let login_content = this.content.querySelector('.connexion');
+                /** @type {HTMLElement} */
                 let loading = this.content.querySelector('.loading');
-
+                
                 login_content.style.display = 'none';
                 loading.style.display = 'block';
 
@@ -116,7 +115,7 @@ try {
 
                     // TEST.
                     // window.location.hash = '#/regles';
-                    nextPage();
+                    nextView();
                     //
 
                     login_content.style.display = 'block';
@@ -126,7 +125,9 @@ try {
             }
 
             _init() {
+                /** @type {HTMLElement} */
                 let login_content = this.content.querySelector('.connexion');
+                /** @type {HTMLElement} */
                 let logout_content = this.content.querySelector('.deconnexion');
 
                 if (!store.state['is_authentication']) {
@@ -134,6 +135,7 @@ try {
                     logout_content.style.display = 'none';
 
                     /* Tags */
+                    /** @type {HTMLInputElement} */
                     let user_id = this.content.querySelector('input[type=text]');
                     let login_button = this.content.querySelector('#connexion-btn');
                     /* Behaviors */

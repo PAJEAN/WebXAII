@@ -2,15 +2,16 @@
 import 'JS/lib/router';
 
 /*** Components ***/
-import 'JS/components/form';
+import 'JS/components/wc-form';
+import 'JS/components/wc-loading';
 
 /*** Pages ***/
-import 'JS/pages/app';
 import 'JS/pages/authentication';
 import 'JS/pages/countdown';
 import 'JS/pages/end';
-import 'JS/pages/rules';
 import 'JS/pages/score';
+import 'JS/pages/task';
+import 'JS/pages/text';
 import 'JS/pages/test';
 
 /*** CSS ***/

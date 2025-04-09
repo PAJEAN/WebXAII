@@ -1,6 +1,6 @@
 /* Store */
 import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
+import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
@@ -63,7 +63,7 @@ try {
             _nextBtn() {
                 let tag = this.content.querySelector('#next-btn');
                 tag.addEventListener('click', () => {
-                    if (store.state[keys.s_current_index_task] >= store.state[keys.g_task_length]) {
+                    if (store.state[keys.s_current_task_index] >= store.state[keys.g_task_length]) {
                         // END.
                         window.location.hash = '#/fin';
                     } else {

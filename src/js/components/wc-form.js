@@ -1,10 +1,12 @@
+// @ts-check
+
 /* Components */
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Lib */
-import { nextPage } from '../lib/next_page.js';
+import { nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
+import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
@@ -75,18 +77,19 @@ try {
             submit() {
                                
                 let fieldsets = this.content.querySelectorAll('fieldset');
-                for (let fieldset of fieldsets) {
+                for (let i = 0; i < fieldsets.length; i++) {
+                    let fieldset = fieldsets[i];
                     let inputs = fieldset.querySelectorAll('input');
-                    for (let input of inputs) {
+                    for (let j = 0; j < inputs.length; j++) {
+                        let input = inputs[j];
                         console.log(input.checked);
-                    }                 
+                    }
                 }
-                nextPage();
+                nextView();
             }
 
             init() {
-                let current_index_view = store.state[keys.s_current_index_task];
-                let current_view = store.state[keys.s_task][current_index_view];
+                let current_view = store.state[keys.g_current_view];
                 let view_type = current_view['type'];
                 
                 if (!view_type) {

@@ -1,29 +1,21 @@
+// @ts-check
+
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
-import { nextPage } from '../lib/next_page.js';
-/* CSS */
-import css from 'CSS/style.css';
+import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
-import { keys } from 'JS/store/modules/task';
+import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
-        const PAGE_NAME = 'page-rules';
+        const PAGE_NAME = PAGE_NAMES.TEXT;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
 
             <style>
-                /* -- TYPES -- */
-                /* Positioning */
-                /* Display & Box Model */
-                /* Color */  
-                /* Text */
-                /* Other */
-
-                /* Import base css */
-                ${css.toString()}
-
                 #main-page {
                     height: 100vh;
                 }
@@ -39,15 +31,6 @@ try {
                 .card {
                     box-shadow: var(--box-shadow);
                 }
-                a {
-                    text-decoration: none;
-                }
-                .button:hover {
-                    box-shadow: none;
-                }
-                .center {
-                    text-align: center;
-                }
                 @media (max-width: 768px) {
                     .container {
                         width: 75%;
@@ -59,10 +42,10 @@ try {
                 <div class="container">
                     <div class="card m-auto">
                         <div class="card-body">
-                            <h3 id="rule-title" class="card-title text-uppercase text-center">Task</h3>
-                            <div id="rule-text" class="text-center mt-3">Rule</div>
+                            <h3 id="title" class="card-title text-uppercase text-center">Title</h3>
+                            <div id="text" class="text-center mt-3">Text</div>
                             <div class="mt-3">
-                                <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Go !</button>
+                                <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Button</button>
                             </div>
                         </div>
                     </div>
@@ -76,22 +59,25 @@ try {
             }
 
             _init() {
-                let tag_title = this.content.querySelector('#rule-title');
-                let text = '';
-                if (store.state[keys.s_current_index_task] == 0) {
-                    text = `Training task`;
-                } else {
-                    text = `Task n°${store.state[keys.s_current_index_task]}`;
+                let tag_title = this.content.querySelector('#title');
+                let view = store.state[keys.g_current_view];
+                if (view.hasOwnProperty('title')) {
+                    tag_title.textContent = view['title'];
                 }
-                tag_title.textContent = text;
-                let tag_text = this.content.querySelector('#rule-text');
-                tag_text.textContent = `Rule : ${store.state[keys.s_task][store.state[keys.s_current_index_task]]['rule']}`;
-
-                let btn = this.content.querySelector('#connexion-btn');
-                btn.addEventListener('click', nextPage);
+                let tag_text = this.content.querySelector('#text');
+                if (view.hasOwnProperty('text')) {
+                    tag_text.textContent = view['text'];
+                }
+                let btn = this.content.querySelector('#next-btn');
+                if (view.hasOwnProperty('btn')) {
+                    btn.textContent = view['btn'];
+                }
+                btn.addEventListener('click', nextView);
             }
          
             connectedCallback () {
+                guardView(PAGE_NAMES.TEXT);
+
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
                 this._init();
