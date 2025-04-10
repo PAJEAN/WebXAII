@@ -8,22 +8,22 @@ export const keys = {
     s_view:                  `${NS}_view`,               // All views info.
     s_current_view_index:    `${NS}_current_view_index`, // Current index on s_view.
     /* ---------------------------------- task ---------------------------------- */
-    s_current_task_index:    `${NS}_current_task_index`, // Annotation task index.
-    s_current_subtask_index: `${NS}_current_index_item`, // Annotation subtask index (each annotation in a task).
-    s_task_completed:        `${NS}_task_completed`,     // Store user values and time for each subtask of a task.
-    s_task_score:            `${NS}_task_score`,         // Compute score for each task.
+    s_current_experiment_index: `${NS}_current_experiment_index`, // Annotation experiment index.
+    s_current_task_index:       `${NS}_current_index_task`,       // Annotation task index (each annotation in an experiment).
+    s_experiment_completed:     `${NS}_experiment_completed`,     // Store user values and time for each task of an experiment.
+    s_experiment_score:         `${NS}_experiment_score`,         // Compute score for each experiment.
     /* --------------------------------- global --------------------------------- */
-    s_max_timer:             `${NS}_max_timer`,          // Time for one item.
+    s_max_timer:             `${NS}_max_timer`, // Time for one item.
     /* ACTIONS */
-    a_fetch_view:                   `${NS}_fetch_view`,            // Get view from server.
-    a_update_view_index:            `${NS}_update_view_index`,     // Update view index.
-    a_update_completed_task:        `${NS}_update_completed_task`, // Put a new annotated item.
-    a_update_task_index:            `${NS}_update_task_index`,     // Update completed task index.
-    a_update_current_subtask_index: `${NS}_update_current_index_task`,
+    a_fetch_view:                  `${NS}_fetch_view`,                  // Get view from server.
+    a_update_view_index:           `${NS}_update_view_index`,           // Update view index.
+    a_update_completed_experiment: `${NS}_update_completed_experiment`, // Put a new task.
+    a_update_experiment_index:     `${NS}_update_experiment_index`,     // Update completed experiment index.
+    a_update_current_task_index:   `${NS}_update_current_index_task`,   // Update task index.
     /* GETTERS */
-    g_view_length:  `${NS}_view_length`, // Length of view.
-    g_task_length:  `${NS}_task_length`, // Length of completed task.
-    g_current_view: `${NS}_current_view` // Get current view info.
+    g_view_length:        `${NS}_view_length`,       // Length of view.
+    g_current_view:       `${NS}_current_view`,      // Get current view info.
+    g_experiment_length:  `${NS}_experiment_length`, // Length of completed experiment.
 }
 
 export const module = {
@@ -32,8 +32,8 @@ export const module = {
     /* -------------------------------------------------------------------------- */
     state: {
         [keys.s_current_view_index]: 0,
+        [keys.s_current_experiment_index]: 0,
         [keys.s_current_task_index]: 0,
-        [keys.s_current_subtask_index]: 0,
         [keys.s_max_timer]: 10,
 
         [keys.s_view]: [
@@ -41,21 +41,48 @@ export const module = {
             // {
             //     type: 'rules'
             // },
+            
             {
-                rule: 'Exactly 3 squares',
                 type: 'page-task',
+                desc: 'Exactly 3 squares',
                 is_training: true, // opt.
                 time: '',
-                sub_task: [
+                task: [
                     {
-                        card: 'assets/datasets/2.jpg',
+                        source: {
+                            is_image: true,
+                            text: 'assets/datasets/2.jpg',
+                        },
                         expected: 0
                     },
                     {
-                        card: 'assets/datasets/6.jpg',
+                        source: {
+                            is_image: true,
+                            text: 'assets/datasets/2.jpg'
+                        },
+                        model: 0,
+                        explanation: [
+                            {
+                                is_image: true,
+                                text: 'assets/datasets/2target_0.jpg'
+                            }, 
+                            {
+                                is_image: true,
+                                text: 'assets/datasets/2target_0.jpg'
+                            }
+                        ],
                         expected: 0
                     }
-                ]
+                ],
+                choice: {
+                    type: 'radio',
+                    title: 'Title',
+                    sub_title: 'Voici un sous texte plus long !',
+                    answers: [
+                        'choix1',
+                        'choix2',
+                    ]
+                }
             },
             {
                 type: 'page-text',
@@ -100,7 +127,7 @@ export const module = {
                 type: 'page-task',
                 is_training: true, // opt.
                 time: '',
-                sub_task: [
+                task: [
                     {
                         card: 'assets/datasets/2.jpg',
                         model: 0,
@@ -132,7 +159,7 @@ export const module = {
                 type: 'page-task',
                 is_training: true, // opt.
                 time: '',
-                sub_task: [
+                task: [
                     {
                         card: 'assets/datasets/2.jpg',
                         expected: 0
@@ -144,32 +171,42 @@ export const module = {
                 ]
             }
         ],
-        [keys.s_task_completed]: [
+        [keys.s_experiment_completed]: [
             [
                 {
-                    value: -1,
+                    response: [],
                     time: 0
                 },
                 {
-                    value: -1,
-                    time: 0
-                },
-                {
-                    value: -1,
-                    time: 0
-                },
-                {
-                    value: -1,
+                    response: [],
                     time: 0
                 }
             ],
             [
                 {
-                    value: -1,
+                    response: [],
                     time: 0
                 },
                 {
-                    value: -1,
+                    response: [],
+                    time: 0
+                },
+                {
+                    response: [],
+                    time: 0
+                },
+                {
+                    response: [],
+                    time: 0
+                }
+            ],
+            [
+                {
+                    response: [],
+                    time: 0
+                },
+                {
+                    response: [],
                     time: 0
                 }
             ]
@@ -200,14 +237,14 @@ export const module = {
             let current_view_index = context.state[keys.s_current_view_index];
             context.commit(`${NS}_UPDATE_VIEW_INDEX`, {index: current_view_index + 1});
         },
-        [keys.a_update_completed_task](context, payload) { // Update a subtask in completed tasks.
-            context.commit(`${NS}_UPDATE_COMPLETED_TASK`, payload);
+        [keys.a_update_completed_experiment](context, payload) { // Update a subtask in completed tasks.
+            context.commit(`${NS}_UPDATE_COMPLETED_EXPERIMENT`, payload);
         },
-        [keys.a_update_task_index](context, payload) {
+        [keys.a_update_experiment_index](context, payload) {
+            context.commit(`${NS}_UPDATE_EXPERIMENT_INDEX`, payload);
+        },
+        [keys.a_update_current_task_index](context, payload) {
             context.commit(`${NS}_UPDATE_TASK_INDEX`, payload);
-        },
-        [keys.a_update_current_subtask_index](context, payload) {
-            context.commit(`${NS}_UPDATE_SUBTASK_INDEX`, payload);
         }
     },
     /* -------------------------------------------------------------------------- */
@@ -220,14 +257,14 @@ export const module = {
         [`${NS}_UPDATE_VIEW_INDEX`](state, payload) {
             state[keys.s_current_view_index] = payload.index;
         },
-        [`${NS}_UPDATE_COMPLETED_TASK`](state, payload) {
-            state[keys.s_task_completed][state[keys.s_current_task_index]][state[keys.s_current_subtask_index]] = payload;
+        [`${NS}_UPDATE_COMPLETED_EXPERIMENT`](state, payload) {
+            state[keys.s_experiment_completed][state[keys.s_current_experiment_index]][state[keys.s_current_task_index]] = payload;
+        },
+        [`${NS}_UPDATE_EXPERIMENT_INDEX`](state, payload) {
+            state[keys.s_current_experiment_index] = payload.index;
         },
         [`${NS}_UPDATE_TASK_INDEX`](state, payload) {
             state[keys.s_current_task_index] = payload.index;
-        },
-        [`${NS}_UPDATE_SUBTASK_INDEX`](state, payload) {
-            state[keys.s_current_subtask_index] = payload.index;
         },
     },
     /* -------------------------------------------------------------------------- */
@@ -235,7 +272,7 @@ export const module = {
     /* -------------------------------------------------------------------------- */
     getters: {
         [keys.g_view_length]:  (state, key) => state[keys.s_view].length,
-        [keys.g_task_length]:  (state, key) => state[keys.s_task_completed].length,
+        [keys.g_task_length]:  (state, key) => state[keys.s_experiment_completed].length,
         [keys.g_current_view]: (state, key) => state[keys.s_view][state[keys.s_current_view_index]]
     }
 }
