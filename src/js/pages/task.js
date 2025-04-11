@@ -8,6 +8,7 @@ import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
+/* Data types */
 import { MyForm } from 'JS/components/wc-form';
 
 try {
@@ -25,25 +26,33 @@ try {
                     border-radius: 10px;
                     box-shadow: var(--box-shadow);
                 }
+                .row {
+                    margin: 0;
+                }
+                .card {
+                    border: none;
+                    box-shadow: var(--box-shadow);
+                }
+                .card-explanation .card {
+                    margin-top: 1rem;
+                }
                 .icon {
-                    max-width: 300px;
+                    max-height: 300px;
+                    border-radius: 10px;
                 }
             </style>
 
             <div id="main-page" class="d-flex flex-column justify-content-center">
-                <h3 id="task" class="container">Task</h3>
 
-                <div id="desc" class="container fs-5">
-                    Rule: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-                
-                <div id="current-status" class="container container-decoration d-flex justify-content-center p-2 mt-4"></div>
-                
-                <div id="timer" class="text-center fs-2 my-4">
-                    10:00
+                <div class="container container-decoration mt-2 p-2">
+                    <h3 id="task" class="container">Task</h3>
+    
+                    <div id="desc" class="container fs-5">
+                        Rule: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
                 </div>
 
-                <div class="container text-center">
+                <div class="container mt-4">
                     <div class="row">
                         <div class="col-sm-9">
                             <div class="row" id="source-model">
@@ -64,7 +73,7 @@ try {
                                     </div>
                                 </div>
                             </div>
-                            <div class="row row-cols-sm-2 mt-3" id="explanation">
+                            <div class="row card-explanation mb-2" id="explanation">
                                 <div class="col-sm">
                                     <div class="card">
                                         <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
@@ -92,7 +101,14 @@ try {
                             </div>
                         </div>
                         <div class="col-sm-3">
+                            <div id="current-status" class="container container-decoration d-flex justify-content-center p-2"></div>
+
+                            <div id="timer" class="text-center fs-2 my-2">
+                                10:00
+                            </div>
+
                             <${COMPONENT_NAMES.FORM} id="form"></${COMPONENT_NAMES.FORM}>
+
                             <button id="submit-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Submit</button>
                         </div>
                     </div>
@@ -114,13 +130,15 @@ try {
                 if (is_image) {
                     let image = document.createElement('img');
                     image.setAttribute('src', text);
-                    image.classList.add('card-img-top', 'm-auto', 'icon')
+                    image.classList.add('m-auto', 'icon')
                     card.appendChild(image);
                 }
                 let card_body = document.createElement('div');
                 card_body.classList.add('card-body');
                 if (!is_image) {
                     let body_text = document.createElement('div');
+                    body_text.classList.add('mb-4')
+                    body_text.textContent = text;
                     card_body.appendChild(body_text);
                 }
                 let body_title = document.createElement('h5');
@@ -138,7 +156,7 @@ try {
                 let tasks = store.state[keys.s_experiment_completed][store.state[keys.s_current_experiment_index]];
                 for (let i = 0; i < tasks.length; i++) {
                     let div = document.createElement('div');
-                    div.classList.add('mx-1');
+                    div.classList.add('mr-1');
                     div.textContent = tasks[i]['response'].length > 0 ? '🟢': '⚪'
                     tag.appendChild(div);
                 }
@@ -157,14 +175,18 @@ try {
                     tag_source_model.appendChild(div);
                 }
                 if (task.hasOwnProperty('model')) {
-                    let path = task['model'] == 0 ? 'assets/img/pouce-vers-le-bas.png': 'assets/img/pouce-en-lair.png';
-                    let div = this._createCard('Model', path, true);
+                    let div = this._createCard('Model', task['model']['text'], task['model']['is_image']);
                     tag_source_model.appendChild(div);
                 }
                 if (task.hasOwnProperty('explanation')) {
+                    if (task['explanation'].length > 1) {
+                        tag_explanation.classList.add('row-cols-sm-2');
+                    }
+                    let i = 1;
                     for (let item of task['explanation']) {
-                        let div = this._createCard('Explanation', item['text'], item['is_image']);
+                        let div = this._createCard(`Explanation #${i}`, item['text'], item['is_image']);
                         tag_explanation.appendChild(div);
+                        i++;
                     }
                 }
             }
@@ -178,10 +200,12 @@ try {
             _task() {
                 let tag = this.content.querySelector('#task');
                 let text = '';
-                if (store.state[keys.s_current_experiment_index] == 0) {
+                let experiment = store.state[keys.g_current_view];
+                let task = experiment['task'][store.state[keys.s_current_task_index]];
+                if (task['is_training']) {
                     text = `Training task`;
                 } else {
-                    text = `Task n°${store.state[keys.s_current_experiment_index]}`;
+                    text = `Task n°${store.state[keys.s_current_experiment_index] + 1}`;
                 }
                 tag.textContent = text;
             }
@@ -209,12 +233,17 @@ try {
                 clearInterval(this._timer_count);
 
                 let experiment = store.state[keys.g_current_view];
+                let task = experiment['task'][store.state[keys.s_current_task_index]];
 
-                store.dispatch(keys.a_update_completed_experiment, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
+                if (!task['is_training']) {
+                    store.dispatch(keys.a_update_experiment_completed, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
+                }
 
                 if (store.state[keys.s_current_task_index] + 1 >= experiment['task'].length) {
                     store.dispatch(keys.a_update_current_task_index, {index: 0});
-                    store.dispatch(keys.a_update_experiment_index, {index: store.state[keys.s_current_experiment_index] + 1});
+                    if (!task['is_training']) {
+                        store.dispatch(keys.a_update_experiment_index, {index: store.state[keys.s_current_experiment_index] + 1});
+                    }
                     nextView();
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});

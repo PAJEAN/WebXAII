@@ -8,11 +8,11 @@ import 'JS/components/wc-loading';
 /*** Pages ***/
 import 'JS/pages/authentication';
 import 'JS/pages/countdown';
+import 'JS/pages/form';
 import 'JS/pages/end';
 import 'JS/pages/score';
 import 'JS/pages/task';
 import 'JS/pages/text';
-import 'JS/pages/test';
 
 /*** CSS ***/
 (function() {
