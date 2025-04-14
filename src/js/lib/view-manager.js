@@ -31,14 +31,17 @@ export function changePage() {
     window.location.hash = '';
 
     switch(view_type) {
+        case PAGE_NAMES.FORM:
+            window.location.hash = '#/form';
+            break;
+        case PAGE_NAMES.SCORE:
+            window.location.hash = '#/score';
+            break;
         case PAGE_NAMES.TASK:
             window.location.hash = '#/task';
             break;
         case PAGE_NAMES.TEXT:
             window.location.hash = '#/text';
-            break;
-        case PAGE_NAMES.TEST:
-            window.location.hash = '#/test';
             break;
     }
 }

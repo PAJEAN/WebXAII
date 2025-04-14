@@ -52,7 +52,7 @@ try {
 
                 console.log(store.state[keys.s_form_completed]);
                 
-                // nextView();
+                nextView();
             }
 
             _submit() {

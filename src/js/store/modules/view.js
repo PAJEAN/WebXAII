@@ -37,22 +37,20 @@ export const keys = {
 }
 
 export const module = {
-    /* -------------------------------------------------------------------------- */
-    /*                                   States                                   */
-    /* -------------------------------------------------------------------------- */
+    /*** STATES ***/
     state: {
-        /* ------------------------------ view ------------------------------ */
+        /* -------------------------------- view -------------------------------- */
         [keys.s_current_view_index]: 0,
         /* -------------------------- experiment & task ------------------------- */
         [keys.s_current_experiment_index]: 0,
         [keys.s_current_task_index]: 0,
-        /* ------------------------------ form ------------------------------ */
+        /* -------------------------------- form -------------------------------- */
         [keys.s_current_form_index]: 0,
-        /* ----------------------------- global ----------------------------- */
+        /* ------------------------------- global ------------------------------- */
         [keys.s_max_timer]: 10,
-        /* ------------------------------ data ------------------------------ */
+        /* -------------------------------- data -------------------------------- */
         [keys.s_view]: [
-            // {}, // Authentication.
+            {}, // Authentication.
             // {
             //     type: 'rules'
             // },
@@ -60,7 +58,7 @@ export const module = {
                 type: 'page-task',
                 desc: 'Exactly 3 squares',
                 is_training: true, // opt.
-                time: '',
+                time: '', // opt
                 task: [
                     {
                         source: {
@@ -70,7 +68,6 @@ export const module = {
                         model: {
                             is_image: false,
                             text: "Ceci est un texte pour le modèle"
-                            
                         },
                         explanation: [
                             {
@@ -98,6 +95,9 @@ export const module = {
                         'choix2',
                     ]
                 }
+            },
+            {
+                type: 'page-score'
             },
             {
                 type: 'page-form',
@@ -136,88 +136,12 @@ export const module = {
                 title: 'Rule',
                 text: 'Exactly 3 squares',
                 btn: 'Next'
-            },
-            {
-                rule: 'Exactly 3 squares',
-                type: 'page-task',
-                is_training: true, // opt.
-                time: '',
-                task: [
-                    {
-                        card: 'assets/datasets/2.jpg',
-                        model: 0,
-                        explicability: ['assets/datasets/2target_0.jpg', 'assets/datasets/2target_0.jpg'],
-                        expected: 0
-                    },
-                    {
-                        card: 'assets/datasets/6.jpg',
-                        model: 1,
-                        explicability: ['assets/datasets/6target_0.jpg'],
-                        expected: 0
-                    },
-                    {
-                        card: 'assets/datasets/40.jpg',
-                        model: 1,
-                        explicability: ['assets/datasets/40target_0.jpg'],
-                        expected: 1
-                    },
-                    {
-                        card: 'assets/datasets/52.jpg',
-                        model: 0,
-                        explicability: ['assets/datasets/52target_0.jpg'],
-                        expected: 1
-                    }
-                ]
-            },
-            {
-                rule: 'Exactly 3 squares',
-                type: 'page-task',
-                is_training: true, // opt.
-                time: '',
-                task: [
-                    {
-                        card: 'assets/datasets/2.jpg',
-                        expected: 0
-                    },
-                    {
-                        card: 'assets/datasets/6.jpg',
-                        expected: 0
-                    }
-                ]
-            },
+            }
         ],
         [keys.s_form_completed]: [
             [],
         ],
         [keys.s_experiment_completed]: [
-            [
-                {
-                    response: [],
-                    time: 0
-                },
-                {
-                    response: [],
-                    time: 0
-                }
-            ],
-            [
-                {
-                    response: [],
-                    time: 0
-                },
-                {
-                    response: [],
-                    time: 0
-                },
-                {
-                    response: [],
-                    time: 0
-                },
-                {
-                    response: [],
-                    time: 0
-                }
-            ],
             [
                 {
                     response: [],

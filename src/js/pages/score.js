@@ -1,10 +1,14 @@
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
+/* Lib */
+import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
 
 try {
     (function() {
-        const PAGE_NAME = 'page-score';
+        const PAGE_NAME = PAGE_NAMES.SCORE;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
@@ -35,7 +39,7 @@ try {
                             <h3 id="score-title" class="card-title text-uppercase text-center">Your score</h3>
                             <div id="score-value" class="text-center score">80%</div>
                             <div class="mt-4">
-                                <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Next task</button>
+                                <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Next</button>
                             </div>
                         </div>
                     </div>
@@ -62,14 +66,7 @@ try {
 
             _nextBtn() {
                 let tag = this.content.querySelector('#next-btn');
-                tag.addEventListener('click', () => {
-                    if (store.state[keys.s_current_task_index] >= store.state[keys.g_task_length]) {
-                        // END.
-                        window.location.hash = '#/fin';
-                    } else {
-                        window.location.hash = '#/regles';
-                    }
-                });
+                tag.addEventListener('click', nextView);
             }
 
             _init() {
@@ -78,6 +75,8 @@ try {
             }
          
             connectedCallback () {
+                guardView(PAGE_NAMES.SCORE);
+
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
                 this._init();
