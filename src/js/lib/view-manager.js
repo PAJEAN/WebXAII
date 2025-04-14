@@ -27,9 +27,9 @@ export function changePage() {
     }
     
     console.log('VIEW TYPE: ' + view_type);
-
+    
     window.location.hash = '';
-
+    
     switch(view_type) {
         case PAGE_NAMES.FORM:
             window.location.hash = '#/form';

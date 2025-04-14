@@ -6,6 +6,7 @@ import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
+import { Experiment, Form, Question, View } from 'JS/store/modules/view-classes';
 
 
 const COMPONENT_NAME = COMPONENT_NAMES.FORM;
@@ -28,10 +29,9 @@ TEMPLATE.innerHTML = /* html */`
             <div id="questions" class="questions"></div>
         </div>
     </div>
-
 `;
 
-export class MyForm extends HTMLElement {
+export class FormComponent extends HTMLElement {
     constructor() {
         super();
     }
@@ -79,7 +79,6 @@ export class MyForm extends HTMLElement {
             for (let j = 0; j < inputs.length; j++) {
                 let input = inputs[j];
                 responses.push(input.checked);
-                console.log(input.checked);
             }
         }
         return responses;
@@ -87,39 +86,26 @@ export class MyForm extends HTMLElement {
     
     init() {
         let questions_div = this.content.querySelector('#questions');
-        let current_view = store.state[keys.g_current_view];
-        let view_type = current_view['type'];
-        
-        if (!view_type) {
-            return;
-        }
-
-        let questions = [];
-        if (view_type == PAGE_NAMES.TASK) {
-            questions = [current_view['choice']];
-        } else {
-            questions = current_view['questions']
-        }
 
         let i = 0;
-        for (let question of questions) {
+        for (let question of this.questions) {
             let fieldset = document.createElement('fieldset');
             if (i > 0) {
                 fieldset.classList.add('mt-2');
             }
 
             let legend = document.createElement('legend');
-            legend.textContent = question['title'];
+            legend.textContent = question.primary_text;
             let sub_title = document.createElement('div');
             sub_title.classList.add('text-secondary');
-            sub_title.textContent = question['sub_title'];
+            sub_title.textContent = question.secondary_text;
             fieldset.appendChild(legend);
             fieldset.appendChild(sub_title);
 
             let j = 0;
-            for (let answer of question['answers']) {
+            for (let answer of question.answers) {
                 let div;
-                switch (question['type']) {
+                switch (question.type) {
                     case 'radio':
                         div = this.radio(`#${i}_${j}`, `name-${i}`, answer);
                         break;
@@ -137,7 +123,22 @@ export class MyForm extends HTMLElement {
     
     connectedCallback () {
         this.appendChild(TEMPLATE.content.cloneNode(true));
+        /* Attributes */
         this.content = this.querySelector('#main');
+        /** @type {Array<Question>} */
+        this.questions = [];
+        /** @type {View} */
+        let current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
+
+        console.log('-- current_view --');
+        
+        if (current_view instanceof Experiment) {
+            this.questions.push(current_view.question)
+        } else if (current_view instanceof Form) {
+            this.questions.push(...current_view.questions);
+            console.log(this.questions);            
+        }
+        /* Methods */
         this.init();
     }
     
@@ -146,7 +147,7 @@ export class MyForm extends HTMLElement {
 
 try {
     (function() {
-        window.customElements.define(COMPONENT_NAME, MyForm);
+        window.customElements.define(COMPONENT_NAME, FormComponent);
     })();
 }
 catch (err) {

@@ -1,5 +1,7 @@
 // @ts-check
 
+/* Data types */
+import { FormComponent } from 'JS/components/wc-form';
 /* Namespaces */
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
@@ -8,8 +10,6 @@ import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
-/* Data types */
-import { MyForm } from 'JS/components/wc-form';
 
 try {
     (function() {
@@ -38,7 +38,7 @@ try {
                 }
                 .icon {
                     max-height: 300px;
-                    border-radius: 10px;
+                    margin: auto;
                 }
             </style>
 
@@ -103,9 +103,7 @@ try {
                         <div class="col-sm-3">
                             <div id="current-status" class="container container-decoration d-flex justify-content-center p-2"></div>
 
-                            <div id="timer" class="text-center fs-2 my-2">
-                                10:00
-                            </div>
+                            <div id="timer" class="text-center fs-2 my-2"></div>
 
                             <${COMPONENT_NAMES.FORM} id="form"></${COMPONENT_NAMES.FORM}>
 
@@ -130,7 +128,7 @@ try {
                 if (is_image) {
                     let image = document.createElement('img');
                     image.setAttribute('src', text);
-                    image.classList.add('m-auto', 'icon')
+                    image.classList.add('img-fluid', 'rounded', 'icon');
                     card.appendChild(image);
                 }
                 let card_body = document.createElement('div');
@@ -153,11 +151,10 @@ try {
             _currentStatus() {
                 let tag = this.content.querySelector('#current-status');
                 tag.textContent = '';
-                let tasks = store.state[keys.s_experiment_completed][store.state[keys.s_current_experiment_index]];
-                for (let i = 0; i < tasks.length; i++) {
+                for (let i = 0; i < this.current_experiment.tasks.length; i++) {                    
                     let div = document.createElement('div');
                     div.classList.add('mr-1');
-                    div.textContent = tasks[i]['response'].length > 0 ? '🟢': '⚪'
+                    div.textContent = i < store.state[keys.s_current_task_index] ? '🟢': '⚪'; // If not undefined.
                     tag.appendChild(div);
                 }
             }
@@ -167,24 +164,23 @@ try {
                 tag_source_model.textContent = '';
                 let tag_explanation = this.content.querySelector('#explanation');
                 tag_explanation.textContent = '';
-                let experiment = store.state[keys.g_current_view];
-                let task = experiment['task'][store.state[keys.s_current_task_index]];
+                let task = this.current_experiment.tasks[store.state[keys.s_current_task_index]];
                 
-                if (task.hasOwnProperty('source')) {
-                    let div = this._createCard('Source', task['source']['text'], task['source']['is_image']);
+                if (task.source) {
+                    let div = this._createCard('Source', task.source.label, task.source.is_image);
                     tag_source_model.appendChild(div);
                 }
-                if (task.hasOwnProperty('model')) {
-                    let div = this._createCard('Model', task['model']['text'], task['model']['is_image']);
+                if (task.model) {
+                    let div = this._createCard('Model', task.source.label, task.source.is_image);
                     tag_source_model.appendChild(div);
                 }
-                if (task.hasOwnProperty('explanation')) {
-                    if (task['explanation'].length > 1) {
+                if (task.explanations) {
+                    if (task.explanations.length > 1) {
                         tag_explanation.classList.add('row-cols-sm-2');
                     }
                     let i = 1;
-                    for (let item of task['explanation']) {
-                        let div = this._createCard(`Explanation #${i}`, item['text'], item['is_image']);
+                    for (let item of task.explanations) {
+                        let div = this._createCard(`Explanation #${i}`, item.label, item.is_image);
                         tag_explanation.appendChild(div);
                         i++;
                     }
@@ -193,16 +189,13 @@ try {
 
             _desc() {
                 let tag = this.content.querySelector('#desc');
-                let experiment = store.state[keys.g_current_view];
-                tag.textContent = `${experiment['desc']}`;
+                tag.textContent = `${this.current_experiment.desc}`;
             }
 
             _task() {
                 let tag = this.content.querySelector('#task');
                 let text = '';
-                let experiment = store.state[keys.g_current_view];
-                let task = experiment['task'][store.state[keys.s_current_task_index]];
-                if (task['is_training']) {
+                if (this.current_experiment.is_training) {
                     text = `Training task`;
                 } else {
                     text = `Task n°${store.state[keys.s_current_experiment_index] + 1}`;
@@ -211,37 +204,36 @@ try {
             }
 
             _timer() {
-                let tag = this.content.querySelector('#timer');
-                tag.textContent = this.current_time.toFixed(2);
-                let delta_time = 1000;
-                this._timer_count = window.setInterval(() => {
-                    this.current_time -= delta_time/1000;
-                    tag.textContent = (Math.round(this.current_time * 100) / 100).toFixed(2);
-                    if (this.current_time <= 0) {
-                        /** @type {MyForm} */
-                        let form = this.content.querySelector('#form');
-                        let responses = form.submit();
-                        this._transition(responses, true);
-                    }
-                }, delta_time);                
+                if (this.current_time >= 0) {
+                    let tag = this.content.querySelector('#timer');
+                    tag.textContent = this.current_time.toFixed(2);
+                    let delta_time = 1000;
+                    this.timer_id = window.setInterval(() => {
+                        this.current_time -= delta_time/1000;
+                        tag.textContent = (Math.round(this.current_time * 100) / 100).toFixed(2);
+                        if (this.current_time <= 0) {
+                            /** @type {FormComponent} */
+                            let form = this.content.querySelector('#form');
+                            let responses = form.submit();
+                            this._transition(responses, true);
+                        }
+                    }, delta_time);
+                }
             }
 
             _transition(response, is_time_exceeded) {
                 let submit_btn = this.content.querySelector('#submit-btn');
                 submit_btn.removeEventListener('click', this._submit);
 
-                clearInterval(this._timer_count);
+                clearInterval(this.timer_id);
 
-                let experiment = store.state[keys.g_current_view];
-                let task = experiment['task'][store.state[keys.s_current_task_index]];
-
-                if (!task['is_training']) {
+                if (!this.current_experiment.is_training) {
                     store.dispatch(keys.a_update_experiment_completed, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
                 }
 
-                if (store.state[keys.s_current_task_index] + 1 >= experiment['task'].length) {
+                if (store.state[keys.s_current_task_index] + 1 >= this.current_experiment.tasks.length) {
                     store.dispatch(keys.a_update_current_task_index, {index: 0});
-                    if (!task['is_training']) {
+                    if (!this.current_experiment.is_training) {
                         store.dispatch(keys.a_update_experiment_index, {index: store.state[keys.s_current_experiment_index] + 1});
                     }
                     nextView();
@@ -252,17 +244,17 @@ try {
             }
 
             _init() {
-                this.current_time = store.state[keys.s_max_timer];
+                this.current_time = this.current_experiment.timer;
                 this._initEvents();
                 this._currentStatus();
                 this._desc();
                 this._task();
                 this._dataset();
-                // this._timer();
+                this._timer();
             }
             
             _submit() {
-                /** @type {MyForm} */
+                /** @type {FormComponent} */
                 let form = this.content.querySelector('#form');
                 let responses = form.submit();
                 this._transition(responses, false);
@@ -274,22 +266,24 @@ try {
             }
             
             connectedCallback () {
-                guardView(PAGE_NAMES.TASK);
-
+                /* Guard */
+                guardView(PAGE_NAMES.TASK);                
+                /* Html */
                 this.appendChild(TEMPLATE.content.cloneNode(true));
+                /* Attributes */
                 this.content = this.querySelector('#main-page');
-                /* Attributes */                
-                this.current_time = store.state[keys.s_max_timer];
+                this.current_experiment = store.state[keys.s_view_objects][store.state[keys.s_current_experiment_index]];
+                this.current_time = this.current_experiment.timer;
                 /** @type {number | undefined} */
-                this._timer_count = undefined;
+                this.timer_id = undefined;
                 this._submit = this._submit.bind(this); // Bind to remove listener (otherwise bind create a new function).
-                /* Init */
+                /* Methods */
                 this._init();
             }
           
             disconnectedCallback () {
-                if(this._timer_count) {
-                    clearInterval(this._timer_count);
+                if(this.timer_id) {
+                    clearInterval(this.timer_id);
                 }
             }
         });

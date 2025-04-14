@@ -5,7 +5,7 @@ import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Lib */
 import { guardView, nextView } from 'JS/lib/view-manager';
-import { MyForm } from 'JS/components/wc-form';
+import { FormComponent } from 'JS/components/wc-form';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
@@ -56,7 +56,7 @@ try {
             }
 
             _submit() {
-                /** @type {MyForm} */
+                /** @type {FormComponent} */
                 let form = this.content.querySelector('#form');
                 let responses = form.submit();
                 this._transition(responses);
@@ -69,7 +69,7 @@ try {
          
             connectedCallback () {
                 guardView(PAGE_NAMES.FORM);
-
+                
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
 

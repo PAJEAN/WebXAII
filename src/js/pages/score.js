@@ -1,3 +1,5 @@
+// @ts-check
+
 /* Namespaces */
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
@@ -14,13 +16,6 @@ try {
         TEMPLATE.innerHTML = /* html */`
 
             <style>
-                /* -- TYPES -- */
-                /* Positioning */
-                /* Display & Box Model */
-                /* Color */  
-                /* Text */
-                /* Other */
-
                 #main-page {
                     height: 100vh;
                 }
