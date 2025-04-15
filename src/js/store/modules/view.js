@@ -1,9 +1,12 @@
 // @ts-check
 
+/* Lib */
+import { viewToObject } from 'JS/lib/view-manager';
 /* Namespaces */
 import { VIEW as NS } from './__namespaces__';
 /* Utils */
-import { viewToObject, TEST_VIEW, testExperimentCompleted, testFormCompleted } from 'JS/utils/test_data';
+import { TEST_VIEW, testExperimentCompleted, testFormCompleted } from 'JS/utils/test_data';
+
 
 /* -------------------------------------------------------------------------- */
 /*                                    KEYS                                    */
@@ -88,8 +91,7 @@ export const module = {
             // });
         },
         [keys.a_update_view_index](context, payload) {
-            let current_view_index = context.state[keys.s_current_view_index];
-            context.commit(`${NS}_UPDATE_VIEW_INDEX`, {index: current_view_index + 1});
+            context.commit(`${NS}_UPDATE_VIEW_INDEX`, {index: context.state[keys.s_current_view_index] + 1});
         },
         /* -------------------------- experiment & task ------------------------- */
         [keys.a_update_experiment_completed](context, payload) { // Update a subtask in completed tasks.
@@ -116,7 +118,7 @@ export const module = {
         [`${NS}_UPDATE_VIEW`](state, payload) {
             state[keys.s_view] = payload.task;
         },
-        [`${NS}_UPDATE_VIEW_INDEX`](state, payload) {
+        [`${NS}_UPDATE_VIEW_INDEX`](state, payload) {            
             state[keys.s_current_view_index] = payload.index;
         },
         /* -------------------------- experiment & task ------------------------- */

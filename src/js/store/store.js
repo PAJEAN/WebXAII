@@ -18,7 +18,7 @@ export class Store {
         this.state = new Proxy((params.state || {}), {
             set: (state, key, value) => {
                 state[key] = value;
-                console.log(`stateChange: ${this.status}`);
+                // console.log(`stateChange: ${this.status}`);
 
                 this.events.publish('stateChange', this.state);
 

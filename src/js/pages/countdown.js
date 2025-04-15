@@ -10,13 +10,6 @@ try {
         TEMPLATE.innerHTML = /* html */`
 
             <style>
-                /* -- TYPES -- */
-                /* Positioning */
-                /* Display & Box Model */
-                /* Color */  
-                /* Text */
-                /* Other */
-
                 #main-page {
                     height: 100vh;
                 }

@@ -49,9 +49,6 @@ try {
             _transition(response) {
                 store.dispatch(keys.a_update_form_completed, {answer: response});
                 store.dispatch(keys.a_update_form_index, {index: store.state[keys.s_current_form_index] + 1});
-
-                console.log(store.state[keys.s_form_completed]);
-                
                 nextView();
             }
 
@@ -68,7 +65,8 @@ try {
             }
          
             connectedCallback () {
-                guardView(PAGE_NAMES.FORM);
+                let is_legit = guardView(PAGE_NAMES.FORM);
+                if (!is_legit) { return; }
                 
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');

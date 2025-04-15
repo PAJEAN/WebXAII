@@ -1,7 +1,5 @@
 // @ts-check
 
-/* Data types */
-import { FormComponent } from 'JS/components/wc-form';
 /* Namespaces */
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
@@ -10,10 +8,13 @@ import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
+import { Experiment } from 'JS/store/modules/view-classes';
+/* Types */
+import { FormComponent } from 'JS/components/wc-form';
 
 try {
     (function() {
-        const PAGE_NAME = PAGE_NAMES.TASK;
+        const PAGE_NAME = PAGE_NAMES.EXPE;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
@@ -101,7 +102,7 @@ try {
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div id="current-status" class="container container-decoration d-flex justify-content-center p-2"></div>
+                            <div id="current-status" class="container container-decoration d-flex justify-content-center"></div>
 
                             <div id="timer" class="text-center fs-2 my-2"></div>
 
@@ -149,13 +150,16 @@ try {
             }
 
             _currentStatus() {
-                let tag = this.content.querySelector('#current-status');
-                tag.textContent = '';
-                for (let i = 0; i < this.current_experiment.tasks.length; i++) {                    
-                    let div = document.createElement('div');
-                    div.classList.add('mr-1');
-                    div.textContent = i < store.state[keys.s_current_task_index] ? '🟢': '⚪'; // If not undefined.
-                    tag.appendChild(div);
+                if (this.current_view.show_progression_bar) {
+                    let tag = this.content.querySelector('#current-status');
+                    tag.classList.add('p-2');
+                    tag.textContent = '';
+                    for (let i = 0; i < this.current_view.tasks.length; i++) {                    
+                        let div = document.createElement('div');
+                        div.classList.add('mr-1');
+                        div.textContent = i < store.state[keys.s_current_task_index] ? '🟢': '⚪'; // If not undefined.
+                        tag.appendChild(div);
+                    }
                 }
             }
 
@@ -164,7 +168,7 @@ try {
                 tag_source_model.textContent = '';
                 let tag_explanation = this.content.querySelector('#explanation');
                 tag_explanation.textContent = '';
-                let task = this.current_experiment.tasks[store.state[keys.s_current_task_index]];
+                let task = this.current_view.tasks[store.state[keys.s_current_task_index]];
                 
                 if (task.source) {
                     let div = this._createCard('Source', task.source.label, task.source.is_image);
@@ -189,13 +193,13 @@ try {
 
             _desc() {
                 let tag = this.content.querySelector('#desc');
-                tag.textContent = `${this.current_experiment.desc}`;
+                tag.textContent = `${this.current_view.desc}`;
             }
 
             _task() {
                 let tag = this.content.querySelector('#task');
                 let text = '';
-                if (this.current_experiment.is_training) {
+                if (this.current_view.is_training) {
                     text = `Training task`;
                 } else {
                     text = `Task n°${store.state[keys.s_current_experiment_index] + 1}`;
@@ -227,13 +231,13 @@ try {
 
                 clearInterval(this.timer_id);
 
-                if (!this.current_experiment.is_training) {
+                if (!this.current_view.is_training) {
                     store.dispatch(keys.a_update_experiment_completed, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
                 }
 
-                if (store.state[keys.s_current_task_index] + 1 >= this.current_experiment.tasks.length) {
+                if (store.state[keys.s_current_task_index] + 1 >= this.current_view.tasks.length) {
                     store.dispatch(keys.a_update_current_task_index, {index: 0});
-                    if (!this.current_experiment.is_training) {
+                    if (!this.current_view.is_training) {
                         store.dispatch(keys.a_update_experiment_index, {index: store.state[keys.s_current_experiment_index] + 1});
                     }
                     nextView();
@@ -243,21 +247,31 @@ try {
                 }      
             }
 
+            _form() {
+                /** @type {FormComponent} */
+                let form = this.content.querySelector('#form');
+                form.unchecked();
+            }
+
             _init() {
-                this.current_time = this.current_experiment.timer;
+                this.current_time = this.current_view.timer;
                 this._initEvents();
                 this._currentStatus();
                 this._desc();
                 this._task();
                 this._dataset();
                 this._timer();
+                this._form();
             }
             
             _submit() {
                 /** @type {FormComponent} */
                 let form = this.content.querySelector('#form');
                 let responses = form.submit();
-                this._transition(responses, false);
+                if (responses.some(bool => bool)) {
+                    // @TODO : Afficher une indication.
+                    this._transition(responses, false);
+                }
             }
 
             _initEvents() {
@@ -267,13 +281,15 @@ try {
             
             connectedCallback () {
                 /* Guard */
-                guardView(PAGE_NAMES.TASK);                
+                let is_legit = guardView(PAGE_NAMES.EXPE);
+                if (!is_legit) { return; }
                 /* Html */
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 /* Attributes */
                 this.content = this.querySelector('#main-page');
-                this.current_experiment = store.state[keys.s_view_objects][store.state[keys.s_current_experiment_index]];
-                this.current_time = this.current_experiment.timer;
+                /** @type {Experiment} */
+                this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
+                this.current_time = this.current_view.timer;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
                 this._submit = this._submit.bind(this); // Bind to remove listener (otherwise bind create a new function).

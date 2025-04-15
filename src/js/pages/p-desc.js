@@ -7,10 +7,11 @@ import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
+import { Desc } from 'JS/store/modules/view-classes';
 
 try {
     (function() {
-        const PAGE_NAME = PAGE_NAMES.TEXT;
+        const PAGE_NAME = PAGE_NAMES.DESC;
 
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
@@ -42,11 +43,9 @@ try {
                 <div class="container">
                     <div class="card m-auto">
                         <div class="card-body">
-                            <h3 id="title" class="card-title text-uppercase text-center">Title</h3>
-                            <div id="text" class="text-center mt-3">Text</div>
-                            <div class="mt-3">
-                                <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase mt-3 w-100">Button</button>
-                            </div>
+                            <h3 id="title" class="card-title text-uppercase text-center"></h3>
+                            <div id="body-text" class="text-center mt-3"></div>
+                            <div class="mt-3" id="btn-container"></div>
                         </div>
                     </div>
                 </div>
@@ -60,26 +59,30 @@ try {
 
             _init() {
                 let tag_title = this.content.querySelector('#title');
-                let view = store.state[keys.g_current_view];
-                if (view.hasOwnProperty('title')) {
-                    tag_title.textContent = view['title'];
+                tag_title.textContent = this.current_view.title;
+                let tag_text = this.content.querySelector('#body-text');
+                tag_text.textContent = this.current_view.body_text;
+                if (this.current_view.with_button) {
+                    let btn_container = this.content.querySelector('#btn-container');
+                    let btn = document.createElement('button');
+                    btn.textContent = this.current_view.button_text;
+                    btn.classList.add('btn', 'btn-primary', 'btn-lg', 'text-uppercase', 'mt-3', 'w-100');
+                    btn.addEventListener('click', nextView);
+                    btn_container.appendChild(btn);
                 }
-                let tag_text = this.content.querySelector('#text');
-                if (view.hasOwnProperty('text')) {
-                    tag_text.textContent = view['text'];
-                }
-                let btn = this.content.querySelector('#next-btn');
-                if (view.hasOwnProperty('btn')) {
-                    btn.textContent = view['btn'];
-                }
-                btn.addEventListener('click', nextView);
             }
          
             connectedCallback () {
-                guardView(PAGE_NAMES.TEXT);
-
+                 /* Guard */
+                 let is_legit = guardView(PAGE_NAMES.DESC);
+                 if (!is_legit) { return; }
+                /* Html */
                 this.appendChild(TEMPLATE.content.cloneNode(true));
+                /* Attributes */
                 this.content = this.querySelector('#main-page');
+                /** @type {Desc} */
+                this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];                
+                /* Methods */
                 this._init();
             }
           

@@ -81,7 +81,21 @@ export class FormComponent extends HTMLElement {
                 responses.push(input.checked);
             }
         }
+        console.log(`wc-form responses: ${responses}`);
+        
         return responses;
+    }
+
+    unchecked() {
+        let fieldsets = this.content.querySelectorAll('fieldset');
+        for (let i = 0; i < fieldsets.length; i++) {
+            let fieldset = fieldsets[i];
+            let inputs = fieldset.querySelectorAll('input');
+            for (let j = 0; j < inputs.length; j++) {
+                let input = inputs[j];
+                input.checked = false;
+            }
+        }
     }
     
     init() {
@@ -130,14 +144,13 @@ export class FormComponent extends HTMLElement {
         /** @type {View} */
         let current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
 
-        console.log('-- current_view --');
+        console.log('-- wc-form --');
         
         if (current_view instanceof Experiment) {
             this.questions.push(current_view.question)
         } else if (current_view instanceof Form) {
             this.questions.push(...current_view.questions);
-            console.log(this.questions);            
-        }
+        }           
         /* Methods */
         this.init();
     }

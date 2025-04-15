@@ -6,13 +6,13 @@ import 'JS/components/wc-form';
 import 'JS/components/wc-loading';
 
 /*** Pages ***/
-import 'JS/pages/authentication';
 import 'JS/pages/countdown';
-import 'JS/pages/form';
-import 'JS/pages/end';
-import 'JS/pages/score';
-import 'JS/pages/task';
-import 'JS/pages/text';
+import 'JS/pages/p-auth';
+import 'JS/pages/p-desc';
+import 'JS/pages/p-form';
+import 'JS/pages/p-score';
+import 'JS/pages/p-expe';
+
 
 /*** CSS ***/
 (function() {

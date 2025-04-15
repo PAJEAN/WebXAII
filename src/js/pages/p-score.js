@@ -70,7 +70,8 @@ try {
             }
          
             connectedCallback () {
-                guardView(PAGE_NAMES.SCORE);
+                let is_legit = guardView(PAGE_NAMES.SCORE);
+                if (!is_legit) { return; }
 
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');

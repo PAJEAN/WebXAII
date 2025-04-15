@@ -1,33 +1,5 @@
 // @ts-check
 
-/* -------------------------------------------------------------------------- */
-/*                                   CLASSES                                  */
-/* -------------------------------------------------------------------------- */
-
-export class View {
-
-    /**
-     * Check if json is compatible.
-     * @param {object} view 
-     */
-    static guard(view) {
-        if (!view.hasOwnProperty('type')) {
-            return false;
-        }
-
-        return true
-    }
-
-    /**
-     * @param {string} type 
-     */
-    constructor(type) {
-        this._type = type;
-    }
-
-    get type() { return this._type; }
-}
-
 class LabelOrImage {
 
     /**
@@ -137,6 +109,40 @@ class Task {
     get explanations() { return this._explanations; }
 }
 
+
+// 888     888 d8b                                 
+// 888     888 Y8P                                 
+// 888     888                                     
+// Y88b   d88P 888  .d88b.  888  888  888 .d8888b  
+//  Y88b d88P  888 d8P  Y8b 888  888  888 88K      
+//   Y88o88P   888 88888888 888  888  888 "Y8888b. 
+//    Y888P    888 Y8b.     Y88b 888 d88P      X88 
+//     Y8P     888  "Y8888   "Y8888888P"   88888P' 
+
+export class View {
+
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (!view.hasOwnProperty('type')) {
+            return false;
+        }
+
+        return true
+    }
+
+    /**
+     * @param {string} type 
+     */
+    constructor(type) {
+        this._type = type;
+    }
+
+    get type() { return this._type; }
+}
+
 export class Experiment extends View {
     
     /**
@@ -168,19 +174,22 @@ export class Experiment extends View {
     constructor(view) {
         super(view['type']);
         /** @type {Question} */
-        this._question    = new Question(view['question']);
+        this._question = new Question(view['question']);
         /** @type {Array<Task>} */
-        this._tasks       = view['tasks'];
+        this._tasks = view['tasks'];
         /** @type {string} */
-        this._desc        = view['desc'] ? view['desc']: '';
+        this._desc = view['desc'] ? view['desc']: '';
         /** @type {boolean} */
         this._is_training = view['is_training'] ? view['is_training']: false;
-        this._timer       = view['time'] ? parseInt(view['time']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._show_progression_bar = view['show_progression_bar'] ? view['show_progression_bar']: false;
+        this._timer = view['time'] ? parseInt(view['time']): -1; // -1 if no timer (otherwise it's the max timer).
     }
     
     get desc() { return this._desc; }
     get is_training() { return this._is_training; }
     get question() { return this._question; }
+    get show_progression_bar() { return this._show_progression_bar; }
     get tasks() { return this._tasks; }
     get timer() { return this._timer; }
 }
@@ -214,4 +223,32 @@ export class Form extends View {
     }
 
     get questions() { return this._questions; }
+}
+
+export class Desc extends View {
+    
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        return true;
+    }
+
+    /**
+     * @param {object} view
+     */
+    constructor(view) {
+        super(view['type']);
+        this._title       = view['title'] ? view['title']: '';
+        this._body_text   = view['body_text'] ? view['body_text']: '';
+        this._button_text = view['button_text'] ? view['button_text']: 'Next';
+        this._with_button = view['with_button'] ? view['with_button']: false;
+    }
+    
+    get title() { return this._title; }
+    get body_text() { return this._body_text; }
+    get button_text() { return this._button_text; }
+    get with_button() { return this._with_button; }
 }
