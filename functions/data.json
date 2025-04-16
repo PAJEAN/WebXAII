@@ -1,0 +1,190 @@
+{
+  "test": {
+    "date": "Wed Apr 16 2025 16:14:03 GMT+0200 (heure d’été d’Europe centrale)",
+    "roles": "user",
+    "views": [
+      {
+        "type": "page-expe",
+        "desc": "Exactly 3 squares",
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/datasets/2.jpg"
+            },
+            "model": {
+              "is_image": false,
+              "label": "Ceci est un texte pour le modèle"
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/datasets/test_lg.png"
+              }
+            ],
+            "expected": 0
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "Title",
+          "secondary_text": "Voici un sous texte plus long !",
+          "answers": [
+            "choix A",
+            "choix B"
+          ]
+        }
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Voici un sous texte plus long !",
+            "answers": [
+              "choix 1",
+              "choix 2"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "Hello World",
+        "body_text": "My first page",
+        "with_button": true,
+        "button_text": "Save",
+        "save": true
+      },
+      {
+        "type": "page-desc",
+        "title": "End",
+        "with_button": false
+      }
+    ],
+    "data": {
+      "experiments": [
+        [
+          {
+            "response": [
+              true,
+              false
+            ],
+            "time": 0,
+            "is_time_exceeded": false
+          }
+        ]
+      ],
+      "forms": [
+        [
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "test1": [],
+  "jixe": [],
+  "idkd": [],
+  "mbae": [],
+  "qunb": [],
+  "occh": [],
+  "ibkt": [],
+  "nktn": [],
+  "oulk": [],
+  "gacj": [],
+  "xnae": [],
+  "sqdf": [],
+  "hobe": [],
+  "turb": [],
+  "gqtc": [],
+  "wylp": [],
+  "fyvu": [],
+  "racr": [],
+  "yqjz": [],
+  "vkyp": [],
+  "iuap": [],
+  "vcqs": [],
+  "qqbu": [],
+  "vpeu": [],
+  "xyxr": [],
+  "upvt": [],
+  "qski": [],
+  "lmmj": [],
+  "yyjg": [],
+  "bafn": [],
+  "slhi": [],
+  "ucuz": [],
+  "qzfw": [],
+  "eqsj": [],
+  "uzwp": [],
+  "dmli": [],
+  "qnaq": [],
+  "csvn": [],
+  "ncfx": [],
+  "ripj": [],
+  "jknr": [],
+  "ytcu": [],
+  "pcwr": [],
+  "fuyu": [],
+  "pnzr": [],
+  "fzzj": [],
+  "xxrx": [],
+  "rnnu": [],
+  "troj": [],
+  "xxrq": [],
+  "zhvk": [],
+  "giqk": [],
+  "lfoz": [],
+  "omgd": [],
+  "ykfw": [],
+  "mdwq": [],
+  "tign": [],
+  "wlib": [],
+  "pndn": [],
+  "ikvh": [],
+  "xykx": [],
+  "yury": [],
+  "wlrt": [],
+  "ndrn": [],
+  "imiw": [],
+  "tjdk": [],
+  "qato": [],
+  "kmti": [],
+  "ibch": [],
+  "aask": [],
+  "bojg": [],
+  "myzv": [],
+  "faba": [],
+  "gpik": [],
+  "qewa": [],
+  "meli": [],
+  "menn": [],
+  "qoxi": [],
+  "euqk": [],
+  "bklf": [],
+  "rdww": [],
+  "ksdi": [],
+  "eaxc": [],
+  "mhml": [],
+  "ehib": [],
+  "evtb": [],
+  "xpwa": [],
+  "nvjy": [],
+  "qqhz": [],
+  "cipo": [],
+  "aqir": [],
+  "oxfn": [],
+  "wcxf": [],
+  "jbdf": [],
+  "xduy": [],
+  "dpzl": [],
+  "yxsg": [],
+  "scfj": [],
+  "sfks": [],
+  "vngq": [],
+  "hdjg": []
+}

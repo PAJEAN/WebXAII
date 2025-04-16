@@ -3,7 +3,7 @@
 /* Lib */
 import { keys as keys_router, Router } from './router';
 /* Namespaces */
-import { PAGES_INFO } from 'JS/pages/__namespaces__';
+import { PAGE_NAMES, PAGES_INFO } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
@@ -68,22 +68,40 @@ export function guardView(expected_view) {
     return true;
 }
 
-export function viewToObject() {
+export function viewToObject(data) {
     let views = []
-    for (let view of TEST_VIEW) {
-        if (!view.hasOwnProperty('type')) {
-            return [];
-        }
-
-        if (view['type'] in PAGES_INFO && PAGES_INFO[view['type']].class_type) {
+    for (let view of data) {
+        if (view.hasOwnProperty('type') &&
+            view['type'] in PAGES_INFO &&
+            PAGES_INFO[view['type']].class_type &&
+            typeof PAGES_INFO[view['type']].class_type.guard === 'function'
+        ) {
             if (!PAGES_INFO[view['type']].class_type.guard(view)) {
                 console.warn(`${view['type']} not readable`);
-                return [];
+                views.push({});
             }
             views.push(new PAGES_INFO[view['type']].class_type(view));
         } else {
             views.push({});
         }
-    }
+    }    
     return views;
+}
+
+export function experimentCompleted(views) {
+    let experiment_completed = [];
+    let page_task = views.filter(it => it['type'] == PAGE_NAMES.EXPE);
+    for (let experiment of page_task) {
+        experiment_completed.push(new Array(experiment['tasks'].length));
+    }
+    return experiment_completed;
+}
+
+export function formCompleted(views) {
+    let form_completed = [];
+    let page_form = views.filter(it => it['type'] == PAGE_NAMES.FORM);
+    for (let _ of page_form) {
+        form_completed.push(new Array());
+    }
+    return form_completed;
 }

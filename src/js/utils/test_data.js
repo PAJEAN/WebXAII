@@ -33,6 +33,14 @@ export const TEST_VIEW = [
         ]
     },
     {
+        type: 'page-desc',
+        title: 'Rule',
+        body_text: 'Exactly 3 squares',
+        button_text: 'Next',
+        with_button: true,
+        save: true
+    },
+    {
         type: 'page-expe',
         desc: 'Exactly 3 squares',
         show_progression_bar: true, // opt
@@ -119,7 +127,7 @@ export const TEST_VIEW = [
         type: 'page-desc',
         title: 'Rule',
         body_text: 'Exactly 3 squares',
-        btn: 'Next',
+        button_text: 'Next',
         with_button: true
     },
     {
@@ -148,22 +156,9 @@ export const TEST_VIEW = [
             }
         ]
     },
+    {
+        type: 'page-desc',
+        title: 'Thank',
+        with_button: false
+    },
 ];
-
-export function testExperimentCompleted() {
-    let experiment_completed = [];
-    let page_task = TEST_VIEW.filter(it => it['type'] == 'page-expe');
-    for (let experiment of page_task) {
-        experiment_completed.push(new Array(experiment['tasks'].length));
-    }
-    return experiment_completed;
-}
-
-export function testFormCompleted() {
-    let form_completed = [];
-    let page_form = TEST_VIEW.filter(it => it['type'] == 'page-form');
-    for (let _ of page_form) {
-        form_completed.push(new Array());
-    }
-    return form_completed;
-}

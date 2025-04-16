@@ -175,7 +175,7 @@ try {
                     tag_source_model.appendChild(div);
                 }
                 if (task.model) {
-                    let div = this._createCard('Model', task.source.label, task.source.is_image);
+                    let div = this._createCard('Model', task.model.label, task.model.is_image);
                     tag_source_model.appendChild(div);
                 }
                 if (task.explanations) {
@@ -232,7 +232,7 @@ try {
                 clearInterval(this.timer_id);
 
                 if (!this.current_view.is_training) {
-                    store.dispatch(keys.a_update_experiment_completed, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
+                    store.dispatch(keys.a_update_experiment_completed_at, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
                 }
 
                 if (store.state[keys.s_current_task_index] + 1 >= this.current_view.tasks.length) {

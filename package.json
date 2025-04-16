@@ -18,6 +18,7 @@
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^10.2.4",
+    "cors": "^2.8.5",
     "css-loader": "^6.11.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.16",
@@ -26,7 +27,6 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "aws-sdk": "^2.1185.0",
     "compression": "^1.7.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1"

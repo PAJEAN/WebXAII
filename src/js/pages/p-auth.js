@@ -7,8 +7,8 @@ import { login } from 'JS/lib/authentication';
 import { nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
-// import { keys as a_keys } from 'JS/store/modules/common';
-// import { keys as p_keys } from 'JS/store/modules/preferences';
+import { keys } from 'JS/store/modules/view';
+import { keys as c_keys } from 'JS/store/modules/common';
 
 try {
     (function() {
@@ -86,7 +86,7 @@ try {
                 <div class="container deconnexion">
                     <div>Vous êtes déja connecté. Voulez-vous vous déconnecter ?</div>
 
-                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Connexion</button>
+                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Deconnexion</button>
                 </div>
             </div>
 
@@ -106,22 +106,51 @@ try {
                 login_content.style.display = 'none';
                 loading.style.display = 'block';
 
-                login(uid)
-                .then(() => {
-                    // window.location.hash = '#/regles';
-                    // nextPage();
+
+                // TODO: Need to keep uid.
+                store.dispatch(keys.a_fetch_view, {uid: uid})
+                .then((data) => {
+                    loading.style.display = 'none';
+
+                    store.dispatch(c_keys.a_login, {
+                        is_authentication: true,
+                        uid: uid,
+                        role: data.roles
+                    });
+
+                    console.log(store.state['is_authentication'], store.state['uid'], store.state['roles']);
+                    
+                    nextView();
                 })
                 .catch((err) => {
 
                     // TEST.
                     // window.location.hash = '#/regles';
-                    nextView();
+                    // nextView();
                     //
+
+                    console.error(err);
 
                     login_content.style.display = 'block';
                     loading.style.display = 'none';
                     this.error_tag.innerHTML = `Oups... Une erreur s'est produite !`;
                 });
+
+                // login(uid)
+                // .then(() => {
+                //     loading.style.display = 'none';
+                //     console.log('CONNECT');
+
+                    
+                // })
+                // .catch((err) => {
+
+                //     console.error(err);
+
+                //     login_content.style.display = 'block';
+                //     loading.style.display = 'none';
+                //     this.error_tag.innerHTML = `Oups... Une erreur s'est produite !`;
+                // });
             }
 
             _init() {

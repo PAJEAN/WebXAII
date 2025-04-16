@@ -8,6 +8,8 @@ import { guardView, nextView } from 'JS/lib/view-manager';
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
 import { Desc } from 'JS/store/modules/view-classes';
+/* Utils */
+import { DATA_URL } from 'JS/utils/constants';
 
 try {
     (function() {
@@ -57,6 +59,28 @@ try {
                 super();
             }
 
+            _submit() {
+                if (this.current_view.save) {                    
+                    // @ts-ignore
+                    axios.patch(DATA_URL, {
+                        // uid: store.state.uid,
+                        uid: 'test',
+                        data: {
+                            experiments: store.state[keys.s_experiment_completed],
+                            forms: store.state[keys.s_form_completed]
+                        }
+                    })
+                    .then(() => {
+                        console.log('Sending data');
+                        nextView();
+                    }, (err) => {
+                        console.error(err);
+                    });
+                } else {
+                    nextView();
+                }
+            }
+
             _init() {
                 let tag_title = this.content.querySelector('#title');
                 tag_title.textContent = this.current_view.title;
@@ -67,7 +91,7 @@ try {
                     let btn = document.createElement('button');
                     btn.textContent = this.current_view.button_text;
                     btn.classList.add('btn', 'btn-primary', 'btn-lg', 'text-uppercase', 'mt-3', 'w-100');
-                    btn.addEventListener('click', nextView);
+                    btn.addEventListener('click', this._submit);
                     btn_container.appendChild(btn);
                 }
             }
@@ -82,6 +106,7 @@ try {
                 this.content = this.querySelector('#main-page');
                 /** @type {Desc} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];                
+                this._submit = this._submit.bind(this);
                 /* Methods */
                 this._init();
             }

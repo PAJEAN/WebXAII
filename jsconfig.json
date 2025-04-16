@@ -7,5 +7,7 @@
             "CSS/*": ["src/css/*"]
         }
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

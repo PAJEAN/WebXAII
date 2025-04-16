@@ -47,7 +47,7 @@ try {
             }
 
             _transition(response) {
-                store.dispatch(keys.a_update_form_completed, {answer: response});
+                store.dispatch(keys.a_update_form_completed_at, {answer: response});
                 store.dispatch(keys.a_update_form_index, {index: store.state[keys.s_current_form_index] + 1});
                 nextView();
             }

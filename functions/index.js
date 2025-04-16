@@ -1,42 +1,108 @@
-/* Packages */
+/* -------------------------------------------------------------------------- */
+/*                                  PACKAGES                                  */
+/* -------------------------------------------------------------------------- */
+
 const fs = require('fs');
 const path = require('path');
 const compression = require('compression');
 /* Express */
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
+
+/* For dev */
+app.use(cors());
+
 const router = express.Router();
 app.use(express.json()); // Body parser.
 app.use(express.static('dist')); // Static files.
 app.use(compression());
+
+
 /* DotEnv */
 require('dotenv').config();
-/* AWS */
-// const AWS = require('aws-sdk');
-// const s3 = new AWS.S3({
-//     apiVersion: '2006-03-01',
-//     accessKeyId: process.env.ACCESSKEYID,
-//     secretAccessKey: process.env.SECRETACCESSKEY,
-//     endpoint: 'https://s3.filebase.com'
-// });
-// const BUCKETNAME = 'ceris-applications';
-// const BUCKETFILENAME = 'kami.json';
 
-/** ROUTES **/
+/* -------------------------------------------------------------------------- */
+/*                                  CONSTANTS                                 */
+/* -------------------------------------------------------------------------- */
+
+const DATA_FILEPATH   = 'data.json';
+const DIST_FOLDERNAME = 'dist';
+const INDEX_FILENAME  = 'index.html';
+
+/* -------------------------------------------------------------------------- */
+/*                                   ROUTES                                   */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Main route.
+ */
 router.get('/', function(req, res) {
     let root_folder = path.resolve(__dirname, '..');
-    res.sendFile(path.join(root_folder + '/dist/index.html'));
+    res.sendFile(path.join(root_folder, DIST_FOLDERNAME, INDEX_FILENAME));
 });
 
+/**
+ * Check if user id exist.
+ */
 router.post('/api/users', function(req, res) {
-    const uid = req.body.uid;
-    let rawdata = fs.readFileSync(path.join(__dirname + '/matrix.json'));
-    let matrices = JSON.parse(rawdata);
-    res.status(matrices.hasOwnProperty(uid) ? 200: 401).json({error: matrices.hasOwnProperty(uid)});
+    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
+    let data = JSON.parse(rawdata);
+    const USER_ID = req.body.uid;
+    return res.status(data.hasOwnProperty(USER_ID) ? 200: 401).json({error: data.hasOwnProperty(USER_ID)});
 });
 
+/**
+ * Get user data.
+ */
+router.get('/api/data', (req, res) => {
+    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
+    let data = JSON.parse(rawdata);
+    const USER_ID = req.query.uid;    
+
+    if (!data.hasOwnProperty(USER_ID)) {
+        return res.status(401).json({error: data.hasOwnProperty(USER_ID)});
+    }
+
+    let user_data = {
+        roles:  data[USER_ID]['roles'] ? data[USER_ID]['roles']: '',
+        views: data[USER_ID]['views']
+    };
+    return res.status(200).json(user_data);
+});
+
+/**
+ * Edit an entry of data.json.
+ */
+router.patch('/api/data', (req, res) => {
+    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
+    let matrices = JSON.parse(rawdata);
+
+    const uid = req.body.uid;
+    const data_received = req.body.data;
+
+    if (matrices.hasOwnProperty(uid)) {
+        let today = new Date(Date.now());
+        matrices[uid]['date'] = today.toDateString() + ' ' + today.toTimeString();
+        matrices[uid]['data'] = data_received;
+
+        let data = JSON.stringify(matrices, null, 2);
+
+        console.log(data);
+
+        fs.writeFileSync(path.join(__dirname, DATA_FILEPATH), data);
+        return res.status(200).json({});
+    } else {
+        return res.status(401).json({
+            error: true
+        });
+    }
+});
+
+/* Admin - Add new user id */
 router.patch('/api/users', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname + '/matrix.json'));
+    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
     let matrices = JSON.parse(rawdata);
 
     const pwd = req.body.pwd;
@@ -46,7 +112,7 @@ router.patch('/api/users', (req, res) => {
         matrices = {...matrices, [uid]: {}};
 
         let data = JSON.stringify(matrices, null, 2);
-        fs.writeFileSync(path.join(__dirname + '/matrix.json'), data);
+        fs.writeFileSync(path.join(__dirname, DATA_FILEPATH), data);
 
         res.status(200).json({
             patch: true
@@ -58,20 +124,9 @@ router.patch('/api/users', (req, res) => {
     }
 });
 
-router.get('/api/matrix', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname + '/matrix.json'));
-    let matrices = JSON.parse(rawdata);
-
-    const id = req.query.id;
-
-    let matrix = matrices[id];
-    matrix.id = id;
-
-    res.status(200).json(matrix);
-});
-
+/* Admin - Get all data */
 router.post('/api/matrix', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname + '/matrix.json'));
+    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
     let matrices = JSON.parse(rawdata);
 
     const pwd = req.body.pwd;
@@ -82,50 +137,6 @@ router.post('/api/matrix', (req, res) => {
             error: true
         });
     }
-});
-
-// Edit an entry of matrices.json.
-router.patch('/api/matrix', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname + '/matrix.json'));
-    let matrices = JSON.parse(rawdata);
-
-    const uid = req.body.uid;
-    const matrix = req.body.matrix;
-
-    if (matrices.hasOwnProperty(uid)) {
-        let today = new Date(Date.now());
-        matrices[uid] = {}
-        matrices[uid]['date'] = today.toDateString() + ' ' + today.toTimeString();
-        matrices[uid]['matrix'] = matrix;
-
-        let data = JSON.stringify(matrices, null, 2);
-        fs.writeFileSync(path.join(__dirname + '/matrix.json'), data);
-
-        // s3.putObject({
-        //     Bucket: BUCKETNAME,
-        //     Key: BUCKETFILENAME,
-        //     Body: data,
-        //     ContentType: 'application/json',
-        // }, function(err, data) {
-        //     if (err) { // An error occurred.
-        //         let content = `${today} - ${err.stack.toString()}\n`;
-        //         fs.writeFileSync(path.join(__dirname + '/log.txt'), content, { flag: 'a+' }, err => {});
-
-        //         res.status(500).json({
-        //             error: true
-        //         });
-        //     } 
-        //     else { // Successful response.
-        //         res.status(200).json({
-        //             patch: true
-        //         });
-        //     }
-        // });
-    } else {
-        res.status(401).json({
-            error: true
-        });
-    }    
 });
 
 app.use('/', router);

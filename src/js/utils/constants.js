@@ -1,3 +1,4 @@
-const MAIN_URL = window.location.origin;
+// const MAIN_URL = window.location.origin;
+const MAIN_URL = 'http://localhost:3000';
 export const USER_URL = MAIN_URL + '/api/users';
-export const MATRIX_URL = MAIN_URL + '/api/matrix';
+export const DATA_URL = MAIN_URL + '/api/data';

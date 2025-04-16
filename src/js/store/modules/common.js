@@ -14,22 +14,25 @@ export const module = {
     },
     actions: {
         [keys.a_login](context, payload) {
-            return new Promise((resolve, reject) => {
-                axios.post(USER_URL, {uid: payload.uid})
-                .then((response) => {
-                    const data = response.data; // Response: null or an object.
-                    if (data) {
-                        context.commit(`AUTHENTICATION`, {is_authentication: true});
-                        context.commit(`UID`, payload);
-                        context.commit(`ADD_ROLES`, {role: data.role ? data.role : 'user'});
-                        resolve();
-                    } else {
-                        reject();
-                    }
-                }, (err) => {
-                    reject(err);
-                });
-            });
+            context.commit(`AUTHENTICATION`, payload);
+            context.commit(`UID`, payload);
+            context.commit(`ADD_ROLES`, payload);
+            // return new Promise((resolve, reject) => {
+            //     axios.post(USER_URL, {uid: payload.uid})
+            //     .then((response) => {
+            //         const data = response.data; // Response: null or an object.
+            //         if (data) {
+            //             context.commit(`AUTHENTICATION`, {is_authentication: true});
+            //             context.commit(`UID`, payload);
+            //             context.commit(`ADD_ROLES`, {role: data.role ? data.role : 'user'});
+            //             resolve();
+            //         } else {
+            //             reject();
+            //         }
+            //     }, (err) => {
+            //         reject(err);
+            //     });
+            // });
         },
         [keys.a_logout](context, payload) {
             context.commit(`AUTHENTICATION`, {is_authentication: false});
