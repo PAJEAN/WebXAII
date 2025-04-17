@@ -1,9 +1,9 @@
 // @ts-check
 
-/* Namespaces */
-import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
 import { guardView, nextView } from 'JS/lib/view-manager';
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
@@ -63,8 +63,8 @@ try {
                 if (this.current_view.save) {                    
                     // @ts-ignore
                     axios.patch(DATA_URL, {
-                        // uid: store.state.uid,
-                        uid: 'test',
+                        uid: store.state.uid,
+                        // uid: 'test',
                         data: {
                             experiments: store.state[keys.s_experiment_completed],
                             forms: store.state[keys.s_form_completed]

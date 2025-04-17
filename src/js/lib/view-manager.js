@@ -7,8 +7,6 @@ import { PAGE_NAMES, PAGES_INFO } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
-/* Utils */
-import { TEST_VIEW } from 'JS/utils/test_data';
 
 function getCurrentViewType() {
     let current_view = store.state[keys.g_current_view];
@@ -20,9 +18,12 @@ function getCurrentViewType() {
     return current_view['type'];
 }
 
+/**
+ * Views is link to pages with the "type" key and PAGE_INFO dict.
+ */
 export function changePage() {
 
-    function reloadOrNewComponent(current_component_name) {        
+    function reloadOrNewComponent(current_component_name) {
         if (window.location.hash == `#${PAGES_INFO[current_component_name].route.path}`) {
             ROUTER.navigate(`#${PAGES_INFO[current_component_name].route.path}`);
         } else {            
@@ -68,6 +69,11 @@ export function guardView(expected_view) {
     return true;
 }
 
+/**
+ * View objects is used in pages/components to less depend on json key.
+ * @param {object} data 
+ * @returns {Array<object>} View objects.
+ */
 export function viewToObject(data) {
     let views = []
     for (let view of data) {

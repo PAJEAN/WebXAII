@@ -2,7 +2,6 @@
 
 /* Components */
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
-import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
@@ -36,14 +35,25 @@ export class FormComponent extends HTMLElement {
         super();
     }
 
-    checkbox(id, value, content) {
+    /**
+     * @param {string} type 
+     * @param {string} id 
+     * @param {string} value_or_name 
+     * @param {string} content 
+     * @returns 
+     */
+    inputType(type, id, value_or_name, content) {
         let div = document.createElement('div');
         div.classList.add('form-check');
         let input = document.createElement('input');
         input.classList.add('form-check-input');
-        input.setAttribute('type', 'checkbox');
+        input.setAttribute('type', type);
         input.setAttribute('id', id);
-        input.setAttribute('value', value);
+        if (type == 'checkbox') {
+            input.setAttribute('value', value_or_name);
+        } else {
+            input.setAttribute('name', value_or_name);
+        }
         let label = document.createElement('label');
         label.classList.add('form-check-label');
         label.setAttribute('for', id);
@@ -53,23 +63,10 @@ export class FormComponent extends HTMLElement {
         return div;
     }
 
-    radio(id, name, content) {
-        let div = document.createElement('div');
-        div.classList.add('form-check');
-        let input = document.createElement('input');
-        input.classList.add('form-check-input');
-        input.setAttribute('type', 'radio');
-        input.setAttribute('id', id);
-        input.setAttribute('name', name);
-        let label = document.createElement('label');
-        label.classList.add('form-check-label');
-        label.setAttribute('for', id);
-        label.textContent = content;
-        div.appendChild(input);
-        div.appendChild(label)
-        return div;
-    }
-
+    /**
+     * Return all input checked status.
+     * @returns {Array<boolean>}
+     */
     submit() {
         let responses = [];
         let fieldsets = this.content.querySelectorAll('fieldset');
@@ -81,11 +78,15 @@ export class FormComponent extends HTMLElement {
                 responses.push(input.checked);
             }
         }
+        
         console.log(`wc-form responses: ${responses}`);
         
         return responses;
     }
 
+    /**
+     * Unchecked all inputs.
+     */
     unchecked() {
         let fieldsets = this.content.querySelectorAll('fieldset');
         for (let i = 0; i < fieldsets.length; i++) {
@@ -121,10 +122,10 @@ export class FormComponent extends HTMLElement {
                 let div;
                 switch (question.type) {
                     case 'radio':
-                        div = this.radio(`#${i}_${j}`, `name-${i}`, answer);
+                        div = this.inputType('radio', `#${i}_${j}`, `name-${i}`, answer);
                         break;
                     default:
-                        div = this.checkbox(`#${i}_${j}`, j, answer);
+                        div = this.inputType('checkbox', `#${i}_${j}`, 'j', answer);
                 }
                 fieldset.appendChild(div);
                 j++;
@@ -147,7 +148,7 @@ export class FormComponent extends HTMLElement {
         console.log('-- wc-form --');
         
         if (current_view instanceof Experiment) {
-            this.questions.push(current_view.question)
+            this.questions.push(current_view.question);
         } else if (current_view instanceof Form) {
             this.questions.push(...current_view.questions);
         }           

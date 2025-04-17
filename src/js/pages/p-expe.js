@@ -171,11 +171,11 @@ try {
                 let task = this.current_view.tasks[store.state[keys.s_current_task_index]];
                 
                 if (task.source) {
-                    let div = this._createCard('Source', task.source.label, task.source.is_image);
+                    let div = this._createCard(task.source.title, task.source.label, task.source.is_image);
                     tag_source_model.appendChild(div);
                 }
                 if (task.model) {
-                    let div = this._createCard('Model', task.model.label, task.model.is_image);
+                    let div = this._createCard(task.model.title, task.model.label, task.model.is_image);
                     tag_source_model.appendChild(div);
                 }
                 if (task.explanations) {
@@ -184,7 +184,7 @@ try {
                     }
                     let i = 1;
                     for (let item of task.explanations) {
-                        let div = this._createCard(`Explanation #${i}`, item.label, item.is_image);
+                        let div = this._createCard(item.title, item.label, item.is_image);
                         tag_explanation.appendChild(div);
                         i++;
                     }
@@ -198,31 +198,28 @@ try {
 
             _task() {
                 let tag = this.content.querySelector('#task');
-                let text = '';
-                if (this.current_view.is_training) {
-                    text = `Training task`;
-                } else {
-                    text = `Task n°${store.state[keys.s_current_experiment_index] + 1}`;
-                }
-                tag.textContent = text;
+                tag.textContent = this.current_view.title;
             }
 
             _timer() {
-                if (this.current_time >= 0) {
-                    let tag = this.content.querySelector('#timer');
-                    tag.textContent = this.current_time.toFixed(2);
-                    let delta_time = 1000;
-                    this.timer_id = window.setInterval(() => {
-                        this.current_time -= delta_time/1000;
-                        tag.textContent = (Math.round(this.current_time * 100) / 100).toFixed(2);
-                        if (this.current_time <= 0) {
-                            /** @type {FormComponent} */
-                            let form = this.content.querySelector('#form');
-                            let responses = form.submit();
-                            this._transition(responses, true);
+                let tag = this.content.querySelector('#timer');
+                
+                if (this.current_view.timer >= 0) {
+                    tag.textContent = this.current_view.timer.toFixed(2);
+                }
+                let delta_time = 1000;
+                this.timer_id = window.setInterval(() => {
+                        this.current_time += delta_time/1000;
+                        if (this.current_view.timer >= 0) {
+                            tag.textContent = (Math.round((this.current_view.timer - this.current_time) * 100) / 100).toFixed(2);
+                            if (this.current_time >= this.current_view.timer) {
+                                /** @type {FormComponent} */
+                                let form = this.content.querySelector('#form');
+                                let responses = form.submit();
+                                this._transition(responses, true);
+                            }
                         }
                     }, delta_time);
-                }
             }
 
             _transition(response, is_time_exceeded) {
@@ -232,7 +229,7 @@ try {
                 clearInterval(this.timer_id);
 
                 if (!this.current_view.is_training) {
-                    store.dispatch(keys.a_update_experiment_completed_at, {response: response, time: Math.max(this.current_time, 0), is_time_exceeded: is_time_exceeded});
+                    store.dispatch(keys.a_update_experiment_completed_at, {response: response, time: this.current_time, is_time_exceeded: is_time_exceeded});
                 }
 
                 if (store.state[keys.s_current_task_index] + 1 >= this.current_view.tasks.length) {
@@ -254,7 +251,7 @@ try {
             }
 
             _init() {
-                this.current_time = this.current_view.timer;
+                this.current_time = 0;
                 this._initEvents();
                 this._currentStatus();
                 this._desc();
@@ -269,14 +266,14 @@ try {
                 let form = this.content.querySelector('#form');
                 let responses = form.submit();
                 if (responses.some(bool => bool)) {
-                    // @TODO : Afficher une indication.
+                    // TODO : Afficher une indication.
                     this._transition(responses, false);
                 }
             }
 
             _initEvents() {
                 let submit_btn = this.content.querySelector('#submit-btn');
-                submit_btn.addEventListener('click', this._submit);                
+                submit_btn.addEventListener('click', this._submit);
             }
             
             connectedCallback () {
@@ -289,7 +286,7 @@ try {
                 this.content = this.querySelector('#main-page');
                 /** @type {Experiment} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
-                this.current_time = this.current_view.timer;
+                this.current_time = 0;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
                 this._submit = this._submit.bind(this); // Bind to remove listener (otherwise bind create a new function).

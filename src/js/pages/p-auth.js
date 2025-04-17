@@ -3,7 +3,6 @@
 /* Namespaces */
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
-import { login } from 'JS/lib/authentication';
 import { nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
@@ -18,13 +17,6 @@ try {
         TEMPLATE.innerHTML = /* html */`
 
             <style>
-                /* -- TYPES -- */
-                /* Positioning */
-                /* Display & Box Model */
-                /* Color */  
-                /* Text */
-                /* Other */
-
                 #main-page {
                     min-height: 100vh;
                 }
@@ -117,18 +109,10 @@ try {
                         uid: uid,
                         role: data.roles
                     });
-
-                    console.log(store.state['is_authentication'], store.state['uid'], store.state['roles']);
                     
                     nextView();
                 })
                 .catch((err) => {
-
-                    // TEST.
-                    // window.location.hash = '#/regles';
-                    // nextView();
-                    //
-
                     console.error(err);
 
                     login_content.style.display = 'block';

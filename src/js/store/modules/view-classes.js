@@ -19,13 +19,15 @@ class LabelOrImage {
      * @param {string} label 
      * @param {boolean} is_image 
      */
-    constructor(label, is_image = false) {
+    constructor(label, is_image = false, title = '') {
         this._label = label;
         this._is_image = is_image;
+        this._title = title;
     }
 
     get label() { return this._label; }
     get is_image() { return this._is_image; }
+    get title() { return this._title; }
 }
 
 export class Question {
@@ -178,12 +180,14 @@ export class Experiment extends View {
         /** @type {Array<Task>} */
         this._tasks = view['tasks'];
         /** @type {string} */
+        this._title = view['title'] ? view['title']: '';
+        /** @type {string} */
         this._desc = view['desc'] ? view['desc']: '';
         /** @type {boolean} */
         this._is_training = view['is_training'] ? view['is_training']: false;
         /** @type {boolean} */
         this._show_progression_bar = view['show_progression_bar'] ? view['show_progression_bar']: false;
-        this._timer = view['time'] ? parseInt(view['time']): -1; // -1 if no timer (otherwise it's the max timer).
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
     }
     
     get desc() { return this._desc; }
@@ -192,6 +196,7 @@ export class Experiment extends View {
     get show_progression_bar() { return this._show_progression_bar; }
     get tasks() { return this._tasks; }
     get timer() { return this._timer; }
+    get title() { return this._title; }
 }
 
 export class Form extends View {

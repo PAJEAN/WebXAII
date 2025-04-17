@@ -19,5 +19,3 @@ npm run build
 ```
 node functions/index.js
 ```
-
-TODO: total time spent on pages.
