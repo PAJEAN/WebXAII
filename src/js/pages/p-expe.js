@@ -45,7 +45,7 @@ try {
 
             <div id="main-page" class="d-flex flex-column justify-content-center">
 
-                <div class="container container-decoration mt-2 p-2">
+                <div class="container container-decoration mt-2 p-2" id="titlebox">
                     <h3 id="task" class="container">Task</h3>
     
                     <div id="desc" class="container fs-5">
@@ -194,11 +194,18 @@ try {
             _desc() {
                 let tag = this.content.querySelector('#desc');
                 tag.textContent = `${this.current_view.desc}`;
+
             }
 
             _task() {
                 let tag = this.content.querySelector('#task');
                 tag.textContent = this.current_view.title;
+                let tag_desc = this.content.querySelector('#desc');
+
+                if (!tag.textContent && !tag_desc.textContent){
+                     let titlebox = this.content.querySelector('#titlebox');
+                     titlebox.style.display = "none"
+                }
             }
 
             _timer() {
