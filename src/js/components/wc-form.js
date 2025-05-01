@@ -51,7 +51,7 @@ export class FormComponent extends HTMLElement {
         input.setAttribute('id', id);
         if (type == 'checkbox') {
             input.setAttribute('value', value_or_name);
-        } else {
+        } else if (type == 'radio'){
             input.setAttribute('name', value_or_name);
         }
         let label = document.createElement('label');
@@ -123,6 +123,9 @@ export class FormComponent extends HTMLElement {
                 switch (question.type) {
                     case 'radio':
                         div = this.inputType('radio', `#${i}_${j}`, `name-${i}`, answer);
+                        break;
+                    case 'textfield':
+                        div = this.inputType('text', `#${i}_${j}`, `name-${i}`, answer);
                         break;
                     default:
                         div = this.inputType('checkbox', `#${i}_${j}`, 'j', answer);
