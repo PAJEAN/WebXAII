@@ -46,13 +46,22 @@ export class FormComponent extends HTMLElement {
         let div = document.createElement('div');
         div.classList.add('form-check');
         let input = document.createElement('input');
-        input.classList.add('form-check-input');
+
         input.setAttribute('type', type);
         input.setAttribute('id', id);
         if (type == 'checkbox') {
             input.setAttribute('value', value_or_name);
+            input.classList.add('form-check-input');
         } else if (type == 'radio'){
             input.setAttribute('name', value_or_name);
+            input.classList.add('form-check-input');
+        }
+        else if (type == 'range'){
+            input.setAttribute('min', "0");
+            input.setAttribute('max', "100");
+        }
+        else if (type == 'text'){
+            input.setAttribute('size', "110");
         }
         let label = document.createElement('label');
         label.classList.add('form-check-label');
@@ -126,6 +135,9 @@ export class FormComponent extends HTMLElement {
                         break;
                     case 'textfield':
                         div = this.inputType('text', `#${i}_${j}`, `name-${i}`, answer);
+                        break;
+                    case 'slider':
+                        div = this.inputType('range', `#${i}_${j}`, `name-${i}`, answer);
                         break;
                     default:
                         div = this.inputType('checkbox', `#${i}_${j}`, 'j', answer);
