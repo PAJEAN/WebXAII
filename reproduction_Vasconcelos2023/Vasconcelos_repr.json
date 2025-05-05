@@ -1,0 +1,2277 @@
+{
+  "reprodA": {
+    "date": "Mon May 05 2025 21:44:23 GMT+0200 (heure d’été d’Europe centrale)",
+    "roles": "user",
+    "views": [
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "dio",
+            "primary_text": "Please answer the following demographic questions",
+            "secondary_text": "What is your gender ?",
+            "answers": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "What is your age ?",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (1/2)",
+        "body_text": "During this experiment, you will have to solve mazes with the help of an AI. You will first perform a training phase so that you get comfortable with the interface and the problem. As a first training task, you will have to solve a series of mazes by yourself, without any AI assistance. Throughout the training series, you will get a feedback each time you answer, so that you know if you took the right decision or not. Are you ready to do the first training series ?",
+        "button_text": "Start the first training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/bigmaze.png",
+              "title": ""
+            },
+            "expected": 1
+          },
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/bigmaze.png",
+              "title": ""
+            },
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (2/2)",
+        "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit. It is still you responsibility to take the decision you submit.",
+        "button_text": "Start the second training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Start of the experiment",
+        "body_text": "The training phase is over. You will now start the actual experiment. The task is the same as the last training task. However, you will not get a feedback indicating if made the right decisions anymore.",
+        "button_text": "Start the experiment",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": false,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Survey",
+        "body_text": "The task is now over, you are now about to reach the last part of the protocol, which is a survey. There will be three pages of questions. Please answer all of them and press Terminate to terminate the experiment. ",
+        "button_text": "Start the survey",
+        "with_button": true
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the AI that assisted you.",
+            "secondary_text": "I believe the AI is a competent performer.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I have confidence in the advice given by the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can depend on the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to behave in consistent ways.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to do its best every time I take its advice.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the task you had to perform.",
+            "secondary_text": "I found this task interesting.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult without the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Please select the option below which best represents how you used the AI.",
+            "answers": [
+              "I did not use the AI and completed the task by myself.",
+              "I first completed the task myself and then verified my response with the AI’s.",
+              "I first looked at the AI’s suggestion and then verified it was correct.",
+              "I always chose the AI’s suggestion."
+            ]
+          },
+          {
+            "type": "slider",
+            "primary_text": "",
+            "secondary_text": "Approximately, how accurate do you think the AI is? Please indicate using the slider below (from 0% to 100%).",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you used the AI when its suggestions were given to you.",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you chose between using the AI and doing the task yourself.",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about your personal preferences.",
+            "secondary_text": "I would prefer complex to simple problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I like to have the responsibility of handling a situation that requires a lot of thinking.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Thinking is not my idea of fun.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I really enjoy a task that involves coming up with new solutions to problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "The experiment is over",
+        "body_text": "Thank you for you participation to the experiment. Please click on Terminate.",
+        "with_button": true,
+        "button_text": "Terminate",
+        "save": true
+      },
+      {
+        "type": "page-desc",
+        "title": "",
+        "body_text": "You may now close this page.",
+        "with_button": false
+      }
+    ],
+    "data": {
+      "experiments": [
+        [
+          {
+            "response": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "time": 2,
+            "is_time_exceeded": false
+          },
+          {
+            "response": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "time": 1,
+            "is_time_exceeded": false
+          }
+        ],
+        [
+          {
+            "response": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "time": 1,
+            "is_time_exceeded": false
+          },
+          {
+            "response": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "time": 1,
+            "is_time_exceeded": false
+          }
+        ],
+        [
+          {
+            "response": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "time": 1,
+            "is_time_exceeded": false
+          },
+          {
+            "response": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "time": 1,
+            "is_time_exceeded": false
+          }
+        ]
+      ],
+      "forms": [
+        [
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ]
+    }
+  },
+  "reprodB": {
+    "date": "Thu May 01 2025 20:10:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "roles": "user",
+    "views": [
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "dio",
+            "primary_text": "Please answer the following demographic questions",
+            "secondary_text": "What is your gender ?",
+            "answers": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "What is your age ?",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (1/2)",
+        "body_text": "During this experiment, you will have to solve mazes with the help of an AI. You will first perform a training phase so that you get comfortable with the interface and the problem. As a first training task, you will have to solve a series of mazes by yourself, without any AI assistance. Throughout the training series, you will get a feedback each time you answer, so that you know if you took the right decision or not. Are you ready to do the first training series ?",
+        "button_text": "Start the first training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/bigmaze.png",
+              "title": ""
+            },
+            "expected": 1
+          },
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/bigmaze.png",
+              "title": ""
+            },
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (2/2)",
+        "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit, and will highlight the path it has detected in the maze. It is still you responsibility to take the decision you submit.",
+        "button_text": "Start the second training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Start of the experiment",
+        "body_text": "The training phase is over. You will now start the actual experiment. The task is the same as the last training task. However, you will not get a feedback indicating if made the right decisions anymore.",
+        "button_text": "Start the experiment",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": false,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/bigmaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Survey",
+        "body_text": "The task is now over, you are now about to reach the last part of the protocol, which is a survey. There will be three pages of questions. Please answer all of them and press Terminate to terminate the experiment. ",
+        "button_text": "Start the survey",
+        "with_button": true
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the AI that assisted you.",
+            "secondary_text": "I believe the AI is a competent performer.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I have confidence in the advice given by the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can depend on the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to behave in consistent ways.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to do its best every time I take its advice.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the task you had to perform.",
+            "secondary_text": "I found this task interesting.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult without the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Please select the option below which best represents how you used the AI.",
+            "answers": [
+              "I did not use the AI and completed the task by myself.",
+              "I first completed the task myself and then verified my response with the AI’s.",
+              "I first looked at the AI’s suggestion and then verified it was correct.",
+              "I always chose the AI’s suggestion."
+            ]
+          },
+          {
+            "type": "slider",
+            "primary_text": "",
+            "secondary_text": "Approximately, how accurate do you think the AI is? Please indicate using the slider below (from 0% to 100%).",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you used the AI when its suggestions were given to you.",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you chose between using the AI and doing the task yourself.",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about your personal preferences.",
+            "secondary_text": "I would prefer complex to simple problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I like to have the responsibility of handling a situation that requires a lot of thinking.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Thinking is not my idea of fun.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I really enjoy a task that involves coming up with new solutions to problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "The experiment is over",
+        "body_text": "Thank you for you participation to the experiment. Please click on Terminate.",
+        "with_button": true,
+        "button_text": "Terminate",
+        "save": true
+      },
+      {
+        "type": "page-desc",
+        "title": "",
+        "body_text": "You may now close this page.",
+        "with_button": false
+      }
+    ]
+  },
+  "reprodC": {
+    "date": "Thu May 01 2025 20:10:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "roles": "user",
+    "views": [
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "dio",
+            "primary_text": "Please answer the following demographic questions",
+            "secondary_text": "What is your gender ?",
+            "answers": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "What is your age ?",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (1/2)",
+        "body_text": "During this experiment, you will have to solve mazes with the help of an AI. You will first perform a training phase so that you get comfortable with the interface and the problem. As a first training task, you will have to solve a series of mazes by yourself, without any AI assistance. Throughout the training series, you will get a feedback each time you answer, so that you know if you took the right decision or not. Are you ready to do the first training series ?",
+        "button_text": "Start the first training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/mediummaze.png",
+              "title": ""
+            },
+            "expected": 1
+          },
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/mediummaze.png",
+              "title": ""
+            },
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (2/2)",
+        "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit. It is still you responsibility to take the decision you submit.",
+        "button_text": "Start the second training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Start of the experiment",
+        "body_text": "The training phase is over. You will now start the actual experiment. The task is the same as the last training task. However, you will not get a feedback indicating if made the right decisions anymore.",
+        "button_text": "Start the experiment",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": false,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Survey",
+        "body_text": "The task is now over, you are now about to reach the last part of the protocol, which is a survey. There will be three pages of questions. Please answer all of them and press Terminate to terminate the experiment. ",
+        "button_text": "Start the survey",
+        "with_button": true
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the AI that assisted you.",
+            "secondary_text": "I believe the AI is a competent performer.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I have confidence in the advice given by the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can depend on the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to behave in consistent ways.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to do its best every time I take its advice.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the task you had to perform.",
+            "secondary_text": "I found this task interesting.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult without the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Please select the option below which best represents how you used the AI.",
+            "answers": [
+              "I did not use the AI and completed the task by myself.",
+              "I first completed the task myself and then verified my response with the AI’s.",
+              "I first looked at the AI’s suggestion and then verified it was correct.",
+              "I always chose the AI’s suggestion."
+            ]
+          },
+          {
+            "type": "slider",
+            "primary_text": "",
+            "secondary_text": "Approximately, how accurate do you think the AI is? Please indicate using the slider below (from 0% to 100%).",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you used the AI when its suggestions were given to you.",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you chose between using the AI and doing the task yourself.",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about your personal preferences.",
+            "secondary_text": "I would prefer complex to simple problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I like to have the responsibility of handling a situation that requires a lot of thinking.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Thinking is not my idea of fun.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I really enjoy a task that involves coming up with new solutions to problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "The experiment is over",
+        "body_text": "Thank you for you participation to the experiment. Please click on Terminate.",
+        "with_button": true,
+        "button_text": "Terminate",
+        "save": true
+      },
+      {
+        "type": "page-desc",
+        "title": "",
+        "body_text": "You may now close this page.",
+        "with_button": false
+      }
+    ]
+  },
+  "reprodD": {
+    "date": "Thu May 01 2025 20:10:44 GMT+0200 (heure d’été d’Europe centrale)",
+    "roles": "user",
+    "views": [
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "dio",
+            "primary_text": "Please answer the following demographic questions",
+            "secondary_text": "What is your gender ?",
+            "answers": [
+              "M",
+              "F"
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "What is your age ?",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (1/2)",
+        "body_text": "During this experiment, you will have to solve mazes with the help of an AI. You will first perform a training phase so that you get comfortable with the interface and the problem. As a first training task, you will have to solve a series of mazes by yourself, without any AI assistance. Throughout the training series, you will get a feedback each time you answer, so that you know if you took the right decision or not. Are you ready to do the first training series ?",
+        "button_text": "Start the first training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/mediummaze.png",
+              "title": ""
+            },
+            "expected": 1
+          },
+          {
+            "source": {
+              "is_image": true,
+              "label": "assets/mediummaze.png",
+              "title": ""
+            },
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Training task (2/2)",
+        "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit, and will highlight the path it has detected in the maze. It is still you responsibility to take the decision you submit.",
+        "button_text": "Start the second training series",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": true,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Start of the experiment",
+        "body_text": "The training phase is over. You will now start the actual experiment. The task is the same as the last training task. However, you will not get a feedback indicating if made the right decisions anymore.",
+        "button_text": "Start the experiment",
+        "with_button": true
+      },
+      {
+        "type": "page-expe",
+        "title": "",
+        "desc": "",
+        "show_progression_bar": false,
+        "randomize": true,
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          },
+          {
+            "model": {
+              "is_image": false,
+              "label": "AI\"s suggestion : B",
+              "title": ""
+            },
+            "explanations": [
+              {
+                "is_image": true,
+                "label": "assets/mediummaze_sol.png",
+                "title": ""
+              }
+            ],
+            "expected": 1
+          }
+        ],
+        "question": {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "Which exit can you get to from the start ?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      },
+      {
+        "type": "page-desc",
+        "title": "Survey",
+        "body_text": "The task is now over, you are now about to reach the last part of the protocol, which is a survey. There will be three pages of questions. Please answer all of them and press Terminate to terminate the experiment. ",
+        "button_text": "Start the survey",
+        "with_button": true
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the AI that assisted you.",
+            "secondary_text": "I believe the AI is a competent performer.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I have confidence in the advice given by the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can depend on the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to behave in consistent ways.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I can rely on the AI to do its best every time I take its advice.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I trust the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about the task you had to perform.",
+            "secondary_text": "I found this task interesting.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult without the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Please select the option below which best represents how you used the AI.",
+            "answers": [
+              "I did not use the AI and completed the task by myself.",
+              "I first completed the task myself and then verified my response with the AI’s.",
+              "I first looked at the AI’s suggestion and then verified it was correct.",
+              "I always chose the AI’s suggestion."
+            ]
+          },
+          {
+            "type": "slider",
+            "primary_text": "",
+            "secondary_text": "Approximately, how accurate do you think the AI is? Please indicate using the slider below (from 0% to 100%).",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you used the AI when its suggestions were given to you.",
+            "answers": [
+              ""
+            ]
+          },
+          {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "In the box below, please describe how you chose between using the AI and doing the task yourself.",
+            "answers": [
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-form",
+        "questions": [
+          {
+            "type": "radio",
+            "primary_text": "Please complete the following survey about your personal preferences.",
+            "secondary_text": "I would prefer complex to simple problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I like to have the responsibility of handling a situation that requires a lot of thinking.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Thinking is not my idea of fun.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.",
+            "answers": [
+              "Strongly agree",
+              "Agree",
+              "Neither agree nor disagree",
+              "Disagree",
+              "Strongly disagree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I really enjoy a task that involves coming up with new solutions to problems.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Neither agree nor disagree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I found this task difficult even with the AI.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          },
+          {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "I would prefer to complete this task with the AI’s suggestions than to complete it by myself.",
+            "answers": [
+              "Strongly disagree",
+              "Disagree",
+              "Somewhat disagree",
+              "Neither agree nor disagree",
+              "Somewhat agree",
+              "Agree",
+              "Strongly agree"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-desc",
+        "title": "The experiment is over",
+        "body_text": "Thank you for you participation to the experiment. Please click on Terminate.",
+        "with_button": true,
+        "button_text": "Terminate",
+        "save": true
+      },
+      {
+        "type": "page-desc",
+        "title": "",
+        "body_text": "You may now close this page.",
+        "with_button": false
+      }
+    ]
+  }
+}
