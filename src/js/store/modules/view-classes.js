@@ -90,19 +90,19 @@ class Task {
         }
         return true
     }
-
+    
     /**
-     * 
-     * @param {number} expected // 0, 1, 2, etc... according to number of choices.
-     * @param {LabelOrImage | undefined} source 
-     * @param {LabelOrImage | undefined} model 
-     * @param {Array<LabelOrImage>} explanations 
+     * @param {object} view
      */
-    constructor(expected, source = undefined, model = undefined, explanations = []) {
-        this._expected = expected;
-        this._source = source;
-        this._model = model;
-        this._explanations = explanations;
+    constructor(view) {
+        /** @type {Array<number>} */
+        this._expected = typeof view['expected'] == 'number' ? [view['expected']]: view['expected']; // Array of correct indexes (only an integer it's for radio answers). Have to be the same length of number of choices.
+        /** @type {LabelOrImage | undefined} */
+        this._source = view.hasOwnProperty('source') ? view['source']: undefined;
+        /** @type {LabelOrImage | undefined} */
+        this._model = view.hasOwnProperty('model') ? view['model']: undefined;
+        /** @type {Array<LabelOrImage>} */
+        this._explanations = view.hasOwnProperty('explanations') ? view['explanations']: [];
     }
 
     get expected() { return this._expected; }
@@ -177,26 +177,69 @@ export class Experiment extends View {
         super(view['type']);
         /** @type {Question} */
         this._question = new Question(view['question']);
-        /** @type {Array<Task>} */
-        this._tasks = view['tasks'];
         /** @type {string} */
-        this._title = view['title'] ? view['title']: '';
+        this._title = view.hasOwnProperty('title') ? view['title']: '';
         /** @type {string} */
-        this._desc = view['desc'] ? view['desc']: '';
+        this._desc = view.hasOwnProperty('desc') ? view['desc']: '';
         /** @type {boolean} */
-        this._is_training = view['is_training'] ? view['is_training']: false;
+        this._is_training = view.hasOwnProperty('is_training') ? view['is_training']: false;
         /** @type {boolean} */
-        this._show_progression_bar = view['show_progression_bar'] ? view['show_progression_bar']: false;
+        this._show_progression_bar = view.hasOwnProperty('show_progression_bar') ? view['show_progression_bar']: false;
+        /** @type {number} */
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._randomize = view.hasOwnProperty('randomize') ? view['randomize']: false;
+        /** @type {boolean} */
+        this._feedback_answer_activated = view.hasOwnProperty('feedback_answer_activated') ? view['feedback_answer_activated']: false;
+        /** @type {string} */
+        this._feedback_answer_correct = view.hasOwnProperty('feedback_answer_correct') ? view['feedback_answer_correct']: '';
+        /** @type {string} */
+        this._feedback_answer_wrong = view.hasOwnProperty('feedback_answer_wrong') ? view['feedback_answer_wrong']: '';
+        /** @type {boolean} */
+        this._feedback_answer_show_expected = view.hasOwnProperty('feedback_answer_show_expected') ? view['feedback_answer_show_expected']: false;
+        /** @type {string} */
+        this._feedback_answer_expected_text = view.hasOwnProperty('feedback_answer_expected_text') ? view['feedback_answer_expected_text']: '';
+
+        /** @type {Array<Task>} */
+        this._tasks = [];
+        for (let task of view['tasks']) {
+            this._tasks.push(new Task(task));
+        }
+        this._order = [...Array(this._tasks.length).keys()];
+        if (this._randomize) {
+            this._order = this._fisherYatesShuffleImmutable(this._order);
+            let tasks = this._order.map(i => this._tasks[i]);
+            this._tasks = [...tasks];
+        }
     }
+
+    /**
+     * @param {Array} array
+     * @returns {Array}
+     */
+    _fisherYatesShuffleImmutable(array) {
+        const copy = [...array];
+        for (let i = copy.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copy[i], copy[j]] = [copy[j], copy[i]]; // swap
+        }
+        return copy;
+    }      
     
     get desc() { return this._desc; }
     get is_training() { return this._is_training; }
+    get order() { return this._order; }
     get question() { return this._question; }
+    get randomize() { return this._randomize; }
     get show_progression_bar() { return this._show_progression_bar; }
     get tasks() { return this._tasks; }
     get timer() { return this._timer; }
     get title() { return this._title; }
+    get feedback_answer_activated() { return this._feedback_answer_activated; }
+    get feedback_answer_correct() { return this._feedback_answer_correct; }
+    get feedback_answer_wrong() { return this._feedback_answer_wrong; }
+    get feedback_answer_show_expected() { return this._feedback_answer_show_expected; }
+    get feedback_answer_expected_text() { return this._feedback_answer_expected_text; }
 }
 
 export class Form extends View {

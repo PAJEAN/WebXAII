@@ -40,7 +40,7 @@ export class FormComponent extends HTMLElement {
      * @param {string} id 
      * @param {string} value_or_name 
      * @param {string} content 
-     * @returns 
+     * @returns {HTMLElement}
      */
     inputType(type, id, value_or_name, content) {
         let div = document.createElement('div');
@@ -49,46 +49,73 @@ export class FormComponent extends HTMLElement {
 
         input.setAttribute('type', type);
         input.setAttribute('id', id);
-        if (type == 'checkbox') {
-            input.setAttribute('value', value_or_name);
-            input.classList.add('form-check-input');
-        } else if (type == 'radio'){
-            input.setAttribute('name', value_or_name);
-            input.classList.add('form-check-input');
-        }
-        else if (type == 'range'){
-            input.setAttribute('min', "0");
-            input.setAttribute('max', "100");
-        }
-        else if (type == 'text'){
-            input.setAttribute('size', "110");
-        }
+
         let label = document.createElement('label');
-        label.classList.add('form-check-label');
+
+        switch(type) {
+            case 'checkbox':
+                input.setAttribute('value', value_or_name);
+                input.classList.add('form-check-input');
+                label.classList.add('form-check-label');
+                break;
+            case 'radio':
+                input.setAttribute('name', value_or_name);
+                input.classList.add('form-check-input');
+                label.classList.add('form-check-label');
+                break;
+            case 'range':
+                input.setAttribute('min', '0');
+                input.setAttribute('max', '100');
+                input.classList.add('form-range');
+                label.classList.add('form-label');
+                break;
+            case 'text':
+                input.setAttribute('size', '110');
+                input.classList.add('form-control');
+                label.classList.add('form-label');
+                break;
+        }
+        
         label.setAttribute('for', id);
         label.textContent = content;
-        div.appendChild(input);
+
         div.appendChild(label)
+        div.appendChild(input);
         return div;
     }
 
     /**
      * Return all input checked status.
-     * @returns {Array<boolean>}
+     * @returns {Array<Array<number|string>>}
      */
     submit() {
         let responses = [];
         let fieldsets = this.content.querySelectorAll('fieldset');
         for (let i = 0; i < fieldsets.length; i++) {
+            let current_responses = [];
             let fieldset = fieldsets[i];
             let inputs = fieldset.querySelectorAll('input');
             for (let j = 0; j < inputs.length; j++) {
                 let input = inputs[j];
-                responses.push(input.checked);
+
+                switch(input.type) {
+                    case 'checkbox':
+                    case 'radio':
+                        if (input.checked) {
+                            current_responses.push(j);
+                        }
+                        break;
+                    case 'range':
+                    case 'text':
+                        current_responses.push(input.value);
+                        break;
+                }
             }
+            responses.push(current_responses);
         }
         
-        console.log(`wc-form responses: ${responses}`);
+        console.log(`---- wc-form responses:`);
+        console.log(responses);
         
         return responses;
     }
@@ -103,7 +130,17 @@ export class FormComponent extends HTMLElement {
             let inputs = fieldset.querySelectorAll('input');
             for (let j = 0; j < inputs.length; j++) {
                 let input = inputs[j];
-                input.checked = false;
+                switch(input.type) {
+                    case 'checkbox':
+                    case 'radio':
+                        input.checked = false;
+                        break;
+                    case 'range':
+                        input.value = '50';
+                    case 'text':
+                        input.value = '';
+                        break;
+                }
             }
         }
     }

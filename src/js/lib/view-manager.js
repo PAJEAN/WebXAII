@@ -94,6 +94,11 @@ export function viewToObject(data) {
     return views;
 }
 
+/**
+ * Create a table with as many tables as there are experience views.
+ * @param {object} views 
+ * @returns 
+ */
 export function experimentCompleted(views) {
     let experiment_completed = [];
     let page_task = views.filter(it => it['type'] == PAGE_NAMES.EXPE);
