@@ -125,7 +125,7 @@ try {
 
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
 
-                            <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-primary btn-lg text-uppercase w-100 mt-4">Submit</button>
+                            <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-info btn-lg text-uppercase w-100 mt-4">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -162,13 +162,18 @@ try {
                 let alert = document.createElement('div');
                 alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'my-3');
                 alert.setAttribute('role', 'alert');
-                let text = `${is_correct ? this.current_view.feedback_answer_correct: this.current_view.feedback_answer_wrong}`;
+                let alert_title = document.createElement('h5');
+                alert_title.textContent = `${is_correct ? this.current_view.feedback_answer_correct: this.current_view.feedback_answer_wrong}`;
+                alert.appendChild(alert_title);
                 if (!is_correct && this.current_view._feedback_answer_show_expected) {
+                    let alert_hr = document.createElement('hr');
+                    alert.appendChild(alert_hr);
+                    let alert_expected = document.createElement('div');
                     let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
                     let expected_answers = expected.map(i => this.current_view.question.answers[i]);
-                    text = `${text} ${this.current_view._feedback_answer_expected_text} ${expected_answers.join(', ')}`;
+                    alert_expected.textContent = `${this.current_view._feedback_answer_expected_text} ${expected_answers.join(', ')}`;
+                    alert.appendChild(alert_expected);
                 }
-                alert.textContent = text
                 alert_container.appendChild(alert);
             }
 
@@ -306,6 +311,7 @@ try {
             _resetForm() {
                 /** @type {FormComponent} */
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                form.enable();
                 form.unchecked();
             }
 
@@ -323,11 +329,13 @@ try {
                 if (answers.length > 0 && answers[0].length > 0) {
                     // Save answers if not training.
                     if (!this.current_view.is_training) {
-                        store.dispatch(keys.a_update_experiment_completed_at, {
-                            answers: answers,
-                            time: this.current_time,
-                            is_time_exceeded: is_time_exceeded,
-                            order_index: this.current_view.order[store.state[keys.s_current_task_index]]
+                        store.dispatch(keys.a_update_save, {
+                            [`task_${store.state[keys.s_current_task_index]}`]: {
+                                answers: answers,
+                                time: this.current_time,
+                                is_time_exceeded: is_time_exceeded,
+                                order_index: this.current_view.order[store.state[keys.s_current_task_index]]
+                            }
                         });
                     }                    
 
@@ -338,6 +346,9 @@ try {
                         next_btn.style.display = 'block';
                         let submit_btn = this._getElementById(TAG_IDS.submit_btn);
                         submit_btn.setAttribute('disabled', '');
+                        /** @type {FormComponent} */
+                        let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                        form.disable();
                     } else {
                         this._transition();
                     }                    
@@ -369,9 +380,10 @@ try {
                 if (this.current_view.timer >= 0) {
                     tag.textContent = this.current_view.timer.toFixed(2);
                 }
+
                 let delta_time = 1000;
                 this.timer_id = window.setInterval(() => {
-                        this.current_time += delta_time/1000;
+                        this.current_time += delta_time / 1000;
                         if (this.current_view.timer >= 0) {
                             tag.textContent = (Math.round((this.current_view.timer - this.current_time) * 100) / 100).toFixed(2);
                             if (this.current_time >= this.current_view.timer) {
@@ -387,9 +399,6 @@ try {
             _transition() {
                 if (store.state[keys.s_current_task_index] + 1 >= this.current_view.tasks.length) {
                     store.dispatch(keys.a_update_current_task_index, {index: 0});
-                    if (!this.current_view.is_training) {
-                        store.dispatch(keys.a_update_experiment_index, {index: store.state[keys.s_current_experiment_index] + 1});
-                    }
                     nextView();
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});
@@ -419,7 +428,7 @@ try {
             }
             
             connectedCallback () {
-                /* Guard */
+                /* Guard */                
                 let is_legit = guardView(PAGE_NAMES.EXPE);
                 if (!is_legit) { return; }
 

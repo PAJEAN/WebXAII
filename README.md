@@ -5,9 +5,15 @@
 npm install
 ```
 
-# Developement environment
+# Developement environment (front)
 ```
 npm run dev
+```
+
+# Developement environment (back)
+```
+npm run build
+./node_modules/nodemon/bin/nodemon.js functions/index.js
 ```
 
 # Production environment

@@ -7,18 +7,17 @@ const path = require('path');
 const compression = require('compression');
 /* Express */
 const express = require('express');
-const cors = require('cors');
 
 const app = express();
 
-/* For dev */
+/*** For dev ***/
+const cors = require('cors');
 app.use(cors());
 
 const router = express.Router();
 app.use(express.json()); // Body parser.
 app.use(express.static('dist')); // Static files.
 app.use(compression());
-
 
 /* DotEnv */
 require('dotenv').config();
@@ -27,9 +26,20 @@ require('dotenv').config();
 /*                                  CONSTANTS                                 */
 /* -------------------------------------------------------------------------- */
 
-const DATA_FILEPATH   = 'data.json';
-const DIST_FOLDERNAME = 'dist';
-const INDEX_FILENAME  = 'index.html';
+const DATA_FOLDERENAME    = 'data';
+const PROTOCOL_FOLDERNAME = 'protocols';
+const USERDATA_FOLDERNAME = 'user-data';
+const USERS_FILENAME = 'users.json';
+
+const DATA_FOLDER_PATH = path.resolve(__dirname, DATA_FOLDERENAME);
+const PROTOCOL_FOLDER_PATH = path.resolve(__dirname, DATA_FOLDERENAME, PROTOCOL_FOLDERNAME);
+const USERDATA_FOLDER_PATH = path.resolve(__dirname, DATA_FOLDERENAME, USERDATA_FOLDERNAME);
+const USERS_FILE_PATH = path.resolve(__dirname, DATA_FOLDERENAME, USERS_FILENAME);
+
+// const DATA_FILEPATH    = 'data.json';
+
+const DIST_FOLDERNAME  = 'dist';
+const INDEX_FILENAME   = 'index.html';
 
 /* -------------------------------------------------------------------------- */
 /*                                   ROUTES                                   */
@@ -47,7 +57,7 @@ router.get('/', function(req, res) {
  * Check if user id exist.
  */
 router.post('/api/users', function(req, res) {
-    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
+    let rawdata = fs.readFileSync(USERS_FILE_PATH);
     let data = JSON.parse(rawdata);
     const USER_ID = req.body.uid;
     return res.status(data.hasOwnProperty(USER_ID) ? 200: 401).json({error: data.hasOwnProperty(USER_ID)});
@@ -57,48 +67,61 @@ router.post('/api/users', function(req, res) {
  * Get user data.
  */
 router.get('/api/data', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
-    let data = JSON.parse(rawdata);
-    const USER_ID = req.query.uid;    
+    let raw_user_data = fs.readFileSync(USERS_FILE_PATH);
+    let user_data = JSON.parse(raw_user_data);
+    const USER_ID = req.query.uid;
 
-    if (!data.hasOwnProperty(USER_ID)) {
-        return res.status(401).json({error: data.hasOwnProperty(USER_ID)});
+    if (!user_data.hasOwnProperty(USER_ID)) {
+        return res.status(401).json({error: `${USER_ID} not found`});
     }
 
-    let user_data = {
-        roles:  data[USER_ID]['roles'] ? data[USER_ID]['roles']: '',
-        views: data[USER_ID]['views']
+    let protocol_filename = user_data[USER_ID].hasOwnProperty('protocol') ? user_data[USER_ID]['protocol']: null;
+
+    if (!protocol_filename) {
+        return res.status(500).json({error: `Protocol key not found`}); 
+    }
+
+    let protocol_files = fs.readdirSync(PROTOCOL_FOLDER_PATH);    
+
+    if (!protocol_files.includes(protocol_filename)) {
+        return res.status(500).json({error: `Protocol file not found`});
+    }
+
+    let raw_data = fs.readFileSync(path.resolve(__dirname, DATA_FOLDERENAME, PROTOCOL_FOLDERNAME, protocol_filename));    
+
+    let return_data = {
+        roles: user_data[USER_ID].hasOwnProperty('roles') ? user_data[USER_ID]['roles']: 'user',
+        views: JSON.parse(raw_data)
     };
-    return res.status(200).json(user_data);
+    return res.status(200).json(return_data);
 });
 
 /**
  * Edit an entry of data.json.
  */
 router.patch('/api/data', (req, res) => {
-    let rawdata = fs.readFileSync(path.join(__dirname, DATA_FILEPATH));
-    let matrices = JSON.parse(rawdata);
-
     const uid = req.body.uid;
-    const data_received = req.body.data;
+    const data_received = req.body.data;    
 
-    if (matrices.hasOwnProperty(uid)) {
-        let today = new Date(Date.now());
-        matrices[uid]['date'] = today.toDateString() + ' ' + today.toTimeString();
-        matrices[uid]['data'] = data_received;
-
-        let data = JSON.stringify(matrices, null, 2);
-
-        console.log(data);
-
-        fs.writeFileSync(path.join(__dirname, DATA_FILEPATH), data);
+    try {
+        let data_received_json = {
+            date: new Date(),
+            data: data_received
+        };
+        fs.writeFileSync(path.resolve(__dirname, DATA_FOLDERENAME, USERDATA_FOLDERNAME, `${uid}.json`), JSON.stringify(data_received_json, null, 2), 'utf-8');
         return res.status(200).json({});
-    } else {
-        return res.status(401).json({
-            error: true
+    } catch (err) {
+        console.log(err);        
+        return res.status(500).json({
+            error: err
         });
     }
 });
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    TODO                                    */
+/* -------------------------------------------------------------------------- */
 
 /* Admin - Add new user id */
 router.patch('/api/users', (req, res) => {

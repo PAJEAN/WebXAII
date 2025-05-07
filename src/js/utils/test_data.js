@@ -1,5 +1,5 @@
 export const TEST_VIEW = [
-    // {}, // Authentication.
+    {}, // Authentication.
     {
         type: 'page-form',
         questions: [

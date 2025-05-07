@@ -1,0 +1,70 @@
+[
+    {
+        "type": "page-expe",
+        "desc": "Exactly 3 squares",
+        "is_training": false,
+        "timer": -1,
+        "tasks": [
+        {
+            "source": {
+            "is_image": true,
+            "label": "assets/datasets/2.jpg"
+            },
+            "model": {
+            "is_image": false,
+            "label": "Ceci est un texte pour le modèle"
+            },
+            "explanations": [
+            {
+                "is_image": true,
+                "label": "assets/datasets/test_lg.png"
+            }
+            ],
+            "expected": 0
+        }
+        ],
+        "question": {
+        "type": "radio",
+        "primary_text": "Title",
+        "secondary_text": "Voici un sous texte plus long !",
+        "answers": [
+            "choix A",
+            "choix B"
+        ]
+        }
+    },
+    {
+        "type": "page-form",
+        "questions": [
+        {
+            "type": "slider",
+            "primary_text": "",
+            "secondary_text": "Voici un sous texte plus long !",
+            "answers": [
+            "Mon slider"
+            ]
+        },
+        {
+            "type": "textfield",
+            "primary_text": "",
+            "secondary_text": "Voici un sous texte plus long !",
+            "answers": [
+            "Mon texte"
+            ]
+        }
+        ]
+    },
+    {
+        "type": "page-desc",
+        "title": "Hello World",
+        "body_text": "My first page",
+        "with_button": true,
+        "button_text": "Save",
+        "save": true
+    },
+    {
+        "type": "page-desc",
+        "title": "End",
+        "with_button": false
+    }
+]

@@ -221,7 +221,7 @@ export class Experiment extends View {
         const copy = [...array];
         for (let i = copy.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [copy[i], copy[j]] = [copy[j], copy[i]]; // swap
+            [copy[i], copy[j]] = [copy[j], copy[i]]; // swap.
         }
         return copy;
     }      
@@ -293,12 +293,10 @@ export class Desc extends View {
         this._body_text   = view['body_text'] ? view['body_text']: '';
         this._button_text = view['button_text'] ? view['button_text']: 'Next';
         this._with_button = view['with_button'] ? view['with_button']: false;
-        this._save        = view['save'] ? view['save']: false; // Attention si on veut mettre vrai, mettre une autre condition (ici on veut juste voir si save existe).
     }
     
     get title() { return this._title; }
     get body_text() { return this._body_text; }
     get button_text() { return this._button_text; }
     get with_button() { return this._with_button; }
-    get save() { return this._save; }
 }

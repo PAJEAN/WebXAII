@@ -35,6 +35,31 @@ export class FormComponent extends HTMLElement {
         super();
     }
 
+    _getInputs() {
+        let inputs = [];
+        let fieldsets = this.content.querySelectorAll('fieldset');
+        for (let i = 0; i < fieldsets.length; i++) {
+            let fieldset = fieldsets[i];
+            let current_inputs = fieldset.querySelectorAll('input');
+            inputs = [...inputs, ...current_inputs];
+        }
+        return inputs;
+    }
+
+    enable() {
+        let inputs = this._getInputs();
+        for (let j = 0; j < inputs.length; j++) {
+            inputs[j].removeAttribute('disabled');
+        }
+    }
+
+    disable() {
+        let inputs = this._getInputs();
+        for (let j = 0; j < inputs.length; j++) {
+            inputs[j].setAttribute('disabled', '');
+        }
+    }
+
     /**
      * @param {string} type 
      * @param {string} id 
