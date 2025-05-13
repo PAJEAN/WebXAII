@@ -96,15 +96,14 @@ export const module = {
         [keys.a_update_view_index](context, payload) {
             context.commit(`${NS}_UPDATE_VIEW_INDEX`, {index: context.state[keys.s_current_view_index] + 1});
         },
-        /* -------------------------- experiment & task ------------------------- */
+        /* -------------------------------- save -------------------------------- */
         [keys.a_update_save](context, payload) { // Update a subtask in completed tasks.
             context.commit(`${NS}_UPDATE_SAVE`, payload);
         },
         [keys.a_update_time](context, payload) { // Update a subtask in completed tasks.
             context.commit(`${NS}_UPDATE_TIME`, payload);
         },
-
-
+        /* -------------------------- experiment & task ------------------------- */
         [keys.a_update_experiment_completed](context, payload) { // Update a subtask in completed tasks.
             context.commit(`${NS}_UPDATE_EXPERIMENT_COMPLETED`, payload);
         },
@@ -141,7 +140,7 @@ export const module = {
         [`${NS}_UPDATE_VIEW_OBJECTS`](state, payload) {
             state[keys.s_view_objects] = viewToObject(payload);
         },
-        /* -------------------------- experiment & task ------------------------- */
+        /* -------------------------------- save -------------------------------- */
         [`${NS}_UPDATE_SAVE`](state, payload) {
             if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) {
                 state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
@@ -152,6 +151,7 @@ export const module = {
         [`${NS}_UPDATE_TIME`](state, payload) {
             state[keys.s_time] = payload.date;
         },
+        /* -------------------------- experiment & task ------------------------- */
         [`${NS}_UPDATE_TASK_INDEX`](state, payload) {
             state[keys.s_current_task_index] = payload.index;
         }

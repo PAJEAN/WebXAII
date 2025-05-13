@@ -1,9 +1,9 @@
 // @ts-check
 
-/* Namespaces */
-import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Lib */
 import { nextView } from 'JS/lib/view-manager';
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';

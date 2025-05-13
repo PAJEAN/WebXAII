@@ -1,10 +1,10 @@
 // @ts-check
 
+/* Lib */
+import { guardView, nextView } from 'JS/lib/view-manager';
 /* Namespaces */
 import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
-/* Lib */
-import { guardView, nextView } from 'JS/lib/view-manager';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';

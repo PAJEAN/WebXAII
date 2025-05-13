@@ -8,8 +8,6 @@ import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
 import { Desc } from 'JS/store/modules/view-classes';
-/* Utils */
-import { DATA_URL } from 'JS/utils/constants';
 
 try {
     const TAG_IDS = {

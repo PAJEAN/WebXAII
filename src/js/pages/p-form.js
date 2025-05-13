@@ -1,11 +1,11 @@
 // @ts-check
 
-/* Namespaces */
-import { PAGE_NAMES } from 'JS/pages/__namespaces__';
-import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Lib */
 import { guardView, nextView } from 'JS/lib/view-manager';
 import { FormComponent } from 'JS/components/wc-form';
+/* Namespaces */
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
+import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';

@@ -59,8 +59,8 @@
         "title": "Hello World",
         "body_text": "My first page",
         "with_button": true,
-        "button_text": "Save",
-        "save": true
+        "button_text": "Next",
+        "countdown": 10
     },
     {
         "type": "page-desc",
