@@ -145,6 +145,11 @@ export class View {
     get type() { return this._type; }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Experiment                                 */
+/* -------------------------------------------------------------------------- */
+
+
 export class Experiment extends View {
     
     /**
@@ -242,6 +247,11 @@ export class Experiment extends View {
     get feedback_answer_expected_text() { return this._feedback_answer_expected_text; }
 }
 
+
+/* -------------------------------------------------------------------------- */
+/*                                    Form                                    */
+/* -------------------------------------------------------------------------- */
+
 export class Form extends View {
 
     /**
@@ -273,6 +283,11 @@ export class Form extends View {
     get questions() { return this._questions; }
 }
 
+
+/* -------------------------------------------------------------------------- */
+/*                                    Desc                                    */
+/* -------------------------------------------------------------------------- */
+
 export class Desc extends View {
     
     /**
@@ -289,14 +304,18 @@ export class Desc extends View {
      */
     constructor(view) {
         super(view['type']);
-        this._title       = view['title'] ? view['title']: '';
-        this._body_text   = view['body_text'] ? view['body_text']: '';
-        this._button_text = view['button_text'] ? view['button_text']: 'Next';
-        this._with_button = view['with_button'] ? view['with_button']: false;
+        this._title       = view.hasOwnProperty('title') ? view['title']: '';
+        this._body_text   = view.hasOwnProperty('body_text') ? view['body_text']: '';
+        this._button_text = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
+        this._with_button = view.hasOwnProperty('with_button') ? view['with_button']: false;
+        this._countdown   = view.hasOwnProperty('countdown') ? 
+                                typeof view['countdown'] == 'number' ? view['countdown']: 10
+                            : undefined;
     }
     
-    get title() { return this._title; }
     get body_text() { return this._body_text; }
     get button_text() { return this._button_text; }
+    get countdown() { return this._countdown; }
+    get title() { return this._title; }
     get with_button() { return this._with_button; }
 }

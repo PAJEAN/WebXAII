@@ -1,5 +1,13 @@
 export const TEST_VIEW = [
-    {}, // Authentication.
+    // {}, // Authentication.
+    {
+        type: 'page-desc',
+        title: 'Rule',
+        body_text: 'Exactly 3 squares',
+        button_text: 'Next',
+        with_button: true,
+        countdown: 10 // opt.
+    },
     {
         type: 'page-form',
         questions: [
@@ -39,15 +47,15 @@ export const TEST_VIEW = [
         type: 'page-expe',
         title: 'Title task',
         desc: 'Exactly 3 squares',
-        show_progression_bar: true, // opt
+        show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: -1, // opt
+        timer: -1, // opt.
         randomize: true,
-        feedback_answer_activated: true, // opt
-        feedback_answer_correct: 'You were correct.', // opt
-        feedback_answer_wrong: 'You were wrong.', // opt
-        feedback_answer_show_expected: true, // opt
-        feedback_answer_expected_text: 'Expected answer was: ', // opt
+        feedback_answer_activated: true, // opt.
+        feedback_answer_correct: 'You were correct.', // opt.
+        feedback_answer_wrong: 'You were wrong.', // opt.
+        feedback_answer_show_expected: true, // opt.
+        feedback_answer_expected_text: 'Expected answer was: ', // opt.
         tasks: [
             {
                 source: {
@@ -93,8 +101,7 @@ export const TEST_VIEW = [
         title: 'Rule',
         body_text: 'Exactly 3 squares',
         button_text: 'Next',
-        with_button: true,
-        save: true
+        with_button: true
     },
     {
         type: 'page-expe',

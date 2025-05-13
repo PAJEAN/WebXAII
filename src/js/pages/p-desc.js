@@ -12,6 +12,14 @@ import { Desc } from 'JS/store/modules/view-classes';
 import { DATA_URL } from 'JS/utils/constants';
 
 try {
+    const TAG_IDS = {
+        body_text:     'body-text',
+        btn_container: 'btn-container',
+        card_body:     'card-body',
+        main_page:     'main-page',
+        title:         'title',
+    };
+
     (function() {
         const PAGE_NAME = PAGE_NAMES.DESC;
 
@@ -41,13 +49,13 @@ try {
                 }
             </style>
 
-            <div id="main-page" class="d-flex justify-content-center align-items-center">
+            <div id="${TAG_IDS.main_page}" class="d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="card m-auto">
-                        <div class="card-body">
-                            <h3 id="title" class="card-title text-uppercase text-center"></h3>
-                            <div id="body-text" class="text-center mt-3"></div>
-                            <div class="mt-3" id="btn-container"></div>
+                        <div id="${TAG_IDS.card_body}" class="card-body">
+                            <h3 id="${TAG_IDS.title}" class="card-title text-uppercase text-center"></h3>
+                            <div id="${TAG_IDS.body_text}" class="text-center mt-3"></div>
+                            <div class="mt-3" id="${TAG_IDS.btn_container}"></div>
                         </div>
                     </div>
                 </div>
@@ -59,22 +67,41 @@ try {
                 super();
             }
 
+            _countdown() {
+                let card_body = this.content.querySelector(`#${TAG_IDS.card_body}`);
+                let tag = document.createElement('div');
+                tag.textContent = `Automatically starting in ${this.current_time}...`;
+                tag.classList.add('text-center', 'text-secondary', 'fst-italic', 'mt-2');
+                this.timer_id = window.setInterval(() => {
+                    this.current_time -= 1;
+                    tag.textContent = `Automatically starting in ${this.current_time}...`;
+                    if (this.current_time <= 0) {
+                        nextView();
+                    }
+                }, 1000);
+                card_body.appendChild(tag);
+            }
+
             _submit() {
                 nextView();
             }
 
             _init() {
-                let tag_title = this.content.querySelector('#title');
+                let tag_title = this.content.querySelector(`#${TAG_IDS.title}`);
                 tag_title.textContent = this.current_view.title;
-                let tag_text = this.content.querySelector('#body-text');
+                let tag_text = this.content.querySelector(`#${TAG_IDS.body_text}`);
                 tag_text.textContent = this.current_view.body_text;
                 if (this.current_view.with_button) {
-                    let btn_container = this.content.querySelector('#btn-container');
+                    let btn_container = this.content.querySelector(`#${TAG_IDS.btn_container}`);
                     let btn = document.createElement('button');
                     btn.textContent = this.current_view.button_text;
                     btn.classList.add('btn', 'btn-primary', 'btn-lg', 'text-uppercase', 'mt-3', 'w-100');
                     btn.addEventListener('click', this._submit);
                     btn_container.appendChild(btn);
+                }
+                if (this.current_view.countdown) {
+                    this.current_time = this.current_view.countdown;
+                    this._countdown();
                 }
             }
          
@@ -85,7 +112,10 @@ try {
                 /* Html */
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 /* Attributes */
-                this.content = this.querySelector('#main-page');
+                this.content = this.querySelector(`#${TAG_IDS.main_page}`);
+                this.current_time = 0;
+                /** @type {number | undefined} */
+                this.timer_id = undefined;
                 /** @type {Desc} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];                
                 this._submit = this._submit.bind(this);
@@ -93,7 +123,11 @@ try {
                 this._init();
             }
           
-            disconnectedCallback () {}
+            disconnectedCallback () {
+                if (this.timer_id) {
+                    clearInterval(this.timer_id);
+                }
+            }
         });
     })();
 }

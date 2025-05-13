@@ -6,7 +6,6 @@ import 'JS/components/wc-form';
 import 'JS/components/wc-loading';
 
 /*** Pages ***/
-import 'JS/pages/countdown';
 import 'JS/pages/p-auth';
 import 'JS/pages/p-desc';
 import 'JS/pages/p-form';
