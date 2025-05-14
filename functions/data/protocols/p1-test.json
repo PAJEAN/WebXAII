@@ -4,15 +4,15 @@
         "desc": "Exactly 3 squares",
         "is_training": false,
         "timer": -1,
-        "tasks": [
+        "instances": [
         {
-            "source": {
-            "is_image": true,
-            "label": "assets/datasets/2.jpg"
+            "input": {
+                "is_image": true,
+                "label": "assets/datasets/2.jpg"
             },
             "model": {
-            "is_image": false,
-            "label": "Ceci est un texte pour le modèle"
+                "is_image": false,
+                "label": "Ceci est un texte pour le modèle"
             },
             "explanations": [
             {

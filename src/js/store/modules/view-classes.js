@@ -77,8 +77,8 @@ class Task {
             console.warn('Task has no expected value');
             return false;
         }
-        if (view.hasOwnProperty('source')) {
-            if (!LabelOrImage.guard(view['source'])) { return false; }
+        if (view.hasOwnProperty('input')) {
+            if (!LabelOrImage.guard(view['input'])) { return false; }
         }
         if (view.hasOwnProperty('model')) {
             if (!LabelOrImage.guard(view['model'])) { return false; }
@@ -98,7 +98,7 @@ class Task {
         /** @type {Array<number>} */
         this._expected = typeof view['expected'] == 'number' ? [view['expected']]: view['expected']; // Array of correct indexes (only an integer it's for radio answers). Have to be the same length of number of choices.
         /** @type {LabelOrImage | undefined} */
-        this._source = view.hasOwnProperty('source') ? view['source']: undefined;
+        this._source = view.hasOwnProperty('input') ? view['input']: undefined;
         /** @type {LabelOrImage | undefined} */
         this._model = view.hasOwnProperty('model') ? view['model']: undefined;
         /** @type {Array<LabelOrImage>} */
@@ -159,15 +159,15 @@ export class Experiment extends View {
     static guard(view) {
         if (typeof view !== 'object') { return false; }
         if (!View.guard(view)) { return false; }
-        if (!view.hasOwnProperty('tasks')) { 
-            console.warn('Experiment has no tasks');
+        if (!view.hasOwnProperty('instances')) { 
+            console.warn('Experiment has no instance');
             return false;
         }
         if (!view.hasOwnProperty('question')) {
             console.warn('Experiment has no question');
             return false;
         }
-        for (let task of view.tasks) {
+        for (let task of view['instances']) {
             if (!Task.guard(task)) { return false; }
         }
         if (!Question.guard(view['question'])) { return false; }
@@ -207,7 +207,7 @@ export class Experiment extends View {
 
         /** @type {Array<Task>} */
         this._tasks = [];
-        for (let task of view['tasks']) {
+        for (let task of view['instances']) {
             this._tasks.push(new Task(task));
         }
         this._order = [...Array(this._tasks.length).keys()];
@@ -277,7 +277,7 @@ export class Form extends View {
     constructor(view) {
         super(view['type']);
         /** @type {Array<Question>} */
-        this._questions = view['questions'].map(q => new Question(q));        
+        this._questions = view['questions'].map(q => new Question(q));
     }
 
     get questions() { return this._questions; }

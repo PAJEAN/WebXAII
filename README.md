@@ -26,8 +26,6 @@ Once inside the project folder, run the following command to install all depende
 npm install
 ```
 
-Parfait, voici une proposition claire et structurée pour la suite de la documentation, toujours en anglais, dans le style courant des README de projets JavaScript/Node.js :
-
 ---
 
 ### 🚀 Start the Development Environment (Frontend Only)
@@ -71,7 +69,7 @@ npm run build
 
 This command uses Webpack to bundle and optimize the frontend application. The output will be placed in the [`dist`](./dist) folder.
 
-You can then serve the contents of the `dist` folder using any static file server.
+You can then serve the contents of the `dist` folder.
 
 ---
 
@@ -124,6 +122,20 @@ To add a new user:
    }
    ```
 2. Link the associated protocol file in `protocols/`, e.g., `protocols/p2-example.json`.
+
+🔁 Sharing Protocols Between Users
+
+You can assign the same protocol file to multiple users.
+
+Example:
+
+```
+{
+    "user1": { "roles": "user", "protocol": "p1-common.json" },
+    "user2": { "roles": "user", "protocol": "p1-common.json" },
+    "user3": { "roles": "user", "protocol": "p1-common.json" }
+}
+```
 
 > ⚠️ Make sure that each protocol filename in `users.json` matches an actual file in the `protocols/` folder.
 
