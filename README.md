@@ -65,7 +65,7 @@ npm run build
 
 This command uses Webpack to bundle and optimize the frontend application. The output will be placed in the [`dist`](./dist) folder.
 
-You can then serve the contents of the `dist` folder using any static file server.
+You can then serve the contents of the `dist` folder.
 
 ---
 
