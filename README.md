@@ -160,10 +160,40 @@ a list of views, and each view is defined as an object (or dictionary).
       }
    ]
 ```
-The views which are currently implemented in WebXAII can be configured as follows.
+The views can be configured as follows.
 
 ### Instruction view
 
+An instruction view is obtained by using the type ```"type": "p-instruction"```.
+It supports the following configuration attributes.
+* "title" : Title displayed in bold (text).
+* "body_text" : Text content (text).
+* "button_text" : Text content of the button (text).
+* "with_button" : Whether to display a button allowing to go to the next view or not (boolean).
+
+Example :
+
+### Questionnaire view
+
+A questionnaire view is obtained by using the type ```"type": "p-questionnaire"```. It is defined by the following 
+structure of attributes (besides ```"type"```).
+* ```"questions"``` : list of question objects, which are each defined by a dictionary containing the following attributes:
+  * ```"type"``` : defines the type of the question (either ```"radio"``` for exclusive choices, ```"checkbox"``` for non-exclusive
+  choices, ```"textfield"``` for an open text answer and ```"slider"``` for a slider input).
+  * ```"answers"``` : list of possible answers if applicable (list of text strings).
+  * ```"primary_text"``` : Title of the question to be written in bold above the choices (text, optional).
+  * ```"secondary_text"``` : Additional text for the question to be written in smaller characters (text, optional).
+
+Example :
+
+### Task view
+
+A task view is obtained by using the type ```"type": "p-task"```. Each task is defined by an object (or dictionary) 
+containing the following attributes (besides ```"type"```).
+* ```title``` : Title of the task (optional, text).
+* ```desc``` : Text description of the task to be displayed below the title (optional, text).
+* ```show_progression_bar``` : Whether to show the progression bar on the view (default: **false**, optional, boolean).
+* ```randomize``` : Whether to randomize the order used to display the instances to the user (default: **false**, optional, boolean).
 
 
-
+It contains a list 
