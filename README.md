@@ -80,7 +80,7 @@ functions/
 └── data/
     ├── protocols/
     │   └── p1-test.json          # Protocol file linked to a user
-    ├── user-data/
+    ├── user-data/                # Folder to store generated data per user
     └── users.json                # User configuration file
 ```
 
