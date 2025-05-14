@@ -1,15 +1,15 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
-        type: 'page-desc',
+        type: 'p-instruction',
         title: 'Rule',
         body_text: 'Exactly 3 squares',
         button_text: 'Next',
         with_button: true,
-        countdown: 10 // opt.
+        countdown: 90 // opt.
     },
     {
-        type: 'page-form',
+        type: 'p-questionnaire',
         questions: [
             {
                 type: 'radio',
@@ -44,7 +44,7 @@ export const TEST_VIEW = [
         ]
     },
     {
-        type: 'page-expe',
+        type: 'p-task',
         title: 'Title task',
         desc: 'Exactly 3 squares',
         show_progression_bar: true, // opt.
@@ -97,14 +97,15 @@ export const TEST_VIEW = [
         }
     },
     {
-        type: 'page-desc',
+        type: 'p-instruction',
         title: 'Rule',
         body_text: 'Exactly 3 squares',
         button_text: 'Next',
-        with_button: true
+        with_button: true,
+        score: true
     },
     {
-        type: 'page-expe',
+        type: 'p-task',
         desc: 'Exactly 3 squares',
         is_training: false, // opt.
         timer: -1, // opt
@@ -145,17 +146,15 @@ export const TEST_VIEW = [
         }
     },
     {
-        type: 'page-desc',
+        type: 'p-instruction',
         title: 'Rule',
         body_text: 'Exactly 3 squares',
         button_text: 'Next',
-        with_button: true
+        with_button: true,
+        score: true
     },
     {
-        type: 'page-score'
-    },
-    {
-        type: 'page-form',
+        type: 'p-questionnaire',
         questions: [
             {
                 type: 'radio',
@@ -178,7 +177,7 @@ export const TEST_VIEW = [
         ]
     },
     {
-        type: 'page-desc',
+        type: 'p-instruction',
         title: 'Thank',
         with_button: false
     },

@@ -1,6 +1,6 @@
 [
     {
-        "type": "page-expe",
+        "type": "p-task",
         "desc": "Exactly 3 squares",
         "is_training": false,
         "timer": -1,
@@ -34,7 +34,7 @@
         }
     },
     {
-        "type": "page-form",
+        "type": "p-questionnaire",
         "questions": [
         {
             "type": "slider",
@@ -55,7 +55,7 @@
         ]
     },
     {
-        "type": "page-desc",
+        "type": "p-instruction",
         "title": "Hello World",
         "body_text": "My first page",
         "with_button": true,
@@ -63,7 +63,7 @@
         "countdown": 10
     },
     {
-        "type": "page-desc",
+        "type": "p-instruction",
         "title": "End",
         "with_button": false
     }

@@ -55,9 +55,7 @@ export function nextView() {
     store.dispatch(keys.a_update_save, {
         time_on_page: new_date.getTime() - store.state[keys.s_time].getTime()
     });
-    store.dispatch(keys.a_update_time, {
-        date: new_date
-    });
+    store.dispatch(keys.a_update_time, new_date);
     store.dispatch(keys.a_update_view_index, {}); // Authentication is the first page.
 
     console.log(`s_current_view_index: ${store.state[keys.s_current_view_index]}`);

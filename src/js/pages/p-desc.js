@@ -15,6 +15,7 @@ try {
         btn_container: 'btn-container',
         card_body:     'card-body',
         main_page:     'main-page',
+        score:         'score',
         title:         'title',
     };
 
@@ -53,7 +54,8 @@ try {
                         <div id="${TAG_IDS.card_body}" class="card-body">
                             <h3 id="${TAG_IDS.title}" class="card-title text-uppercase text-center"></h3>
                             <div id="${TAG_IDS.body_text}" class="text-center mt-3"></div>
-                            <div class="mt-3" id="${TAG_IDS.btn_container}"></div>
+                            <div id="${TAG_IDS.score}" class="text-center fw-bold mt-2"></div>
+                            <div class="mt-2" id="${TAG_IDS.btn_container}"></div>
                         </div>
                     </div>
                 </div>
@@ -80,6 +82,14 @@ try {
                 card_body.appendChild(tag);
             }
 
+            _score() {
+                let experiment_scores = store.state[keys.s_experiment_scores];
+                if (experiment_scores.length > 0) {
+                    let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
+                    score_tag.textContent = `Score: ${Math.ceil(experiment_scores[experiment_scores.length - 1] * 100)}%`;
+                }
+            }
+
             _submit() {
                 nextView();
             }
@@ -100,6 +110,9 @@ try {
                 if (this.current_view.countdown) {
                     this.current_time = this.current_view.countdown;
                     this._countdown();
+                }
+                if (this.current_view.score) {
+                    this._score();
                 }
             }
          

@@ -24,7 +24,7 @@ export const keys = {
     s_time: `${NS}_time`,
     /* -------------------------- experiment & task ------------------------- */
     s_current_task_index:       `${NS}_current_index_task`,       // Annotation task index (each annotation in an experiment).
-    s_experiment_score:         `${NS}_experiment_score`,         // Compute score for each experiment
+    s_experiment_scores:        `${NS}_experiment_scores`,         // Compute score for each experiment
    /* -------------------------------- global ------------------------------- */
     s_max_timer: `${NS}_max_timer`, // Time for one item.
     
@@ -36,7 +36,8 @@ export const keys = {
     a_update_save:    `${NS}_update_save`,
     a_update_time:    `${NS}_update_time`,
     /* -------------------------- experiment & task ------------------------- */
-    a_update_current_task_index:      `${NS}_update_current_index_task`,      // Update task index.
+    a_update_current_task_index: `${NS}_update_current_index_task`,      // Update task index.
+    a_update_experiment_scores:  `${NS}_update_experiment_scores`,       // Update scores.
     
     /*** GETTERS ***/
     g_view_length:        `${NS}_view_length`,       // Length of view.
@@ -61,6 +62,7 @@ export const module = {
         [keys.s_time]: new Date(),
         /* -------------------------- experiment & task ------------------------- */
         [keys.s_current_task_index]: 0,
+        [keys.s_experiment_scores]: [],
         /* ------------------------------- global ------------------------------- */
         [keys.s_max_timer]: 10
     },
@@ -94,7 +96,7 @@ export const module = {
             });
         },
         [keys.a_update_view_index](context, payload) {
-            context.commit(`${NS}_UPDATE_VIEW_INDEX`, {index: context.state[keys.s_current_view_index] + 1});
+            context.commit(`${NS}_UPDATE_VIEW_INDEX`, context.state[keys.s_current_view_index] + 1);
         },
         /* -------------------------------- save -------------------------------- */
         [keys.a_update_save](context, payload) { // Update a subtask in completed tasks.
@@ -104,27 +106,11 @@ export const module = {
             context.commit(`${NS}_UPDATE_TIME`, payload);
         },
         /* -------------------------- experiment & task ------------------------- */
-        [keys.a_update_experiment_completed](context, payload) { // Update a subtask in completed tasks.
-            context.commit(`${NS}_UPDATE_EXPERIMENT_COMPLETED`, payload);
-        },
-        [keys.a_update_experiment_completed_at](context, payload) { // Update a subtask in completed tasks.
-            context.commit(`${NS}_UPDATE_EXPERIMENT_COMPLETED_AT`, payload);
-        },
-        [keys.a_update_experiment_index](context, payload) {
-            context.commit(`${NS}_UPDATE_EXPERIMENT_INDEX`, payload);
-        },
         [keys.a_update_current_task_index](context, payload) {
             context.commit(`${NS}_UPDATE_TASK_INDEX`, payload);
         },
-        /* -------------------------------- form -------------------------------- */
-        [keys.a_update_form_completed](context, payload) {
-            context.commit(`${NS}_UPDATE_FORM_COMPLETED`, payload);
-        },
-        [keys.a_update_form_completed_at](context, payload) {
-            context.commit(`${NS}_UPDATE_FORM_COMPLETED_AT`, payload);
-        },
-        [keys.a_update_form_index](context, payload) {
-            context.commit(`${NS}_UPDATE_FORM_INDEX`, payload);
+        [keys.a_update_experiment_scores](context, payload) {
+            context.commit(`${NS}_UPDATE_EXPERIMENT_SCORES`, payload);
         },
     },
     
@@ -135,7 +121,7 @@ export const module = {
             state[keys.s_view] = payload;
         },
         [`${NS}_UPDATE_VIEW_INDEX`](state, payload) {            
-            state[keys.s_current_view_index] = payload.index;
+            state[keys.s_current_view_index] = payload;
         },
         [`${NS}_UPDATE_VIEW_OBJECTS`](state, payload) {
             state[keys.s_view_objects] = viewToObject(payload);
@@ -149,12 +135,15 @@ export const module = {
             }
         },
         [`${NS}_UPDATE_TIME`](state, payload) {
-            state[keys.s_time] = payload.date;
+            state[keys.s_time] = payload;
         },
         /* -------------------------- experiment & task ------------------------- */
         [`${NS}_UPDATE_TASK_INDEX`](state, payload) {
             state[keys.s_current_task_index] = payload.index;
-        }
+        },
+        [`${NS}_UPDATE_EXPERIMENT_SCORES`](state, payload) {
+            state[keys.s_experiment_scores].push(payload);
+        },
     },
     
     /*** Getters ***/
