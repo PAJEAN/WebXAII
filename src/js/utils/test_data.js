@@ -56,9 +56,9 @@ export const TEST_VIEW = [
         feedback_answer_wrong: 'You were wrong.', // opt.
         feedback_answer_show_expected: true, // opt.
         feedback_answer_expected_text: 'Expected answer was: ', // opt.
-        tasks: [
+        instances: [
             {
-                source: {
+                input: {
                     is_image: true,
                     label: 'assets/datasets/2.jpg',
                     title: 'Source'
@@ -78,7 +78,7 @@ export const TEST_VIEW = [
                 expected: 0
             },
             {
-                source: {
+                input: {
                     is_image: true,
                     label: 'assets/datasets/2.jpg',
                     title: 'An other source'
@@ -108,9 +108,9 @@ export const TEST_VIEW = [
         desc: 'Exactly 3 squares',
         is_training: false, // opt.
         timer: -1, // opt
-        tasks: [
+        instances: [
             {
-                source: {
+                input: {
                     is_image: true,
                     label: 'assets/datasets/2.jpg'
                 },
@@ -127,7 +127,7 @@ export const TEST_VIEW = [
                 expected: 0
             },
             {
-                source: {
+                input: {
                     is_image: true,
                     label: 'assets/datasets/2.jpg',
                 },

@@ -26,8 +26,6 @@ Once inside the project folder, run the following command to install all depende
 npm install
 ```
 
-Parfait, voici une proposition claire et structurée pour la suite de la documentation, toujours en anglais, dans le style courant des README de projets JavaScript/Node.js :
-
 ---
 
 ### 🚀 Start the Development Environment (Frontend Only)
@@ -107,7 +105,7 @@ Example:
 
 * `"test"` is the **user ID**.
 * `"roles"` defines the role (currently unused but reserved for permission levels).
-* `"protocol"` refers to a file in the `protocols/` folder, which describes the expected experiment for that user.
+* `"protocol"` refers to a file in the `protocols/` folder, which describes the expected protocol for that user.
 
 ### 📁 Adding New Users
 
@@ -124,5 +122,19 @@ To add a new user:
    }
    ```
 2. Link the associated protocol file in `protocols/`, e.g., `protocols/p2-example.json`.
+
+🔁 Sharing Protocols Between Users
+
+You can assign the same protocol file to multiple users.
+
+Example:
+
+```
+{
+    "user1": { "roles": "user", "protocol": "p1-common.json" },
+    "user2": { "roles": "user", "protocol": "p1-common.json" },
+    "user3": { "roles": "user", "protocol": "p1-common.json" }
+}
+```
 
 > ⚠️ Make sure that each protocol filename in `users.json` matches an actual file in the `protocols/` folder.
