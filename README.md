@@ -125,7 +125,7 @@ You can assign the same protocol file to multiple users.
 
 Example:
 
-```
+```json
 {
     "user1": { "roles": "user", "protocol": "p1-common.json" },
     "user2": { "roles": "user", "protocol": "p1-common.json" },
