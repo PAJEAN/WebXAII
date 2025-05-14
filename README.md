@@ -126,3 +126,32 @@ To add a new user:
 2. Link the associated protocol file in `protocols/`, e.g., `protocols/p2-example.json`.
 
 > ⚠️ Make sure that each protocol filename in `users.json` matches an actual file in the `protocols/` folder.
+
+## Implementing a protocol
+
+A protocol file (in `protocols/`) is a JSON file which defines all the content for a given protocol. It is defined as
+a list of views, and each view is defined as an object (or dictionary).
+
+```json
+   [
+      {
+        "type":  "p-instruction",
+        [...]
+      },
+      {
+        "type":  "p-questionnaire",
+        [...]
+      },
+      {
+        "type":  "p-task",
+        [...]
+      }
+   ]
+```
+The views which are currently implemented in WebXAII can be configured as follows.
+
+### Instruction view
+
+
+
+
