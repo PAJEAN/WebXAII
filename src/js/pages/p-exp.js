@@ -140,8 +140,8 @@ try {
 
             /**
              * Check the validity of the form.
-             * @param {Array<number>} answers
-             * @returns boolean
+             * @param {Array<number|string>} answers
+             * @returns {boolean}
              */
             _checkAnswers(answers) {
                 let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
@@ -338,6 +338,11 @@ try {
                             }
                         });
                     }                    
+                    
+                    let checked_answers = this._checkAnswers(answers[0]);
+                    if (checked_answers) {
+                        this.good_answers += 1;
+                    }
 
                     if (this.current_view.feedback_answer_activated) {
                         this._createAlert(answers[0]);
@@ -399,6 +404,7 @@ try {
             _transition() {
                 if (store.state[keys.s_current_task_index] + 1 >= this.current_view.tasks.length) {
                     store.dispatch(keys.a_update_current_task_index, {index: 0});
+                    store.dispatch(keys.a_update_experiment_scores, this.good_answers / this.current_view.tasks.length);
                     nextView();
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});
@@ -441,6 +447,7 @@ try {
                 /** @type {Experiment} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
                 this.current_time = 0;
+                this.good_answers = 0;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
 

@@ -95,7 +95,7 @@ class Task {
      * @param {object} view
      */
     constructor(view) {
-        /** @type {Array<number>} */
+        /** @type {Array<number|string>} */
         this._expected = typeof view['expected'] == 'number' ? [view['expected']]: view['expected']; // Array of correct indexes (only an integer it's for radio answers). Have to be the same length of number of choices.
         /** @type {LabelOrImage | undefined} */
         this._source = view.hasOwnProperty('input') ? view['input']: undefined;
@@ -304,18 +304,21 @@ export class Desc extends View {
      */
     constructor(view) {
         super(view['type']);
-        this._title       = view.hasOwnProperty('title') ? view['title']: '';
         this._body_text   = view.hasOwnProperty('body_text') ? view['body_text']: '';
         this._button_text = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
-        this._with_button = view.hasOwnProperty('with_button') ? view['with_button']: false;
         this._countdown   = view.hasOwnProperty('countdown') ? 
-                                typeof view['countdown'] == 'number' ? view['countdown']: 10
+                                typeof view['countdown'] == 'number' ? view['countdown']: 60
                             : undefined;
+        /** @type {boolean|undefined} */                    
+        this._score       = view.hasOwnProperty('score') ? view['score']: undefined;
+        this._title       = view.hasOwnProperty('title') ? view['title']: '';
+        this._with_button = view.hasOwnProperty('with_button') ? view['with_button']: false;
     }
     
     get body_text() { return this._body_text; }
     get button_text() { return this._button_text; }
     get countdown() { return this._countdown; }
+    get score() { return this._score; }
     get title() { return this._title; }
     get with_button() { return this._with_button; }
 }

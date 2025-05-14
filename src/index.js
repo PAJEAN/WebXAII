@@ -7,10 +7,9 @@ import 'JS/components/wc-loading';
 
 /*** Pages ***/
 import 'JS/pages/p-auth';
-import 'JS/pages/p-instruction';
-import 'JS/pages/p-questionnaire';
-import 'JS/pages/p-task';
-import 'JS/pages/p-score';
+import 'JS/pages/p-desc';
+import 'JS/pages/p-form';
+import 'JS/pages/p-exp';
 
 
 /*** CSS ***/
