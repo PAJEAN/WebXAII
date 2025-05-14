@@ -55,10 +55,6 @@ Make sure the `MAIN_URL` variable in [`src/utils/test_data.js`](src/utils/test_d
 
 ---
 
-Parfait, voici une section claire pour la partie **Build** de ton projet, à ajouter à ton fichier `README.md` :
-
----
-
 ### 📦 Build for Production
 
 To generate the production build of the project, run:
