@@ -1,6 +1,18 @@
 {
-    "test": {
+    "A": {
+        "roles": "user",
+        "protocol": "protocolA.json"
+    },
+    "B": {
         "roles": "user",
         "protocol": "protocolB.json"
+    },
+    "C": {
+        "roles": "user",
+        "protocol": "protocolC.json"
+    },
+    "D": {
+        "roles": "user",
+        "protocol": "protocolD.json"
     }
 }

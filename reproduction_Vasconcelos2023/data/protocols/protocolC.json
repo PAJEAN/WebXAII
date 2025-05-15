@@ -44,7 +44,7 @@
         {
           "input": {
             "is_image": true,
-            "label": "assets/vasconcelos2023/bigmaze.png",
+            "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
           "expected": 1
@@ -52,7 +52,7 @@
         {
           "input": {
             "is_image": true,
-            "label": "assets/vasconcelos2023/bigmaze.png",
+            "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
           "expected": 1
@@ -73,7 +73,7 @@
     {
       "type": "p-instruction",
       "title": "Training task (2/2)",
-      "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit, and will highlight the path it has detected in the maze. It is still your responsibility to take the decision you submit.",
+      "body_text": "Now that you are more comfortable with the task, we will introduce the AI which will assist you for solving the mazes. It will suggest an exit. It is still your responsibility to take the decision you submit.",
       "button_text": "Start the second training series",
       "with_button": true
     },
@@ -99,7 +99,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze.png",
               "title": ""
             }
           ],
@@ -114,7 +114,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze.png",
               "title": ""
             }
           ],
@@ -157,7 +157,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze.png",
               "title": ""
             }
           ],
@@ -172,7 +172,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze.png",
               "title": ""
             }
           ],

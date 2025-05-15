@@ -1,6 +1,6 @@
 {
-    "test": {
+    "B": {
         "roles": "user",
-        "protocol": "p1-test.json"
+        "protocol": "protocolB.json"
     }
 }

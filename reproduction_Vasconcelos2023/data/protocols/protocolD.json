@@ -44,7 +44,7 @@
         {
           "input": {
             "is_image": true,
-            "label": "assets/vasconcelos2023/bigmaze.png",
+            "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
           "expected": 1
@@ -52,7 +52,7 @@
         {
           "input": {
             "is_image": true,
-            "label": "assets/vasconcelos2023/bigmaze.png",
+            "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
           "expected": 1
@@ -99,7 +99,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze_sol.png",
               "title": ""
             }
           ],
@@ -114,7 +114,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze_sol.png",
               "title": ""
             }
           ],
@@ -157,7 +157,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze_sol.png",
               "title": ""
             }
           ],
@@ -172,7 +172,7 @@
           "explanations": [
             {
               "is_image": true,
-              "label": "assets/vasconcelos2023/bigmaze_sol.png",
+              "label": "assets/vasconcelos2023/mediummaze_sol.png",
               "title": ""
             }
           ],
