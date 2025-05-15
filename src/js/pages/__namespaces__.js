@@ -7,7 +7,6 @@ export const PAGE_NAMES = {
     DESC:           'p-instruction',
     EXPE:           'p-task',
     FORM:           'p-questionnaire',
-    SCORE:          'p-score',
 }
 
 export const PAGES_INFO = {
@@ -38,11 +37,5 @@ export const PAGES_INFO = {
             title: 'Questionnaire'
         },
         class_type: Form
-    },
-    [PAGE_NAMES.SCORE]: {
-        route: {
-            path: '/score',
-            title: 'Score'
-        }
-    },
+    }
 }
