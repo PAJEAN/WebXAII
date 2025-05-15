@@ -148,8 +148,20 @@ It supports the following configuration attributes (besides ```"type"```).
 * "body_text" : Text content (text).
 * "button_text" : Text content of the button (text).
 * "with_button" : Whether to display a button allowing to go to the next view or not (boolean).
+* "countdown" : @TODO
 
 Example :
+
+```json
+{
+  "type": "p-instruction",
+  "title": "Training task (1/2)",
+  "body_text": "During this experiment, you will have to solve mazes with the help of an AI. You will first perform a training phase so that you get comfortable with the interface and the problem. As a first training task, you will have to solve a series of mazes by yourself, without any AI assistance. Throughout the training series, you will get a feedback each time you answer, so that you know if you took the right decision or not. Are you ready to do the first training series ?",
+  "button_text": "Start the first training series",
+  "with_button": true
+}
+```
+![](reproduction_Vasconcelos2023/data/screenshots/instructions_example.png)
 
 ### Questionnaire view
 
@@ -164,6 +176,47 @@ structure of attributes (besides ```"type"```).
 
 Example :
 
+![](reproduction_Vasconcelos2023/data/screenshots/quest_example.png)
+
+```json
+{
+  "type": "p-questionnaire",
+  "questions": [
+    {
+      "type": "radio",
+      "primary_text": "Please complete the following survey about the AI that assisted you.",
+      "secondary_text": "I believe the AI is a competent performer.",
+      "answers": [
+        "Strongly disagree",
+        "Disagree",
+        "Somewhat disagree",
+        "Neither agree nor disagree",
+        "Somewhat agree",
+        "Agree",
+        "Strongly agree"
+      ]
+    },
+    [...]
+    {
+      "type": "slider",
+      "primary_text": "",
+      "secondary_text": "Approximately, how accurate do you think the AI is? Please indicate using the slider below (from 0% to 100%).",
+      "answers": [
+        ""
+      ]
+    },
+    [...]
+    {
+      "type": "textfield",
+      "primary_text": "",
+      "secondary_text": "In the box below, please describe how you chose between using the AI and doing the task yourself.",
+      "answers": [
+        ""
+      ]
+    }
+  ]
+}
+```
 ### Task view
 
 A task view is obtained by using the type ```"type": "p-task"```. Each task is defined by an object (or dictionary) 
@@ -189,3 +242,47 @@ containing the following attributes (besides ```"type"```).
   * ```"expected"``` : Index of the expected answer, if applicable (positive integer, optional).
 
 Example : 
+
+![](reproduction_Vasconcelos2023/data/screenshots/decision_example.png)
+
+```json
+{
+  "type": "p-task",
+  "title": "",
+  "desc": "",
+  "show_progression_bar": false,
+  "randomize": true,
+  "timer": -1,
+  "feedback_answer_activated": true,
+  "feedback_answer_correct": "This was the right answer",
+  "feedback_answer_wrong": "This was not the right answer",
+  "instances": [
+    {
+      "model": {
+        "is_image": false,
+        "label": "AI's suggestion : B",
+        "title": ""
+      },
+      "explanations": [
+        {
+          "is_image": true,
+          "label": "assets/vasconcelos2023/mediummaze_sol.png",
+          "title": ""
+        }
+      ],
+      "expected": 1
+    }
+  ],
+  "question": {
+    "type": "radio",
+    "primary_text": "",
+    "secondary_text": "Which exit can you get to from the start ?",
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  }
+}
+```
