@@ -139,7 +139,7 @@ Example:
 
 > ⚠️ Make sure that each protocol filename in `users.json` matches an actual file in the `protocols/` folder.
 
-## Implementing a protocol
+## 📋 Implementing a protocol
 
 A protocol file (in `protocols/`) is a JSON file which defines all the content for a given protocol. It is defined as
 a list of views, and each view is defined as an object (or dictionary).
@@ -165,7 +165,7 @@ The views can be configured as follows.
 ### Instruction view
 
 An instruction view is obtained by using the type ```"type": "p-instruction"```.
-It supports the following configuration attributes.
+It supports the following configuration attributes (besides ```"type"```).
 * "title" : Title displayed in bold (text).
 * "body_text" : Text content (text).
 * "button_text" : Text content of the button (text).
@@ -190,10 +190,24 @@ Example :
 
 A task view is obtained by using the type ```"type": "p-task"```. Each task is defined by an object (or dictionary) 
 containing the following attributes (besides ```"type"```).
-* ```title``` : Title of the task (optional, text).
-* ```desc``` : Text description of the task to be displayed below the title (optional, text).
-* ```show_progression_bar``` : Whether to show the progression bar on the view (default: **false**, optional, boolean).
-* ```randomize``` : Whether to randomize the order used to display the instances to the user (default: **false**, optional, boolean).
+* ```"title"``` : Title of the task (text, optional).
+* ```"desc"``` : Text description of the task to be displayed below the title (text, optional). 
+* ```"question"``` : Question and possible answers which are submitted to the user for every instance of the task. It is defined by a dictionary which accepts the same attributes as the question dictionary in the questionnaire view. However, it only supports the types ```"radio"``` and ```"checkbox"``` in this context.
+* ```"show_progression_bar"``` : Whether to show the progression bar on the view (default: **false**, optional, boolean).
+* ```"randomize"``` : Whether to randomize the order used to display the instances to the user (default: **false**, optional, boolean).
+* ```"timer"``` : If not -1, defines a time limit in seconds for the user to give an answer to the instance. If the time is expired, the view goes to the next instance. If defined, the timer is shown on the view (default : **-1**, positive integer).
+* ```"feedback_answer_activated"``` : Whether to show a feedback on the correctness of the answer (default: **false**, optional, boolean).
+* ```"feedback_answer_correct"``` : Text to show to the user when they are correct (text, optional).
+* ```"feedback_answer_wrong"``` : Text to show to the user when they are wrong (text, optional).
+* ```"feedback_answer_show_expected"``` : Whether the expected answer is indicated to the user as part of the feedback (default: **false**, optional, boolean).
+* ```"feedback_answer_expected_text"``` : Text to introduce the expected answer to the user (text, optional).
+* ```"instances"``` : list of objects which describe all the instances of the task. Each instance is described by a dictionary with the following attributes:
+  * ```"input"``` : Dictionary describing the input and containing the following attributes:
+    * ```"is_image"``` : Whether the input is an image (boolean)
+    * ```"label"``` : Text description of the input, or path to the image (text).
+    * ```"title"``` : Title to be displayed below the input (text, optional).
+  * ```"model"``` : Dictionary describing the model prediction and containing the same attributes as for ```"input"```.
+  * ```"explanations"``` :  List of dictionaries describing each explanation. Each of them is described by a dictionary containing the same attributes as for ```"input"```.
+  * ```"expected"``` : Index of the expected answer, if applicable (positive integer, optional).
 
-
-It contains a list 
+Example : 
