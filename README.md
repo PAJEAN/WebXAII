@@ -108,7 +108,7 @@ Example:
 }
 ```
 
-* `"user1"` and `"user2"` are the **user IDs**.
+* `"user1"`, `"user2"` and `"user3"` are the **user IDs**.
 * `"roles"` defines the role (currently unused but reserved for permission levels).
 * `"protocol"` refers to a file in the `protocols/` folder, which describes the expected experiment for that user.
 
