@@ -1,23 +1,25 @@
 [
     {
         "type": "p-task",
-        "desc": "Exactly 3 squares",
-        "is_training": false,
+        "desc": "",
         "timer": -1,
         "instances": [
         {
             "input": {
                 "is_image": true,
-                "label": "assets/datasets/2.jpg"
+                "label": "assets/datasets/single-kingfisher-bird.jpg",
+                "title": "Input image"
             },
             "model": {
                 "is_image": false,
-                "label": "Ceci est un texte pour le modèle"
+                "label": "The model predicts the class Kingfisher.",
+                "title": "AI prediction"
             },
             "explanations": [
             {
                 "is_image": true,
-                "label": "assets/datasets/test_lg.png"
+                "label": "assets/datasets/single-kingfisher-bird_xai.jpg",
+                "title": "Prediction explanation"
             }
             ],
             "expected": 0
@@ -25,11 +27,11 @@
         ],
         "question": {
         "type": "radio",
-        "primary_text": "Title",
-        "secondary_text": "Voici un sous texte plus long !",
+        "primary_text": "Is the model prediction correct ?",
+        "secondary_text": "",
         "answers": [
-            "choix A",
-            "choix B"
+            "Yes",
+            "No"
         ]
         }
     },
@@ -38,33 +40,34 @@
         "questions": [
         {
             "type": "slider",
-            "primary_text": "",
-            "secondary_text": "Voici un sous texte plus long !",
+            "primary_text": "Please indicate your assessment of the difficulty of the task with the slider.",
+            "secondary_text": "Left : very easy; right : very difficult.",
             "answers": [
-            "Mon slider"
+                ""
             ]
         },
         {
             "type": "textfield",
-            "primary_text": "",
-            "secondary_text": "Voici un sous texte plus long !",
+            "primary_text": "Please enter additional remarks.",
+            "secondary_text": "",
             "answers": [
-            "Mon texte"
+                ""
             ]
         }
         ]
     },
     {
         "type": "p-instruction",
-        "title": "Hello World",
-        "body_text": "My first page",
+        "title": "Thank you for your participation",
+        "body_text": "",
         "with_button": true,
-        "button_text": "Next",
+        "button_text": "Exit.",
         "countdown": 10
     },
     {
         "type": "p-instruction",
-        "title": "End",
+        "title": "Goodbye",
+        "body_text": "You may now close the page.",
         "with_button": false
     }
 ]

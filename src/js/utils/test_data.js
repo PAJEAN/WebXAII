@@ -2,8 +2,8 @@ export const TEST_VIEW = [
     // {}, // Authentication.
     {
         type: 'p-instruction',
-        title: 'Rule',
-        body_text: 'Exactly 3 squares',
+        title: 'Task',
+        body_text: 'Instruction',
         button_text: 'Next',
         with_button: true,
         countdown: 90 // opt.
@@ -14,7 +14,7 @@ export const TEST_VIEW = [
             {
                 type: 'radio',
                 primary_text: '',
-                secondary_text: 'Voici un sous texte plus long !',
+                secondary_text: 'Here is a longer text',
                 answers: [
                     'choix1',
                     'choix2',
@@ -46,7 +46,7 @@ export const TEST_VIEW = [
     {
         type: 'p-task',
         title: 'Title task',
-        desc: 'Exactly 3 squares',
+        desc: 'Description',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
         timer: -1, // opt.
@@ -60,98 +60,33 @@ export const TEST_VIEW = [
             {
                 input: {
                     is_image: true,
-                    label: 'assets/datasets/2.jpg',
+                    label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
                 model: {
                     is_image: false,
-                    label: "Ceci est un texte pour le modèle",
+                    label: "This is a text for the model",
                     title: 'Model'
                 },
                 explanations: [
                     {
                         is_image: true,
-                        label: 'assets/datasets/test_lg.png',
+                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
                         title: 'Explanation'
                     }
                 ],
                 expected: 0
             },
-            {
-                input: {
-                    is_image: true,
-                    label: 'assets/datasets/2.jpg',
-                    title: 'An other source'
-                },
-                expected: 0
-            }
         ],
         question: {
             type: 'radio',
             primary_text: 'Title',
-            secondary_text: 'Voici un sous texte plus long !',
+            secondary_text: 'Here is a longer text',
             answers: [
                 'choix A',
                 'choix B',
             ]
         }
-    },
-    {
-        type: 'p-instruction',
-        title: 'Rule',
-        body_text: 'Exactly 3 squares',
-        button_text: 'Next',
-        with_button: true,
-        score: true
-    },
-    {
-        type: 'p-task',
-        desc: 'Exactly 3 squares',
-        is_training: false, // opt.
-        timer: -1, // opt
-        instances: [
-            {
-                input: {
-                    is_image: true,
-                    label: 'assets/datasets/2.jpg'
-                },
-                model: {
-                    is_image: false,
-                    label: "Ceci est un texte pour le modèle"
-                },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/test_lg.png',
-                    }
-                ],
-                expected: 0
-            },
-            {
-                input: {
-                    is_image: true,
-                    label: 'assets/datasets/2.jpg',
-                },
-                expected: 0
-            }
-        ],
-        question: {
-            type: 'radio',
-            primary_text: 'Title',
-            secondary_text: 'Voici un sous texte plus long !',
-            answers: [
-                'choix A',
-                'choix B',
-            ]
-        }
-    },
-    {
-        type: 'p-instruction',
-        title: 'Rule',
-        body_text: 'Exactly 3 squares',
-        button_text: 'Next',
-        with_button: true,
-        score: true
     },
     {
         type: 'p-questionnaire',
@@ -159,10 +94,10 @@ export const TEST_VIEW = [
             {
                 type: 'radio',
                 primary_text: '',
-                secondary_text: 'Voici un sous texte plus long !',
+                secondary_text: 'Here is a longer text',
                 answers: [
-                    'choix1',
-                    'choix2',
+                    'choice1',
+                    'choice2',
                 ]
             },
             {
@@ -178,7 +113,7 @@ export const TEST_VIEW = [
     },
     {
         type: 'p-instruction',
-        title: 'Thank',
+        title: 'Thank you',
         with_button: false
     },
 ];
