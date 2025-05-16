@@ -1,4 +1,8 @@
 try {
+    const TAG_IDS = {
+        main_page: 'main-page',
+    };
+
     (function() {
         const PAGE_NAME = 'page-boilerplate';
 
@@ -7,7 +11,7 @@ try {
 
             <style></style>
 
-            <div id="main"></div>
+            <div id="${TAG_IDS.main_page}"></div>
 
         `;
 
@@ -18,7 +22,7 @@ try {
          
             connectedCallback () {
                 this.appendChild(TEMPLATE.content.cloneNode(true));
-                this.content = this.querySelector('#main');
+                this.content = this.querySelector(`#${TAG_IDS.main_page}`);
             }
           
             disconnectedCallback () {}

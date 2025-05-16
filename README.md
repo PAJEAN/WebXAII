@@ -304,6 +304,141 @@ npm run dev-back
 
 The four protocols are made available through the users `A`, `B`, `C` and `D`. They are fully described in [our article](). Out of simplicity, we only created four users in `users.json`. Note that there should be as many users as participants in order to actually conduct the experiment on a production server.
 
+Parfait ! Voici une section claire et complète que tu peux ajouter à ta documentation, expliquant comment un utilisateur peut ajouter un **composant personnalisé d’interface** à son expérience :
+
+---
+
+## 🧱 Adding a Custom UI Page
+
+If you want to add a new custom page (a *customElement*) for a specific experiment or protocol, follow the steps below.
+
+### 📁 1. Create a New Page Component
+
+Navigate to the `js/pages/` folder and create a new JavaScript file for your component.
+
+> You can use the provided boilerplate in this folder as a starting point.
+
+---
+
+### 🧩 2. Register the Component in `index.js`
+
+Open `js/index.js` and import your new component so that it’s included in the application build.
+
+Example:
+
+```javascript
+import 'JS/pages/MyCustomPage';
+```
+
+---
+
+### 🗂️ 3. Declare the Component in the `js/pages/__namespaces__.js` file
+
+After creating and importing your component, you need to **register** it within the page configuration system.
+
+#### a) Add the Component Name to `PAGE_NAMES`
+
+In `js/pages/__namespaces__.js`, add a new entry to `PAGE_NAMES` object (use a clear and unique name prefixed, ex. `p-`.):
+
+```javascript
+export const PAGE_NAMES = {
+    AUTHENTICATION: 'p-authentication',
+    DESC:           'p-instruction',
+    EXPE:           'p-task',
+    FORM:           'p-questionnaire',
+    CUSTOM:         'p-custompage' // 👈 Your new component name.
+};
+```
+
+🧠 **Why this matters**: This constant allows you to reference the page name consistently throughout your codebase. It is especially important because the `"type"` fields used in the protocol files must exactly match the names of the custom elements defined in the application.
+
+Then, you can use `PAGE_NAMES.CUSTOM` when defining the name of your customElement in your page file:
+
+```js
+// In your custom page.
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
+// ...
+const PAGE_NAME = PAGE_NAMES.DESC;
+```
+
+---
+
+#### b) Define the Page’s Routing in `PAGES_INFO`
+
+Finally, declare your new page in the `PAGES_INFO` constant:
+
+```javascript
+export const PAGES_INFO = {
+    [PAGE_NAMES.AUTHENTICATION]: {
+        route: {
+            path: '/',
+            title: 'Authentication',
+            is_default: true
+        },
+    },
+    [PAGE_NAMES.CUSTOM]: {
+        route: {
+            path: '/custom',
+            title: 'My Custom Page'
+        },
+    },
+    [PAGE_NAMES.DESC]: {
+        route: {
+            path: '/desc',
+            title: 'Instruction'
+        },
+        class_type: Desc
+    },
+    // ...
+};
+```
+
+* `path`: the URL fragment for routing (e.g., `/custom`).
+* `title`: displayed title page.
+* `is_default`: whether this page loads first when the app starts (only one).
+* `roles`: (optional) a string of user roles that are allowed to access this page (ex: *user/manager/administrator*), use "/" as separator. If omitted, the page is accessible to all users, regardless of their role.
+* `class_type`: (optional) a JavaScript class that will be instantiated when the page receives its associated data. This enables your page components to work directly with class-based objects instead of relying solely on raw JSON structures or hardcoded keys. Actually, all view-related classes are defined in `js/store/modules/view-classes.js`.
+
+> ✅ Once this step is complete, your new component is fully integrated and can be used in the app’s navigation or as part of a user protocol.
+
+---
+
+## 💾 Data Saving Mechanism
+
+The application automatically **saves data to the server at each view transition** (only on production mode). This mechanism is handled in the `nextView` function located in:
+
+```
+js/lib/view-manager.js
+```
+
+### 🔄 What Gets Saved?
+
+The data saved during a transition corresponds to the content of the variable:
+
+```
+s_save
+```
+
+This variable is defined and managed in:
+
+```
+js/store/modules/views.js
+```
+
+### 📣 How to Update the Saved Data?
+
+To update `s_save` before the transition and trigger a save, simply dispatch the following custom event:
+
+```javascript
+store.dispatch(keys.a_update_save, {
+  detail: yourData
+});
+```
+
+Replace `yourData` with the object you want to persist. This data will then be add to `s_save` and sent to the server on the next view change.
+
+> 🔐 This mechanism ensures that data is stored progressively without requiring explicit save buttons in most pages.
+
 ## Citing WebXAII
 
 To reference WebXAII, please cite the following article.

@@ -12,7 +12,7 @@ export const keys = {
 }
 
 /**
- * Example: /user/manager/administrator.
+ * Example: user/manager/administrator.
  * @param {string} hash 
  * @returns {Array<string>}
  */
