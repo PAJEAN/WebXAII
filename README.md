@@ -44,7 +44,7 @@ You can then serve the contents of the `dist` folder.
 
 ### 🖥️ Start the Backend Server
 
-If you want to test the application with a real backend, you can start the backend server with:
+To run the application, you can start the backend server with:
 
 ```bash
 npm run dev-back
@@ -148,7 +148,7 @@ It supports the following configuration attributes (besides ```"type"```).
 * "body_text" : Text content (text).
 * "button_text" : Text content of the button (text).
 * "with_button" : Whether to display a button allowing to go to the next view or not (boolean).
-* "countdown" : @TODO
+* "countdown" : If not -1, defines a time after which the application automatically goes to the next view, even if the button was not pressed by the user. The timer is shown in the view (default : **-1**, integer).
 
 Example :
 
@@ -226,7 +226,7 @@ containing the following attributes (besides ```"type"```).
 * ```"question"``` : Question and possible answers which are submitted to the user for every instance of the task. It is defined by a dictionary which accepts the same attributes as the question dictionary in the questionnaire view. However, it only supports the types ```"radio"``` and ```"checkbox"``` in this context.
 * ```"show_progression_bar"``` : Whether to show the progression bar on the view (default: **false**, optional, boolean).
 * ```"randomize"``` : Whether to randomize the order used to display the instances to the user (default: **false**, optional, boolean).
-* ```"timer"``` : If not -1, defines a time limit in seconds for the user to give an answer to the instance. If the time is expired, the view goes to the next instance. If defined, the timer is shown on the view (default : **-1**, positive integer).
+* ```"timer"``` : If not -1, defines a time limit in seconds for the user to give an answer to the instance. If the time is expired, the view goes to the next instance. If defined, the timer is shown on the view (default : **-1**, integer).
 * ```"feedback_answer_activated"``` : Whether to show a feedback on the correctness of the answer (default: **false**, optional, boolean).
 * ```"feedback_answer_correct"``` : Text to show to the user when they are correct (text, optional).
 * ```"feedback_answer_wrong"``` : Text to show to the user when they are wrong (text, optional).
@@ -286,3 +286,26 @@ Example :
   }
 }
 ```
+---
+
+## Reproducing the interface of (Vasconcelos et al, 2023)
+
+As a demonstration, we propose to configure a WebXAII instance in order to reproduce the interface of the Study 1 presented in the following article.
+
+> Vasconcelos, Helena, Matthew Jörke, Madeleine Grunde-McLaughlin, Tobias Gerstenberg, Michael S. Bernstein, et Ranjay Krishna. « Explanations Can Reduce Overreliance on AI Systems During Decision-Making ». Proc. ACM Hum.-Comput. Interact. 7, nᵒ CSCW1 (16 avril 2023): 129:1-129:38. https://doi.org/10.1145/3579605.
+
+To set up the WebXAII server, you need to replace the directory `functions/data/` by `reproduction_Vasconcelos2023/data/`.
+
+Then, you can build the instance and start the backend with the following commands.
+```bash
+npm run build
+npm run dev-back
+```
+
+The four protocols are made available through the users `A`, `B`, `C` and `D`. They are fully described in [our article](). Out of simplicity, we only created four users in `users.json`. Note that there should be as many users as participants in order to actually conduct the experiment on a production server.
+
+## Citing WebXAII
+
+To reference WebXAII, please cite the following article.
+
+> @TODO
