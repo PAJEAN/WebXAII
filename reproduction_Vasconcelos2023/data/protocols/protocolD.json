@@ -47,7 +47,7 @@
             "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
-          "expected": 1
+          "expected": 0
         },
         {
           "input": {
@@ -55,7 +55,7 @@
             "label": "assets/vasconcelos2023/mediummaze.png",
             "title": ""
           },
-          "expected": 1
+          "expected": 0
         }
       ],
       "question": {
@@ -93,7 +93,7 @@
         {
           "model": {
             "is_image": false,
-            "label": "AI's suggestion : B",
+            "label": "AI's suggestion : A",
             "title": ""
           },
           "explanations": [
@@ -103,12 +103,12 @@
               "title": ""
             }
           ],
-          "expected": 1
+          "expected": 0
         },
         {
           "model": {
             "is_image": false,
-            "label": "AI's suggestion : B",
+            "label": "AI's suggestion : A",
             "title": ""
           },
           "explanations": [
@@ -118,7 +118,7 @@
               "title": ""
             }
           ],
-          "expected": 1
+          "expected": 0
         }
       ],
       "question": {
@@ -151,7 +151,7 @@
         {
           "model": {
             "is_image": false,
-            "label": "AI's suggestion : B",
+            "label": "AI's suggestion : A",
             "title": ""
           },
           "explanations": [
@@ -161,12 +161,12 @@
               "title": ""
             }
           ],
-          "expected": 1
+          "expected": 0
         },
         {
           "model": {
             "is_image": false,
-            "label": "AI's suggestion : B",
+            "label": "AI's suggestion : A",
             "title": ""
           },
           "explanations": [
@@ -176,7 +176,7 @@
               "title": ""
             }
           ],
-          "expected": 1
+          "expected": 0
         }
       ],
       "question": {

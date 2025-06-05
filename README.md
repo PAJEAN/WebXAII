@@ -304,8 +304,6 @@ npm run dev-back
 
 The four protocols are made available through the users `A`, `B`, `C` and `D`. They are fully described in [our article](). Out of simplicity, we only created four users in `users.json`. Note that there should be as many users as participants in order to actually conduct the experiment on a production server.
 
-Parfait ! Voici une section claire et complète que tu peux ajouter à ta documentation, expliquant comment un utilisateur peut ajouter un **composant personnalisé d’interface** à son expérience :
-
 ---
 
 ## 🧱 Adding a Custom UI Page
