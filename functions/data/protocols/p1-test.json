@@ -2,7 +2,7 @@
     {
         "type": "p-task",
         "desc": "",
-        "timer": -1,
+        "timer": 10,
         "instances": [
         {
             "input": {

@@ -1,14 +1,6 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
-        type: 'p-instruction',
-        title: 'Task',
-        body_text: 'Instruction',
-        button_text: 'Next',
-        with_button: true,
-        countdown: 90 // opt.
-    },
-    {
         type: 'p-questionnaire',
         questions: [
             {
@@ -39,7 +31,7 @@ export const TEST_VIEW = [
                 type: 'textfield',
                 primary_text: 'Title 4',
                 secondary_text: 'Sub title 4',
-                answers: ['Text']
+                answers: ['']
             }
         ]
     },
@@ -49,7 +41,7 @@ export const TEST_VIEW = [
         desc: 'Description',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: -1, // opt.
+        timer: 10, // opt.
         randomize: true,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
@@ -87,6 +79,14 @@ export const TEST_VIEW = [
                 'choix B',
             ]
         }
+    },
+    {
+        type: 'p-instruction',
+        title: 'Task',
+        body_text: 'Instruction',
+        button_text: 'Next',
+        with_button: true,
+        countdown: 90 // opt.
     },
     {
         type: 'p-questionnaire',

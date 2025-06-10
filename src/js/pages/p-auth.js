@@ -70,15 +70,15 @@ try {
                         </div>
                     </div>
 
-                    <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Connexion</button>
+                    <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Connection</button>
 
                     <div id="error" class="text-center text-danger mt-4"></div>
                 </div>
 
                 <div class="container deconnexion">
-                    <div>Vous êtes déja connecté. Voulez-vous vous déconnecter ?</div>
+                    <div>you are already logged in. Do you want to log out? ?</div>
 
-                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Deconnexion</button>
+                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Disconnection</button>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@ try {
 
                     login_content.style.display = 'block';
                     loading.style.display = 'none';
-                    this.error_tag.innerHTML = `Oups... Une erreur s'est produite !`;
+                    this.error_tag.innerHTML = `Oups... An error has occurred !`;
                 });
 
                 // login(uid)

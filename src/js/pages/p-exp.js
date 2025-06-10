@@ -320,13 +320,12 @@ try {
              * @param {boolean} is_time_exceeded 
              */
             _submit(is_time_exceeded = false) {
-                clearInterval(this.timer_id); 
-
                 /** @type {FormComponent} */
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
                 let answers = form.submit();
                 // At least one answer.
-                if (answers.length > 0 && answers[0].length > 0) {
+                if (!form.someEmptyQuestion() || (this.current_view.timer >= 0 && (this.current_time / 1000) >= this.current_view.timer)) {
+                    clearInterval(this.timer_id);
                     // Save answers if not training.
                     if (!this.current_view.is_training) {
                         store.dispatch(keys.a_update_save, {
@@ -337,7 +336,7 @@ try {
                                 order_index: this.current_view.order[store.state[keys.s_current_task_index]]
                             }
                         });
-                    }                    
+                    }
                     
                     let checked_answers = this._checkAnswers(answers[0]);
                     if (checked_answers) {
@@ -386,16 +385,19 @@ try {
                     tag.textContent = this.current_view.timer.toFixed(2);
                 }
 
-                let delta_time = 1000;
+                let delta_time = 100;
                 this.timer_id = window.setInterval(() => {
-                        this.current_time += delta_time / 1000;
-                        if (this.current_view.timer >= 0) {
-                            tag.textContent = (Math.round((this.current_view.timer - this.current_time) * 100) / 100).toFixed(2);
-                            if (this.current_time >= this.current_view.timer) {
-                                this._submit(true);
-                            }
+                    this.current_time += delta_time;
+                    let current_time_second = this.current_time / 1000;
+                    if (this.current_view.timer >= 0) {
+                        if (current_time_second % 1 == 0) {
+                            tag.textContent = (Math.round((this.current_view.timer - current_time_second) * 100) / 100).toFixed(2);
                         }
-                    }, delta_time);
+                        if (current_time_second >= this.current_view.timer) {
+                            this._submit(true);
+                        }
+                    }
+                }, delta_time);
             }
 
             /**

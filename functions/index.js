@@ -41,6 +41,12 @@ const USERS_FILE_PATH = path.resolve(__dirname, DATA_FOLDERENAME, USERS_FILENAME
 const DIST_FOLDERNAME  = 'dist';
 const INDEX_FILENAME   = 'index.html';
 
+
+if(!fs.existsSync(USERDATA_FOLDER_PATH)) {
+    fs.mkdirSync(USERDATA_FOLDER_PATH, { recursive: true });
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                                   ROUTES                                   */
 /* -------------------------------------------------------------------------- */

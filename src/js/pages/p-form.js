@@ -54,8 +54,11 @@ try {
             _submit() {
                 /** @type {FormComponent} */
                 let form = this.content.querySelector('#form');
-                let responses = form.submit();
-                this._transition(responses);
+                if (!form.someEmptyQuestion()) {
+                    let responses = form.submit();
+                    this._transition(responses);
+                }
+                
             }
 
             _init() {

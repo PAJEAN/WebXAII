@@ -1,0 +1,35 @@
+{
+  "date": "2025-06-10T14:29:00.941Z",
+  "data": [
+    {
+      "time_on_page": 7023
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 10000,
+        "is_time_exceeded": true,
+        "order_index": 0
+      },
+      "time_on_page": 10078
+    },
+    {
+      "answers": [
+        [
+          "72"
+        ],
+        [
+          "F"
+        ]
+      ],
+      "time_on_page": 5758
+    },
+    {
+      "time_on_page": 856
+    }
+  ]
+}
