@@ -80,7 +80,7 @@ export const module = {
                     }
                 })
                 .then((response) => {
-                    let data = response.data; // Response: null or an object.                    
+                    let data = response.data; // Response: null or an object.
                     if (data) {
                         let data_views = [{}, ...data.views]; // Add authentication view first.
                         context.commit(`${NS}_UPDATE_VIEW`, data_views);

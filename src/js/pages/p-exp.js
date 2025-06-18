@@ -74,7 +74,7 @@ try {
                     <div class="row">
                         <div class="col-sm-9">
                             <div class="row" id="${TAG_IDS.source_model}">
-                                <div class="col-sm">
+                                <!-- <div class="col-sm">
                                     <div class="card">
                                         <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
                                         <div class="card-body">
@@ -89,10 +89,10 @@ try {
                                             <h5 class="card-title text-center">Model</h5>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row card-explanation mb-2" id="${TAG_IDS.explanation}">
-                                <div class="col-sm">
+                                <!-- <div class="col-sm">
                                     <div class="card">
                                         <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
                                         <div class="card-body">
@@ -115,7 +115,7 @@ try {
                                             <h5 class="card-title text-center">Source image</h5>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="col-sm-3">

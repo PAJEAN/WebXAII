@@ -12,7 +12,7 @@ export const PAGE_NAMES = {
 export const PAGES_INFO = {
     [PAGE_NAMES.AUTHENTICATION]: {
         route: {
-            path: '/',
+            path: '/auth/:user-id',
             title: 'Authentication',
             is_default: true
         },

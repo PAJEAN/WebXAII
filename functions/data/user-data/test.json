@@ -1,35 +1,35 @@
 {
-  "date": "2025-06-10T14:29:00.941Z",
+  "first_connection": "2025-06-18T13:25:18.045Z",
+  "last_modification": "2025-06-18T13:44:53.537Z",
+  "is_completed": true,
   "data": [
     {
-      "time_on_page": 7023
+      "time_on_page": 2929
     },
     {
       "task_0": {
         "answers": [
-          [
-            0
-          ]
+          []
         ],
         "time": 10000,
         "is_time_exceeded": true,
         "order_index": 0
       },
-      "time_on_page": 10078
+      "time_on_page": 10029
     },
     {
       "answers": [
         [
-          "72"
+          "50"
         ],
         [
-          "F"
+          ""
         ]
       ],
-      "time_on_page": 5758
+      "time_on_page": 34643
     },
     {
-      "time_on_page": 856
+      "time_on_page": 793
     }
   ]
 }

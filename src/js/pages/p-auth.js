@@ -57,8 +57,8 @@ try {
                 </div>
 
                 <div class="container connexion">
-                    <div class="title">Welcome</div>
-                    <div class="sub-title">xaipatimg</div>
+                    <div class="title">WebXAll</div>
+                    <div class="sub-title">Welcome</div>
 
                     <div class="input-group my-4">
                         <span class="input-group-text">
@@ -76,7 +76,7 @@ try {
                 </div>
 
                 <div class="container deconnexion">
-                    <div>you are already logged in. Do you want to log out? ?</div>
+                    <div>You are already logged in. Do you want to log out?</div>
 
                     <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Disconnection</button>
                 </div>
@@ -89,6 +89,9 @@ try {
                 super();
             }
 
+            /**
+             * @param {string} uid 
+             */
             _connectUser(uid) {
                 /** @type {HTMLElement} */
                 let login_content = this.content.querySelector('.connexion');
@@ -98,8 +101,6 @@ try {
                 login_content.style.display = 'none';
                 loading.style.display = 'block';
 
-
-                // TODO: Need to keep uid.
                 store.dispatch(keys.a_fetch_view, {uid: uid})
                 .then((data) => {
                     loading.style.display = 'none';
@@ -110,6 +111,9 @@ try {
                         role: data.roles
                     });
                     
+                    console.log("is_completed: " + data['is_completed']);
+                    // TODO: if not completed but have data, update index of current view.
+                    
                     nextView();
                 })
                 .catch((err) => {
@@ -119,22 +123,6 @@ try {
                     loading.style.display = 'none';
                     this.error_tag.innerHTML = `Oups... An error has occurred !`;
                 });
-
-                // login(uid)
-                // .then(() => {
-                //     loading.style.display = 'none';
-                //     console.log('CONNECT');
-
-                    
-                // })
-                // .catch((err) => {
-
-                //     console.error(err);
-
-                //     login_content.style.display = 'block';
-                //     loading.style.display = 'none';
-                //     this.error_tag.innerHTML = `Oups... Une erreur s'est produite !`;
-                // });
             }
 
             _init() {
@@ -153,6 +141,9 @@ try {
                     let login_button = this.content.querySelector('#connexion-btn');
                     /* Behaviors */
                     login_button.addEventListener('click', () => {
+                        console.log(user_id.value);
+                        
+                        
                         this._connectUser(user_id.value);
                     });
                 } else {
@@ -162,8 +153,7 @@ try {
                     let logout_button = this.content.querySelector('#deconnexion-btn');
                     /* Behaviors */
                     logout_button.addEventListener('click', () => {
-                        // store.dispatch(a_keys.a_logout,  {});
-                        // store.dispatch(p_keys.a_clear_ordering, {});
+                        store.dispatch(c_keys.a_logout,  {});
                     });
                 }
             }
@@ -177,6 +167,13 @@ try {
                 this._init();
                 /* Update UI */
                 this.unsubscribe = store.events.subscribe('stateChange', this._init.bind(this));
+                /* Check if user is given on url parameters */
+                if (this.hasAttribute('user-id')) {                    
+                    this._connectUser(this.getAttribute('user-id'));
+                }
+
+                // const isMobile = !window.matchMedia('(hover: hover)').matches
+                
             }
           
             disconnectedCallback () {

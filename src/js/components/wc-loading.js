@@ -57,7 +57,7 @@ try {
             </style>
             <div id="main">
                 <div class="container">
-                    <div>Chargement</div>
+                    <div>Loading</div>
                     <div class="loader"></div>
                 </div>
             </div>

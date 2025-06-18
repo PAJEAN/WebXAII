@@ -29,19 +29,6 @@ export class Router extends HTMLElement {
         super();
         this.current_route;
         this.routes;
-        this.default_route = (() => {
-            let default_route = null;
-            let route = this.querySelector(`${keys.ROUTE}[is-default]`);
-            if (route) {
-                default_route = {
-                    path: route.getAttribute('path'),
-                    title: route.getAttribute('title'),
-                    component: route.getAttribute('component'),
-                    params: {}
-                };
-            }
-            return default_route; 
-        })();
     }
 
     get outlet() {
@@ -60,13 +47,26 @@ export class Router extends HTMLElement {
             let route_info = page_info['route'];
             for (let attribute in route_info) {
                 if (attribute == 'is_default') {
-                    route.setAttribute('is-default', '');
+                    route.setAttribute('is-default', '');                    
                 } else {
                     route.setAttribute(attribute, route_info[attribute]);
                 }
                 route.setAttribute('component', page_name);
             }
             ROUTER.appendChild(route);
+        }
+    }
+
+    _update() {
+        const {component, title, params = {}} = this.current_route;
+        if (component) {
+            this.outlet.textContent = '';
+            const view = document.createElement(component);
+            document.title = title || document.title;
+            for (let param in params) {
+                view.setAttribute(param, params[param]);
+            }
+            this.outlet.appendChild(view);
         }
     }
 
@@ -89,7 +89,7 @@ export class Router extends HTMLElement {
             this._update();
         }
         else if (this.default_route) {
-            window.history.replaceState(null, null, `${window.location.pathname}#${this.default_route.path}`);
+            // window.history.replaceState(null, null, `${window.location.pathname}#${this.default_route.path}`);
             this.current_route = this.default_route;
             this._update();
         }
@@ -138,22 +138,23 @@ export class Router extends HTMLElement {
         }
         return match;
     }
-
-    _update() {
-        const {component, title, params = {}} = this.current_route;
-        if (component) {
-            this.outlet.textContent = '';
-            const view = document.createElement(component);
-            document.title = title || document.title;
-            for (let param in params) {
-                view.setAttribute(param, params[param]);
-            }
-            this.outlet.appendChild(view);
-        }
-    }
   
     connectedCallback() {
         this._initRoutes();
+
+        this.default_route = (() => {
+            let default_route = null;
+            let route = this.querySelector(`${keys.ROUTE}[is-default]`);
+            if (route) {
+                default_route = {
+                    path: route.getAttribute('path'),
+                    title: route.getAttribute('title'),
+                    component: route.getAttribute('component'),
+                    params: {}
+                };
+            }
+            return default_route; 
+        })();
 
         this.routes = Array.from(this.querySelectorAll(keys.ROUTE))
                 .filter(node => node.parentNode === this)
