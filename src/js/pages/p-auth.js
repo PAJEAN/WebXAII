@@ -1,7 +1,7 @@
 // @ts-check
 
 /* Lib */
-import { nextView } from 'JS/lib/view-manager';
+import { changePage, nextView } from 'JS/lib/view-manager';
 /* Namespaces */
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
@@ -105,16 +105,25 @@ try {
                 .then((data) => {
                     loading.style.display = 'none';
 
-                    store.dispatch(c_keys.a_login, {
-                        is_authentication: true,
-                        uid: uid,
-                        role: data.roles
-                    });
-                    
-                    console.log("is_completed: " + data['is_completed']);
-                    // TODO: if not completed but have data, update index of current view.
-                    
-                    nextView();
+                    if (data.hasOwnProperty('is_completed') && data['is_completed'] == true) {
+                        login_content.style.display = 'block';
+                        this.error_tag.innerHTML = `You have already completed your experiment !`;
+                    } else {
+                        store.dispatch(c_keys.a_login, {
+                            is_authentication: true,
+                            uid: uid,
+                            role: data.roles
+                        });
+
+                        if (data.hasOwnProperty('user_data') && data['user_data'].length > 0) {
+                            store.dispatch(keys.a_init_save, data['user_data']);
+                            store.dispatch(keys.a_init_view_index, data['user_data'].length);
+                            
+                            changePage();
+                        } else {
+                            nextView();
+                        }
+                    }                    
                 })
                 .catch((err) => {
                     console.error(err);
@@ -130,7 +139,7 @@ try {
                 let login_content = this.content.querySelector('.connexion');
                 /** @type {HTMLElement} */
                 let logout_content = this.content.querySelector('.deconnexion');
-
+                
                 if (!store.state['is_authentication']) {
                     login_content.style.display = 'block';
                     logout_content.style.display = 'none';
@@ -172,8 +181,8 @@ try {
                     this._connectUser(this.getAttribute('user-id'));
                 }
 
-                // const isMobile = !window.matchMedia('(hover: hover)').matches
-                
+                // TODO: Maybe an option for only some experiments.
+                // const isMobile = !window.matchMedia('(hover: hover)').matches;
             }
           
             disconnectedCallback () {

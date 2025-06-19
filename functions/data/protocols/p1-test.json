@@ -4,35 +4,55 @@
         "desc": "",
         "timer": 10,
         "instances": [
-        {
-            "input": {
-                "is_image": true,
-                "label": "assets/datasets/single-kingfisher-bird.jpg",
-                "title": "Input image"
-            },
-            "model": {
-                "is_image": false,
-                "label": "The model predicts the class Kingfisher.",
-                "title": "AI prediction"
-            },
-            "explanations": [
             {
-                "is_image": true,
-                "label": "assets/datasets/single-kingfisher-bird_xai.jpg",
-                "title": "Prediction explanation"
+                "input": {
+                    "is_image": true,
+                    "label": "assets/datasets/single-kingfisher-bird.jpg",
+                    "title": "Input image"
+                },
+                "model": {
+                    "is_image": false,
+                    "label": "The model predicts the class Kingfisher.",
+                    "title": "AI prediction"
+                },
+                "explanations": [
+                {
+                    "is_image": true,
+                    "label": "assets/datasets/single-kingfisher-bird_xai.jpg",
+                    "title": "Prediction explanation"
+                }
+                ],
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/datasets/single-kingfisher-bird.jpg",
+                    "title": "Input image"
+                },
+                "model": {
+                    "is_image": false,
+                    "label": "The model predicts the class Kingfisher.",
+                    "title": "AI prediction"
+                },
+                "explanations": [
+                {
+                    "is_image": true,
+                    "label": "assets/datasets/single-kingfisher-bird_xai.jpg",
+                    "title": "Prediction explanation"
+                }
+                ],
+                "expected": 0
             }
-            ],
-            "expected": 0
-        }
         ],
         "question": {
-        "type": "radio",
-        "primary_text": "Is the model prediction correct ?",
-        "secondary_text": "",
-        "answers": [
-            "Yes",
-            "No"
-        ]
+            "type": "radio",
+            "primary_text": "Is the model prediction correct ?",
+            "secondary_text": "",
+            "answers": [
+                "Yes",
+                "No"
+            ]
         }
     },
     {

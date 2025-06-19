@@ -31,8 +31,10 @@ export const keys = {
     /*** ACTIONS ***/
     /* -------------------------------- view -------------------------------- */
     a_fetch_view:          `${NS}_fetch_view`,          // Get view from server.
+    a_init_view_index:     `${NS}_init_view_index`,     // Get view index from server (already completed some views).
     a_update_view_index:   `${NS}_update_view_index`,   // Update view index.
     /* -------------------------------- save -------------------------------- */
+    a_init_save:      `${NS}_init_save`,
     a_update_save:    `${NS}_update_save`,
     a_update_time:    `${NS}_update_time`,
     /* -------------------------- experiment & task ------------------------- */
@@ -55,8 +57,8 @@ export const module = {
     state: {
         /* -------------------------------- view -------------------------------- */
         [keys.s_current_view_index]: 0,
-        [keys.s_view]: TEST_VIEW,
-        [keys.s_view_objects]: viewToObject(TEST_VIEW),
+        [keys.s_view]: process.env.NODE_ENV == 'production' ? []: TEST_VIEW,
+        [keys.s_view_objects]: process.env.NODE_ENV == 'production' ? []: viewToObject(TEST_VIEW),
         /* -------------------------------- save -------------------------------- */
         [keys.s_save]: [],
         [keys.s_time]: new Date(),
@@ -95,10 +97,16 @@ export const module = {
                 });
             });
         },
+        [keys.a_init_view_index](context, payload) {
+            context.commit(`${NS}_UPDATE_VIEW_INDEX`, payload);
+        },
         [keys.a_update_view_index](context, payload) {
             context.commit(`${NS}_UPDATE_VIEW_INDEX`, context.state[keys.s_current_view_index] + 1);
         },
         /* -------------------------------- save -------------------------------- */
+        [keys.a_init_save](context, payload) { // Init user data with already completed views.
+            context.commit(`${NS}_INIT_SAVE`, payload);
+        },
         [keys.a_update_save](context, payload) { // Update a subtask in completed tasks.
             context.commit(`${NS}_UPDATE_SAVE`, payload);
         },
@@ -127,10 +135,13 @@ export const module = {
             state[keys.s_view_objects] = viewToObject(payload);
         },
         /* -------------------------------- save -------------------------------- */
+        [`${NS}_INIT_SAVE`](state, payload) {
+            state[keys.s_save] = payload;
+        },
         [`${NS}_UPDATE_SAVE`](state, payload) {
-            if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) {
+            if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) { // Update current.
                 state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
-            } else {
+            } else { // New entry.
                 state[keys.s_save][state[keys.s_current_view_index]] = payload;
             }
         },

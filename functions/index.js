@@ -104,7 +104,8 @@ router.get('/api/data', (req, res) => {
     let return_data = {
         roles: user_data[USER_ID].hasOwnProperty('roles') ? user_data[USER_ID]['roles']: 'user',
         views: JSON.parse(raw_data),
-        is_completed: experiment_user_data.hasOwnProperty('is_completed') ? experiment_user_data['is_completed']: false
+        is_completed: experiment_user_data.hasOwnProperty('is_completed') ? experiment_user_data['is_completed']: false,
+        user_data: experiment_user_data.hasOwnProperty('data') ? experiment_user_data['data']: []
     };
     return res.status(200).json(return_data);
 });

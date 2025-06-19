@@ -28,8 +28,13 @@ export function changePage() {
     function reloadOrNewComponent(current_component_name) {
         if (window.location.hash == `#${PAGES_INFO[current_component_name].route.path}`) {
             ROUTER.navigate(`#${PAGES_INFO[current_component_name].route.path}`);
-        } else {            
-            window.location.hash = `#${PAGES_INFO[current_component_name].route.path}`;
+        } else {
+            // Avoid /auth/:user_id default url.
+            if (PAGES_INFO[current_component_name].route.hasOwnProperty('is_default') && PAGES_INFO[current_component_name].route['is_default']) {
+                window.location.hash = '/';
+            } else {
+                window.location.hash = `#${PAGES_INFO[current_component_name].route.path}`;
+            }
         }
     }
 

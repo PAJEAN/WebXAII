@@ -1,35 +1,47 @@
 {
-  "first_connection": "2025-06-18T13:25:18.045Z",
-  "last_modification": "2025-06-18T13:44:53.537Z",
+  "first_connection": "2025-06-19T09:21:00.752Z",
+  "last_modification": "2025-06-19T09:34:14.740Z",
   "is_completed": true,
   "data": [
     {
-      "time_on_page": 2929
+      "time_on_page": 1856
     },
     {
       "task_0": {
         "answers": [
-          []
+          [
+            0
+          ]
         ],
-        "time": 10000,
-        "is_time_exceeded": true,
+        "time": 7300,
+        "is_time_exceeded": false,
         "order_index": 0
       },
-      "time_on_page": 10029
+      "task_1": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 6600,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "time_on_page": 14079
     },
     {
       "answers": [
         [
-          "50"
+          "62"
         ],
         [
           ""
         ]
       ],
-      "time_on_page": 34643
+      "time_on_page": 54587
     },
     {
-      "time_on_page": 793
+      "time_on_page": 887
     }
   ]
 }

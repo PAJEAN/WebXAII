@@ -35,6 +35,20 @@ export const TEST_VIEW = [
             }
         ]
     },
+        {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: 'Here is a longer text',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            }
+        ]
+    },
     {
         type: 'p-task',
         title: 'Title task',
