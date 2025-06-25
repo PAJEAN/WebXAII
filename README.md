@@ -116,6 +116,17 @@ Example:
 
 > ⚠️ Make sure that each protocol filename in `users.json` matches an actual file in the `protocols/` folder.
 
+You can allow your users to log in to the application in two ways:
+
+1. **By sharing their user ID manually** – Distribute the user ID to each user so they can input it when accessing the app.
+2. **By providing a direct login link** – Send your users a pre-built login URL in the following format:
+
+```
+<your-url>/#/auth/<user-id>
+```
+
+Replace `<your-url>` with your actual application URL and `<user-id>` with the corresponding user's ID.
+
 ---
 ## 📋 Implementing a protocol
 

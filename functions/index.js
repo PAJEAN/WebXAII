@@ -99,8 +99,6 @@ router.get('/api/data', (req, res) => {
         experiment_user_data = JSON.parse(fs.readFileSync(experiment_user_data_path));
     }
 
-    // TODO: Ici on pourrait ajouter les données de l'user s'il a déjà commencé à annoter (experiment_user_data.data).
-
     let return_data = {
         roles: user_data[USER_ID].hasOwnProperty('roles') ? user_data[USER_ID]['roles']: 'user',
         views: JSON.parse(raw_data),
