@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Introduction",
+      "body_text": "Thank you for participating to this experiment. You will have to perform a series of tasks which will consist in identyfing pattern in images. Your goal is to maximize your performance, by trying to provide the right answer for every image. At the end of each task (a series of 10 images), you will be given your performance as a percentage of right answers. The protocol will last about 30 minutes and is organized as follows. First, you will peform two training tasks in order to get confortable with the tasks and with the interface. Then, the main experiment will start. It will be divided in 4 sessions. Each session consists in solving two tasks, and ends with a short survey. Once you have performed all 4 sessions, the protocol will end with a final survey.",
+      "button_text": "I read and understood the instructions.",
+      "with_button": "True"
+}

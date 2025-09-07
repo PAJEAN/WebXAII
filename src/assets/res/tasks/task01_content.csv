@@ -1,0 +1,11 @@
+target,pred,source,xai_shap,xai_cf,xai_llm
+1,1,res/input/task01/1.png,res/xai_shap/task01/1target_0.jpg,res/xai_cf/task01/1cf_3.png,This is a text explanation for the prediction of the model.
+1,1,res/input/task01/2.png,res/xai_shap/task01/2target_0.jpg,res/xai_cf/task01/2cf_0.png,This is a text explanation for the prediction of the model.
+1,1,res/input/task01/3.png,res/xai_shap/task01/3target_0.jpg,res/xai_cf/task01/3cf_1.png,This is a text explanation for the prediction of the model.
+1,1,res/input/task01/4.png,res/xai_shap/task01/4target_0.jpg,res/xai_cf/task01/4cf_0.png,This is a text explanation for the prediction of the model.
+0,0,res/input/task01/7.png,res/xai_shap/task01/7target_0.jpg,res/xai_cf/task01/7cf_0.png,This is a text explanation for the prediction of the model.
+0,0,res/input/task01/8.png,res/xai_shap/task01/8target_0.jpg,res/xai_cf/task01/8cf_0.png,This is a text explanation for the prediction of the model.
+0,0,res/input/task01/9.png,res/xai_shap/task01/9target_0.jpg,res/xai_cf/task01/9cf_0.png,This is a text explanation for the prediction of the model.
+0,0,res/input/task01/10.png,res/xai_shap/task01/10target_0.jpg,res/xai_cf/task01/10cf_0.png,This is a text explanation for the prediction of the model.
+1,0,res/input/task01/18.png,res/xai_shap/task01/18target_1.jpg,res/xai_cf/task01/18cf_0.png,This is a text explanation for the prediction of the model.
+1,0,res/input/task01/28.png,res/xai_shap/task01/28target_0.jpg,res/xai_cf/task01/28cf_0.png,This is a text explanation for the prediction of the model.

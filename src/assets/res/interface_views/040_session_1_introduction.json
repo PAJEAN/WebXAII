@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Start of the experiment",
+      "body_text": "You will now start the experiment. The experiment is divided in 4 sessions, and each of them consists in performing 2 tasks. The tasks are similar to the training experiment you just performed.",
+      "button_text": "Start the session 1/4",
+      "with_button": "True"
+}

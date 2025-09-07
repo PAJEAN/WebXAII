@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Start of the second session",
+      "body_text": "You will now start the second session. It is identical to the first session, except that you will have less time to take each decision (10 seconds instead of 20).",
+      "button_text": "Start the session 2/4",
+      "with_button": "True"
+}

@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "AI assistant",
+    "body_text": "To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. However, the AI might make mistakes, and the ultimate decision is your responsability. You are free to take into account the AI's prediction or not. In addition, you will have access to an explanation of the AI's prediction. The explanation will be a counterfactual image. This corresponds to an image that is very similar to the source image, but for which the AI would make the opposite prediction (YES instead of NO and NO instead of YES). The differences between the source image and the counterfactual explanation will be highlighted by circles on the counterfactual explanation.",
+    "button_text": "I read and understood the instructions",
+    "with_button": "True"
+}

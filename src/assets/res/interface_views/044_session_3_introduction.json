@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Start of the thrid session",
+      "body_text": "You will now start the third session. In this session, the difficulty of the tasks will increase. However, you will have 20 seconds to take each decision again.",
+      "button_text": "Start the session 3/4",
+      "with_button": "True"
+}

@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "AI assistant",
+    "body_text": "To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. However, the AI might make mistakes, and the ultimate decision is your responsability. You are free to take into account the AI's prediction or not. In addition, you will have access to an explanation of the AI's prediction. The explanation will be a text sample which describes the reasoning of the AI model.",
+    "button_text": "I read and understood the instructions.",
+    "with_button": "True"
+}

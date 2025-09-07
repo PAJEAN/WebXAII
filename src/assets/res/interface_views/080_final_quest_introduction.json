@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Last phase - Instructions",
+      "body_text": "Thank you for completing the task. Before terminating the protocol, you will complete a final survey (2 pages).",
+      "button_text": "Start the final survey.",
+      "with_button": "True"
+}

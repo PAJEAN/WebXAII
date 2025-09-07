@@ -1,0 +1,34 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "Please answer the following questions related to demographics.",
+          "secondary_text": "What is your age ?",
+          "answers": [
+            "18-24",
+            "25-34",
+            "35-44",
+            "45-54",
+            "55-64",
+            "65+"
+        ]
+        },
+        {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "What is your gender",
+           "answers": [
+            "M",
+            "F",
+            "Other or Prefer not to say"
+          ]
+        },
+        {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "What is your socioeconomical status ?",
+           "answers": ["TBD"]
+        }
+      ]
+}

@@ -1,0 +1,1849 @@
+[
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "checkbox",
+                "primary_text": "Consent form (TODO)",
+                "secondary_text": "",
+                "answers": [
+                    "I consent.",
+                    "I do not consent (leave the experiment)."
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "Introduction",
+        "body_text": "Thank you for participating to this experiment. You will have to perform a series of tasks which will consist in identyfing pattern in images. Your goal is to maximize your performance, by trying to provide the right answer for every image. At the end of each task (a series of 10 images), you will be given your performance as a percentage of right answers. The protocol will last about 30 minutes and is organized as follows. First, you will peform two training tasks in order to get confortable with the tasks and with the interface. Then, the main experiment will start. It will be divided in 4 sessions. Each session consists in solving two tasks, and ends with a short survey. Once you have performed all 4 sessions, the protocol will end with a final survey.",
+        "button_text": "I read and understood the instructions.",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "AI assistant",
+        "body_text": "To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. However, the AI might make mistakes, and the ultimate decision is your responsability. You are free to take into account the AI's prediction or not.",
+        "button_text": "I read and understood the instructions.",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "Training phase - Instructions",
+        "body_text": "You will now start the training phase. You will have to perform two tasks.",
+        "button_text": "Start training.",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": -1,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Training phase - Instructions",
+        "body_text": "For the second training task, you will have a limited time to take each decision, as you will have later on the actual experiments. The lack of answer in time which will be considered as a wrong answer for your score.",
+        "button_text": "Start training.",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 20,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Start of the experiment",
+        "body_text": "You will now start the experiment. The experiment is divided in 4 sessions, and each of them consists in performing 2 tasks. The tasks are similar to the training experiment you just performed.",
+        "button_text": "Start the session 1/4",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 20,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/3.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 20,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/3.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Start of the second session",
+        "body_text": "You will now start the second session. It is identical to the first session, except that you will have less time to take each decision (10 seconds instead of 20).",
+        "button_text": "Start the session 2/4",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 10,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/3.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : There is at least one row that contains only circles.",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : There is at least one row that contains only circles.",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 10,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/1.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/2.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/3.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/7.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/8.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/18.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task01/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Start of the thrid session",
+        "body_text": "You will now start the third session. In this session, the difficulty of the tasks will increase. However, you will have 20 seconds to take each decision again.",
+        "button_text": "Start the session 3/4",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 20,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/47.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/92.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/97.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/190.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/339.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/364.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 20,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/47.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/92.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/97.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/190.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/339.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/364.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Start of the last session",
+        "body_text": "You will now start the fourth and last session. In this session, the difficulty will stay the same, but the time to take each decision will decrease to 10 seconds again.",
+        "button_text": "Start the session 4/4",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 10,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/47.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/92.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/97.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/190.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/339.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/364.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "New training task",
+        "body_text": "The rule is : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "with_button": true,
+        "button_text": "Start the training task"
+    },
+    {
+        "type": "p-task",
+        "title": "Identify if the image respects the rule or not before the end of the timer.",
+        "desc": "Rule : If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. ",
+        "show_progression_bar": false,
+        "randomize": true,
+        "timer": 10,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This was the right answer",
+        "feedback_answer_wrong": "This was not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/4.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/47.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/92.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/97.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : YES",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/190.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/339.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "model": {
+                    "is_image": false,
+                    "label": "The AI prediction is : NO",
+                    "title": "AI prediction"
+                },
+                "explanations": [],
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/task02/364.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "radio",
+            "primary_text": "",
+            "secondary_text": "Does the image presented respect the rule ?",
+            "answers": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "Task end",
+        "body_text": "On the last task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "Last phase - Instructions",
+        "body_text": "Thank you for completing the task. Before terminating the protocol, you will complete a final survey (2 pages).",
+        "button_text": "Start the final survey.",
+        "with_button": "True"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Please answer the following questions related to demographics.",
+                "secondary_text": "What is your age ?",
+                "answers": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "What is your gender",
+                "answers": [
+                    "M",
+                    "F",
+                    "Other or Prefer not to say"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "What is your socioeconomical status ?",
+                "answers": [
+                    "TBD"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "For each statement listed below, select the proposition that indicates the extent to which you feel it is characteristic of you. For example, if the statement is not at all like you, select number 1 \u201cExtremely Uncharacteristic,\u201d or if you really can\u2019t decide if the statement is or is not characteristic of you, select number 3 \u201cUncertain.\u201d",
+                "secondary_text": "I would prefer complex to simple problems.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "I like to have the responsibility of handling a situation that requires a lot of thinking.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Thinking is not my idea of fun.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "I would rather do something that requires little thought than something that is sure to challenge my thinking abilities.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "I really enjoy a task that involves coming up with new solutions to problems.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.",
+                "answers": [
+                    "(1) Extremely Uncharacteristic ",
+                    "(2) Somewhat Uncharacteristic",
+                    "(3) Uncertain",
+                    "(4) Somewhat Characteristic",
+                    "(5) Extremely Characteristic"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "End of the protocol",
+        "body_text": "",
+        "button_text": "Thank you for participating to this experiment. The protocol is now over. You can close this page.",
+        "with_button": "False"
+    }
+]

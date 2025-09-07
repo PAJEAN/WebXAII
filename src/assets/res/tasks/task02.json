@@ -1,0 +1,3 @@
+{
+    "rule" : "If the row 2 contains at least one red symbol, the rule 1 applies. Otherwise, the rule 2 applies. Rule 1 : The number of triangles is greater or equal to the number of blue symbols. Rule 2 : The number of green symbols is greater or equal to the number of squares. "
+}

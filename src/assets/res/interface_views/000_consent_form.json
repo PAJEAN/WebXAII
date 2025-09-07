@@ -1,0 +1,14 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "checkbox",
+          "primary_text": "Consent form (TODO)",
+          "secondary_text": "",
+          "answers": [
+            "I consent.",
+            "I do not consent (leave the experiment)."
+          ]
+        }
+      ]
+}

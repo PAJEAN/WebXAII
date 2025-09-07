@@ -1,0 +1,154 @@
+{
+  "first_connection": "2025-09-07T10:56:53.461Z",
+  "last_modification": "2025-09-07T11:02:58.367Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 3258
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 10218
+    },
+    {
+      "time_on_page": 49205
+    },
+    {
+      "time_on_page": 57006
+    },
+    {
+      "time_on_page": 4723
+    },
+    {
+      "time_on_page": 3956
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 51600,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_1": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 6900,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 9200,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 6400,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_4": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 4200,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "time_on_page": 149539
+    },
+    {
+      "time_on_page": 5543
+    },
+    {
+      "time_on_page": 43595
+    },
+    {
+      "time_on_page": 2130
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 4500,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_1": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 6800,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 2000,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 2200,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_4": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 4800,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "time_on_page": 29863
+    },
+    {
+      "time_on_page": 1320
+    },
+    {
+      "time_on_page": 6140
+    },
+    {
+      "time_on_page": 1669
+    }
+  ]
+}

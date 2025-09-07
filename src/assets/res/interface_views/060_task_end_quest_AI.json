@@ -1,0 +1,39 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey evaluates your opinions towards the AI, for the two tasks you just performed. Rate your level of agreement with each statement.",
+          "secondary_text": "I relied on the AI to take the decisions.",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "I trusted the AI's decisions.",
+           "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "slider",
+          "primary_text": "",
+          "secondary_text": "Give an estimation of the accuracy of the AI model's predictions using the slider below (from 0% to 100%). Left : the model only makes mistakes. Right : the model never makes mistakes.",
+           "answers": []
+        }
+      ]
+}

@@ -1,6 +1,202 @@
 {
-    "test": {
+    "H1": {
         "roles": "user",
-        "protocol": "p1-test.json"
+        "protocol": "H.json"
+    },
+    "H2": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H3": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H4": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H5": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H6": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H7": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H8": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H9": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "H10": {
+        "roles": "user",
+        "protocol": "H.json"
+    },
+    "AI1": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI2": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI3": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI4": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI5": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI6": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI7": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI8": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI9": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "AI10": {
+        "roles": "user",
+        "protocol": "AI.json"
+    },
+    "XAI_SHAP1": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP2": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP3": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP4": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP5": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP6": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP7": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP8": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP9": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_SHAP10": {
+        "roles": "user",
+        "protocol": "XAI_SHAP.json"
+    },
+    "XAI_CF1": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF2": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF3": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF4": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF5": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF6": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF7": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF8": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF9": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_CF10": {
+        "roles": "user",
+        "protocol": "XAI_CF.json"
+    },
+    "XAI_LLM1": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM2": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM3": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM4": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM5": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM6": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM7": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM8": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM9": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
+    },
+    "XAI_LLM10": {
+        "roles": "user",
+        "protocol": "XAI_LLM.json"
     }
 }

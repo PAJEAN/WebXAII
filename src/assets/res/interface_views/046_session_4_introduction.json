@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "Start of the last session",
+      "body_text": "You will now start the fourth and last session. In this session, the difficulty will stay the same, but the time to take each decision will decrease to 10 seconds again.",
+      "button_text": "Start the session 4/4",
+      "with_button": "True"
+}
