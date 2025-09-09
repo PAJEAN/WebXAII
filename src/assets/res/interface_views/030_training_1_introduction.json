@@ -2,6 +2,6 @@
     "type": "p-instruction",
     "title": "Training phase - Instructions",
       "body_text": "You will now start the training phase. You will have to perform two tasks.",
-      "button_text": "Start training.",
+      "button_text": "Start training",
       "with_button": "True"
 }

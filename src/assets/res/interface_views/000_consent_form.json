@@ -2,7 +2,7 @@
       "type": "p-questionnaire",
       "questions": [
         {
-          "type": "checkbox",
+          "type": "radio",
           "primary_text": "Consent form (TODO)",
           "secondary_text": "",
           "answers": [

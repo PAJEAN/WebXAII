@@ -1,7 +1,7 @@
 {
     "type": "p-instruction",
     "title": "Training phase - Instructions",
-      "body_text": "For the second training task, you will have a limited time to take each decision, as you will have later on the actual experiments. The lack of answer in time which will be considered as a wrong answer for your score.",
-      "button_text": "Start training.",
+      "body_text": "For the second training task, you will have a limited time to take each decision, as you will have later on the actual experiments. The lack of answer in time which will be considered as a wrong answer.",
+      "button_text": "Start training",
       "with_button": "True"
 }

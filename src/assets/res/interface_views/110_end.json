@@ -1,7 +1,7 @@
 {
     "type": "p-instruction",
     "title": "End of the protocol",
-    "body_text": "",
-    "button_text": "Thank you for participating to this experiment. The protocol is now over. You can close this page.",
+    "body_text": "Thank you for participating to this experiment. The protocol is now over. You can close this page.",
+    "button_text":  "Leave",
     "with_button": "False"
 }
