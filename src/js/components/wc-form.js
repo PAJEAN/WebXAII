@@ -61,6 +61,33 @@ export class FormComponent extends HTMLElement {
     }
 
     /**
+     * 
+     * @param {string} id 
+     * @param {Array<string>} answers 
+     * @returns {HTMLDivElement}
+     */
+    inputButton(id, answers) {
+        let div = document.createElement('div');
+        div.classList.add('d-flex', 'mt-2');
+        div.style.columnGap = '1rem';
+
+        for (let i = 0; i < answers.length; i++) {
+            let button = document.createElement('button');
+            button.id = id;
+            button.classList.add('btn', 'btn-info', 'btn-lg', 'w-100');
+            button.textContent = answers[i];
+
+            button.addEventListener('click', () => {
+                this.setAttribute(this.response_attribute_name, `${i}`);
+            });
+    
+            div.appendChild(button);
+        }
+
+        return div;
+    }
+
+    /**
      * @param {string} type 
      * @param {string} id 
      * @param {string} value_or_name 
@@ -104,8 +131,7 @@ export class FormComponent extends HTMLElement {
                 input.classList.add('form-control');
                 label.classList.add('form-label');
                 break;
-        }
-
+        } 
         
         div.appendChild(input);
         return div;
@@ -135,21 +161,28 @@ export class FormComponent extends HTMLElement {
         for (let i = 0; i < fieldsets.length; i++) {
             let current_responses = [];
             let fieldset = fieldsets[i];
-            let inputs = fieldset.querySelectorAll('input');
-            for (let j = 0; j < inputs.length; j++) {
-                let input = inputs[j];
-
-                switch(input.type) {
-                    case 'checkbox':
-                    case 'radio':
-                        if (input.checked) {
-                            current_responses.push(j);
-                        }
-                        break;
-                    case 'range':
-                    case 'text':
-                        current_responses.push(input.value);
-                        break;
+            let buttons = fieldset.querySelectorAll('button');
+            if (buttons.length > 0) {
+                if (this.hasAttribute(this.response_attribute_name)) {
+                    current_responses.push(parseInt(this.getAttribute(this.response_attribute_name)));
+                }
+            } else {
+                let inputs = fieldset.querySelectorAll('input');
+                for (let j = 0; j < inputs.length; j++) {
+                    let input = inputs[j];
+    
+                    switch(input.type) {
+                        case 'checkbox':
+                        case 'radio':
+                            if (input.checked) {
+                                current_responses.push(j);
+                            }
+                            break;
+                        case 'range':
+                        case 'text':
+                            current_responses.push(input.value);
+                            break;
+                    }
                 }
             }
             responses.push(current_responses);
@@ -162,7 +195,7 @@ export class FormComponent extends HTMLElement {
      * @returns {Array<Array<number|string>>}
      */
     submit() {
-        let responses = this.responses();        
+        let responses = this.responses();
         console.log(`---- wc-form responses:`);
         console.log(responses);
         
@@ -173,6 +206,7 @@ export class FormComponent extends HTMLElement {
      * Unchecked all inputs.
      */
     unchecked() {
+        this.removeAttribute(this.response_attribute_name);
         let fieldsets = this.content.querySelectorAll('fieldset');
         for (let i = 0; i < fieldsets.length; i++) {
             let fieldset = fieldsets[i];
@@ -205,13 +239,12 @@ export class FormComponent extends HTMLElement {
             }
 
             let legend = document.createElement('legend');
-            legend.textContent = question.primary_text;
+            legend.innerHTML = question.primary_text;
             let sub_title = document.createElement('div');
-            sub_title.classList.add('text-secondary');
-            sub_title.textContent = question.secondary_text;
+            // sub_title.classList.add('text-secondary');
+            sub_title.innerHTML = question.secondary_text;
             fieldset.appendChild(legend);
             fieldset.appendChild(sub_title);
-
             
             let j = 0;
             if (question.type == 'radio' || question.type == 'checkbox') {
@@ -228,6 +261,9 @@ export class FormComponent extends HTMLElement {
                     fieldset.appendChild(div);
                     j++;
                 }
+            } else if (question.type == 'button') {
+                let div = this.inputButton(`#${i}_${j}`, question.answers);
+                fieldset.appendChild(div);
             } else {
                 let div = document.createElement('div');
                 if (question.type == 'textfield') {                    
@@ -250,12 +286,13 @@ export class FormComponent extends HTMLElement {
         /** @type {Array<Question>} */
         this.questions = [];
         /** @type {View} */
-        let current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];        
+        let current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
         if (current_view instanceof Experiment) {
             this.questions.push(current_view.question);
         } else if (current_view instanceof Form) {
             this.questions.push(...current_view.questions);
-        }           
+        }
+        this.response_attribute_name = 'data-response';
         /* Methods */
         this.init();
     }

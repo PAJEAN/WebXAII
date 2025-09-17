@@ -61,9 +61,9 @@ try {
             <div id="${TAG_IDS.main_page}" class="d-flex flex-column justify-content-center">
 
                 <div class="container container-decoration mt-2 p-2" id="${TAG_IDS.task_title_container}">
-                    <h3 id="${TAG_IDS.task_title}" class="container">Task</h3>
+                    <div id="${TAG_IDS.task_title}" class="container">Task</div>
     
-                    <div id="${TAG_IDS.desc_text}" class="container fs-5">
+                    <div id="${TAG_IDS.desc_text}" class="container">
                         Rule: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </div>
                 </div>
@@ -71,10 +71,49 @@ try {
                 <div id="${TAG_IDS.alert_placeholder}" class="container"></div>
 
                 <div class="container mt-2">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div class="row" id="${TAG_IDS.source_model}">
-                                <!-- <div class="col-sm">
+                    <div id="${TAG_IDS.current_status}" class="container container-decoration d-flex justify-content-center"></div>
+                    <div class="row mt-3">
+                        <div class="col-sm">
+                            <div class="d-flex align-items-stretch mt-2" style="gap:1rem" id="${TAG_IDS.source_model}">
+                                <div class="col-sm">
+                                    <div class="card h-100">
+                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Source image
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <p class="card-text d-flex flex-column align-items-center justify-content-center h-100">
+                                                Une explication à propos de la donnée.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Explanation
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card h-100">
+                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Model
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row card-explanation mb-2" id="${TAG_IDS.explanation}"> -->
+                                <!--<div class="col-sm">
+                                    <div class="card">
+                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-center">Source image</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
                                     <div class="card">
                                         <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
                                         <div class="card-body">
@@ -86,46 +125,21 @@ try {
                                     <div class="card">
                                         <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title text-center">Model</h5>
+                                            <h5 class="card-title text-center">Source image</h5>
                                         </div>
                                     </div>
                                 </div> -->
-                            </div>
-                            <div class="row card-explanation mb-2" id="${TAG_IDS.explanation}">
-                                <!-- <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
+                            <!-- </div> -->
                         </div>
-                        <div class="col-sm-3">
-                            <div id="${TAG_IDS.current_status}" class="container container-decoration d-flex justify-content-center"></div>
-
-                            <div id="${TAG_IDS.timer}" class="text-center fs-2 my-2"></div>
-
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-sm m-auto">
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
 
                             <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-info btn-lg text-uppercase w-100 mt-4">Submit</button>
+                        </div>
+                        <div class="m-auto">
+                            <div id="${TAG_IDS.timer}" class="text-center fs-2 my-2"></div>
                         </div>
                     </div>
                 </div>
@@ -145,6 +159,8 @@ try {
              */
             _checkAnswers(answers) {
                 let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
+                console.log(expected, answers);
+                
                 if (expected.length != answers.length) {
                     return false;
                 }
@@ -187,7 +203,7 @@ try {
                 let col = document.createElement('div');
                 col.classList.add('col-sm');
                 let card = document.createElement('div');
-                card.classList.add('card');
+                card.classList.add('card', 'h-100');
                 if (is_image) {
                     let image = document.createElement('img');
                     image.setAttribute('src', text);
@@ -198,15 +214,15 @@ try {
                 card_body.classList.add('card-body');
                 if (!is_image) {
                     let body_text = document.createElement('div');
-                    body_text.classList.add('mb-4')
+                    body_text.classList.add('card-text', 'd-flex', 'flex-column', 'align-items-center', 'justify-content-center', 'h-100');
                     body_text.textContent = text;
                     card_body.appendChild(body_text);
+                    card.appendChild(card_body);
                 }
-                let body_title = document.createElement('h5');
-                body_title.classList.add('card-title', 'text-center');
+                let body_title = document.createElement('div');
+                body_title.classList.add('card-footer', 'text-body-secondary', 'text-center', 'fw-normal');
                 body_title.textContent = body_title_text;
-                card_body.appendChild(body_title);
-                card.appendChild(card_body);
+                card.appendChild(body_title);
                 col.appendChild(card);
                 return col;
             }
@@ -234,8 +250,8 @@ try {
             _dataset() {
                 let tag_source_model = this._getElementById(TAG_IDS.source_model);
                 tag_source_model.textContent = '';
-                let tag_explanation = this._getElementById(TAG_IDS.explanation);
-                tag_explanation.textContent = '';
+                // let tag_explanation = this._getElementById(TAG_IDS.explanation);
+                // tag_explanation.textContent = '';
                 let task = this.current_view.tasks[store.state[keys.s_current_task_index]];
                 
                 if (task.source) {
@@ -247,13 +263,14 @@ try {
                     tag_source_model.appendChild(div);
                 }
                 if (task.explanations) {
-                    if (task.explanations.length > 1) {
-                        tag_explanation.classList.add('row-cols-sm-2');
-                    }
+                    // if (task.explanations.length > 1) {
+                    //     tag_explanation.classList.add('row-cols-sm-2');
+                    // }
                     let i = 1;
                     for (let item of task.explanations) {
                         let div = this._createCard(item.title, item.label, item.is_image);
-                        tag_explanation.appendChild(div);
+                        // tag_explanation.appendChild(div);
+                        tag_source_model.appendChild(div);
                         i++;
                     }
                 }
@@ -264,7 +281,7 @@ try {
              */
             _desc() {
                 let tag = this._getElementById(TAG_IDS.desc_text);
-                tag.textContent = `${this.current_view.desc}`;
+                tag.innerHTML = `${this.current_view.desc}`;
             }
 
             /**
@@ -297,6 +314,22 @@ try {
                 submit_btn.parentElement.appendChild(next_btn);
             }
 
+            _observer(mutationsList) {
+                for(const mutation of mutationsList) { // List of detected mutations.
+                    if (mutation.type === 'attributes') { // Check if it's an attribute modification.
+                        if (mutation.attributeName == 'data-response') {
+                            this._submit();
+                        }
+                    }
+                }
+            }
+
+            _observing() {
+                /** @type {FormComponent} */
+                let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                this.observer.observe(form, { attributes: true });
+            }
+
             /**
              * Empty the alert container.
              */
@@ -322,7 +355,7 @@ try {
             _submit(is_time_exceeded = false) {
                 /** @type {FormComponent} */
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
-                let answers = form.submit();
+                let answers = form.submit();                
                 // At least one answer.
                 if (!form.someEmptyQuestion() || (this.current_view.timer >= 0 && (this.current_time / 1000) >= this.current_view.timer)) {
                     clearInterval(this.timer_id);
@@ -353,6 +386,7 @@ try {
                         /** @type {FormComponent} */
                         let form = this.content.querySelector(`#${TAG_IDS.form}`);
                         form.disable();
+                        this.observer && this.observer.disconnect();
                     } else {
                         this._transition();
                     }                    
@@ -364,7 +398,7 @@ try {
              */
             _task() {
                 let tag = this._getElementById(TAG_IDS.task_title);
-                tag.textContent = this.current_view.title;
+                tag.innerHTML = this.current_view.title;
                 let tag_desc_title = this._getElementById(TAG_IDS.desc_text);
 
                 if (!tag.textContent && !tag_desc_title.textContent) {
@@ -383,6 +417,7 @@ try {
                 
                 if (this.current_view.timer >= 0) {
                     tag.textContent = this.current_view.timer.toFixed(2);
+                    tag.parentElement.classList.add('col-sm-2');
                 }
 
                 let delta_time = 100;
@@ -424,14 +459,29 @@ try {
                 this._resetForm();
                 this._task();
                 this._timer();
+                this.observer && this._observing();
             }
 
             _initEvents() {
+                /** @type {FormComponent} */
+                let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                
+                if (form.questions.length == 0) {
+                    return;
+                }
+
                 let submit_btn = this._getElementById(TAG_IDS.submit_btn);
-                if (submit_btn) {
-                    submit_btn.addEventListener('click', () => {
-                        this._submit();
-                    });
+                if (form.questions[0].type == 'button') {
+                    this.observer = new MutationObserver(this._observer.bind(this));
+                    this._observing();
+                    submit_btn.style.display = 'none';
+                } else {
+                    if (submit_btn) {
+                        submit_btn.addEventListener('click', () => {
+                            this._submit();
+                        });
+                        submit_btn.style.display = 'block';
+                    }
                 }
             }
             
@@ -452,7 +502,7 @@ try {
                 this.good_answers = 0;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
-
+                this.observer = undefined;
                 /* Methods */
                 this._init();
                 this._initEvents();
@@ -462,6 +512,7 @@ try {
                 if(this.timer_id) {
                     clearInterval(this.timer_id);
                 }
+                this.observer && this.observer.disconnect();
             }
         });
     })();

@@ -29,12 +29,6 @@ try {
                 #main-page {
                     height: 100vh;
                 }
-                .title {
-                    text-align: center;
-                    font-size: 28px;
-                    letter-spacing: 1px;
-                    margin-bottom: 15px;
-                }
                 .container {
                     width: 50%;
                 }
@@ -52,7 +46,7 @@ try {
                 <div class="container">
                     <div class="card m-auto">
                         <div id="${TAG_IDS.card_body}" class="card-body">
-                            <h3 id="${TAG_IDS.title}" class="card-title text-uppercase text-center"></h3>
+                            <div id="${TAG_IDS.title}" class="card-title text-uppercase text-center"></div>
                             <div id="${TAG_IDS.body_text}" class="text-center mt-3"></div>
                             <div id="${TAG_IDS.score}" class="text-center fw-bold mt-2"></div>
                             <div class="mt-2" id="${TAG_IDS.btn_container}"></div>
@@ -96,9 +90,9 @@ try {
 
             _init() {
                 let tag_title = this.content.querySelector(`#${TAG_IDS.title}`);
-                tag_title.textContent = this.current_view.title;
+                tag_title.innerHTML = this.current_view.title;
                 let tag_text = this.content.querySelector(`#${TAG_IDS.body_text}`);
-                tag_text.textContent = this.current_view.body_text;
+                tag_text.innerHTML = this.current_view.body_text;
                 if (this.current_view.with_button) {
                     let btn_container = this.content.querySelector(`#${TAG_IDS.btn_container}`);
                     let btn = document.createElement('button');

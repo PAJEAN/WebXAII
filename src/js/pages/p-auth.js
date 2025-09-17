@@ -57,7 +57,7 @@ try {
                 </div>
 
                 <div class="container connexion">
-                    <div class="title">WebXAll</div>
+                    <div class="title">WebXAII</div>
                     <div class="sub-title">Welcome</div>
 
                     <div class="input-group my-4">

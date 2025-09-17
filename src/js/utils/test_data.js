@@ -1,61 +1,12 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
-        type: 'p-questionnaire',
-        questions: [
-            {
-                type: 'radio',
-                primary_text: '',
-                secondary_text: 'Here is a longer text',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
-            },
-            {
-                type: 'checkbox',
-                primary_text: 'Title 2',
-                secondary_text: 'Sub title 2',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
-            },
-            {
-                type: 'slider',
-                primary_text: 'Title 3',
-                secondary_text: 'Sub title 3',
-                answers: ['Slider 1']
-            },
-            {
-                type: 'textfield',
-                primary_text: 'Title 4',
-                secondary_text: 'Sub title 4',
-                answers: ['']
-            }
-        ]
-    },
-        {
-        type: 'p-questionnaire',
-        questions: [
-            {
-                type: 'radio',
-                primary_text: '',
-                secondary_text: 'Here is a longer text',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
-            }
-        ]
-    },
-    {
         type: 'p-task',
-        title: 'Title task',
-        desc: 'Description',
+        title: '<i>Title task</i>',
+        desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 10, // opt.
+        timer: 200, // opt.
         randomize: true,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
@@ -83,11 +34,31 @@ export const TEST_VIEW = [
                 ],
                 expected: 0
             },
+            {
+                input: {
+                    is_image: true,
+                    label: 'assets/datasets/single-kingfisher-bird.jpg',
+                    title: 'Source'
+                },
+                model: {
+                    is_image: false,
+                    label: "This is a text for the model n°2",
+                    title: 'Model'
+                },
+                explanations: [
+                    {
+                        is_image: true,
+                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
+                        title: 'Explanation'
+                    }
+                ],
+                expected: 1
+            },
         ],
         question: {
-            type: 'radio',
-            primary_text: 'Title',
-            secondary_text: 'Here is a longer text',
+            type: 'button',
+            primary_text: '<div class="w-100 text-center">Title</div>',
+            secondary_text: '<div class="w-100 text-center">Here is a longer text</div>',
             answers: [
                 'choix A',
                 'choix B',
@@ -95,12 +66,61 @@ export const TEST_VIEW = [
         }
     },
     {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: '<i>Here is a longer text</i>',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            },
+            {
+                type: 'checkbox',
+                primary_text: '<h4>Title 2</h4>',
+                secondary_text: 'Sub title 2',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            },
+            {
+                type: 'slider',
+                primary_text: 'Title 3',
+                secondary_text: 'Sub title 3',
+                answers: ['Slider 1']
+            },
+            {
+                type: 'textfield',
+                primary_text: 'Title 4',
+                secondary_text: 'Sub title 4',
+                answers: ['']
+            }
+        ]
+    },
+    {
         type: 'p-instruction',
-        title: 'Task',
-        body_text: 'Instruction',
+        title: '<h3><i>Task</i></h3',
+        body_text: "<h4>Instruction</h4><p>C'est du HTML!</p>",
         button_text: 'Next',
         with_button: true,
-        countdown: 90 // opt.
+        countdown: 260 // opt.
+    },
+    {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: 'Here is a longer text',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            }
+        ]
     },
     {
         type: 'p-questionnaire',
