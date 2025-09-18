@@ -2,5 +2,9 @@
     "test": {
         "roles": "user",
         "protocol": "p1-test.json"
+    },
+    "test1": {
+        "roles": "user",
+        "protocol": "p1-test.json"
     }
 }

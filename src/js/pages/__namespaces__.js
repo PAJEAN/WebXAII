@@ -1,6 +1,6 @@
 // @ts-check
 
-import { Desc, Experiment, Form } from "JS/store/modules/view-classes";
+import { Auth, Desc, Experiment, Form } from "JS/store/modules/view-classes";
 
 export const PAGE_NAMES = {
     AUTHENTICATION: 'p-authentication',
@@ -16,6 +16,7 @@ export const PAGES_INFO = {
             title: 'Authentication',
             is_default: true
         },
+        class_type: Auth
     },
     [PAGE_NAMES.DESC]: {
         route: {

@@ -5,7 +5,7 @@ import { COMPONENT_NAMES } from 'JS/components/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
-import { Experiment, Form, Question, View } from 'JS/store/modules/view-classes';
+import { EnumQuestionOptions, Experiment, Form, Question, View } from 'JS/store/modules/view-classes';
 
 
 const COMPONENT_NAME = COMPONENT_NAMES.FORM;
@@ -20,6 +20,10 @@ TEMPLATE.innerHTML = /* html */`
             /* Display & Box Model */
             border-radius: 10px;
             box-shadow: var(--box-shadow);
+        }
+        input[type='checkbox'],
+        input[type='radio'] {
+            margin: 5px;
         }
     </style>
 
@@ -92,48 +96,91 @@ export class FormComponent extends HTMLElement {
      * @param {string} id 
      * @param {string} value_or_name 
      * @param {string} content 
+     * @param {Object<string, any>} options
+     * @param {boolean} is_last_answer
      * @returns {HTMLDivElement}
      */
-    inputType(type, id, value_or_name, content) {
+    inputType(type, id, value_or_name, content, options = {}, is_last_answer = false) {
         let div = document.createElement('div');
-        div.classList.add('form-check');
+        
+        if (EnumQuestionOptions.INLINE in options) {
+            div.classList.add('form-check-inline');
+        } else {
+            div.classList.add('form-check');
+        }
         let input = document.createElement('input');
 
         input.setAttribute('type', type);
         input.setAttribute('id', id);
-
-        let label = document.createElement('label');
-        label.setAttribute('for', id);
-
-        switch(type) {
-            case 'checkbox':
-                input.setAttribute('value', value_or_name);
-                input.classList.add('form-check-input');
-                label.classList.add('form-check-label');
-                label.textContent = content;
-                div.appendChild(label);
-                break;
-            case 'radio':
-                input.setAttribute('name', value_or_name);
-                input.classList.add('form-check-input');
-                label.classList.add('form-check-label');
-                label.textContent = content;
-                div.appendChild(label);
-                break;
-            case 'range':
-                input.setAttribute('min', '0');
-                input.setAttribute('max', '100');
-                input.classList.add('form-range');
-                label.classList.add('form-label');
-                break;
-            case 'text':
-                input.setAttribute('size', '110');
-                input.classList.add('form-control');
-                label.classList.add('form-label');
-                break;
-        } 
         
-        div.appendChild(input);
+        if (type == 'radio' || type == 'checkbox') {
+            let label = document.createElement('label');
+            label.setAttribute('for', id);
+            switch(type) {
+                case 'checkbox':
+                    input.setAttribute('value', value_or_name);
+                    input.classList.add('form-check-input');
+                    label.classList.add('form-check-label');
+                    label.textContent = content;
+                    break;
+                case 'radio':
+                    input.setAttribute('name', value_or_name);
+                    input.classList.add('form-check-input');
+                    label.classList.add('form-check-label');
+                    label.textContent = content;
+                    break;
+            }
+            if (is_last_answer && EnumQuestionOptions.LIMIT_VALUES in options) {
+                div.appendChild(input);
+                div.appendChild(label);
+            } else {
+                div.appendChild(label);
+                div.appendChild(input);
+            }
+        } else if (type == 'range') {
+            input.setAttribute('min', EnumQuestionOptions.MIN in options ? EnumQuestionOptions.MIN: '0');
+            input.setAttribute('max', EnumQuestionOptions.MAX in options ? EnumQuestionOptions.MAX: '100');
+            if (EnumQuestionOptions.STEP in options) {
+                input.setAttribute('step', options[EnumQuestionOptions.STEP].toString());
+            }
+            input.classList.add('form-range');
+            if (EnumQuestionOptions.LIMIT_VALUES in options) {
+                input.classList.add('mx-3');
+                div.classList.remove('form-check');
+                let container_div = document.createElement('div');
+                container_div.classList.add('d-flex', 'align-items-center', 'justify-content-center');
+                let left_div = document.createElement('div');
+                left_div.classList.add('text-nowrap');
+                let right_div = document.createElement('div');
+                right_div.classList.add('text-nowrap');
+                if (options[EnumQuestionOptions.LIMIT_VALUES] instanceof Array) {
+                    left_div.textContent = options[EnumQuestionOptions.LIMIT_VALUES].length > 0 ? options[EnumQuestionOptions.LIMIT_VALUES][0]: '';
+                    right_div.textContent = options[EnumQuestionOptions.LIMIT_VALUES].length > 1 ? options[EnumQuestionOptions.LIMIT_VALUES][1]: '';
+                }
+                container_div.appendChild(left_div);
+                container_div.appendChild(input);
+                container_div.appendChild(right_div);
+                div.appendChild(container_div);
+            } else {
+                div.appendChild(input);
+            }
+            if (EnumQuestionOptions.DISPLAY_VALUE in options) {
+                let range_output = document.createElement('output');
+                range_output.setAttribute('for', id);
+                range_output.classList.add('w-100', 'text-center');
+                range_output.textContent = input.value;
+                input.addEventListener('input', () => {
+                    range_output.textContent = input.value;
+                });
+                div.appendChild(range_output);
+            }
+        } else if (type == 'text') {
+            input.setAttribute('size', '110');
+            input.classList.add('form-control');
+            div.appendChild(input);
+        }
+        
+        
         return div;
     }
 
@@ -252,10 +299,10 @@ export class FormComponent extends HTMLElement {
                     let div = document.createElement('div');
                     switch (question.type) {
                         case 'radio':
-                            div = this.inputType('radio', `#${i}_${j}`, `name-${i}`, answer);
+                            div = this.inputType('radio', `#${i}_${j}`, `name-${i}`, answer, question.options, (j + 1) == question.answers.length);
                             break;
                         case 'checkbox':                            
-                            div = this.inputType('checkbox', `#${i}_${j}`, 'j', answer);
+                            div = this.inputType('checkbox', `#${i}_${j}`, 'j', answer, question.options, (j + 1) == question.answers.length);
                             break;
                     }
                     fieldset.appendChild(div);
@@ -269,7 +316,7 @@ export class FormComponent extends HTMLElement {
                 if (question.type == 'textfield') {                    
                     div = this.inputType('text', `#${i}_${j}`, `name-${i}`, null);
                 } else {
-                    div = this.inputType('range', `#${i}_${j}`, `name-${i}`, null);
+                    div = this.inputType('range', `#${i}_${j}`, `name-${i}`, null, question.options);
                 }
                 fieldset.appendChild(div);
             }

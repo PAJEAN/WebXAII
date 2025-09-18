@@ -1,5 +1,11 @@
 export const TEST_VIEW = [
-    // {}, // Authentication.
+    {
+        type: 'p-authentication',
+        logo: [
+            'assets/img/pouce-en-lair.png',
+            'assets/img/pouce-en-lair.png'
+        ]
+    }, // Authentication.
     {
         type: 'p-task',
         title: '<i>Title task</i>',
@@ -74,8 +80,13 @@ export const TEST_VIEW = [
                 secondary_text: '<i>Here is a longer text</i>',
                 answers: [
                     'choix1',
+                    '',
                     'choix2',
-                ]
+                ],
+                options: {
+                    'inline': '',
+                    'limit_values': []
+                }
             },
             {
                 type: 'checkbox',
@@ -90,7 +101,12 @@ export const TEST_VIEW = [
                 type: 'slider',
                 primary_text: 'Title 3',
                 secondary_text: 'Sub title 3',
-                answers: ['Slider 1']
+                answers: [''],
+                options: {
+                    'limit_values': ['---', '+++'],
+                    'step': 10,
+                    'display_value': ''
+                }
             },
             {
                 type: 'textfield',

@@ -80,7 +80,7 @@ try {
                 let experiment_scores = store.state[keys.s_experiment_scores];
                 if (experiment_scores.length > 0) {
                     let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
-                    score_tag.textContent = `Score: ${Math.ceil(experiment_scores[experiment_scores.length - 1] * 100)}%`;
+                    score_tag.textContent = `${Math.ceil(experiment_scores[experiment_scores.length - 1] * 100)}%`;
                 }
             }
 

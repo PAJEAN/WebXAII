@@ -1,15 +1,22 @@
 // @ts-check
 
 /* Lib */
-import { changePage, nextView } from 'JS/lib/view-manager';
+import { changePage, guardView, nextView } from 'JS/lib/view-manager';
 /* Namespaces */
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
+import { Auth } from 'JS/store/modules/view-classes';
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
 import { keys as c_keys } from 'JS/store/modules/common';
 
 try {
+    const TAG_IDS = {
+        connexion_btn: 'connexion-btn',
+        deconnexion_btn: 'deconnexion-btn',
+        error_container: 'error',
+    };
+
     (function() {
         const PAGE_NAME = PAGE_NAMES.AUTHENTICATION;
 
@@ -49,9 +56,13 @@ try {
                 .signout {
                     margin: 20px 0;
                 }
+                .logo {
+                    max-height: 150px;
+                    margin: auto;
+                }
             </style>
 
-            <div id="main-page" class="d-flex justify-content-center align-items-center">
+            <div id="main-page" class="d-flex flex-column justify-content-center align-items-center">
                 <div class="loading">
                     <wc-loading></wc-loading>
                 </div>
@@ -70,16 +81,17 @@ try {
                         </div>
                     </div>
 
-                    <button id="connexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Connection</button>
+                    <button id="${TAG_IDS.connexion_btn}" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Login</button>
 
-                    <div id="error" class="text-center text-danger mt-4"></div>
+                    <div id="${TAG_IDS.error_container}" class="text-center text-danger mt-4"></div>
                 </div>
 
                 <div class="container deconnexion">
                     <div>You are already logged in. Do you want to log out?</div>
 
-                    <button id="deconnexion-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Disconnection</button>
+                    <button id="${TAG_IDS.deconnexion_btn}" type="button" class="btn btn-primary btn-lg text-uppercase w-100 my-4">Logout</button>
                 </div>
+
             </div>
 
         `;
@@ -139,7 +151,7 @@ try {
                 let login_content = this.content.querySelector('.connexion');
                 /** @type {HTMLElement} */
                 let logout_content = this.content.querySelector('.deconnexion');
-                
+
                 if (!store.state['is_authentication']) {
                     login_content.style.display = 'block';
                     logout_content.style.display = 'none';
@@ -147,7 +159,7 @@ try {
                     /* Tags */
                     /** @type {HTMLInputElement} */
                     let user_id = this.content.querySelector('input[type=text]');
-                    let login_button = this.content.querySelector('#connexion-btn');
+                    let login_button = this.content.querySelector(`#${TAG_IDS.connexion_btn}`);
                     /* Behaviors */
                     login_button.addEventListener('click', () => {
                         console.log(user_id.value);
@@ -159,19 +171,39 @@ try {
                     login_content.style.display  = 'none';
                     logout_content.style.display = 'block';
 
-                    let logout_button = this.content.querySelector('#deconnexion-btn');
+                    let logout_button = this.content.querySelector(`#${TAG_IDS.deconnexion_btn}`);
                     /* Behaviors */
                     logout_button.addEventListener('click', () => {
                         store.dispatch(c_keys.a_logout,  {});
+                        window.location.reload();
                     });
+                }
+                console.log(this.current_view);
+                
+                if (this.current_view.logo.length > 0) {
+                    let div = document.createElement('div');
+                    div.classList.add('mt-4', 'text-center');
+                    for (let url of this.current_view.logo) {
+                        let img = document.createElement('img');
+                        img.classList.add('img-thumbnail', 'logo', 'mx-1');
+                        img.src = url;
+                        div.appendChild(img);
+                    }
+                    this.content.appendChild(div);
                 }
             }
          
             connectedCallback () {
+                /* Guard */                
+                let is_legit = guardView(PAGE_NAMES.AUTHENTICATION);
+                if (!is_legit) { return; }
+                
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
+                /** @type {Auth} */
+                this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
                 /* HTML tags */
-                this.error_tag = this.content.querySelector('#error');
+                this.error_tag = this.content.querySelector(`#${TAG_IDS.error_container}`);
                 /* Setup the page */
                 this._init();
                 /* Update UI */
