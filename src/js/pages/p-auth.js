@@ -1,11 +1,12 @@
 // @ts-check
 
 /* Lib */
-import { changePage, guardView, nextView } from 'JS/lib/view-manager';
+import { changePage, nextView } from 'JS/lib/view-manager';
+/* Const */
+import { LOGO } from 'JS/utils/constants';
 /* Namespaces */
 import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Store */
-import { Auth } from 'JS/store/modules/view-classes';
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
 import { keys as c_keys } from 'JS/store/modules/common';
@@ -178,12 +179,11 @@ try {
                         window.location.reload();
                     });
                 }
-                console.log(this.current_view);
                 
-                if (this.current_view.logo.length > 0) {
+                if (LOGO.length > 0) {
                     let div = document.createElement('div');
                     div.classList.add('mt-4', 'text-center');
-                    for (let url of this.current_view.logo) {
+                    for (let url of LOGO) {
                         let img = document.createElement('img');
                         img.classList.add('img-thumbnail', 'logo', 'mx-1');
                         img.src = url;
@@ -194,14 +194,9 @@ try {
             }
          
             connectedCallback () {
-                /* Guard */                
-                let is_legit = guardView(PAGE_NAMES.AUTHENTICATION);
-                if (!is_legit) { return; }
-                
+                /* Guard */
                 this.appendChild(TEMPLATE.content.cloneNode(true));
                 this.content = this.querySelector('#main-page');
-                /** @type {Auth} */
-                this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
                 /* HTML tags */
                 this.error_tag = this.content.querySelector(`#${TAG_IDS.error_container}`);
                 /* Setup the page */

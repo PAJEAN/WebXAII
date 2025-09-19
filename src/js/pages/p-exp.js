@@ -37,6 +37,7 @@ try {
             <style>
                 #main-page {
                     min-height: 100vh;
+                    font-size: 1.2em;
                 }
                 .container-decoration {
                     border-radius: 10px;
@@ -61,10 +62,10 @@ try {
             <div id="${TAG_IDS.main_page}" class="d-flex flex-column justify-content-center">
 
                 <div class="container container-decoration mt-2 p-2" id="${TAG_IDS.task_title_container}">
-                    <div id="${TAG_IDS.task_title}" class="container">Task</div>
+                    <div id="${TAG_IDS.task_title}" class="container">Task view</div>
     
                     <div id="${TAG_IDS.desc_text}" class="container">
-                        Rule: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        There was an error when parsing the JSON entry, so the page cannot be rendered
                     </div>
                 </div>
                 
@@ -75,7 +76,7 @@ try {
                     <div class="row mt-3">
                         <div class="col-sm">
                             <div class="d-flex align-items-stretch mt-2" style="gap:1rem" id="${TAG_IDS.source_model}">
-                                <div class="col-sm">
+                                <!-- <div class="col-sm">
                                     <div class="card h-100">
                                         <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
                                         <div class="card-footer text-body-secondary text-center">
@@ -102,34 +103,8 @@ try {
                                             Model
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- <div class="row card-explanation mb-2" id="${TAG_IDS.explanation}"> -->
-                                <!--<div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
                                 </div> -->
-                            <!-- </div> -->
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -416,17 +391,24 @@ try {
                 let tag = this._getElementById(TAG_IDS.timer);
                 
                 if (this.current_view.timer >= 0) {
-                    tag.textContent = this.current_view.timer.toFixed(2);
+                    tag.textContent = this.current_view.timer.toFixed(0);
                     tag.parentElement.classList.add('col-sm-2');
+                    tag.classList.remove('text-danger');
                 }
 
                 let delta_time = 100;
                 this.timer_id = window.setInterval(() => {
                     this.current_time += delta_time;
                     let current_time_second = this.current_time / 1000;
+
+                    let remaining_time = this.current_view.timer - current_time_second;
+                    
+                    if (remaining_time <= 5) {
+                        tag.classList.add('text-danger');
+                    }
                     if (this.current_view.timer >= 0) {
                         if (current_time_second % 1 == 0) {
-                            tag.textContent = (Math.round((this.current_view.timer - current_time_second) * 100) / 100).toFixed(2);
+                            tag.textContent = (Math.round(remaining_time * 100) / 100).toFixed(0);
                         }
                         if (current_time_second >= this.current_view.timer) {
                             this._submit(true);

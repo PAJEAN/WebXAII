@@ -3,18 +3,20 @@
 export class EnumQuestionOptions {
     static #_INLINE = 'inline'; // Checkbox, radio.
     static #_LIMIT_VALUES = 'limit_values'; // Checkbox, radio, range.
-    static #_STEP = 'step'; // Range.
-    static #_MIN = 'min'; // Range.
-    static #_MAX = 'max'; // Range.
     static #_DISPLAY_VALUE = 'display_value'; // Range.
+    static #_MAX = 'max'; // Range.
+    static #_MIN = 'min'; // Range.
+    static #_STEP = 'step'; // Range.
+    static #_COLORS = 'css_class_colors'; // Buttons.
 
     // Accessors for "get" functions only (no "set" functions)
     static get INLINE() { return this.#_INLINE; }
     static get LIMIT_VALUES() { return this.#_LIMIT_VALUES; }
-    static get STEP() { return this.#_STEP; }
-    static get MIN() { return this.#_MIN; }
-    static get MAX() { return this.#_MAX; }
     static get DISPLAY_VALUE() { return this.#_DISPLAY_VALUE; }
+    static get MAX() { return this.#_MAX; }
+    static get MIN() { return this.#_MIN; }
+    static get STEP() { return this.#_STEP; }
+    static get COLORS() { return this.#_COLORS; }
 }
 
 class LabelOrImage {
@@ -340,31 +342,4 @@ export class Desc extends View {
     get score() { return this._score; }
     get title() { return this._title; }
     get with_button() { return this._with_button; }
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                    Auth                                    */
-/* -------------------------------------------------------------------------- */
-
-export class Auth extends View {
-    
-    /**
-     * Check if json is compatible.
-     * @param {object} view 
-     */
-    static guard(view) {
-        if (typeof view !== 'object') { return false; }
-        return true;
-    }
-
-    /**
-     * @param {object} view
-     */
-    constructor(view) {
-        super(view['type']);
-        /** @type {Array<string>} */
-        this._logo = view.hasOwnProperty('logo') ? view['logo']: [];
-    }
-    
-    get logo() { return this._logo; }
 }

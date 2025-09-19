@@ -1,18 +1,12 @@
 export const TEST_VIEW = [
-    {
-        type: 'p-authentication',
-        logo: [
-            'assets/img/pouce-en-lair.png',
-            'assets/img/pouce-en-lair.png'
-        ]
-    }, // Authentication.
+    // {}, // Authentication.
     {
         type: 'p-task',
         title: '<i>Title task</i>',
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 200, // opt.
+        timer: 8, // opt.
         randomize: true,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
@@ -68,7 +62,10 @@ export const TEST_VIEW = [
             answers: [
                 'choix A',
                 'choix B',
-            ]
+            ],
+            options: {
+                css_class_colors: ['btn-success', 'btn-danger']
+            }
         }
     },
     {
@@ -90,7 +87,7 @@ export const TEST_VIEW = [
             },
             {
                 type: 'checkbox',
-                primary_text: '<h4>Title 2</h4>',
+                primary_text: '<i>Title 2</i>',
                 secondary_text: 'Sub title 2',
                 answers: [
                     'choix1',

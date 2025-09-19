@@ -20,6 +20,7 @@ try {
             <style>
                 #main-page {
                     min-height: 100vh;
+                    font-size: 1.2em;
                 }
                 .card {
                     border: none;
@@ -33,6 +34,7 @@ try {
                             <${COMPONENT_NAMES.FORM} id="form"></${COMPONENT_NAMES.FORM}>
                             <div class="mt-4">
                                 <button id="next-btn" type="button" class="btn btn-primary btn-lg text-uppercase w-100">Submit</button>
+                                <div id="error" class="text-center text-danger mt-2"></div>
                             </div>
                         </div>
                     </div>
@@ -57,6 +59,9 @@ try {
                 if (!form.someEmptyQuestion()) {
                     let responses = form.submit();
                     this._transition(responses);
+                } else {
+                    let error_tag = this.content.querySelector(`#error`);
+                    error_tag.textContent = 'All fields must be completed';
                 }
                 
             }

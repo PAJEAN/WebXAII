@@ -4,6 +4,7 @@
 import { viewToObject } from 'JS/lib/view-manager';
 /* Namespaces */
 import { VIEW as NS } from './__namespaces__';
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Utils */
 import { TEST_VIEW } from 'JS/utils/test_data';
 import { DATA_URL } from 'JS/utils/constants';

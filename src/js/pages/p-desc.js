@@ -28,6 +28,7 @@ try {
             <style>
                 #main-page {
                     height: 100vh;
+                    font-size: 1.2em;
                 }
                 .container {
                     width: 50%;

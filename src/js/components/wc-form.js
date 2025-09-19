@@ -39,38 +39,39 @@ export class FormComponent extends HTMLElement {
         super();
     }
 
-    _getInputs() {
+    _getInputsButtons() {
         let inputs = [];
         let fieldsets = this.content.querySelectorAll('fieldset');
         for (let i = 0; i < fieldsets.length; i++) {
             let fieldset = fieldsets[i];
             let current_inputs = fieldset.querySelectorAll('input');
-            inputs = [...inputs, ...current_inputs];
+            let current_buttons = fieldset.querySelectorAll('button');
+            inputs = [...inputs, ...current_inputs, ...current_buttons];
         }
         return inputs;
     }
 
     enable() {
-        let inputs = this._getInputs();
+        let inputs = this._getInputsButtons();
         for (let j = 0; j < inputs.length; j++) {
             inputs[j].removeAttribute('disabled');
         }
     }
 
     disable() {
-        let inputs = this._getInputs();
+        let inputs = this._getInputsButtons();
         for (let j = 0; j < inputs.length; j++) {
             inputs[j].setAttribute('disabled', '');
         }
     }
 
     /**
-     * 
      * @param {string} id 
      * @param {Array<string>} answers 
+     * @param {Object<string, any>} options
      * @returns {HTMLDivElement}
      */
-    inputButton(id, answers) {
+    inputButton(id, answers, options = {}) {
         let div = document.createElement('div');
         div.classList.add('d-flex', 'mt-2');
         div.style.columnGap = '1rem';
@@ -78,7 +79,14 @@ export class FormComponent extends HTMLElement {
         for (let i = 0; i < answers.length; i++) {
             let button = document.createElement('button');
             button.id = id;
-            button.classList.add('btn', 'btn-info', 'btn-lg', 'w-100');
+            button.classList.add('btn', 'btn-lg', 'w-100');
+            if (EnumQuestionOptions.COLORS in options) {
+                if (options[EnumQuestionOptions.COLORS].length >= i + 1) {
+                    button.classList.add(options[EnumQuestionOptions.COLORS][i]);
+                }
+            } else {
+                button.classList.add('btn-info');
+            }
             button.textContent = answers[i];
 
             button.addEventListener('click', () => {
@@ -288,7 +296,7 @@ export class FormComponent extends HTMLElement {
             let legend = document.createElement('legend');
             legend.innerHTML = question.primary_text;
             let sub_title = document.createElement('div');
-            // sub_title.classList.add('text-secondary');
+            sub_title.classList.add('mb-2');
             sub_title.innerHTML = question.secondary_text;
             fieldset.appendChild(legend);
             fieldset.appendChild(sub_title);
@@ -309,7 +317,7 @@ export class FormComponent extends HTMLElement {
                     j++;
                 }
             } else if (question.type == 'button') {
-                let div = this.inputButton(`#${i}_${j}`, question.answers);
+                let div = this.inputButton(`#${i}_${j}`, question.answers, question.options);
                 fieldset.appendChild(div);
             } else {
                 let div = document.createElement('div');
@@ -323,6 +331,12 @@ export class FormComponent extends HTMLElement {
 
             i++;
             questions_div.appendChild(fieldset);
+
+            if (i < this.questions.length) {
+                let hr = document.createElement('hr');
+                hr.classList.add('opacity-25');
+                questions_div.appendChild(hr);
+            }
         }
     }
     
