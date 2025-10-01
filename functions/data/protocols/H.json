@@ -162,7 +162,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
+                    "label": "assets/res/input/disc_1_triangle_all_2/42.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -178,10 +178,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_2/83.png",
+                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
                     "title": "Image to analyze"
                 },
-                "expected": 0
+                "expected": 1
             }
         ],
         "question": {
@@ -244,10 +244,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_3/77.png",
+                    "label": "assets/res/input/disc_1_triangle_all_3/68.png",
                     "title": "Image to analyze"
                 },
-                "expected": 0
+                "expected": 1
             },
             {
                 "input": {

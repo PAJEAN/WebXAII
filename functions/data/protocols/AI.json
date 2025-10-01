@@ -120,7 +120,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>AI assistant</h3>",
-        "body_text": "<div class='text-start'><p>To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. However, the AI might make mistakes, and the ultimate decision is your responsability.</p><p>Below is an example of AI prediction for the question \"<b>In the image, is there a triangle in every row (1, ..., 6)?</b>\"</p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-10 d-flex flex-column align-items-center'><img src='assets/res/input/img/cf_example.png' class='img-fluid' alt='AI example'> </div> </div> </div> <br/><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p>",
+        "body_text": "<div class='text-start'><p>To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. However, the AI might make mistakes, and the ultimate decision is your responsability.</p><p>Below is an example of AI prediction for the question \"<b>In the image, is there a triangle in every row (1, ..., 6)?</b>\"</p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-10 d-flex flex-column align-items-center'><img src='assets/res/input/img/ai_example.png' class='img-fluid' alt='AI example'> </div> </div> </div> <br/><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p>",
         "button_text": "I read and understood the instructions",
         "with_button": "True"
     },
@@ -179,13 +179,13 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
+                    "label": "assets/res/input/disc_1_triangle_all_2/42.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1,
                 "model": {
                     "is_image": true,
-                    "label": "assets/res/AI/disc_1_triangle_all_2/9.png",
+                    "label": "assets/res/AI/disc_1_triangle_all_2/42.png",
                     "title": "AI"
                 }
             },
@@ -205,13 +205,13 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_2/83.png",
+                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
                     "title": "Image to analyze"
                 },
-                "expected": 0,
+                "expected": 1,
                 "model": {
                     "is_image": true,
-                    "label": "assets/res/AI/disc_1_triangle_all_2/83.png",
+                    "label": "assets/res/AI/disc_1_triangle_all_2/9.png",
                     "title": "AI"
                 }
             }
@@ -281,13 +281,13 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/disc_1_triangle_all_3/77.png",
+                    "label": "assets/res/input/disc_1_triangle_all_3/68.png",
                     "title": "Image to analyze"
                 },
-                "expected": 0,
+                "expected": 1,
                 "model": {
                     "is_image": true,
-                    "label": "assets/res/AI/disc_1_triangle_all_3/77.png",
+                    "label": "assets/res/AI/disc_1_triangle_all_3/68.png",
                     "title": "AI"
                 }
             },
