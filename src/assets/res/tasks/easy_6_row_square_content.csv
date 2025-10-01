@@ -1,0 +1,11 @@
+target,pred,source,AI,xai_shap,xai_cf
+1,1,res/input/easy_6_row_square/10.png,res/AI/easy_6_row_square/10.png,res/xai_shap/easy_6_row_square/10.png,res/xai_cf/easy_6_row_square/10.png
+1,1,res/input/easy_6_row_square/2.png,res/AI/easy_6_row_square/2.png,res/xai_shap/easy_6_row_square/2.png,res/xai_cf/easy_6_row_square/2.png
+1,1,res/input/easy_6_row_square/20.png,res/AI/easy_6_row_square/20.png,res/xai_shap/easy_6_row_square/20.png,res/xai_cf/easy_6_row_square/20.png
+1,1,res/input/easy_6_row_square/74.png,res/AI/easy_6_row_square/74.png,res/xai_shap/easy_6_row_square/74.png,res/xai_cf/easy_6_row_square/74.png
+0,0,res/input/easy_6_row_square/75.png,res/AI/easy_6_row_square/75.png,res/xai_shap/easy_6_row_square/75.png,res/xai_cf/easy_6_row_square/75.png
+0,1,res/input/easy_6_row_square/8.png,res/AI/easy_6_row_square/8.png,res/xai_shap/easy_6_row_square/8.png,res/xai_cf/easy_6_row_square/8.png
+0,0,res/input/easy_6_row_square/55.png,res/AI/easy_6_row_square/55.png,res/xai_shap/easy_6_row_square/55.png,res/xai_cf/easy_6_row_square/55.png
+0,0,res/input/easy_6_row_square/7.png,res/AI/easy_6_row_square/7.png,res/xai_shap/easy_6_row_square/7.png,res/xai_cf/easy_6_row_square/7.png
+1,1,res/input/easy_6_row_square/24.png,res/AI/easy_6_row_square/24.png,res/xai_shap/easy_6_row_square/24.png,res/xai_cf/easy_6_row_square/24.png
+0,1,res/input/easy_6_row_square/15.png,res/AI/easy_6_row_square/15.png,res/xai_shap/easy_6_row_square/15.png,res/xai_cf/easy_6_row_square/15.png

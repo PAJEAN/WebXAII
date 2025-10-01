@@ -1,0 +1,1 @@
+{"question": "In the image, is there at least one row (1, ..., 6) containing only purple symbols, and one column (A, ..., F) containing only triangles?", "pos_example": "assets/res/input/hard_2_row_purple_col_triangle/pos_example.png", "neg_example": "assets/res/input/hard_2_row_purple_col_triangle/neg_example.png"}

@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Training phase - Instructions</h3>",
+      "body_text": "<div class='text-start'><p>You will now enter the training phase. You will have to perform two tasks, which will allow you to experiment with the AI.</p><p>On the first task, you can take as much time as you wish to answer the questions. On the second task, your time will be limited.</p><p>As these tasks are for training, your answers will not be recorded and your score will not count towards your bonus remuneration.<p>",
+      "button_text": "Start training",
+      "with_button": "True"
+}

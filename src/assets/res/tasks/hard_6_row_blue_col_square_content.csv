@@ -1,0 +1,11 @@
+target,pred,source,AI,xai_shap,xai_cf
+0,0,res/input/hard_6_row_blue_col_square/16.png,res/AI/hard_6_row_blue_col_square/16.png,res/xai_shap/hard_6_row_blue_col_square/16.png,res/xai_cf/hard_6_row_blue_col_square/16.png
+0,0,res/input/hard_6_row_blue_col_square/88.png,res/AI/hard_6_row_blue_col_square/88.png,res/xai_shap/hard_6_row_blue_col_square/88.png,res/xai_cf/hard_6_row_blue_col_square/88.png
+1,1,res/input/hard_6_row_blue_col_square/77.png,res/AI/hard_6_row_blue_col_square/77.png,res/xai_shap/hard_6_row_blue_col_square/77.png,res/xai_cf/hard_6_row_blue_col_square/77.png
+0,0,res/input/hard_6_row_blue_col_square/95.png,res/AI/hard_6_row_blue_col_square/95.png,res/xai_shap/hard_6_row_blue_col_square/95.png,res/xai_cf/hard_6_row_blue_col_square/95.png
+0,0,res/input/hard_6_row_blue_col_square/79.png,res/AI/hard_6_row_blue_col_square/79.png,res/xai_shap/hard_6_row_blue_col_square/79.png,res/xai_cf/hard_6_row_blue_col_square/79.png
+1,0,res/input/hard_6_row_blue_col_square/1.png,res/AI/hard_6_row_blue_col_square/1.png,res/xai_shap/hard_6_row_blue_col_square/1.png,res/xai_cf/hard_6_row_blue_col_square/1.png
+1,0,res/input/hard_6_row_blue_col_square/91.png,res/AI/hard_6_row_blue_col_square/91.png,res/xai_shap/hard_6_row_blue_col_square/91.png,res/xai_cf/hard_6_row_blue_col_square/91.png
+0,0,res/input/hard_6_row_blue_col_square/60.png,res/AI/hard_6_row_blue_col_square/60.png,res/xai_shap/hard_6_row_blue_col_square/60.png,res/xai_cf/hard_6_row_blue_col_square/60.png
+1,1,res/input/hard_6_row_blue_col_square/90.png,res/AI/hard_6_row_blue_col_square/90.png,res/xai_shap/hard_6_row_blue_col_square/90.png,res/xai_cf/hard_6_row_blue_col_square/90.png
+1,1,res/input/hard_6_row_blue_col_square/74.png,res/AI/hard_6_row_blue_col_square/74.png,res/xai_shap/hard_6_row_blue_col_square/74.png,res/xai_cf/hard_6_row_blue_col_square/74.png

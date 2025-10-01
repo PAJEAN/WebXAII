@@ -1,0 +1,11 @@
+target,pred,source,AI,xai_shap,xai_cf
+0,0,res/input/easy_1_6_blue/68.png,res/AI/easy_1_6_blue/68.png,res/xai_shap/easy_1_6_blue/68.png,res/xai_cf/easy_1_6_blue/68.png
+0,0,res/input/easy_1_6_blue/45.png,res/AI/easy_1_6_blue/45.png,res/xai_shap/easy_1_6_blue/45.png,res/xai_cf/easy_1_6_blue/45.png
+1,1,res/input/easy_1_6_blue/78.png,res/AI/easy_1_6_blue/78.png,res/xai_shap/easy_1_6_blue/78.png,res/xai_cf/easy_1_6_blue/78.png
+1,0,res/input/easy_1_6_blue/83.png,res/AI/easy_1_6_blue/83.png,res/xai_shap/easy_1_6_blue/83.png,res/xai_cf/easy_1_6_blue/83.png
+0,0,res/input/easy_1_6_blue/42.png,res/AI/easy_1_6_blue/42.png,res/xai_shap/easy_1_6_blue/42.png,res/xai_cf/easy_1_6_blue/42.png
+1,1,res/input/easy_1_6_blue/39.png,res/AI/easy_1_6_blue/39.png,res/xai_shap/easy_1_6_blue/39.png,res/xai_cf/easy_1_6_blue/39.png
+1,0,res/input/easy_1_6_blue/72.png,res/AI/easy_1_6_blue/72.png,res/xai_shap/easy_1_6_blue/72.png,res/xai_cf/easy_1_6_blue/72.png
+0,0,res/input/easy_1_6_blue/47.png,res/AI/easy_1_6_blue/47.png,res/xai_shap/easy_1_6_blue/47.png,res/xai_cf/easy_1_6_blue/47.png
+0,0,res/input/easy_1_6_blue/6.png,res/AI/easy_1_6_blue/6.png,res/xai_shap/easy_1_6_blue/6.png,res/xai_cf/easy_1_6_blue/6.png
+1,1,res/input/easy_1_6_blue/51.png,res/AI/easy_1_6_blue/51.png,res/xai_shap/easy_1_6_blue/51.png,res/xai_cf/easy_1_6_blue/51.png

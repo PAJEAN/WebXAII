@@ -1,0 +1,11 @@
+target,pred,source,AI,xai_shap,xai_cf
+1,1,res/input/hard_3_yellow_circle_plus_triangle_9/51.png,res/AI/hard_3_yellow_circle_plus_triangle_9/51.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/51.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/51.png
+0,0,res/input/hard_3_yellow_circle_plus_triangle_9/69.png,res/AI/hard_3_yellow_circle_plus_triangle_9/69.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/69.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/69.png
+1,1,res/input/hard_3_yellow_circle_plus_triangle_9/53.png,res/AI/hard_3_yellow_circle_plus_triangle_9/53.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/53.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/53.png
+0,1,res/input/hard_3_yellow_circle_plus_triangle_9/44.png,res/AI/hard_3_yellow_circle_plus_triangle_9/44.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/44.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/44.png
+1,1,res/input/hard_3_yellow_circle_plus_triangle_9/30.png,res/AI/hard_3_yellow_circle_plus_triangle_9/30.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/30.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/30.png
+0,1,res/input/hard_3_yellow_circle_plus_triangle_9/15.png,res/AI/hard_3_yellow_circle_plus_triangle_9/15.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/15.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/15.png
+1,1,res/input/hard_3_yellow_circle_plus_triangle_9/63.png,res/AI/hard_3_yellow_circle_plus_triangle_9/63.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/63.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/63.png
+0,0,res/input/hard_3_yellow_circle_plus_triangle_9/61.png,res/AI/hard_3_yellow_circle_plus_triangle_9/61.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/61.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/61.png
+1,1,res/input/hard_3_yellow_circle_plus_triangle_9/76.png,res/AI/hard_3_yellow_circle_plus_triangle_9/76.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/76.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/76.png
+0,0,res/input/hard_3_yellow_circle_plus_triangle_9/64.png,res/AI/hard_3_yellow_circle_plus_triangle_9/64.png,res/xai_shap/hard_3_yellow_circle_plus_triangle_9/64.png,res/xai_cf/hard_3_yellow_circle_plus_triangle_9/64.png

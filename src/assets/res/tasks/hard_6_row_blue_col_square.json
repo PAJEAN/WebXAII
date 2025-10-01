@@ -1,0 +1,1 @@
+{"question": "In the image, is there at least one row (1, ..., 6) containing only blue symbols, and one column (A, ..., F) containing only squares?", "pos_example": "assets/res/input/hard_6_row_blue_col_square/pos_example.png", "neg_example": "assets/res/input/hard_6_row_blue_col_square/neg_example.png"}

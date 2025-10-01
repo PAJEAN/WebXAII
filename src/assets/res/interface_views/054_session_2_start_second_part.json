@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Continue session 2 (recorded section)</h3>",
+      "body_text": "<div class='text-start'> <p>You will now enter the last part of the recorded section of session 2. You are about to perform two new tasks, followed by a short survey.</p> <p The difference with previous tasks is that the time allowed for each question will decrease to 7 seconds again</p> <p>Your performance during the tasks will keep being recorded and will count towards your bonus remuneration.</p>",
+      "button_text": "Continue recorded tasks",
+      "with_button": "True"
+}

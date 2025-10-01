@@ -1,0 +1,11 @@
+target,pred,source,AI,xai_shap,xai_cf
+0,0,res/input/easy_3_7_purple/8.png,res/AI/easy_3_7_purple/8.png,res/xai_shap/easy_3_7_purple/8.png,res/xai_cf/easy_3_7_purple/8.png
+1,1,res/input/easy_3_7_purple/2.png,res/AI/easy_3_7_purple/2.png,res/xai_shap/easy_3_7_purple/2.png,res/xai_cf/easy_3_7_purple/2.png
+1,1,res/input/easy_3_7_purple/90.png,res/AI/easy_3_7_purple/90.png,res/xai_shap/easy_3_7_purple/90.png,res/xai_cf/easy_3_7_purple/90.png
+1,1,res/input/easy_3_7_purple/74.png,res/AI/easy_3_7_purple/74.png,res/xai_shap/easy_3_7_purple/74.png,res/xai_cf/easy_3_7_purple/74.png
+0,1,res/input/easy_3_7_purple/15.png,res/AI/easy_3_7_purple/15.png,res/xai_shap/easy_3_7_purple/15.png,res/xai_cf/easy_3_7_purple/15.png
+0,1,res/input/easy_3_7_purple/44.png,res/AI/easy_3_7_purple/44.png,res/xai_shap/easy_3_7_purple/44.png,res/xai_cf/easy_3_7_purple/44.png
+1,1,res/input/easy_3_7_purple/0.png,res/AI/easy_3_7_purple/0.png,res/xai_shap/easy_3_7_purple/0.png,res/xai_cf/easy_3_7_purple/0.png
+1,1,res/input/easy_3_7_purple/20.png,res/AI/easy_3_7_purple/20.png,res/xai_shap/easy_3_7_purple/20.png,res/xai_cf/easy_3_7_purple/20.png
+0,0,res/input/easy_3_7_purple/55.png,res/AI/easy_3_7_purple/55.png,res/xai_shap/easy_3_7_purple/55.png,res/xai_cf/easy_3_7_purple/55.png
+0,0,res/input/easy_3_7_purple/47.png,res/AI/easy_3_7_purple/47.png,res/xai_shap/easy_3_7_purple/47.png,res/xai_cf/easy_3_7_purple/47.png

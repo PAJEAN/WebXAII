@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>End of session 1</h3>",
+      "body_text": "<div class='text-start'> <p>Session 1 is now terminated. Click on the button below to start session 2.</p>",
+      "button_text": "Start session 2",
+      "with_button": "True"
+}

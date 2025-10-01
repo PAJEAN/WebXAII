@@ -1,0 +1,8 @@
+
+{
+    "type": "p-instruction",
+    "title": "<h3> Protocol structure </h3>",
+    "body_text": "<div class='text-start'> <p> The protocol will last about 30 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-7 d-flex flex-column align-items-center'><img src='assets/res/input/img/diagram_exp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> To conclude the introduction, you will perform a training phase, which consists of two tasks of 5 images. </p><p> Then, the main experiment will start. It will be divided into 2 main sessions. Each session consists in solving 4 tasks that will count towards your score and bonus remuneration, and starts with two training tasks, that will help you prepare for the rest of the session. You will also have to answer several surveys during the experiment.</p><p> Finally, you will have to answer a final survey to terminate the protocol.</p><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
+    "button_text": "I read and understood the instructions",
+    "with_button": "True"
+}
