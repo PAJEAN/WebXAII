@@ -71,9 +71,14 @@ try {
                 
                 <div id="${TAG_IDS.alert_placeholder}" class="container"></div>
 
-                <div class="container mt-2">
+                <div class="container mt-3">
                     <div id="${TAG_IDS.current_status}" class="container container-decoration d-flex justify-content-center"></div>
-                    <div class="row mt-3">
+
+                    <div class="container">
+                        <div id="${TAG_IDS.timer}" class="text-center fs-1 mt-2"></div>
+                    </div>
+
+                    <div class="row mt-1">
                         <div class="col-sm">
                             <div class="d-flex align-items-stretch mt-2" style="gap:1rem" id="${TAG_IDS.source_model}">
                                 <!-- <div class="col-sm">
@@ -112,9 +117,6 @@ try {
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
 
                             <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-info btn-lg text-uppercase w-100 mt-4">Submit</button>
-                        </div>
-                        <div class="m-auto">
-                            <div id="${TAG_IDS.timer}" class="text-center fs-2 my-2"></div>
                         </div>
                     </div>
                 </div>
@@ -174,9 +176,11 @@ try {
              * @param {boolean} is_image 
              * @returns HTMLDivElement
              */
-            _createCard(body_title_text, text, is_image) {
+            _createCard(body_title_text, text, is_image, only_source = false) {
                 let col = document.createElement('div');
-                col.classList.add('col-sm');
+                if (!only_source) {
+                    col.classList.add('col-sm');
+                }
                 let card = document.createElement('div');
                 card.classList.add('card', 'h-100');
                 if (is_image) {
@@ -213,7 +217,7 @@ try {
                     for (let i = 0; i < this.current_view.tasks.length; i++) {
                         let div = document.createElement('div');
                         div.classList.add('mr-1');
-                        div.textContent = i < store.state[keys.s_current_task_index] ? '🟢': '⚪'; // If not undefined.
+                        div.textContent = i < store.state[keys.s_current_task_index] ? '🔵': '⚪'; // If not undefined.
                         tag.appendChild(div);
                     }
                 }
@@ -230,7 +234,7 @@ try {
                 let task = this.current_view.tasks[store.state[keys.s_current_task_index]];
                 
                 if (task.source) {
-                    let div = this._createCard(task.source.title, task.source.label, task.source.is_image);
+                    let div = this._createCard(task.source.title, task.source.label, task.source.is_image, (task.model == undefined && task.explanations.length == 0) ? true: false);
                     tag_source_model.appendChild(div);
                 }
                 if (task.model) {
@@ -392,7 +396,6 @@ try {
                 
                 if (this.current_view.timer >= 0) {
                     tag.textContent = this.current_view.timer.toFixed(0);
-                    tag.parentElement.classList.add('col-sm-2');
                     tag.classList.remove('text-danger');
                 }
 
