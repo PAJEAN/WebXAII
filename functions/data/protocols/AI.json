@@ -36,7 +36,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": -1,
@@ -140,7 +140,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": -1,
@@ -255,7 +255,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -370,7 +370,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there exactly 6 blue symbols? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there exactly 6 blue symbols? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -543,7 +543,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there at least one row (1, ..., 6) containing only circles? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there at least one row (1, ..., 6) containing only circles? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -716,7 +716,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, does the number of blue squares plus (+) the number of circles equal to 8? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, does the number of blue squares plus (+) the number of circles equal to 8? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -889,7 +889,7 @@
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, does the number of yellow triangles multiplied by 2 (\u00d72) equal to the number of squares? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, does the number of yellow triangles multiplied by 2 (\u00d72) equal to the number of squares? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -1069,10 +1069,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there exactly 7 purple symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -1234,10 +1234,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there at least one row (1, ..., 6) containing only triangles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -1507,7 +1507,7 @@
             {
                 "type": "radio",
                 "primary_text": "",
-                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?.",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
                 "answers": [
                     "Perfect",
                     "",
@@ -1569,10 +1569,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there exactly 5 yellow symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -1734,10 +1734,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there at least one row (1, ..., 6) containing only squares?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -2007,7 +2007,7 @@
             {
                 "type": "radio",
                 "primary_text": "",
-                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?.",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
                 "answers": [
                     "Perfect",
                     "",
@@ -2076,10 +2076,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of yellow circles plus (+) the number of triangles equal to 9?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -2241,10 +2241,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -2514,7 +2514,7 @@
             {
                 "type": "radio",
                 "primary_text": "",
-                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?.",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
                 "answers": [
                     "Perfect",
                     "",
@@ -2576,10 +2576,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple triangles plus (+) the number of squares equal to 7?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -2741,10 +2741,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>New task (recorded)<h3>",
+        "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
-        "button_text": "Start the task (recorded)"
+        "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
@@ -3014,7 +3014,7 @@
             {
                 "type": "radio",
                 "primary_text": "",
-                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?.",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
                 "answers": [
                     "Perfect",
                     "",
@@ -3077,7 +3077,7 @@
     {
         "type": "p-instruction",
         "title": "<img src='assets/res/img/timeline_closing.png' class='img-fluid' alt='timeline'></br><hr><h3>Closing phase</h3>",
-        "body_text": "<div class='text-start'>Thank you for completing all the tasks. Before terminating the protocol, you will complete a final survey (2 pages).</div>",
+        "body_text": "<div class='text-start'>Thank you for completing all the tasks. Before terminating the protocol, you will complete a final survey (several pages).</div>",
         "button_text": "Start the final survey",
         "with_button": "True"
     },
@@ -3105,14 +3105,6 @@
                     "M",
                     "F",
                     "Other or Prefer not to say"
-                ]
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>What is your socioeconomical status ?</b>",
-                "answers": [
-                    "TBD"
                 ]
             }
         ]
@@ -3195,6 +3187,44 @@
         ]
     },
     {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures your trust and distrust towards the AI that assisted you during the study. Please rate your level of agreement with each statement.<hr>",
+                "secondary_text": "<b>I earned trust in the AI thanks to the rightness of its predictions.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures your trust and distrust towards the AI that assisted you during the study. Please rate your level of agreement with each statement.<hr>",
+                "secondary_text": "<b>I lost trust in the AI because of its errors.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ]
+    },
+    {
         "type": "p-instruction",
         "title": "<img src='assets/res/img/timeline_end.png' class='img-fluid' alt='timeline'></br><hr><h3>End of the protocol - Score</h3>",
         "body_text": "<div class='text-start'> <div>Thank you for participating to this experiment. To discover your score and terminate the experiment, click on the button below.</div>",
@@ -3212,7 +3242,6 @@
     {
         "type": "p-instruction",
         "title": "<h3>End of the protocol</h3>",
-        "body_text": "<div class='text-start'> <div> The protocol is now over. You can close this page.</div>",
-        "with_button": "False"
+        "body_text": "<div class='text-start'> <div> <p>The protocol is now over. In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:jules.leguy@mines-ales.fr'>jules.leguy@mines-ales.fr</a>.</p> <p>You can close this page.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-4 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div> <div class='col-12 col-md-4 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='Example of image with answer No'> </div> </div></div>"
     }
 ]

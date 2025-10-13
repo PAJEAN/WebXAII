@@ -1,13 +1,13 @@
 {
-    "H1": {
+    "TESTH1": {
         "roles": "user",
         "protocol": "H.json"
     },
-    "H2": {
+    "TESTH2": {
         "roles": "user",
         "protocol": "H.json"
     },
-    "H3": {
+    "TESTH3": {
         "roles": "user",
         "protocol": "H.json"
     },
@@ -399,15 +399,15 @@
         "roles": "user",
         "protocol": "H.json"
     },
-    "AI1": {
+    "TESTA1": {
         "roles": "user",
         "protocol": "AI.json"
     },
-    "AI2": {
+    "TESTA2": {
         "roles": "user",
         "protocol": "AI.json"
     },
-    "AI3": {
+    "TESTA3": {
         "roles": "user",
         "protocol": "AI.json"
     },
@@ -799,15 +799,15 @@
         "roles": "user",
         "protocol": "AI.json"
     },
-    "XAI_SHAP1": {
+    "TESTSH1": {
         "roles": "user",
         "protocol": "XAI_SHAP.json"
     },
-    "XAI_SHAP2": {
+    "TESTSH2": {
         "roles": "user",
         "protocol": "XAI_SHAP.json"
     },
-    "XAI_SHAP3": {
+    "TESTSH3": {
         "roles": "user",
         "protocol": "XAI_SHAP.json"
     },
@@ -1199,15 +1199,15 @@
         "roles": "user",
         "protocol": "XAI_SHAP.json"
     },
-    "XAI_CF1": {
+    "TESTCF1": {
         "roles": "user",
         "protocol": "XAI_CF.json"
     },
-    "XAI_CF2": {
+    "TESTCF2": {
         "roles": "user",
         "protocol": "XAI_CF.json"
     },
-    "XAI_CF3": {
+    "TESTCF3": {
         "roles": "user",
         "protocol": "XAI_CF.json"
     },
@@ -1599,15 +1599,15 @@
         "roles": "user",
         "protocol": "XAI_CF.json"
     },
-    "XAI_LLM1": {
+    "TESTT1": {
         "roles": "user",
         "protocol": "XAI_LLM.json"
     },
-    "XAI_LLM2": {
+    "TESTT2": {
         "roles": "user",
         "protocol": "XAI_LLM.json"
     },
-    "XAI_LLM3": {
+    "TESTT3": {
         "roles": "user",
         "protocol": "XAI_LLM.json"
     },
