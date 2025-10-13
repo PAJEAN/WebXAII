@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf,xai_llm
+0,0,88,res/input/easy_2_row_circle/88.png,res/AI/easy_2_row_circle/88.png,res/xai_shap/easy_2_row_circle/88.png,res/xai_cf/easy_2_row_circle/88.png,res/xai_llm/easy_2_row_circle/88.png
+1,1,78,res/input/easy_2_row_circle/78.png,res/AI/easy_2_row_circle/78.png,res/xai_shap/easy_2_row_circle/78.png,res/xai_cf/easy_2_row_circle/78.png,res/xai_llm/easy_2_row_circle/78.png
+1,1,17,res/input/easy_2_row_circle/17.png,res/AI/easy_2_row_circle/17.png,res/xai_shap/easy_2_row_circle/17.png,res/xai_cf/easy_2_row_circle/17.png,res/xai_llm/easy_2_row_circle/17.png
+0,1,59,res/input/easy_2_row_circle/59.png,res/AI/easy_2_row_circle/59.png,res/xai_shap/easy_2_row_circle/59.png,res/xai_cf/easy_2_row_circle/59.png,res/xai_llm/easy_2_row_circle/59.png
+1,1,77,res/input/easy_2_row_circle/77.png,res/AI/easy_2_row_circle/77.png,res/xai_shap/easy_2_row_circle/77.png,res/xai_cf/easy_2_row_circle/77.png,res/xai_llm/easy_2_row_circle/77.png
+0,0,43,res/input/easy_2_row_circle/43.png,res/AI/easy_2_row_circle/43.png,res/xai_shap/easy_2_row_circle/43.png,res/xai_cf/easy_2_row_circle/43.png,res/xai_llm/easy_2_row_circle/43.png
+1,0,96,res/input/easy_2_row_circle/96.png,res/AI/easy_2_row_circle/96.png,res/xai_shap/easy_2_row_circle/96.png,res/xai_cf/easy_2_row_circle/96.png,res/xai_llm/easy_2_row_circle/96.png
+0,0,75,res/input/easy_2_row_circle/75.png,res/AI/easy_2_row_circle/75.png,res/xai_shap/easy_2_row_circle/75.png,res/xai_cf/easy_2_row_circle/75.png,res/xai_llm/easy_2_row_circle/75.png
+0,0,5,res/input/easy_2_row_circle/5.png,res/AI/easy_2_row_circle/5.png,res/xai_shap/easy_2_row_circle/5.png,res/xai_cf/easy_2_row_circle/5.png,res/xai_llm/easy_2_row_circle/5.png
+1,1,14,res/input/easy_2_row_circle/14.png,res/AI/easy_2_row_circle/14.png,res/xai_shap/easy_2_row_circle/14.png,res/xai_cf/easy_2_row_circle/14.png,res/xai_llm/easy_2_row_circle/14.png

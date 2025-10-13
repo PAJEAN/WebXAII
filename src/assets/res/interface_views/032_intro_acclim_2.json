@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Introduction - Acclimatation phase</h3>",
+      "body_text": "<img src='assets/res/img/timeline_intro_acclim_2.png' class='img-fluid' alt='timeline'></br><hr><div class='text-start'> For the second training task, you will have a limited time to take each decision. The lack of answer in time will be considered as a wrong answer. This will be stay true for all remaining tasks of the protocol.",
+      "button_text": "Start training",
+      "with_button": "True"
+}

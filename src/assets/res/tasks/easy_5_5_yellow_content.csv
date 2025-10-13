@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf,xai_llm
+0,1,8,res/input/easy_5_5_yellow/8.png,res/AI/easy_5_5_yellow/8.png,res/xai_shap/easy_5_5_yellow/8.png,res/xai_cf/easy_5_5_yellow/8.png,res/xai_llm/easy_5_5_yellow/8.png
+1,1,76,res/input/easy_5_5_yellow/76.png,res/AI/easy_5_5_yellow/76.png,res/xai_shap/easy_5_5_yellow/76.png,res/xai_cf/easy_5_5_yellow/76.png,res/xai_llm/easy_5_5_yellow/76.png
+1,1,39,res/input/easy_5_5_yellow/39.png,res/AI/easy_5_5_yellow/39.png,res/xai_shap/easy_5_5_yellow/39.png,res/xai_cf/easy_5_5_yellow/39.png,res/xai_llm/easy_5_5_yellow/39.png
+1,1,52,res/input/easy_5_5_yellow/52.png,res/AI/easy_5_5_yellow/52.png,res/xai_shap/easy_5_5_yellow/52.png,res/xai_cf/easy_5_5_yellow/52.png,res/xai_llm/easy_5_5_yellow/52.png
+0,0,36,res/input/easy_5_5_yellow/36.png,res/AI/easy_5_5_yellow/36.png,res/xai_shap/easy_5_5_yellow/36.png,res/xai_cf/easy_5_5_yellow/36.png,res/xai_llm/easy_5_5_yellow/36.png
+0,0,45,res/input/easy_5_5_yellow/45.png,res/AI/easy_5_5_yellow/45.png,res/xai_shap/easy_5_5_yellow/45.png,res/xai_cf/easy_5_5_yellow/45.png,res/xai_llm/easy_5_5_yellow/45.png
+1,1,92,res/input/easy_5_5_yellow/92.png,res/AI/easy_5_5_yellow/92.png,res/xai_shap/easy_5_5_yellow/92.png,res/xai_cf/easy_5_5_yellow/92.png,res/xai_llm/easy_5_5_yellow/92.png
+0,1,80,res/input/easy_5_5_yellow/80.png,res/AI/easy_5_5_yellow/80.png,res/xai_shap/easy_5_5_yellow/80.png,res/xai_cf/easy_5_5_yellow/80.png,res/xai_llm/easy_5_5_yellow/80.png
+0,0,34,res/input/easy_5_5_yellow/34.png,res/AI/easy_5_5_yellow/34.png,res/xai_shap/easy_5_5_yellow/34.png,res/xai_cf/easy_5_5_yellow/34.png,res/xai_llm/easy_5_5_yellow/34.png
+1,1,14,res/input/easy_5_5_yellow/14.png,res/AI/easy_5_5_yellow/14.png,res/xai_shap/easy_5_5_yellow/14.png,res/xai_cf/easy_5_5_yellow/14.png,res/xai_llm/easy_5_5_yellow/14.png

@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf,xai_llm
+0,1,70,res/input/easy_4_row_triangle/70.png,res/AI/easy_4_row_triangle/70.png,res/xai_shap/easy_4_row_triangle/70.png,res/xai_cf/easy_4_row_triangle/70.png,res/xai_llm/easy_4_row_triangle/70.png
+1,1,99,res/input/easy_4_row_triangle/99.png,res/AI/easy_4_row_triangle/99.png,res/xai_shap/easy_4_row_triangle/99.png,res/xai_cf/easy_4_row_triangle/99.png,res/xai_llm/easy_4_row_triangle/99.png
+0,0,41,res/input/easy_4_row_triangle/41.png,res/AI/easy_4_row_triangle/41.png,res/xai_shap/easy_4_row_triangle/41.png,res/xai_cf/easy_4_row_triangle/41.png,res/xai_llm/easy_4_row_triangle/41.png
+0,0,50,res/input/easy_4_row_triangle/50.png,res/AI/easy_4_row_triangle/50.png,res/xai_shap/easy_4_row_triangle/50.png,res/xai_cf/easy_4_row_triangle/50.png,res/xai_llm/easy_4_row_triangle/50.png
+1,1,81,res/input/easy_4_row_triangle/81.png,res/AI/easy_4_row_triangle/81.png,res/xai_shap/easy_4_row_triangle/81.png,res/xai_cf/easy_4_row_triangle/81.png,res/xai_llm/easy_4_row_triangle/81.png
+0,0,75,res/input/easy_4_row_triangle/75.png,res/AI/easy_4_row_triangle/75.png,res/xai_shap/easy_4_row_triangle/75.png,res/xai_cf/easy_4_row_triangle/75.png,res/xai_llm/easy_4_row_triangle/75.png
+1,1,65,res/input/easy_4_row_triangle/65.png,res/AI/easy_4_row_triangle/65.png,res/xai_shap/easy_4_row_triangle/65.png,res/xai_cf/easy_4_row_triangle/65.png,res/xai_llm/easy_4_row_triangle/65.png
+1,1,77,res/input/easy_4_row_triangle/77.png,res/AI/easy_4_row_triangle/77.png,res/xai_shap/easy_4_row_triangle/77.png,res/xai_cf/easy_4_row_triangle/77.png,res/xai_llm/easy_4_row_triangle/77.png
+0,1,6,res/input/easy_4_row_triangle/6.png,res/AI/easy_4_row_triangle/6.png,res/xai_shap/easy_4_row_triangle/6.png,res/xai_cf/easy_4_row_triangle/6.png,res/xai_llm/easy_4_row_triangle/6.png
+1,1,3,res/input/easy_4_row_triangle/3.png,res/AI/easy_4_row_triangle/3.png,res/xai_shap/easy_4_row_triangle/3.png,res/xai_cf/easy_4_row_triangle/3.png,res/xai_llm/easy_4_row_triangle/3.png

@@ -1,0 +1,89 @@
+{
+  "first_connection": "2025-10-13T09:47:53.436Z",
+  "last_modification": "2025-10-13T09:57:11.858Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 90107
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 7117
+    },
+    {
+      "time_on_page": 17504
+    },
+    {
+      "time_on_page": 10105
+    },
+    {
+      "time_on_page": 2397
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 900,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_1": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 400,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 400,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 300,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_4": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 1000,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "time_on_page": 5230
+    },
+    {
+      "time_on_page": 723
+    },
+    {
+      "time_on_page": 26675
+    },
+    {
+      "time_on_page": 30818
+    }
+  ]
+}

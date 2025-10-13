@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_intro_prep.png' class='img-fluid' alt='timeline'></br><hr><h3>Introduction - Main experiment preparation</h3>",
+      "body_text": "<div class='text-start'><p>You are now entering the preparation phase for the Main experiment, which is the last phase of the Introduction. You are about to perform 4 tasks of 10 questions each. These tasks closely resemble those in the main experimental phase and are designed to help you practice and prepare for the main task. <p>As this is still a training phase, your answers will <b>not</b> be recorded and your score will <b>not</b> count towards your bonus remuneration.</p>",
+      "button_text": "Start training",
+      "with_button": "True"
+}

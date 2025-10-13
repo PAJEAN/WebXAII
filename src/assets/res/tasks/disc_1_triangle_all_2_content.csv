@@ -1,0 +1,6 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf,xai_llm
+0,0,69,res/input/disc_1_triangle_all_2/69.png,res/AI/disc_1_triangle_all_2/69.png,res/xai_shap/disc_1_triangle_all_2/69.png,res/xai_cf/disc_1_triangle_all_2/69.png,res/xai_llm/disc_1_triangle_all_2/69.png
+1,1,93,res/input/disc_1_triangle_all_2/93.png,res/AI/disc_1_triangle_all_2/93.png,res/xai_shap/disc_1_triangle_all_2/93.png,res/xai_cf/disc_1_triangle_all_2/93.png,res/xai_llm/disc_1_triangle_all_2/93.png
+0,0,86,res/input/disc_1_triangle_all_2/86.png,res/AI/disc_1_triangle_all_2/86.png,res/xai_shap/disc_1_triangle_all_2/86.png,res/xai_cf/disc_1_triangle_all_2/86.png,res/xai_llm/disc_1_triangle_all_2/86.png
+0,0,15,res/input/disc_1_triangle_all_2/15.png,res/AI/disc_1_triangle_all_2/15.png,res/xai_shap/disc_1_triangle_all_2/15.png,res/xai_cf/disc_1_triangle_all_2/15.png,res/xai_llm/disc_1_triangle_all_2/15.png
+1,1,30,res/input/disc_1_triangle_all_2/30.png,res/AI/disc_1_triangle_all_2/30.png,res/xai_shap/disc_1_triangle_all_2/30.png,res/xai_cf/disc_1_triangle_all_2/30.png,res/xai_llm/disc_1_triangle_all_2/30.png

@@ -1,0 +1,437 @@
+{
+  "first_connection": "2025-10-11T13:53:46.149Z",
+  "last_modification": "2025-10-11T14:45:27.238Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 8027
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 17504
+    },
+    {
+      "time_on_page": 39851
+    },
+    {
+      "time_on_page": 223854
+    },
+    {
+      "time_on_page": 20792
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 5400,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_1": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 1000,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_2": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 2300,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 1400,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_4": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 600,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "time_on_page": 16004
+    },
+    {
+      "time_on_page": 1306
+    },
+    {
+      "time_on_page": 1769310
+    },
+    {
+      "time_on_page": 121480
+    },
+    {
+      "time_on_page": 54277
+    },
+    {
+      "time_on_page": 619210
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 14300,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_1": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 11500,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 3900,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_3": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 5000,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_4": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 8200,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "time_on_page": 47939
+    },
+    {
+      "time_on_page": 1297
+    },
+    {
+      "time_on_page": 4337
+    },
+    {
+      "time_on_page": 27483
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 6500,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_1": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 1600,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_2": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 6800,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_3": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 1500,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_4": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 2900,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "time_on_page": 54970
+    },
+    {
+      "time_on_page": 1102
+    },
+    {
+      "time_on_page": 5102
+    },
+    {
+      "time_on_page": 717
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 1600,
+        "is_time_exceeded": false,
+        "order_index": 6
+      },
+      "task_1": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 800,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 500,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 600,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_4": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 500,
+        "is_time_exceeded": false,
+        "order_index": 5
+      },
+      "task_5": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 600,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_6": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 500,
+        "is_time_exceeded": false,
+        "order_index": 7
+      },
+      "task_7": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 500,
+        "is_time_exceeded": false,
+        "order_index": 8
+      },
+      "task_8": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 700,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_9": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 800,
+        "is_time_exceeded": false,
+        "order_index": 9
+      },
+      "time_on_page": 7454
+    },
+    {
+      "time_on_page": 15937
+    },
+    {
+      "time_on_page": 1456
+    },
+    {
+      "task_0": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 14100,
+        "is_time_exceeded": false,
+        "order_index": 5
+      },
+      "task_1": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 4400,
+        "is_time_exceeded": false,
+        "order_index": 3
+      },
+      "task_2": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 4900,
+        "is_time_exceeded": false,
+        "order_index": 0
+      },
+      "task_3": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 2200,
+        "is_time_exceeded": false,
+        "order_index": 4
+      },
+      "task_4": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 1900,
+        "is_time_exceeded": false,
+        "order_index": 9
+      },
+      "task_5": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 3100,
+        "is_time_exceeded": false,
+        "order_index": 7
+      },
+      "task_6": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 1600,
+        "is_time_exceeded": false,
+        "order_index": 6
+      },
+      "task_7": {
+        "answers": [
+          [
+            0
+          ]
+        ],
+        "time": 2400,
+        "is_time_exceeded": false,
+        "order_index": 2
+      },
+      "task_8": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 3900,
+        "is_time_exceeded": false,
+        "order_index": 1
+      },
+      "task_9": {
+        "answers": [
+          [
+            1
+          ]
+        ],
+        "time": 6900,
+        "is_time_exceeded": false,
+        "order_index": 8
+      },
+      "time_on_page": 46104
+    },
+    {
+      "time_on_page": 1647
+    },
+    {
+      "time_on_page": 1961
+    }
+  ]
+}
