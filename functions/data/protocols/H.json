@@ -23,14 +23,14 @@
     {
         "type": "p-instruction",
         "title": "<img src='assets/res/img/timeline_intro_disc.png' class='img-fluid' alt='timeline'></br><hr><h3>Let's jump in</h3>",
-        "body_text": "<div class='text-start'> <p>Before giving you further instructions, you will perform a first training task in order to discover the interface. This task will <b>not</b> count towards your score and remuneration, and the results will <b>not</b> be recorded. You will be presented with a series of 5 images of symbols of colors, and you will have to answer a question regarding the image. For this task and few other tasks of the Introduction, you will be informed if the decision was right or wrong after each decision.</p> <p> As for every task later, the question will be the same for every image of the task. The question will usually change every new task, except for few tasks of the Introduction.</p> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
+        "body_text": "<div class='text-start'> <p>Before giving you further instructions, you will perform a first training task in order to discover the interface. This task will <b>not</b> count towards your score and remuneration, and the results will <b>not</b> be recorded. You will be presented with a series of 5 images of symbols of colors, and you will have to answer a question pertaining to each of the images. For this task and few other tasks of the Introduction, you will be informed if the decision was right or wrong after each decision.</p> <p> As for every task later, the question will be the same for every image of the task. The question will usually change every new task, except for the tasks of the Discovery and Acclimatation sequences of the Introduction.</p> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
         "button_text": "Proceed with the discovery task",
         "with_button": "True"
     },
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "<br/><div class='text-start'>The task question is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "<br/><div class='text-start'>The question for the task is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -113,7 +113,7 @@
     {
         "type": "p-instruction",
         "title": "<h3> Protocol structure </h3>",
-        "body_text": "<div class='text-start'> <p> The protocol will last about 30 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_exp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> To continue your familiarization with the task and the interface, you will enter the acclimation phase, which consists of two tasks of 5 images each. </p><p> Then, you will start the preparation phase for the main experiment, which will consist of 4 tasks of 10 questions each. The tasks will be very similar to the tasks of the main experiment. This phase will conclude the introduction</p> </p> Then, the main experiment will start. It will be divided into 2 main sessions. Each session consists in solving 4 tasks of 10 questions each, that will count towards your score and bonus remuneration. Every 2 tasks, you will have to answer a small survey about the tasks you just performed.</p><p> Finally, you will enter the closing phase, in which you will have to answer a final survey to terminate the protocol.</p><p>Please note that your actions and answers will only be recorded during the Main experimental phase and the Closing phase, and that the tasks that count towards your performance and bonus remuneration are all part of the Main experimental phase.</p><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
+        "body_text": "<div class='text-start'> <p> The protocol will last about 30 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_exp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> To continue your familiarization with the task and the interface, you will enter the acclimation phase, which consists of two tasks of 5 images each. </p><p> Then, you will start the preparation phase for the main experiment, which will consist of 4 tasks of 10 questions each. The tasks will be very similar to the tasks of the main experiment. This phase will conclude the introduction</p> </p> Then, the main experiment will start. It will be divided into 2 main sessions. Each session consists in solving 4 tasks of 10 questions each, that will count towards your score and bonus remuneration. Every 2 tasks, you will have to answer a small survey about the tasks you just performed.</p><p> Finally, you will enter the closing phase, in which you will have to answer a final survey to conclude the protocol.</p><p>Please note that your actions and answers will only be recorded during the Main experimental phase and the Closing phase, and that the tasks that count towards your performance and bonus remuneration are all part of the Main experimental phase.</p><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
         "button_text": "I read and understood the instructions",
         "with_button": "True"
     },
@@ -127,7 +127,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "<br/><div class='text-start'>The task question is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_2/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_2/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "<br/><div class='text-start'>The question for the task is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_2/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_2/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -217,7 +217,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "<br/><div class='text-start'>The task question is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_3/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_3/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "<br/><div class='text-start'>The question for the task is : <b>In the image, is there a triangle in every row (1, ..., 6)?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_3/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/disc_1_triangle_all_3/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -307,13 +307,13 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there exactly 6 blue symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_1_6_blue/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_1_6_blue/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, are there exactly 6 blue symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_1_6_blue/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_1_6_blue/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, is there exactly 6 blue symbols? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>In the image, are there exactly 6 blue symbols? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -430,7 +430,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there at least one row (1, ..., 6) containing only circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_2_row_circle/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_2_row_circle/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, is there at least one row (1, ..., 6) containing only circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_2_row_circle/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_2_row_circle/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -553,7 +553,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of blue squares plus (+) the number of circles equal to 8?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_1_blue_square_plus_circle_8/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_1_blue_square_plus_circle_8/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of blue squares plus (+) the number of circles equal to 8?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_1_blue_square_plus_circle_8/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_1_blue_square_plus_circle_8/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -676,7 +676,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (training)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of yellow triangles multiplied by 2 (\u00d72) equal to the number of squares?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_2_yellow_triangles_times2_squares/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_2_yellow_triangles_times2_squares/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of yellow triangles multiplied by 2 (\u00d72) equal to the number of squares?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_2_yellow_triangles_times2_squares/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_2_yellow_triangles_times2_squares/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (training)"
     },
@@ -799,7 +799,7 @@
     {
         "type": "p-instruction",
         "title": "<img src='assets/res/img/timeline_mainexp.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment</h3>",
-        "body_text": "<div class='text-start'> <p>The introduction is over. You are now entering the main experimental phase, in which your answers as well as your performance at the tasks will be recorded. <b>Your performance during this phase will count towards your bonus remuneration.</b> As a reminder, the structure of the experiment is described in the diagram below.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_mainexp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> This phase is divided in 2 sessions. In each session, you must perform 2 tasks, answer a first survey about those tasks, then you must perform another 2 tasks and answer a second survey about those 2 latter tasks. There is no right or wrong answers to the surveys; only your score during the tasks will count towards your bonus remuneration.</p><p> <b>Note that you will not be given your score anymore at the end of each task.</b> Your score on all tasks of the main experimental phase will be given to you at the end of the protocol.</p><p> Please read the information above carefully as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p>",
+        "body_text": "<div class='text-start'> <p>The introduction is over. You are now entering the main experimental phase, in which your answers as well as your performance at the tasks will be recorded. <b>Your performance during this phase will count towards your bonus remuneration.</b> As a reminder, the structure of the experiment is described in the diagram below.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_mainexp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> This phase is divided in 2 sessions. In each session, you must perform 2 tasks, answer a first survey about those tasks, then you must perform another 2 tasks and answer a second survey about those 2 latter tasks. There are no right or wrong answers to the survey questions; only your score during the tasks will count towards your bonus remuneration.</p><p> <b>Note that you will not be given your score anymore at the end of each task.</b> Your score on all tasks of the main experimental phase will be given to you at the end of the protocol.</p><p> Please read the information above carefully as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p>",
         "button_text": "Enter Session 1",
         "with_button": "True"
     },
@@ -813,13 +813,13 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there exactly 7 purple symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, are there exactly 7 purple symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_3_7_purple/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there exactly 7 purple symbols? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, are there exactly 7 purple symbols? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 15,
@@ -928,7 +928,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there at least one row (1, ..., 6) containing only triangles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, is there at least one row (1, ..., 6) containing only triangles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_4_row_triangle/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
@@ -1163,13 +1163,13 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there exactly 5 yellow symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, are there exactly 5 yellow symbols?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_5_5_yellow/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there exactly 5 yellow symbols? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, are there exactly 5 yellow symbols? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -1278,7 +1278,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, is there at least one row (1, ..., 6) containing only squares?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, is there at least one row (1, ..., 6) containing only squares?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy_6_row_square/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
@@ -1520,7 +1520,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of yellow circles plus (+) the number of triangles equal to 9?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of yellow circles plus (+) the number of triangles equal to 9?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_3_yellow_circle_plus_triangle_9/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
@@ -1635,7 +1635,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_4_purple_squares_times2_circles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
@@ -1870,7 +1870,7 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple triangles plus (+) the number of squares equal to 7?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of purple triangles plus (+) the number of squares equal to 7?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_5_purple_triangle_plus_square_7/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
@@ -1985,13 +1985,13 @@
     {
         "type": "p-instruction",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The task question is : <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'>The question for the task is : <b>In the image, does the number of blue circles multiplied by 2 (\u00d72) equal to the number of triangles?</b> <br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard_6_blue_circles_times2_triangles/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, does the number of purple squares multiplied by 2 (\u00d72) equal to the number of circles? </b></div>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, does the number of blue circles multiplied by 2 (\u00d72) equal to the number of triangles? </b></div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -2338,10 +2338,10 @@
     },
     {
         "type": "p-instruction",
-        "title": "<h3>Task end</h3>",
-        "body_text": "You achieved a score of",
+        "title": "<h3>Final score</h3>",
+        "body_text": "During the main experimental phase, you achieved a score of",
         "with_button": true,
-        "button_text": "Next",
+        "button_text": "Leave",
         "score": true
     },
     {
