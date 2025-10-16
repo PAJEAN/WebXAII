@@ -38,7 +38,7 @@ try {
             <style>
                 #main-page {
                     min-height: 100vh;
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                 }
                 .container-decoration {
                     border-radius: 1rem;
@@ -55,8 +55,8 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-height: 50vh;
-                    
+                    max-width: 40vw;
+                    margin: auto;                    
                 }
             </style>
 
@@ -115,7 +115,7 @@ try {
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3 mx-4">
+                    <div class="row mt-2 mx-4">
                         <div class="col-sm px-0">
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
                         </div>
@@ -157,13 +157,14 @@ try {
                 let alert_container = this._getElementById(TAG_IDS.alert_placeholder);
                 alert_container.textContent = '';
                 let alert = document.createElement('div');
-                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'my-3');
+                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'm-0', 'mt-2');
                 alert.setAttribute('role', 'alert');
                 let alert_title = document.createElement('h5');
                 alert_title.textContent = `${is_correct ? this.current_view.feedback_answer_correct: this.current_view.feedback_answer_wrong}`;
                 alert.appendChild(alert_title);
                 if (!is_correct && this.current_view._feedback_answer_show_expected) {
                     let alert_hr = document.createElement('hr');
+                    alert_hr.classList.add('my-0')
                     alert.appendChild(alert_hr);
                     let alert_expected = document.createElement('div');
                     let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
@@ -197,6 +198,8 @@ try {
                 let col = document.createElement('div');
                 if (!only_source) {
                     col.classList.add('col');
+                } else {
+                    col.classList.add('col-6');
                 }
                 let card = document.createElement('div');
                 card.classList.add('card', 'h-100');
@@ -477,7 +480,9 @@ try {
                 this._resetAlert();
                 this._resetForm();
                 this._task();
-                this._timer();
+                window.addEventListener('load', () => {
+                     this._timer();
+                });
                 this.observer && this._observing();
             }
 

@@ -22,11 +22,11 @@ export const TEST_VIEW = [
                     label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
-                model: {
-                    is_image: false,
-                    label: "This is a text for the model",
-                    title: 'Model'
-                },
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model",
+                //     title: 'Model'
+                // },
                 // explanations: [
                 //     {
                 //         is_image: true,
@@ -42,11 +42,11 @@ export const TEST_VIEW = [
                     label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
-                // model: {
-                //     is_image: false,
-                //     label: "This is a text for the model n°2",
-                //     title: 'Model'
-                // },
+                model: {
+                    is_image: false,
+                    label: "This is a text for the model n°2",
+                    title: 'Model'
+                },
                 // explanations: [
                 //     {
                 //         is_image: true,
