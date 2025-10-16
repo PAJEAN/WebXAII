@@ -6,7 +6,7 @@ export const TEST_VIEW = [
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 8, // opt.
+        timer: 200, // opt.
         randomize: true,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
@@ -20,18 +20,18 @@ export const TEST_VIEW = [
                     label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
-                model: {
-                    is_image: false,
-                    label: "This is a text for the model",
-                    title: 'Model'
-                },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                        title: 'Explanation'
-                    }
-                ],
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model",
+                //     title: 'Model'
+                // },
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
+                //         title: 'Explanation'
+                //     }
+                // ],
                 expected: 0
             },
             {
@@ -40,18 +40,18 @@ export const TEST_VIEW = [
                     label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
-                model: {
-                    is_image: false,
-                    label: "This is a text for the model n°2",
-                    title: 'Model'
-                },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                        title: 'Explanation'
-                    }
-                ],
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model n°2",
+                //     title: 'Model'
+                // },
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
+                //         title: 'Explanation'
+                //     }
+                // ],
                 expected: 1
             },
         ],
@@ -67,6 +67,14 @@ export const TEST_VIEW = [
                 css_class_colors: ['btn-success', 'btn-danger']
             }
         }
+    },
+    {
+        type: 'p-instruction',
+        title: '<h3><i>Task</i></h3',
+        body_text: '<h4>Instruction</h4><p>C\'est du HTML!<img width="500px" src="assets/datasets/single-kingfisher-bird.jpg"></p>',
+        button_text: 'Next',
+        with_button: true,
+        countdown: 260 // opt.
     },
     {
         type: 'p-questionnaire',
@@ -112,14 +120,6 @@ export const TEST_VIEW = [
                 answers: ['']
             }
         ]
-    },
-    {
-        type: 'p-instruction',
-        title: '<h3><i>Task</i></h3',
-        body_text: "<h4>Instruction</h4><p>C'est du HTML!</p>",
-        button_text: 'Next',
-        with_button: true,
-        countdown: 260 // opt.
     },
     {
         type: 'p-questionnaire',
