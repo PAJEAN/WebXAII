@@ -1,12 +1,14 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
+        view_id: 'my-exp-view',
         type: 'p-task',
         title: '<i>Title task</i>',
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
         timer: 200, // opt.
+        time_exceeded_timer: 3, // opt.
         randomize: true,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
@@ -20,11 +22,11 @@ export const TEST_VIEW = [
                     label: 'assets/datasets/single-kingfisher-bird.jpg',
                     title: 'Source'
                 },
-                // model: {
-                //     is_image: false,
-                //     label: "This is a text for the model",
-                //     title: 'Model'
-                // },
+                model: {
+                    is_image: false,
+                    label: "This is a text for the model",
+                    title: 'Model'
+                },
                 // explanations: [
                 //     {
                 //         is_image: true,
@@ -69,6 +71,8 @@ export const TEST_VIEW = [
         }
     },
     {
+        view_id: 'my-desc-view',
+        score: true,
         type: 'p-instruction',
         title: '<h3><i>Task</i></h3',
         body_text: '<h4>Instruction</h4><p>C\'est du HTML!<img width="500px" src="assets/datasets/single-kingfisher-bird.jpg"></p>',

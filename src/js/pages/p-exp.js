@@ -15,6 +15,7 @@ import { FormComponent } from 'JS/components/wc-form';
 try {
     const TAG_IDS = {
         alert_placeholder: 'alert-placeholder',
+        alert_timer_placeholder: 'alert-timer-placeholder',
         current_status: 'current-status',
         desc_text: 'desc-text',
         explanation: 'explanation',
@@ -40,7 +41,7 @@ try {
                     font-size: 1.2em;
                 }
                 .container-decoration {
-                    border-radius: 10px;
+                    border-radius: 1rem;
                     box-shadow: var(--box-shadow);
                 }
                 .row {
@@ -54,32 +55,34 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-height: 300px;
-                    margin: auto;
+                    max-height: 50vh;
+                    
                 }
             </style>
 
             <div id="${TAG_IDS.main_page}" class="d-flex flex-column justify-content-center">
 
-                <div class="container container-decoration mt-2 p-2" id="${TAG_IDS.task_title_container}">
-                    <div id="${TAG_IDS.task_title}" class="container">Task view</div>
+                <div class="container-decoration mx-4 px-4 py-2" id="${TAG_IDS.task_title_container}">
+                    <div id="${TAG_IDS.task_title}">Task view</div>
     
-                    <div id="${TAG_IDS.desc_text}" class="container">
+                    <div id="${TAG_IDS.desc_text}">
                         There was an error when parsing the JSON entry, so the page cannot be rendered
                     </div>
                 </div>
                 
-                <div id="${TAG_IDS.alert_placeholder}" class="container"></div>
+                <div id="${TAG_IDS.alert_placeholder}" class="mx-4"></div>
 
-                <div class="container mt-3">
-                    <div id="${TAG_IDS.current_status}" class="container container-decoration d-flex justify-content-center"></div>
+                <div id="${TAG_IDS.alert_timer_placeholder}" class="mx-4"></div>
 
-                    <div class="container">
+                <div class="">
+                    <div id="${TAG_IDS.current_status}" class="mx-4 m-0 container-decoration d-flex justify-content-center"></div>
+
+                    <div class="mx-4 container-decoration">
                         <div id="${TAG_IDS.timer}" class="text-center fs-1 mt-2"></div>
                     </div>
 
-                    <div class="row mt-1">
-                        <div class="col-sm">
+                    <div class="row mt-1 mx-4">
+                        <div class="col px-0">
                             <div class="d-flex align-items-stretch mt-2" style="gap:1rem" id="${TAG_IDS.source_model}">
                                 <!-- <div class="col-sm">
                                     <div class="card h-100">
@@ -112,10 +115,11 @@ try {
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-sm m-auto">
+                    <div class="row mt-3 mx-4">
+                        <div class="col-sm px-0">
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
-
+                        </div>
+                        <div class="px-0">
                             <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-info btn-lg text-uppercase w-100 mt-4">Submit</button>
                         </div>
                     </div>
@@ -171,6 +175,19 @@ try {
             }
 
             /**
+             * @param {number} remaining_time 
+             */
+            _createAlertTimer(remaining_time) {
+                let alert_container = this._getElementById(TAG_IDS.alert_timer_placeholder);
+                alert_container.textContent = '';
+                let alert = document.createElement('div');
+                alert.classList.add('alert', 'alert-danger', 'my-3');
+                alert.setAttribute('role', 'alert');
+                alert.textContent = `You did not answer on time. The next view will appear in ${remaining_time} seconds.`;
+                alert_container.appendChild(alert);
+            }
+
+            /**
              * @param {string} body_title_text 
              * @param {string} text 
              * @param {boolean} is_image 
@@ -179,7 +196,7 @@ try {
             _createCard(body_title_text, text, is_image, only_source = false) {
                 let col = document.createElement('div');
                 if (!only_source) {
-                    col.classList.add('col-sm');
+                    col.classList.add('col');
                 }
                 let card = document.createElement('div');
                 card.classList.add('card', 'h-100');
@@ -212,7 +229,7 @@ try {
             _currentStatus() {
                 if (this.current_view.show_progression_bar) {
                     let tag = this._getElementById(TAG_IDS.current_status);
-                    tag.classList.add('p-2');
+                    tag.classList.add('p-2', 'mt-2');
                     tag.textContent = '';
                     for (let i = 0; i < this.current_view.tasks.length; i++) {
                         let div = document.createElement('div');
@@ -315,6 +332,8 @@ try {
             _resetAlert() {
                 let alert_container = this._getElementById(TAG_IDS.alert_placeholder);
                 alert_container.textContent = '';
+                let alert_timer_container = this._getElementById(TAG_IDS.alert_timer_placeholder);
+                alert_timer_container.textContent = '';
             }
 
             /**
@@ -325,6 +344,7 @@ try {
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
                 form.enable();
                 form.unchecked();
+                form.style.display = 'block';
             }
 
             /**
@@ -365,9 +385,22 @@ try {
                         /** @type {FormComponent} */
                         let form = this.content.querySelector(`#${TAG_IDS.form}`);
                         form.disable();
+                        form.style.display = 'none';
                         this.observer && this.observer.disconnect();
                     } else {
-                        this._transition();
+                        if (is_time_exceeded && this.current_view.time_exceeded_timer > 0) {
+                            this._createAlertTimer(this.current_view.time_exceeded_timer);
+                            this.time_exceeded_timer = window.setInterval(() => {
+                                this.time_exceeded_current_time += 1;
+                                this._createAlertTimer(this.current_view.time_exceeded_timer - this.time_exceeded_current_time);
+                            }, 1000);
+                            setTimeout(() => {
+                                clearInterval(this.time_exceeded_timer);
+                                this._transition();
+                            }, this.current_view.time_exceeded_timer * 1000);
+                        } else {
+                            this._transition();
+                        }
                     }                    
                 }
             }
@@ -436,6 +469,7 @@ try {
 
             _init() {
                 this.current_time = 0;
+                this.time_exceeded_current_time = 0;
                 this._currentStatus();
                 this._dataset();
                 this._desc();
@@ -484,9 +518,12 @@ try {
                 /** @type {Experiment} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
                 this.current_time = 0;
+                this.time_exceeded_current_time = 0;
                 this.good_answers = 0;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
+                /** @type {number | undefined} */
+                this.time_exceeded_timer = undefined;
                 this.observer = undefined;
                 /* Methods */
                 this._init();
@@ -497,6 +534,7 @@ try {
                 if(this.timer_id) {
                     clearInterval(this.timer_id);
                 }
+                this.time_exceeded_timer && clearInterval(this.time_exceeded_timer);
                 this.observer && this.observer.disconnect();
             }
         });

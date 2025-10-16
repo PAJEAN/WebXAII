@@ -28,7 +28,7 @@ TEMPLATE.innerHTML = /* html */`
     </style>
 
     <div id="main">
-        <div class="container p-2">
+        <div class="p-2">
             <div id="questions" class="questions"></div>
         </div>
     </div>

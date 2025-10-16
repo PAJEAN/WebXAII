@@ -8,6 +8,7 @@ import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Utils */
 import { TEST_VIEW } from 'JS/utils/test_data';
 import { DATA_URL } from 'JS/utils/constants';
+import { View } from './view-classes';
 
 
 /* -------------------------------------------------------------------------- */
@@ -43,9 +44,10 @@ export const keys = {
     a_update_experiment_scores:  `${NS}_update_experiment_scores`,       // Update scores.
     
     /*** GETTERS ***/
-    g_view_length:        `${NS}_view_length`,       // Length of view.
-    g_current_view:       `${NS}_current_view`,      // Get current view info.
-    g_experiment_length:  `${NS}_experiment_length`, // Length of completed experiment.
+    g_view_length:         `${NS}_view_length`,         // Length of view.
+    g_current_view:        `${NS}_current_view`,        // Get current view info.
+    g_current_view_object: `${NS}_current_view_object`, // Get current view object.
+    g_experiment_length:   `${NS}_experiment_length`,   // Length of completed experiment.
 }
 
 
@@ -161,6 +163,7 @@ export const module = {
     /*** Getters ***/
     getters: {
         [keys.g_view_length]:  (state, key) => state[keys.s_view].length,
-        [keys.g_current_view]: (state, key) => state[keys.s_view][state[keys.s_current_view_index]]
+        [keys.g_current_view]: (state, key) => state[keys.s_view][state[keys.s_current_view_index]],
+        [keys.g_current_view_object]: (state, key) => state[keys.s_view_objects][state[keys.s_current_view_index]]
     }
 }

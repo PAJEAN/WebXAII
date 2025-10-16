@@ -158,12 +158,15 @@ export class View {
 
     /**
      * @param {string} type 
+     * @param {string} id 
      */
-    constructor(type) {
+    constructor(type, id = '') {
+        this._id = id;
         this._type = type;
     }
 
     get type() { return this._type; }
+    get id() { return this._id; }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -200,7 +203,7 @@ export class Experiment extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         /** @type {Question} */
         this._question = new Question(view['question']);
         /** @type {string} */
@@ -213,6 +216,8 @@ export class Experiment extends View {
         this._show_progression_bar = view.hasOwnProperty('show_progression_bar') ? view['show_progression_bar']: false;
         /** @type {number} */
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {number} */
+        this._time_exceeded_timer = view.hasOwnProperty('time_exceeded_timer') ? parseInt(view['time_exceeded_timer']): -1; // -1 if no timer (otherwise it's the max timer).
         /** @type {boolean} */
         this._randomize = view.hasOwnProperty('randomize') ? view['randomize']: false;
         /** @type {boolean} */
@@ -260,6 +265,7 @@ export class Experiment extends View {
     get show_progression_bar() { return this._show_progression_bar; }
     get tasks() { return this._tasks; }
     get timer() { return this._timer; }
+    get time_exceeded_timer() { return this._time_exceeded_timer; }
     get title() { return this._title; }
     get feedback_answer_activated() { return this._feedback_answer_activated; }
     get feedback_answer_correct() { return this._feedback_answer_correct; }
@@ -296,7 +302,7 @@ export class Form extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         /** @type {Array<Question>} */
         this._questions = view['questions'].map(q => new Question(q));
     }
@@ -324,7 +330,7 @@ export class Desc extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         this._body_text   = view.hasOwnProperty('body_text') ? view['body_text']: '';
         this._button_text = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
         this._countdown   = view.hasOwnProperty('countdown') ? 

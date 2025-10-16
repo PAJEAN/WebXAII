@@ -7,6 +7,7 @@ import { PAGE_NAMES, PAGES_INFO } from 'JS/pages/__namespaces__';
 /* Store */
 import { store } from 'JS/store/index';
 import { keys } from 'JS/store/modules/view';
+import { View } from 'JS/store/modules/view-classes';
 /* Utils */
 import { DATA_URL } from 'JS/utils/constants';
 
@@ -58,12 +59,15 @@ export function changePage() {
 export function nextView() {    
     let new_date = new Date();
     store.dispatch(keys.a_update_save, {
-        time_on_page: new_date.getTime() - store.state[keys.s_time].getTime()
+        time_on_page: new_date.getTime() - store.state[keys.s_time].getTime(),
+        view_id: store.state[keys.g_current_view_object].id
     });
     store.dispatch(keys.a_update_time, new_date);
     store.dispatch(keys.a_update_view_index, {}); // Authentication is the first page.
 
     console.log(`s_current_view_index: ${store.state[keys.s_current_view_index]}`);
+
+    console.log(store.state[keys.s_save])
     
     if (process.env.NODE_ENV == 'production') {
         // @ts-ignore
