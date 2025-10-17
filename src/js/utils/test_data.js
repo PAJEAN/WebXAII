@@ -1,6 +1,24 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: 'Here is a longer text',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            }
+        ],
+        break: {
+            index: 1,
+            text: 'Thank you for you participation, bye.'
+        }
+    },
+    {
         view_id: 'my-exp-view',
         type: 'p-task',
         title: '<i>Title task</i>',
@@ -9,7 +27,7 @@ export const TEST_VIEW = [
         is_training: false, // opt.
         timer: 200, // opt.
         time_exceeded_timer: 3, // opt.
-        randomize: true,
+        randomize: false,
         feedback_answer_activated: true, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
         feedback_answer_wrong: 'You were wrong.', // opt.
@@ -27,13 +45,13 @@ export const TEST_VIEW = [
                 //     label: "This is a text for the model",
                 //     title: 'Model'
                 // },
-                // explanations: [
-                //     {
-                //         is_image: true,
-                //         label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                //         title: 'Explanation'
-                //     }
-                // ],
+                explanations: [
+                    {
+                        is_image: true,
+                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
+                        title: 'Explanation'
+                    }
+                ],
                 expected: 0
             },
             {
@@ -122,20 +140,6 @@ export const TEST_VIEW = [
                 primary_text: 'Title 4',
                 secondary_text: 'Sub title 4',
                 answers: ['']
-            }
-        ]
-    },
-    {
-        type: 'p-questionnaire',
-        questions: [
-            {
-                type: 'radio',
-                primary_text: '',
-                secondary_text: 'Here is a longer text',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
             }
         ]
     },

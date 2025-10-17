@@ -19,6 +19,34 @@ export class EnumQuestionOptions {
     static get COLORS() { return this.#_COLORS; }
 }
 
+class BreakForm {
+
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!view.hasOwnProperty('index')) {
+            console.warn('BreakForm has no index');
+            return false;
+        }
+        return true
+    }
+
+    /**
+     * @param {number} index 
+     * @param {string} text
+     */
+    constructor(index, text = '') {
+        this._index = index;
+        this._text = text;
+    }
+
+    get index() { return this._index; }
+    get text() { return this._text; }
+}
+
 class LabelOrImage {
 
     /**
@@ -295,6 +323,9 @@ export class Form extends View {
         for (let question of view['questions']) {
             if (!Question.guard(question)) { return false; }
         }
+        if (view.hasOwnProperty('break')) {
+            if (!BreakForm.guard(view['break'])) { return false; }
+        }
         return true;
     }
 
@@ -305,8 +336,11 @@ export class Form extends View {
         super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         /** @type {Array<Question>} */
         this._questions = view['questions'].map(q => new Question(q));
+        /** @type {BreakForm} */
+        this._break = view.hasOwnProperty('break') ? view['break']: undefined;
     }
 
+    get break() { return this._break; }
     get questions() { return this._questions; }
 }
 

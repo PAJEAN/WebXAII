@@ -82,8 +82,8 @@ try {
                     </div>
 
                     <div class="row mt-1 mx-4">
-                        <div class="col px-0">
-                            <div class="d-flex align-items-stretch mt-2" style="gap:1rem" id="${TAG_IDS.source_model}">
+                        <!-- <div class="col px-0"> -->
+                        <div class="row mt-2" id="${TAG_IDS.source_model}">
                                 <!-- <div class="col-sm">
                                     <div class="card h-100">
                                         <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
@@ -112,8 +112,8 @@ try {
                                         </div>
                                     </div>
                                 </div> -->
-                            </div>
                         </div>
+                        <!-- </div> -->
                     </div>
                     <div class="row mt-2 mx-4">
                         <div class="col-sm px-0">
