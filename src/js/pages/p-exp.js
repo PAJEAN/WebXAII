@@ -55,7 +55,7 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-width: 40vw;
+                    max-width: 35vw;
                     margin: auto;                    
                 }
             </style>
@@ -480,9 +480,9 @@ try {
                 this._resetAlert();
                 this._resetForm();
                 this._task();
-                window.addEventListener('load', () => {
-                     this._timer();
-                });
+                // window.addEventListener('load', () => {
+                this._timer();
+                // });
                 this.observer && this._observing();
             }
 

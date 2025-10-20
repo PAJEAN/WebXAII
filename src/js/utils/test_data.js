@@ -1,24 +1,6 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
-        type: 'p-questionnaire',
-        questions: [
-            {
-                type: 'radio',
-                primary_text: '',
-                secondary_text: 'Here is a longer text',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
-            }
-        ],
-        break: {
-            index: 1,
-            text: 'Thank you for you participation, bye.'
-        }
-    },
-    {
         view_id: 'my-exp-view',
         type: 'p-task',
         title: '<i>Title task</i>',
@@ -86,6 +68,24 @@ export const TEST_VIEW = [
             options: {
                 css_class_colors: ['btn-success', 'btn-danger']
             }
+        }
+    },
+        {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: 'Here is a longer text',
+                answers: [
+                    'choix1',
+                    'choix2',
+                ]
+            }
+        ],
+        break: {
+            index: 1,
+            text: 'Thank you for you participation, bye.'
         }
     },
     {
