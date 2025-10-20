@@ -23,12 +23,6 @@
             "F",
             "Other or Prefer not to say"
           ]
-        },
-        {
-          "type": "radio",
-          "primary_text": "",
-          "secondary_text": "<b>What is your socioeconomical status ?</b>",
-           "answers": ["TBD"]
         }
       ]
 }

@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_end.png' class='img-fluid' alt='timeline'></br><hr><h3>End of the protocol - Score</h3>",
+    "body_text": "<div class='text-start'> <div>Thank you for participating to this experiment. To discover your score and terminate the experiment, click on the button below.</div>",
+    "button_text":  "Discover your score",
+    "with_button": "True"
+}

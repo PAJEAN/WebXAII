@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_intro_acclim.png' class='img-fluid' alt='timeline'></br><hr><h3>Introduction - Acclimatation phase</h3>",
+      "body_text": "<div class='text-start'><p>You will now enter the acclimatation phase of the introduction. You have to perform a single task of 7 questions, which will allow you to experiment with the AI's outputs. You should take time to analyze the AI's output as much as you can during this phase and for the rest of the introduction, because you will have less time for this analysis during the main experiment.</p><p>As this task is for training, your answers will <b>not</b> be recorded and your score will <b>not</b> count towards your bonus remuneration. Please ensure that you review the AI’s outputs.<p>",
+      "button_text": "Start training",
+      "with_button": "True"
+}

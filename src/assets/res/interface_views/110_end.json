@@ -1,7 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>End of the protocol</h3>",
-    "body_text": "<div class='text-start'> <div>Thank you for participating to this experiment. The protocol is now over. You can close this page.</div>",
-    "button_text":  "Leave",
-    "with_button": "False"
-}

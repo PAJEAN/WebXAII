@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_mainexp_sess_2_2.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Session 2 - Second part </h3>",
+      "body_text": "<div class='text-start'> <p>You are now starting the second part of Session 2. For the two following tasks, the timer will decrease to 7 seconds for each image.</p>",
+      "button_text": "Start second part of Session 2",
+      "with_button": "True"
+}

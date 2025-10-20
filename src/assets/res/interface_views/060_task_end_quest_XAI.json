@@ -32,7 +32,7 @@
         {
           "type": "slider",
           "primary_text": "",
-          "secondary_text": "<b>Give an estimation of the accuracy of the AI model's predictions using the slider below (from 0% to 100%). Left : the model only makes mistakes. Right : the model never makes mistakes.</b>",
+          "secondary_text": "<b>Give an estimation of the accuracy of the AI's predictions using the slider below (from 0% to 100%). Left : the AI only makes mistakes. Right : the AI never makes mistakes.</b>",
           "answers": [""],
           "options":{
               "inline": "",
@@ -40,20 +40,6 @@
               "display_value": "",
               "step" : "5"
           }
-        },
-        {
-          "type": "radio",
-          "primary_text": "",
-          "secondary_text": "<b>The justifications gave me relevant insights about the AI's predictions.</b>",
-           "answers": [
-            "(1) Strongly Disagree",
-            "(2) Disagree",
-            "(3) Somewhat Disagree",
-            "(4) Neutral",
-            "(5) Somewhat Agree",
-            "(6) Agree",
-            "(7) Strongly Agree"
-          ]
         },
         {
           "type": "radio",

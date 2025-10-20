@@ -58,7 +58,7 @@
         {
           "type": "radio",
           "primary_text": "",
-          "secondary_text": "<b>Performance</b> — How successful were you in accomplishing what you were asked to do?.",
+          "secondary_text": "<b>Performance</b> — How successful were you in accomplishing what you were asked to do?",
           "answers": [
             "Perfect",
             "",

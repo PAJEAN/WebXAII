@@ -1,1 +1,0 @@
-{"question": "In the image, is there at least one row (1, ..., 6) containing only yellow symbols, and one column (A, ..., F) containing only circles?", "pos_example": "assets/res/input/hard_4_row_yellow_col_circle/pos_example.png", "neg_example": "assets/res/input/hard_4_row_yellow_col_circle/neg_example.png"}

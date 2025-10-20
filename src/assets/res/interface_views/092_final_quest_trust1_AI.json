@@ -1,0 +1,19 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey measures your trust and distrust towards the AI that assisted you during the study. Please rate your level of agreement with each statement.<hr>",
+          "secondary_text": "<b>I earned trust in the AI thanks to the rightness of its predictions.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        }
+      ]
+}
