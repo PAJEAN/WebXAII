@@ -42,6 +42,7 @@ export const keys = {
     /* -------------------------- experiment & task ------------------------- */
     a_update_current_task_index: `${NS}_update_current_index_task`,      // Update task index.
     a_update_experiment_scores:  `${NS}_update_experiment_scores`,       // Update scores.
+    a_reset_experiment_scores:   `${NS}_reset_experiment_scores`,        // Reset scores.
     
     /*** GETTERS ***/
     g_view_length:         `${NS}_view_length`,         // Length of view.
@@ -123,6 +124,9 @@ export const module = {
         [keys.a_update_experiment_scores](context, payload) {
             context.commit(`${NS}_UPDATE_EXPERIMENT_SCORES`, payload);
         },
+        [keys.a_reset_experiment_scores](context, payload) {
+            context.commit(`${NS}_RESET_EXPERIMENT_SCORES`, payload);
+        },
     },
     
     /*** Mutations ***/
@@ -158,6 +162,9 @@ export const module = {
         [`${NS}_UPDATE_EXPERIMENT_SCORES`](state, payload) {
             state[keys.s_experiment_scores].push(payload);
         },
+        [`${NS}_RESET_EXPERIMENT_SCORES`](state, payload) {
+            state[keys.s_experiment_scores] = [];
+        }
     },
     
     /*** Getters ***/

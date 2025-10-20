@@ -81,7 +81,9 @@ try {
                 let experiment_scores = store.state[keys.s_experiment_scores];
                 if (experiment_scores.length > 0) {
                     let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
-                    score_tag.textContent = `${(experiment_scores[experiment_scores.length - 1] * 100).toFixed(2)}%`;
+                    let score = experiment_scores.reduce((acc, value) => acc + value, 0) / experiment_scores.length;
+                    score_tag.textContent = `${(score * 100).toFixed(2)}%`;
+                    store.dispatch(keys.a_reset_experiment_scores, {});
                 }
             }
 
