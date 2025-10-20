@@ -55,7 +55,7 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-width: 35vw;
+                    max-width: 30vw;
                     margin: auto;                    
                 }
             </style>
