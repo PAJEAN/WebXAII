@@ -3,14 +3,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy1_2sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy1_2sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -24,6 +24,14 @@
             {
                 "input": {
                     "is_image": true,
+                    "label": "assets/res/input/easy1_2sym/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
                     "label": "assets/res/input/easy1_2sym/44.png",
                     "title": "Image to analyze"
                 },
@@ -32,7 +40,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/10.png",
+                    "label": "assets/res/input/easy1_2sym/0.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -48,7 +56,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/18.png",
+                    "label": "assets/res/input/easy1_2sym/30.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -64,7 +72,15 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/30.png",
+                    "label": "assets/res/input/easy1_2sym/73.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_2sym/18.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -114,14 +130,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy2_3sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy2_3sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -143,7 +159,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/66.png",
+                    "label": "assets/res/input/easy2_3sym/30.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -159,26 +175,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/69.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/30.png",
+                    "label": "assets/res/input/easy2_3sym/54.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/15.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
             },
             {
                 "input": {
@@ -187,6 +187,38 @@
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/66.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/69.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/48.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/15.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             },
             {
                 "input": {
@@ -225,14 +257,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy3_2sym_rot_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce79c12b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7b33cb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy3_2sym_rot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce79c12b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7b33cb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -246,22 +278,6 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/27.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/43.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
                     "label": "assets/res/input/easy3_2sym_rot/9.png",
                     "title": "Image to analyze"
                 },
@@ -270,26 +286,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/20.png",
+                    "label": "assets/res/input/easy3_2sym_rot/27.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/12.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/93.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
             },
             {
                 "input": {
@@ -302,7 +302,55 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/50.png",
+                    "label": "assets/res/input/easy3_2sym_rot/52.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/42.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/46.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/57.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/14.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/99.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/88.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -336,14 +384,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard1_2sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard1_2sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -357,6 +405,14 @@
             {
                 "input": {
                     "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/93.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
                     "label": "assets/res/input/hard1_2sym/2.png",
                     "title": "Image to analyze"
                 },
@@ -365,26 +421,18 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/72.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/40.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/49.png",
+                    "label": "assets/res/input/hard1_2sym/39.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/79.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
             },
             {
                 "input": {
@@ -397,15 +445,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/54.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/44.png",
+                    "label": "assets/res/input/hard1_2sym/84.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -413,7 +453,31 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/70.png",
+                    "label": "assets/res/input/hard1_2sym/68.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/64.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/37.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/76.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -447,14 +511,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard2_3sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard2_3sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -468,14 +532,6 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/6.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
                     "label": "assets/res/input/hard2_3sym/45.png",
                     "title": "Image to analyze"
                 },
@@ -484,10 +540,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/42.png",
+                    "label": "assets/res/input/hard2_3sym/54.png",
                     "title": "Image to analyze"
                 },
-                "expected": 1
+                "expected": 0
             },
             {
                 "input": {
@@ -500,7 +556,15 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/82.png",
+                    "label": "assets/res/input/hard2_3sym/84.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/29.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -508,7 +572,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/16.png",
+                    "label": "assets/res/input/hard2_3sym/73.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -516,7 +580,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/92.png",
+                    "label": "assets/res/input/hard2_3sym/35.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -528,6 +592,22 @@
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/43.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/49.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             }
         ],
         "question": {
@@ -558,14 +638,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard3_2sym_rot_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>12 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard3_2sym_rot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 12,
@@ -579,15 +659,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/32.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/46.png",
+                    "label": "assets/res/input/hard3_2sym_rot/86.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -595,31 +667,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/47.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/70.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/39.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/3.png",
+                    "label": "assets/res/input/hard3_2sym_rot/89.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -627,7 +675,31 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/43.png",
+                    "label": "assets/res/input/hard3_2sym_rot/71.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/20.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/45.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/50.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -635,10 +707,34 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/33.png",
+                    "label": "assets/res/input/hard3_2sym_rot/99.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/93.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/59.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             }
         ],
         "question": {
@@ -669,14 +765,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy1_2sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy1_2sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce78dc6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -690,6 +786,14 @@
             {
                 "input": {
                     "is_image": true,
+                    "label": "assets/res/input/easy1_2sym/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
                     "label": "assets/res/input/easy1_2sym/44.png",
                     "title": "Image to analyze"
                 },
@@ -698,7 +802,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/10.png",
+                    "label": "assets/res/input/easy1_2sym/0.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -714,7 +818,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/18.png",
+                    "label": "assets/res/input/easy1_2sym/30.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -730,7 +834,15 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy1_2sym/30.png",
+                    "label": "assets/res/input/easy1_2sym/73.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_2sym/18.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -780,14 +892,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy2_3sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy2_3sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7c6a6b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -809,7 +921,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/66.png",
+                    "label": "assets/res/input/easy2_3sym/30.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -825,26 +937,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/69.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/30.png",
+                    "label": "assets/res/input/easy2_3sym/54.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy2_3sym/15.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
             },
             {
                 "input": {
@@ -853,6 +949,38 @@
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/66.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/69.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/48.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy2_3sym/15.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             },
             {
                 "input": {
@@ -891,14 +1019,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_easy3_2sym_rot_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce79c12b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7b33cb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_easy3_2sym_rot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce79c12b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7b33cb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -912,22 +1040,6 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/27.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/43.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
                     "label": "assets/res/input/easy3_2sym_rot/9.png",
                     "title": "Image to analyze"
                 },
@@ -936,26 +1048,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/20.png",
+                    "label": "assets/res/input/easy3_2sym_rot/27.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/12.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/93.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
             },
             {
                 "input": {
@@ -968,7 +1064,55 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_2sym_rot/50.png",
+                    "label": "assets/res/input/easy3_2sym_rot/52.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/42.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/46.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/57.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/14.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/99.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_2sym_rot/88.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1002,14 +1146,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard1_2sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_2sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard1_2sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7a734b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -1023,6 +1167,14 @@
             {
                 "input": {
                     "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/93.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
                     "label": "assets/res/input/hard1_2sym/2.png",
                     "title": "Image to analyze"
                 },
@@ -1031,26 +1183,18 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/72.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/40.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/49.png",
+                    "label": "assets/res/input/hard1_2sym/39.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/79.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
             },
             {
                 "input": {
@@ -1063,15 +1207,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/54.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/44.png",
+                    "label": "assets/res/input/hard1_2sym/84.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -1079,7 +1215,31 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard1_2sym/70.png",
+                    "label": "assets/res/input/hard1_2sym/68.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/64.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/37.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_2sym/76.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -1113,14 +1273,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard2_3sym_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard2_3sym/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard2_3sym_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7d6b4b31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -1134,14 +1294,6 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/6.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0
-            },
-            {
-                "input": {
-                    "is_image": true,
                     "label": "assets/res/input/hard2_3sym/45.png",
                     "title": "Image to analyze"
                 },
@@ -1150,10 +1302,10 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/42.png",
+                    "label": "assets/res/input/hard2_3sym/54.png",
                     "title": "Image to analyze"
                 },
-                "expected": 1
+                "expected": 0
             },
             {
                 "input": {
@@ -1166,7 +1318,15 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/82.png",
+                    "label": "assets/res/input/hard2_3sym/84.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/29.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1174,7 +1334,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/16.png",
+                    "label": "assets/res/input/hard2_3sym/73.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1182,7 +1342,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard2_3sym/92.png",
+                    "label": "assets/res/input/hard2_3sym/35.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1
@@ -1194,6 +1354,22 @@
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/43.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard2_3sym/49.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             }
         ],
         "question": {
@@ -1224,14 +1400,14 @@
         "type": "p-instruction",
         "view_id": "mainexp_hard3_2sym_rot_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p> <img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'> <p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question for the task is : <b>Is the pattern or its left/right rotations in the image?</b> </p><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div><p> For this task, you will have <b>7 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_2sym_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
         "view_id": "mainexp_hard3_2sym_rot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><img src='/home/jleguy/Documents/postdoc/data/webinterfaces/int05_prototype/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-70' alt='Pattern to search for'>",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or its left/right rotations in the image? </b></div></br><div class='container-fluid text-center'> <img src='assets/res/tasks/0ce7afccb31211f092e2d4d8534cb0f8.png' class='img-fluid w-30' alt='Pattern to search for'> </div>",
         "show_progression_bar": true,
         "randomize": true,
         "timer": 7,
@@ -1245,15 +1421,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/32.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/46.png",
+                    "label": "assets/res/input/hard3_2sym_rot/86.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1261,31 +1429,7 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/47.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/70.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/39.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/3.png",
+                    "label": "assets/res/input/hard3_2sym_rot/89.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1293,7 +1437,31 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/43.png",
+                    "label": "assets/res/input/hard3_2sym_rot/71.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/20.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/45.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/50.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
@@ -1301,10 +1469,34 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/hard3_2sym_rot/33.png",
+                    "label": "assets/res/input/hard3_2sym_rot/99.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/93.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/74.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_2sym_rot/59.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
             }
         ],
         "question": {

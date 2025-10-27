@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI
+0,1,10,res/input/easy1_2sym/10.png,res/AI/easy1_2sym/10.png
+0,1,44,res/input/easy1_2sym/44.png,res/AI/easy1_2sym/44.png
+0,1,0,res/input/easy1_2sym/0.png,res/AI/easy1_2sym/0.png
+1,1,22,res/input/easy1_2sym/22.png,res/AI/easy1_2sym/22.png
+1,1,30,res/input/easy1_2sym/30.png,res/AI/easy1_2sym/30.png
+1,1,80,res/input/easy1_2sym/80.png,res/AI/easy1_2sym/80.png
+1,1,73,res/input/easy1_2sym/73.png,res/AI/easy1_2sym/73.png
+1,1,18,res/input/easy1_2sym/18.png,res/AI/easy1_2sym/18.png
+0,1,70,res/input/easy1_2sym/70.png,res/AI/easy1_2sym/70.png
+0,1,39,res/input/easy1_2sym/39.png,res/AI/easy1_2sym/39.png

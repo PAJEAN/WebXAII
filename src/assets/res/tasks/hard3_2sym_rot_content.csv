@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI
+1,1,86,res/input/hard3_2sym_rot/86.png,res/AI/hard3_2sym_rot/86.png
+1,0,89,res/input/hard3_2sym_rot/89.png,res/AI/hard3_2sym_rot/89.png
+0,1,71,res/input/hard3_2sym_rot/71.png,res/AI/hard3_2sym_rot/71.png
+0,1,20,res/input/hard3_2sym_rot/20.png,res/AI/hard3_2sym_rot/20.png
+0,1,45,res/input/hard3_2sym_rot/45.png,res/AI/hard3_2sym_rot/45.png
+1,1,50,res/input/hard3_2sym_rot/50.png,res/AI/hard3_2sym_rot/50.png
+1,1,99,res/input/hard3_2sym_rot/99.png,res/AI/hard3_2sym_rot/99.png
+1,1,93,res/input/hard3_2sym_rot/93.png,res/AI/hard3_2sym_rot/93.png
+0,1,74,res/input/hard3_2sym_rot/74.png,res/AI/hard3_2sym_rot/74.png
+0,0,59,res/input/hard3_2sym_rot/59.png,res/AI/hard3_2sym_rot/59.png
