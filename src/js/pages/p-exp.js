@@ -378,6 +378,12 @@ try {
                         this.good_answers += 1;
                     }
 
+                    /** @type {FormComponent} */
+                    let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                    form.disable();
+                    form.style.display = 'none';
+                    this.observer && this.observer.disconnect();
+
                     if (this.current_view.feedback_answer_activated) {
                         this._createAlert(answers[0]);
                         /** @type {HTMLElement} */
@@ -385,11 +391,6 @@ try {
                         next_btn.style.display = 'block';
                         let submit_btn = this._getElementById(TAG_IDS.submit_btn);
                         submit_btn.setAttribute('disabled', '');
-                        /** @type {FormComponent} */
-                        let form = this.content.querySelector(`#${TAG_IDS.form}`);
-                        form.disable();
-                        form.style.display = 'none';
-                        this.observer && this.observer.disconnect();
                     } else {
                         if (is_time_exceeded && this.current_view.time_exceeded_timer > 0) {
                             this._createAlertTimer(this.current_view.time_exceeded_timer);
