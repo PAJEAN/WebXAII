@@ -1,1 +1,0 @@
-{"question": "In the image, is there at least one row (1, ..., 6) containing only squares?", "pos_example": "assets/res/input/easy_6_row_square/pos_example.png", "neg_example": "assets/res/input/easy_6_row_square/neg_example.png"}

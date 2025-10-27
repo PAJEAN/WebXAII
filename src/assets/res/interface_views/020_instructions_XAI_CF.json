@@ -1,7 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>AI assistant</h3>",
-    "body_text": "<div class='text-start'><p>To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. Please note that <b>the AI might make mistakes, and that the ultimate decision is always your responsability.</b></p><p> In addition, you will have access to an justification of the AI's prediction. The justification will be a counterfactual image. This corresponds to an image that is very similar to the source image, but for which the AI would make the opposite prediction (YES instead of NO and NO instead of YES). The differences between the source image and the justification will be highlighted by circles on the justification.</p> <p>Below is an example of AI prediction and justification for the question \"<b>In the image, is there a triangle in every row (1, ..., 6)?</b>\"</p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-10 d-flex flex-column align-items-center'><img src='assets/res/img/cf_example.png' class='img-fluid' alt='AI example'> </div> </div> </div> <br/><p> <b>Please make sure you understand how the justification works before clicking on the button below.</b></p>",
-    "button_text": "I read and understood the instructions",
-    "with_button": "True"
-}

@@ -1,1 +1,0 @@
-{"question": "In the image, is there at least one row (1, ..., 6) containing only triangles?", "pos_example": "assets/res/input/easy_4_row_triangle/pos_example.png", "neg_example": "assets/res/input/easy_4_row_triangle/neg_example.png"}

@@ -1,5 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>End of the protocol</h3>",
-    "body_text": "<div class='text-start'> <div> <p>The protocol is now over. In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:jules.leguy@mines-ales.fr'>jules.leguy@mines-ales.fr</a>.</p> <p>You can close this page.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div><div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imtbs.png' class='img-fluid w-100' alt='IMT BS logo'> </div> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='ENFIELD logo'> </div> </div></div>"
-}
