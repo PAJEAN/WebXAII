@@ -27,6 +27,7 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "async-mutex": "^0.5.0",
     "compression": "^1.7.4",
     "dotenv": "^16.0.1",
     "express": "^4.19.2"

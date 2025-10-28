@@ -351,6 +351,30 @@ try {
             }
 
             /**
+             * Waiting the loading of images before start the timer.
+             */
+            _secure_timer() {
+                if (this.current_view.timer >= 0) {
+                    let tag = this._getElementById(TAG_IDS.timer);
+                    tag.textContent = this.current_view.timer.toFixed(0);
+                    tag.classList.remove('text-danger');
+
+                    let tag_source_model = this._getElementById(TAG_IDS.source_model);
+                    let imgs = Array.from(tag_source_model.querySelectorAll('img'));
+                    
+                    Promise.all(imgs.map(async (img) => {
+                        await img.decode();
+                        return img;
+                    })).then(() => {
+                        this._timer();
+                    }).catch((err) => {
+                        console.error(err);
+                        this._timer();
+                    });
+                }
+            }
+
+            /**
              * Function called when the task is submitted.
              * @param {boolean} is_time_exceeded 
              */
@@ -468,12 +492,13 @@ try {
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});
                     this._init();
-                }      
+                }
             }
 
             _init() {
                 this.current_time = 0;
                 this.time_exceeded_current_time = 0;
+
                 this._currentStatus();
                 this._dataset();
                 this._desc();
@@ -481,9 +506,9 @@ try {
                 this._resetAlert();
                 this._resetForm();
                 this._task();
-                // window.addEventListener('load', () => {
-                this._timer();
-                // });
+                // this._timer();
+                this._secure_timer();
+
                 this.observer && this._observing();
             }
 
