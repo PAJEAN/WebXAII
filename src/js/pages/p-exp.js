@@ -140,7 +140,6 @@ try {
              */
             _checkAnswers(answers) {
                 let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
-                console.log(expected, answers);
                 
                 if (expected.length != answers.length) {
                     return false;
@@ -388,12 +387,14 @@ try {
                     // Save answers if not training.
                     if (!this.current_view.is_training) {
                         store.dispatch(keys.a_update_save, {
-                            [`task_${store.state[keys.s_current_task_index]}`]: {
+                            // [`task_${store.state[keys.s_current_task_index]}`]: {
+                            instances: [{
                                 answers: answers,
                                 time: this.current_time,
                                 is_time_exceeded: is_time_exceeded,
-                                order_index: this.current_view.order[store.state[keys.s_current_task_index]]
-                            }
+                                order_index: this.current_view.order[store.state[keys.s_current_task_index]],
+                                expected: this.current_view.tasks[store.state[keys.s_current_task_index]].expected
+                            }]
                         });
                     }
                     

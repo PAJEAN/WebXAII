@@ -146,8 +146,22 @@ export const module = {
             state[keys.s_save] = payload;
         },
         [`${NS}_UPDATE_SAVE`](state, payload) {
+            console.log(payload);
+            
             if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) { // Update current.
-                state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
+                // state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
+
+                for (let key in payload) {                    
+                    if (Array.isArray(payload[key])) {
+                        if (!state[keys.s_save][state[keys.s_current_view_index]].hasOwnProperty(key)) {
+                            state[keys.s_save][state[keys.s_current_view_index]][key] = []
+                        }                        
+                        state[keys.s_save][state[keys.s_current_view_index]][key] = [...state[keys.s_save][state[keys.s_current_view_index]][key], ...payload[key]];
+                    } else {
+                        state[keys.s_save][state[keys.s_current_view_index]][key] = payload[key];
+                    }
+                }
+                
             } else { // New entry.
                 state[keys.s_save][state[keys.s_current_view_index]] = payload;
             }
