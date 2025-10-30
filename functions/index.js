@@ -149,18 +149,18 @@ router.post('/api/users', function(req, res) {
  * Get user from prolific id.
  */
 router.get('/api/prolific', async function(req, res) {
-    const USER_ID = req.query.PROLIFIC_UID;
+    const USER_ID = req.query.PROLIFIC_PID;
 
     if (!USER_ID) {
         console.error('No prolific id found');        
-        return res.redirect(`/#/auth`);
+        return res.redirect(`/#/auth/${USER_ID}`);
     }
 
     result = await prolific_auth(USER_ID);    
 
     if (result['status'] != 200) {
         console.error(result['json']);
-        return res.redirect(`/#/auth`);
+        return res.redirect(`/#/auth/${USER_ID}`);
     }
 
     res.redirect(`/#/auth/${USER_ID}`);
@@ -207,73 +207,8 @@ router.get('/api/data', async (req, res) => {
         };
         return res.status(200).json(return_data);
     } else {
-        const release = await file_mutex.acquire(); // bloque les accès concurrents.
-        
-        try {
-            let prolific_assigned_id = JSON.parse(await fs.promises.readFile(PROLIFIC_FILE_PATH));
-    
-            let protocol_files = await fs.promises.readdir(PROTOCOL_FOLDER_PATH);            
-    
-            if (prolific_assigned_id.hasOwnProperty(USER_ID)) {
-                let protocol_filename = prolific_assigned_id[USER_ID]['protocol'];
-    
-                if (!protocol_filename) {
-                    return res.status(500).json({error: `Protocol key not found`});
-                }
-    
-                if (!protocol_files.includes(protocol_filename)) {
-                    return res.status(500).json({error: `Protocol file not found`});
-                }
-    
-                let raw_data = await fs.promises.readFile(path.resolve(__dirname, DATA_FOLDERENAME, PROTOCOL_FOLDERNAME, protocol_filename));
-    
-                // Get experiment data of the user (if exist).
-                let experiment_user_data_path = path.resolve(__dirname, DATA_FOLDERENAME, USERDATA_FOLDERNAME, `${USER_ID}.json`);
-                let experiment_user_data = {};
-                if(fs.existsSync(experiment_user_data_path)) {
-                    experiment_user_data = JSON.parse(await fs.promises.readFile(experiment_user_data_path));
-                }
-    
-                let return_data = {
-                    roles: 'user',
-                    views: JSON.parse(raw_data),
-                    is_completed: experiment_user_data.hasOwnProperty('is_completed') ? experiment_user_data['is_completed']: false,
-                    user_data: experiment_user_data.hasOwnProperty('data') ? experiment_user_data['data']: []
-                };
-    
-                return res.status(200).json(return_data);
-    
-            } else {
-                assigned_ids = Object.values(prolific_assigned_id).map(x => x['protocol']);                
-        
-                let available_ids = protocol_files.filter(x => !assigned_ids.includes(x));
-        
-                if (available_ids.length == 0) {
-                    return res.status(500).json({error: `No remaining protocols`});
-                }
-        
-                prolific_assigned_id[USER_ID] = { protocol: available_ids[Math.floor(Math.random() * available_ids.length)] };
-        
-                await fs.promises.writeFile(PROLIFIC_FILE_PATH, JSON.stringify(prolific_assigned_id, null, 2), 'utf-8');
-    
-                let raw_data = await fs.promises.readFile(path.resolve(__dirname, DATA_FOLDERENAME, PROTOCOL_FOLDERNAME, prolific_assigned_id[USER_ID]['protocol']));
-    
-                let return_data = {
-                    roles: 'user',
-                    views: JSON.parse(raw_data),
-                    is_completed: false,
-                    user_data: []
-                };
-    
-                return res.status(200).json(return_data);
-            }
-        }  catch (err) {
-            console.error(err);
-            return res.status(500).json({ error: 'Erreur serveur' });
-        } finally {
-            console.log("RELEASE");
-            release(); // libère le verrou.
-        }
+        result = await prolific_auth(USER_ID);
+        return res.status(result['status']).json(result['json']);
     }
 
     // I] Check if id.
