@@ -7,10 +7,10 @@ export const TEST_VIEW = [
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 200, // opt.
+        timer: 5, // opt.
         time_exceeded_timer: 3, // opt.
         randomize: false,
-        feedback_answer_activated: true, // opt.
+        feedback_answer_activated: false, // opt.
         feedback_answer_correct: 'You were correct.', // opt.
         feedback_answer_wrong: 'You were wrong.', // opt.
         feedback_answer_show_expected: true, // opt.
@@ -77,7 +77,7 @@ export const TEST_VIEW = [
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 200, // opt.
+        timer: 5, // opt.
         time_exceeded_timer: 3, // opt.
         randomize: false,
         feedback_answer_activated: true, // opt.
