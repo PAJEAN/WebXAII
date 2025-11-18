@@ -190,7 +190,7 @@ try {
                         div.appendChild(img);
                     }
                     this.content.appendChild(div);
-                }
+                }                
             }
          
             connectedCallback () {
@@ -204,7 +204,9 @@ try {
                 /* Update UI */
                 this.unsubscribe = store.events.subscribe('stateChange', this._init.bind(this));
                 /* Check if user is given on url parameters */
-                if (this.hasAttribute('user-id')) {                    
+                if (this.hasAttribute('user-id')) {
+                    console.log(this.getAttribute('user-id'));
+                    
                     this._connectUser(this.getAttribute('user-id'));
                 }
 

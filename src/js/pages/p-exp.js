@@ -55,14 +55,13 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-width: 30vw;
-                    margin: auto;                    
+                    width: 70%;
                 }
             </style>
 
             <div id="${TAG_IDS.main_page}" class="d-flex flex-column justify-content-center">
 
-                <div class="container-decoration mx-4 px-4 py-2" id="${TAG_IDS.task_title_container}">
+                <div class="container-decoration mx-4 px-4 py-1" id="${TAG_IDS.task_title_container}">
                     <div id="${TAG_IDS.task_title}">Task view</div>
     
                     <div id="${TAG_IDS.desc_text}">
@@ -78,7 +77,7 @@ try {
                     <div id="${TAG_IDS.current_status}" class="mx-4 m-0 container-decoration d-flex justify-content-center"></div>
 
                     <div class="mx-4 container-decoration">
-                        <div id="${TAG_IDS.timer}" class="text-center fs-1 mt-2"></div>
+                        <div id="${TAG_IDS.timer}" class="text-center fs-2 mt-1"></div>
                     </div>
 
                     <div class="row mt-1 mx-4">
@@ -140,7 +139,6 @@ try {
              */
             _checkAnswers(answers) {
                 let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
-                console.log(expected, answers);
                 
                 if (expected.length != answers.length) {
                     return false;
@@ -157,7 +155,7 @@ try {
                 let alert_container = this._getElementById(TAG_IDS.alert_placeholder);
                 alert_container.textContent = '';
                 let alert = document.createElement('div');
-                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'm-0', 'mt-2');
+                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'm-0', 'mt-2', 'p-1');
                 alert.setAttribute('role', 'alert');
                 let alert_title = document.createElement('h5');
                 alert_title.textContent = `${is_correct ? this.current_view.feedback_answer_correct: this.current_view.feedback_answer_wrong}`;
@@ -194,15 +192,19 @@ try {
              * @param {boolean} is_image 
              * @returns HTMLDivElement
              */
-            _createCard(body_title_text, text, is_image, only_source = false) {
+            _createCard(body_title_text, text, is_image, only_source = false, is_explanation = false) {
                 let col = document.createElement('div');
                 if (!only_source) {
-                    col.classList.add('col');
+                    if (!is_explanation) {
+                        col.classList.add('col-5');
+                    } else {
+                        col.classList.add('col-7');
+                    }
                 } else {
-                    col.classList.add('col-6');
+                    col.classList.add('col-5');
                 }
                 let card = document.createElement('div');
-                card.classList.add('card', 'h-100');
+                card.classList.add('card', 'h-100', 'd-flex', 'justify-content-between', 'align-items-center');
                 if (is_image) {
                     let image = document.createElement('img');
                     image.setAttribute('src', text);
@@ -219,7 +221,7 @@ try {
                     card.appendChild(card_body);
                 }
                 let body_title = document.createElement('div');
-                body_title.classList.add('card-footer', 'text-body-secondary', 'text-center', 'fw-normal');
+                body_title.classList.add('card-footer', 'text-body-secondary', 'text-center', 'fw-normal', 'w-100');
                 body_title.textContent = body_title_text;
                 card.appendChild(body_title);
                 col.appendChild(card);
@@ -267,7 +269,7 @@ try {
                     // }
                     let i = 1;
                     for (let item of task.explanations) {
-                        let div = this._createCard(item.title, item.label, item.is_image);
+                        let div = this._createCard(item.title, item.label, item.is_image, false, true);
                         // tag_explanation.appendChild(div);
                         tag_source_model.appendChild(div);
                         i++;
@@ -351,6 +353,30 @@ try {
             }
 
             /**
+             * Waiting the loading of images before start the timer.
+             */
+            _secure_timer() {
+                if (this.current_view.timer >= 0) {
+                    let tag = this._getElementById(TAG_IDS.timer);
+                    tag.textContent = this.current_view.timer.toFixed(0);
+                    tag.classList.remove('text-danger');
+
+                    let tag_source_model = this._getElementById(TAG_IDS.source_model);
+                    let imgs = Array.from(tag_source_model.querySelectorAll('img'));
+                    
+                    Promise.all(imgs.map(async (img) => {
+                        await img.decode();
+                        return img;
+                    })).then(() => {
+                        this._timer();
+                    }).catch((err) => {
+                        console.error(err);
+                        this._timer();
+                    });
+                }
+            }
+
+            /**
              * Function called when the task is submitted.
              * @param {boolean} is_time_exceeded 
              */
@@ -364,12 +390,14 @@ try {
                     // Save answers if not training.
                     if (!this.current_view.is_training) {
                         store.dispatch(keys.a_update_save, {
-                            [`task_${store.state[keys.s_current_task_index]}`]: {
+                            // [`task_${store.state[keys.s_current_task_index]}`]: {
+                            instances: [{
                                 answers: answers,
                                 time: this.current_time,
                                 is_time_exceeded: is_time_exceeded,
-                                order_index: this.current_view.order[store.state[keys.s_current_task_index]]
-                            }
+                                order_index: this.current_view.order[store.state[keys.s_current_task_index]],
+                                expected: this.current_view.tasks[store.state[keys.s_current_task_index]].expected
+                            }]
                         });
                     }
                     
@@ -468,12 +496,13 @@ try {
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});
                     this._init();
-                }      
+                }
             }
 
             _init() {
                 this.current_time = 0;
                 this.time_exceeded_current_time = 0;
+
                 this._currentStatus();
                 this._dataset();
                 this._desc();
@@ -481,9 +510,9 @@ try {
                 this._resetAlert();
                 this._resetForm();
                 this._task();
-                // window.addEventListener('load', () => {
-                this._timer();
-                // });
+                // this._timer();
+                this._secure_timer();
+
                 this.observer && this._observing();
             }
 

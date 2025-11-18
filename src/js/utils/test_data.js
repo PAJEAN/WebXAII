@@ -7,7 +7,7 @@ export const TEST_VIEW = [
         desc: '<b>Description</b>',
         show_progression_bar: true, // opt.
         is_training: false, // opt.
-        timer: 5, // opt.
+        timer: -1, // opt.
         time_exceeded_timer: 3, // opt.
         randomize: false,
         feedback_answer_activated: false, // opt.
@@ -19,7 +19,7 @@ export const TEST_VIEW = [
             {
                 input: {
                     is_image: true,
-                    label: 'assets/datasets/single-kingfisher-bird.jpg',
+                    label: 'assets/datasets/1.png',
                     title: 'Source'
                 },
                 // model: {
@@ -27,33 +27,33 @@ export const TEST_VIEW = [
                 //     label: "This is a text for the model",
                 //     title: 'Model'
                 // },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                        title: 'Explanation'
-                    }
-                ],
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/2.png',
+                //         title: 'Explanation'
+                //     }
+                // ],
                 expected: 0
             },
             {
                 input: {
                     is_image: true,
-                    label: 'assets/datasets/single-kingfisher-bird.jpg',
+                    label: 'assets/datasets/1.png',
                     title: 'Source'
                 },
-                model: {
-                    is_image: false,
-                    label: "This is a text for the model n°2",
-                    title: 'Model'
-                },
-                // explanations: [
-                //     {
-                //         is_image: true,
-                //         label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                //         title: 'Explanation'
-                //     }
-                // ],
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model n°2",
+                //     title: 'Model'
+                // },
+                explanations: [
+                    {
+                        is_image: true,
+                        label: 'assets/datasets/2.png',
+                        title: 'Explanation'
+                    }
+                ],
                 expected: 1
             },
         ],
@@ -89,7 +89,7 @@ export const TEST_VIEW = [
             {
                 input: {
                     is_image: true,
-                    label: 'assets/datasets/single-kingfisher-bird.jpg',
+                    label: 'assets/datasets/1.png',
                     title: 'Source'
                 },
                 // model: {
@@ -97,19 +97,19 @@ export const TEST_VIEW = [
                 //     label: "This is a text for the model",
                 //     title: 'Model'
                 // },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                        title: 'Explanation'
-                    }
-                ],
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/2.png',
+                //         title: 'Explanation'
+                //     }
+                // ],
                 expected: 0
             },
             {
                 input: {
                     is_image: true,
-                    label: 'assets/datasets/single-kingfisher-bird.jpg',
+                    label: 'assets/datasets/1.png',
                     title: 'Source'
                 },
                 model: {
@@ -120,7 +120,7 @@ export const TEST_VIEW = [
                 // explanations: [
                 //     {
                 //         is_image: true,
-                //         label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
+                //         label: 'assets/datasets/2.png',
                 //         title: 'Explanation'
                 //     }
                 // ],
