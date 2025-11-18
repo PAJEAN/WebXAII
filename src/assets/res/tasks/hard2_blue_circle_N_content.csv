@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+1,0,5,res/input/hard2_blue_circle_N/5.png,res/AI/hard2_blue_circle_N/5.png
+0,0,3,res/input/hard2_blue_circle_N/3.png,res/AI/hard2_blue_circle_N/3.png
+1,0,14,res/input/hard2_blue_circle_N/14.png,res/AI/hard2_blue_circle_N/14.png
+0,0,12,res/input/hard2_blue_circle_N/12.png,res/AI/hard2_blue_circle_N/12.png
+0,0,9,res/input/hard2_blue_circle_N/9.png,res/AI/hard2_blue_circle_N/9.png
+0,0,28,res/input/hard2_blue_circle_N/28.png,res/AI/hard2_blue_circle_N/28.png
+1,0,26,res/input/hard2_blue_circle_N/26.png,res/AI/hard2_blue_circle_N/26.png
+1,0,35,res/input/hard2_blue_circle_N/35.png,res/AI/hard2_blue_circle_N/35.png
+1,0,19,res/input/hard2_blue_circle_N/19.png,res/AI/hard2_blue_circle_N/19.png
+0,0,10,res/input/hard2_blue_circle_N/10.png,res/AI/hard2_blue_circle_N/10.png
+1,0,31,res/input/hard2_blue_circle_N/31.png,res/AI/hard2_blue_circle_N/31.png
+0,0,20,res/input/hard2_blue_circle_N/20.png,res/AI/hard2_blue_circle_N/20.png

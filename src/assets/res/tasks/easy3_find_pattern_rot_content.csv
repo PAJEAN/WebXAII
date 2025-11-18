@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+0,1,12,res/input/easy3_find_pattern_rot/12.png,res/AI/easy3_find_pattern_rot/12.png
+0,1,20,res/input/easy3_find_pattern_rot/20.png,res/AI/easy3_find_pattern_rot/20.png
+0,1,38,res/input/easy3_find_pattern_rot/38.png,res/AI/easy3_find_pattern_rot/38.png
+0,1,8,res/input/easy3_find_pattern_rot/8.png,res/AI/easy3_find_pattern_rot/8.png
+0,1,10,res/input/easy3_find_pattern_rot/10.png,res/AI/easy3_find_pattern_rot/10.png
+1,1,26,res/input/easy3_find_pattern_rot/26.png,res/AI/easy3_find_pattern_rot/26.png
+1,1,18,res/input/easy3_find_pattern_rot/18.png,res/AI/easy3_find_pattern_rot/18.png
+1,1,2,res/input/easy3_find_pattern_rot/2.png,res/AI/easy3_find_pattern_rot/2.png
+1,1,4,res/input/easy3_find_pattern_rot/4.png,res/AI/easy3_find_pattern_rot/4.png
+0,1,0,res/input/easy3_find_pattern_rot/0.png,res/AI/easy3_find_pattern_rot/0.png
+1,1,22,res/input/easy3_find_pattern_rot/22.png,res/AI/easy3_find_pattern_rot/22.png
+1,1,32,res/input/easy3_find_pattern_rot/32.png,res/AI/easy3_find_pattern_rot/32.png

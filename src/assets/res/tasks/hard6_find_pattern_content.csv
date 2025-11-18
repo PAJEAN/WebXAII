@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+1,1,19,res/input/hard6_find_pattern/19.png,res/AI/hard6_find_pattern/19.png
+1,1,14,res/input/hard6_find_pattern/14.png,res/AI/hard6_find_pattern/14.png
+0,1,23,res/input/hard6_find_pattern/23.png,res/AI/hard6_find_pattern/23.png
+1,1,5,res/input/hard6_find_pattern/5.png,res/AI/hard6_find_pattern/5.png
+1,1,35,res/input/hard6_find_pattern/35.png,res/AI/hard6_find_pattern/35.png
+1,1,32,res/input/hard6_find_pattern/32.png,res/AI/hard6_find_pattern/32.png
+0,1,28,res/input/hard6_find_pattern/28.png,res/AI/hard6_find_pattern/28.png
+0,1,9,res/input/hard6_find_pattern/9.png,res/AI/hard6_find_pattern/9.png
+1,1,26,res/input/hard6_find_pattern/26.png,res/AI/hard6_find_pattern/26.png
+0,1,16,res/input/hard6_find_pattern/16.png,res/AI/hard6_find_pattern/16.png
+0,1,21,res/input/hard6_find_pattern/21.png,res/AI/hard6_find_pattern/21.png
+0,1,12,res/input/hard6_find_pattern/12.png,res/AI/hard6_find_pattern/12.png

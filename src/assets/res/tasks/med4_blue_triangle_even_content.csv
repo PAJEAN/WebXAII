@@ -1,0 +1,11 @@
+target,pred,og_idx,source,AI
+1,0,10,res/input/med4_blue_triangle_even/10.png,res/AI/med4_blue_triangle_even/10.png
+0,0,15,res/input/med4_blue_triangle_even/15.png,res/AI/med4_blue_triangle_even/15.png
+1,0,3,res/input/med4_blue_triangle_even/3.png,res/AI/med4_blue_triangle_even/3.png
+0,0,9,res/input/med4_blue_triangle_even/9.png,res/AI/med4_blue_triangle_even/9.png
+1,0,33,res/input/med4_blue_triangle_even/33.png,res/AI/med4_blue_triangle_even/33.png
+0,0,46,res/input/med4_blue_triangle_even/46.png,res/AI/med4_blue_triangle_even/46.png
+1,0,35,res/input/med4_blue_triangle_even/35.png,res/AI/med4_blue_triangle_even/35.png
+0,0,22,res/input/med4_blue_triangle_even/22.png,res/AI/med4_blue_triangle_even/22.png
+1,0,13,res/input/med4_blue_triangle_even/13.png,res/AI/med4_blue_triangle_even/13.png
+0,0,41,res/input/med4_blue_triangle_even/41.png,res/AI/med4_blue_triangle_even/41.png

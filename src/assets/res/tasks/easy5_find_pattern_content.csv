@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+0,1,21,res/input/easy5_find_pattern/21.png,res/AI/easy5_find_pattern/21.png
+1,1,34,res/input/easy5_find_pattern/34.png,res/AI/easy5_find_pattern/34.png
+0,1,17,res/input/easy5_find_pattern/17.png,res/AI/easy5_find_pattern/17.png
+1,1,2,res/input/easy5_find_pattern/2.png,res/AI/easy5_find_pattern/2.png
+1,1,6,res/input/easy5_find_pattern/6.png,res/AI/easy5_find_pattern/6.png
+0,1,9,res/input/easy5_find_pattern/9.png,res/AI/easy5_find_pattern/9.png
+1,1,19,res/input/easy5_find_pattern/19.png,res/AI/easy5_find_pattern/19.png
+0,1,12,res/input/easy5_find_pattern/12.png,res/AI/easy5_find_pattern/12.png
+1,1,7,res/input/easy5_find_pattern/7.png,res/AI/easy5_find_pattern/7.png
+1,1,15,res/input/easy5_find_pattern/15.png,res/AI/easy5_find_pattern/15.png
+0,1,24,res/input/easy5_find_pattern/24.png,res/AI/easy5_find_pattern/24.png
+0,1,13,res/input/easy5_find_pattern/13.png,res/AI/easy5_find_pattern/13.png

@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+1,0,2,res/input/med5_find_pattern/2.png,res/AI/med5_find_pattern/2.png
+0,0,13,res/input/med5_find_pattern/13.png,res/AI/med5_find_pattern/13.png
+1,0,7,res/input/med5_find_pattern/7.png,res/AI/med5_find_pattern/7.png
+0,0,21,res/input/med5_find_pattern/21.png,res/AI/med5_find_pattern/21.png
+0,0,24,res/input/med5_find_pattern/24.png,res/AI/med5_find_pattern/24.png
+1,0,19,res/input/med5_find_pattern/19.png,res/AI/med5_find_pattern/19.png
+0,0,9,res/input/med5_find_pattern/9.png,res/AI/med5_find_pattern/9.png
+1,0,15,res/input/med5_find_pattern/15.png,res/AI/med5_find_pattern/15.png
+0,0,17,res/input/med5_find_pattern/17.png,res/AI/med5_find_pattern/17.png
+0,0,12,res/input/med5_find_pattern/12.png,res/AI/med5_find_pattern/12.png
+1,0,6,res/input/med5_find_pattern/6.png,res/AI/med5_find_pattern/6.png
+1,0,34,res/input/med5_find_pattern/34.png,res/AI/med5_find_pattern/34.png

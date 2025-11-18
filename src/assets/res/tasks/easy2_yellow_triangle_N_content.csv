@@ -1,0 +1,13 @@
+target,pred,og_idx,source,AI
+0,1,28,res/input/easy2_yellow_triangle_N/28.png,res/AI/easy2_yellow_triangle_N/28.png
+1,1,31,res/input/easy2_yellow_triangle_N/31.png,res/AI/easy2_yellow_triangle_N/31.png
+0,1,9,res/input/easy2_yellow_triangle_N/9.png,res/AI/easy2_yellow_triangle_N/9.png
+1,1,26,res/input/easy2_yellow_triangle_N/26.png,res/AI/easy2_yellow_triangle_N/26.png
+1,1,14,res/input/easy2_yellow_triangle_N/14.png,res/AI/easy2_yellow_triangle_N/14.png
+1,1,5,res/input/easy2_yellow_triangle_N/5.png,res/AI/easy2_yellow_triangle_N/5.png
+0,1,12,res/input/easy2_yellow_triangle_N/12.png,res/AI/easy2_yellow_triangle_N/12.png
+0,1,20,res/input/easy2_yellow_triangle_N/20.png,res/AI/easy2_yellow_triangle_N/20.png
+0,1,10,res/input/easy2_yellow_triangle_N/10.png,res/AI/easy2_yellow_triangle_N/10.png
+1,1,19,res/input/easy2_yellow_triangle_N/19.png,res/AI/easy2_yellow_triangle_N/19.png
+0,1,3,res/input/easy2_yellow_triangle_N/3.png,res/AI/easy2_yellow_triangle_N/3.png
+1,1,35,res/input/easy2_yellow_triangle_N/35.png,res/AI/easy2_yellow_triangle_N/35.png
