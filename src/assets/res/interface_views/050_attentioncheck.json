@@ -1,0 +1,32 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey measures important information relative to the study. Please rate your level of agreement with each statement.<hr>",
+          "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        }
+      ]
+}

@@ -1,0 +1,47 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey measures how you used the AI's justifications. Please rate your level of agreement with each statement.<hr>",
+          "secondary_text": "<b>I think the justifications were helpful to verify the answers to the questions.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "<b>I think the justifications were helpful to understand the AI's decision processes.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "primary_text": "",
+          "secondary_text": "<b>I think the justifications were helpful to detect the AI's errors.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        }
+      ]
+}

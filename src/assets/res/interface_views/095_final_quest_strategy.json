@@ -1,0 +1,18 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "Please answer the question below.<hr>",
+          "secondary_text": "<b>Which sentence would best describe the strategy you used to maximize your score and monetary bonus ?</b>",
+          "answers": [
+            "I largely relied on the AI’s predictions, because I think they were correct all the time or almost all the time.",
+            "I largely relied on the AI’s predictions, because I perceived them as imperfect but sufficiently accurate, and not worth the effort to surpass.",
+            "I sometimes or often relied on the AI’s predictions, but due to limited trust in the AI, I made efforts to respond independently or to verify its predictions for many questions.",
+            "I barely relied or did not rely at all on the AI’s predictions, because I had a very limited trust in the predictions.",
+            "I barely relied or did not rely at all on the AI’s predictions, because I wanted to do the task by myself, independently of my assessment of the reliability of the AI.",
+            "I did not have a consistent strategy, or my strategy was not described in the propositions above."
+          ]
+        }
+      ]
+}

@@ -1,0 +1,8 @@
+
+{
+    "type": "p-instruction",
+    "title": "<h3> Time limitations </h3>",
+    "body_text": "<div class='text-start'> <p> The protocol will last about 25 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_exp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> To continue your training, you will start the preparation phase, that contains two tasks which closely resemble those of the main experimental phase. </p> Then, the main experiment will start. It will be divided into 2 sessions. Each session consists in solving 4 tasks of 12 questions each, that will count towards your score and bonus remuneration. Every 2 tasks, you will have to answer a small survey about the tasks you just performed.</p><p> Finally, you will enter the closing phase, in which you will have to answer a final survey to conclude the protocol.</p><p>Notice that the tasks that will count towards your performance and thus your bonus remuneration are all in the Main experimental phase. <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+    "button_text": "Continue",
+    "with_button": "True"
+}

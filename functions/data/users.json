@@ -1,402 +1,50 @@
 {
-    "H1": {
+    "H_0": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "H_0.json"
     },
-    "H2": {
+    "H_1": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "H_1.json"
     },
-    "H3": {
+    "H_2": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "H_2.json"
     },
-    "H4": {
+    "H_3": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "H_3.json"
     },
-    "H5": {
+    "H_4": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "H_4.json"
     },
-    "H6": {
+    "AI_0": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "AI_0.json"
     },
-    "H7": {
+    "XAI_SHAP_0": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_SHAP_0.json"
     },
-    "H8": {
+    "XAI_SHAP_1": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_SHAP_1.json"
     },
-    "H9": {
+    "XAI_SHAP_2": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_SHAP_2.json"
     },
-    "H10": {
+    "XAI_CF_0": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_CF_0.json"
     },
-    "H11": {
+    "XAI_CF_1": {
         "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_CF_1.json"
     },
-    "H12": {
+    "XAI_CF_2": {
         "roles": "user",
-        "protocol": "H.json"
-    },
-    "H13": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H14": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H15": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H16": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H17": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H18": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H19": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H20": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H21": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H22": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H23": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H24": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H25": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H26": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H27": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H28": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H29": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H30": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H31": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H32": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H33": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H34": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H35": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H36": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H37": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H38": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H39": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H40": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H41": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H42": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H43": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H44": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H45": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H46": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H47": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H48": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H49": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H50": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H51": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H52": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H53": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H54": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H55": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H56": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H57": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H58": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H59": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H60": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H61": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H62": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H63": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H64": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H65": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H66": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H67": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H68": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H69": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H70": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H71": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H72": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H73": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H74": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H75": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H76": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H77": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H78": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H79": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H80": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H81": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H82": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H83": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H84": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H85": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H86": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H87": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H88": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H89": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H90": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H91": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H92": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H93": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H94": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H95": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H96": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H97": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H98": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H99": {
-        "roles": "user",
-        "protocol": "H.json"
-    },
-    "H100": {
-        "roles": "user",
-        "protocol": "H.json"
+        "protocol": "XAI_CF_2.json"
     }
 }
