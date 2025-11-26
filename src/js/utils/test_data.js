@@ -1,5 +1,99 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
+
+    {
+        "type": "p-task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": -1,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This is the right answer",
+        "feedback_answer_wrong": "This is not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/48.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "model": {
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/48.png",
+                    "title": "AI"
+                }
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "model": {
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/28.png",
+                    "title": "AI"
+                }
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/42.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "model": {
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/42.png",
+                    "title": "AI"
+                }
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/85.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "model": {
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/85.png",
+                    "title": "AI"
+                }
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "model": {
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/9.png",
+                    "title": "AI"
+                }
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
     {
         view_id: 'my-exp-view',
         type: 'p-task',
