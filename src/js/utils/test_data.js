@@ -20,11 +20,11 @@ export const TEST_VIEW = [
                     "title": "Image to analyze"
                 },
                 "expected": 0,
-                "model": {
+                "explanations": [{
                     "is_image": true,
                     "label": "assets/res/xai_shap/disc_1_triangle_all_2/48.png",
                     "title": "AI"
-                }
+                }]
             },
             {
                 "input": {
@@ -33,11 +33,11 @@ export const TEST_VIEW = [
                     "title": "Image to analyze"
                 },
                 "expected": 1,
-                "model": {
+                "explanations": [{
                     "is_image": true,
                     "label": "assets/res/xai_shap/disc_1_triangle_all_2/28.png",
                     "title": "AI"
-                }
+                }]
             },
             {
                 "input": {
@@ -46,11 +46,11 @@ export const TEST_VIEW = [
                     "title": "Image to analyze"
                 },
                 "expected": 1,
-                "model": {
+                "explanations": [{
                     "is_image": true,
                     "label": "assets/res/xai_shap/disc_1_triangle_all_2/42.png",
                     "title": "AI"
-                }
+                }]
             },
             {
                 "input": {
@@ -59,11 +59,11 @@ export const TEST_VIEW = [
                     "title": "Image to analyze"
                 },
                 "expected": 0,
-                "model": {
+                "explanations": [{
                     "is_image": true,
                     "label": "assets/res/xai_shap/disc_1_triangle_all_2/85.png",
                     "title": "AI"
-                }
+                }]
             },
             {
                 "input": {
@@ -72,11 +72,11 @@ export const TEST_VIEW = [
                     "title": "Image to analyze"
                 },
                 "expected": 1,
-                "model": {
+                "explanations": [{
                     "is_image": true,
                     "label": "assets/res/xai_shap/disc_1_triangle_all_2/9.png",
                     "title": "AI"
-                }
+                }]
             }
         ],
         "question": {
