@@ -72,7 +72,7 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
     view_dict = _get_res_entry_from_key(results_d, view_id)
 
     # Counting number of questions
-    nb_quest = len(view_dict.keys()) - 2
+    nb_quest = view_dict["nb_instances"]
 
     answers_idx_vect = np.zeros((nb_quest,), dtype=float)
     answers_text_vect = np.zeros((nb_quest,), dtype="U1000") if protocol_d is not None else None
@@ -82,22 +82,21 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
     if protocol_d is not None:
         protocol_entry = _get_protocol_entry_from_key(protocol_d, view_id)
 
-    for k, v in view_dict.items():
-        if k == "time_on_page" or k == "view_id":
-            continue
-        curr_idx = v["order_index"]
-        answer_idx = v["answers"][0][0] if v["answers"][0] else None
+    for question_entry in view_dict["instances"]:
+
+        actual_idx = question_entry["order_index"]
+        answer_idx = question_entry["answers"][0][0] if question_entry["answers"][0] else None
         # try:
-        answers_idx_vect[curr_idx] = answer_idx
+        answers_idx_vect[actual_idx] = answer_idx
         # # Happens if the task was incomplete
         # except IndexError:
         #     continue
 
         if protocol_d is not None:
-            answers_text_vect[curr_idx] = protocol_entry["question"]["answers"][answer_idx] if answer_idx is not None else None
+            answers_text_vect[actual_idx] = protocol_entry["question"]["answers"][answer_idx] if answer_idx is not None else None
 
-        time_vect[curr_idx] = v["time"]
-        time_exceeded_vect[curr_idx] = v["is_time_exceeded"]
+        time_vect[actual_idx] = question_entry["time"]
+        time_exceeded_vect[actual_idx] = question_entry["is_time_exceeded"]
 
     return answers_idx_vect, answers_text_vect, time_vect, time_exceeded_vect, _time_on_view(view_dict)
 
