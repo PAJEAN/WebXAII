@@ -7,7 +7,7 @@ export const TEST_VIEW = [
         "show_progression_bar": true,
         "randomize": true,
         "timer": -1,
-        "feedback_answer_activated": true,
+        "feedback_answer_activated": false,
         "feedback_answer_correct": "This is the right answer",
         "feedback_answer_wrong": "This is not the right answer",
         "feedback_answer_show_expected": false,
