@@ -376,11 +376,29 @@ try {
                 }
             }
 
+            _scroll_to_bottom() {
+                let tag_source_model = this._getElementById(TAG_IDS.source_model);
+                let imgs = Array.from(tag_source_model.querySelectorAll('img'));
+                
+                Promise.all(imgs.map(async (img) => {
+                    await img.decode();
+                    return img;
+                })).then(() => {
+                    window.scrollTo({ top: document.documentElement.scrollHeight });
+                }).catch((err) => {
+                    console.error(err);
+                    window.scrollTo({ top: document.documentElement.scrollHeight });
+                });
+            }
+
             /**
              * Function called when the task is submitted.
              * @param {boolean} is_time_exceeded 
              */
             _submit(is_time_exceeded = false) {
+                if (this.is_submit) { return; }
+                this.is_submit = true;                
+
                 /** @type {FormComponent} */
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
                 let answers = form.submit();                
@@ -434,6 +452,8 @@ try {
                             this._transition();
                         }
                     }                    
+                } else {
+                    this.is_submit = false;
                 }
             }
 
@@ -513,6 +533,9 @@ try {
                 // this._timer();
                 this._secure_timer();
 
+                this._scroll_to_bottom();
+
+                this.is_submit = false;
                 this.observer && this._observing();
             }
 
@@ -548,6 +571,7 @@ try {
                 this.appendChild(TEMPLATE.content.cloneNode(true));
 
                 /* Attributes */
+                this.is_submit = false;
                 /** @type {HTMLElement} */
                 this.content = this.querySelector(`#${TAG_IDS.main_page}`);
                 /** @type {Experiment} */

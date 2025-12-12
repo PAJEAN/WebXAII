@@ -146,8 +146,6 @@ export const module = {
             state[keys.s_save] = payload;
         },
         [`${NS}_UPDATE_SAVE`](state, payload) {
-            console.log(payload);
-            
             if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) { // Update current.
                 // state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
 
