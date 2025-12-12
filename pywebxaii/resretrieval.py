@@ -15,7 +15,7 @@ def _get_res_entry_from_key(results_d, view_id):
     raise KeyError(view_id)
 
 
-def _get_protocol_entry_from_key(protocol_d, view_id):
+def get_protocol_entry_from_key(protocol_d, view_id):
     """
     Returning the entry corresponding to the given view_id in the given protocol dictionary. Can be a p-task, a
     p-questionnaire, etc.
@@ -80,7 +80,7 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
     time_exceeded_vect = np.zeros((nb_quest,), dtype=bool)
 
     if protocol_d is not None:
-        protocol_entry = _get_protocol_entry_from_key(protocol_d, view_id)
+        protocol_entry = get_protocol_entry_from_key(protocol_d, view_id)
 
     for question_entry in view_dict["instances"]:
 
@@ -121,7 +121,7 @@ def extract_p_questionnaire_results(results_d, view_id, protocol_d=None):
     answers_values = np.full((nb_quest,), None)
 
     if protocol_d is not None:
-        protocol_entry = _get_protocol_entry_from_key(protocol_d, view_id)
+        protocol_entry = get_protocol_entry_from_key(protocol_d, view_id)
 
     for quest_idx in range(nb_quest):
         answer_raw = view_dict["answers"][quest_idx][0] if view_dict["answers"][quest_idx] else None
