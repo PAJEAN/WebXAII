@@ -1,7 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>Start of session 2</h3>",
-      "body_text": "<div class='text-start'> <p>You will now start the second and last session of the main experiment. The structure of this session will be the same as the last session.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/input/img/diagram_mainexp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p>The session will start with two training tasks, that will not count towards your score and your bonus remuneration.</p><p> Then, the recorded section will start, in which you will have to complete 2 tasks, 1 survey, another 2 tasks and another survey. There is no right or wrong answers to the surveys; only your score during the recorded task will count towards your bonus remuneration.</p><p>The time allowed for each question will increase again to its original value. You will be informed when the recorded section starts.</p>",
-      "button_text": "Start session 2 (training part)",
-      "with_button": "True"
-}

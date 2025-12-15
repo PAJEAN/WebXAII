@@ -1,7 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>Training phase - Instructions</h3>",
-      "body_text": "<div class='text-start'> For the second training task, you will have a limited time to take each decision. The lack of answer in time will be considered as a wrong answer. This will be stay true for all remaining tasks of the experiment.",
-      "button_text": "Start training",
-      "with_button": "True"
-}

@@ -1,7 +1,7 @@
 {
     "type": "p-instruction",
-    "title": "<h3>Let's jump in</h3>",
-    "body_text": "<div class='text-start'> <p>Before giving you further instructions, you will perform a first training task in order to discover the interface. This task will NOT count towards your score and remuneration, and the results will not be recorded. You will be presented with a series of 5 images of symbols of colors, and you will have to answer a question regarding the image. For this task and for the rest of the introduction, you will be informed if the decision was right or wrong after each decision.</p> <p> As for every task later, the question will be the same for every image of the task. The question will usually change every new task, but it will stay the same during the introduction. </p> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below. You can take notes if you wish to.</p></div>",
-    "button_text": "Proceed with the discovery task",
+    "title": "<img src='assets/res/img/timeline_intro_disc.png' class='img-fluid' alt='timeline'></br><hr><h3>Let's jump in</h3>",
+    "body_text": "<div class='text-start'> <p>You will now perform a first training task. It consists in answering a single question relative to the content of images of symbols of colors. You must answer the question for 6 different images. This task will <b>NOT</b> count towards your bonus remuneration.</p> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+    "button_text": "Continue",
     "with_button": "True"
 }

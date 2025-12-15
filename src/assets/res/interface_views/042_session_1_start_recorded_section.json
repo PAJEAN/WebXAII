@@ -1,7 +1,0 @@
-{
-    "type": "p-instruction",
-    "title": "<h3>Start of session 1 (recorded section)</h3>",
-      "body_text": "<div class='text-start'> <p>You will now start the recorded section of session 1. You are about to perform two tasks, followed by a short survey. Your performance during the tasks will be recorded and will count towards your bonus remuneration. During the recorded section, your score will not be displayed at the end of each task. It will be communicated to you at the end of the experiment.</p>",
-      "button_text": "Start recorded tasks",
-      "with_button": "True"
-}

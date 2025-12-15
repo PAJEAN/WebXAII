@@ -4,4 +4,4 @@ export const USER_URL = MAIN_URL + '/api/users';
 export const DATA_URL = MAIN_URL + '/api/data';
 
 // Auth page logos.
-export const LOGO = [];
+export const LOGO = ["assets/res/img/imt.png", "assets/res/img/imtbs.png", "assets/res/img/enfield.png"];
