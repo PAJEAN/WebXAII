@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Adjustment of page zoom</h3>",
+    "body_text": "<div class='text-start'> <p>When you will perform the task, please make sure all elements of the page fit on your monitor, without needing to scroll the page. If it does not fit fully, please use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page so that all elements of the page can be seen at once. Below is an example of display where all elements are visible at once.</p><img src='assets/res/img/example_fit_interface.png' class='img-fluid' alt='page where all elements are visible at once'></div>",
+    "button_text": "Continue",
+    "with_button": "True"
+}

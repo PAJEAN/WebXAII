@@ -1,0 +1,5 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>End of the protocol</h3>",
+    "body_text": "<div class='text-start'> <div> <p>The protocol is now over.</p> <p>Use the following link to come back to Prolific : <a href='https://app.prolific.com/submissions/complete?cc=C13X3WJS'>https://app.prolific.com/submissions/complete?cc=C13X3WJS</a>. If it doesn't work, use the code C13X3WJS.</p><p>In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:jules.leguy@mines-ales.fr'>jules.leguy@mines-ales.fr</a>.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div><div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imtbs.png' class='img-fluid w-100' alt='IMT BS logo'> </div> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='ENFIELD logo'> </div> </div></div>"
+}

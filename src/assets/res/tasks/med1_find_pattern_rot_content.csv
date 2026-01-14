@@ -1,0 +1,5 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf,xai_gradcam,xai_LLM
+1,0,15,res/input/med1_find_pattern_rot/15.png,res/AI/med1_find_pattern_rot/15.png,res/xai_shap/med1_find_pattern_rot/15.png,res/xai_cf/med1_find_pattern_rot/15.png,res/xai_gradcam/med1_find_pattern_rot/15.png,res/xai_LLM/med1_find_pattern_rot/15.png
+0,0,174,res/input/med1_find_pattern_rot/174.png,res/AI/med1_find_pattern_rot/174.png,res/xai_shap/med1_find_pattern_rot/174.png,res/xai_cf/med1_find_pattern_rot/174.png,res/xai_gradcam/med1_find_pattern_rot/174.png,res/xai_LLM/med1_find_pattern_rot/174.png
+1,1,95,res/input/med1_find_pattern_rot/95.png,res/AI/med1_find_pattern_rot/95.png,res/xai_shap/med1_find_pattern_rot/95.png,res/xai_cf/med1_find_pattern_rot/95.png,res/xai_gradcam/med1_find_pattern_rot/95.png,res/xai_LLM/med1_find_pattern_rot/95.png
+0,0,170,res/input/med1_find_pattern_rot/170.png,res/AI/med1_find_pattern_rot/170.png,res/xai_shap/med1_find_pattern_rot/170.png,res/xai_cf/med1_find_pattern_rot/170.png,res/xai_gradcam/med1_find_pattern_rot/170.png,res/xai_LLM/med1_find_pattern_rot/170.png

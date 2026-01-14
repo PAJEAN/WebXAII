@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_mainexp_task_4.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 4 </h3>",
+      "body_text": "<div class='text-start'> <p>The thrid task is over. Click on the button below to start the last Task.</p>",
+      "button_text": "Start Task 4",
+      "with_button": "True"
+}

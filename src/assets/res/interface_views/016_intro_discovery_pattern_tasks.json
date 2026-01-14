@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Pattern identification tasks</h3>",
+    "body_text": "<div class='text-start'> <p> The tasks of this protocol will consist in searching whether a pattern (or its rotations) can be found in an image or not.</p> <p> Below is an example. The pattern to search for contains several symbols, and an empty cell with a question mark. <b>When searching for the pattern, the cell with the question mark can be matched with any symbol </b> (as in the image B), <b>or it can also be matched with an empty cell</b> (as in the image A). In addition, the task consists in searching for rotations of the pattern. The rotations considered are a rotation to the right (symbolized by ↻, as in the image C) or a rotation to the left (symbolized by ↺, as in the image D). In the image E, the pattern or its rotations do not appear. </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-9 d-flex flex-column align-items-center'><img src='assets/res/img/example_patternsearch.png' class='img-fluid' alt='Explanation for the pattern task'> </div> </div> </div> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+    "button_text": "Continue",
+    "with_button": "True"
+}

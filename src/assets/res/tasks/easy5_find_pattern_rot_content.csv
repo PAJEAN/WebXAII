@@ -1,0 +1,7 @@
+target,pred,og_idx,source,AI,xai_shap,xai_cf
+0,0,35,res/input/easy5_find_pattern_rot/35.png,res/AI/easy5_find_pattern_rot/35.png,res/xai_shap/easy5_find_pattern_rot/35.png,res/xai_cf/easy5_find_pattern_rot/35.png
+0,0,47,res/input/easy5_find_pattern_rot/47.png,res/AI/easy5_find_pattern_rot/47.png,res/xai_shap/easy5_find_pattern_rot/47.png,res/xai_cf/easy5_find_pattern_rot/47.png
+1,1,15,res/input/easy5_find_pattern_rot/15.png,res/AI/easy5_find_pattern_rot/15.png,res/xai_shap/easy5_find_pattern_rot/15.png,res/xai_cf/easy5_find_pattern_rot/15.png
+1,1,5,res/input/easy5_find_pattern_rot/5.png,res/AI/easy5_find_pattern_rot/5.png,res/xai_shap/easy5_find_pattern_rot/5.png,res/xai_cf/easy5_find_pattern_rot/5.png
+0,1,10,res/input/easy5_find_pattern_rot/10.png,res/AI/easy5_find_pattern_rot/10.png,res/xai_shap/easy5_find_pattern_rot/10.png,res/xai_cf/easy5_find_pattern_rot/10.png
+1,1,1,res/input/easy5_find_pattern_rot/1.png,res/AI/easy5_find_pattern_rot/1.png,res/xai_shap/easy5_find_pattern_rot/1.png,res/xai_cf/easy5_find_pattern_rot/1.png

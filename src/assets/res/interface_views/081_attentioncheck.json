@@ -1,0 +1,28 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey measures important information. Please answer as required.<hr>",
+          "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "secondary_text": "<b>The tasks you had to perfom consisted in </b>",
+          "answers": [
+            "(1) Searching for patterns and their rotations",
+            "(2) Counting the number of symbols and colors",
+            "(3) Searching for lines or columns which had an odd number of symbols"
+          ]
+        }
+      ]
+}

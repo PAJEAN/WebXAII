@@ -78,7 +78,7 @@ try {
                         </span>
                         <div class="form-floating">
                             <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                            <label for="floatingInputGroup1">Identifier</label>
+                            <label for="floatingInputGroup1">Enter your prolific ID</label>
                         </div>
                     </div>
 
