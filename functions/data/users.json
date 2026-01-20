@@ -1,4 +1,56 @@
 {
+    "H_0": {
+        "roles": "user",
+        "protocol": "H_0.json"
+    },
+    "H_1": {
+        "roles": "user",
+        "protocol": "H_1.json"
+    },
+    "H_2": {
+        "roles": "user",
+        "protocol": "H_2.json"
+    },
+    "H_3": {
+        "roles": "user",
+        "protocol": "H_3.json"
+    },
+    "H_4": {
+        "roles": "user",
+        "protocol": "H_4.json"
+    },
+    "H_5": {
+        "roles": "user",
+        "protocol": "H_5.json"
+    },
+    "H_6": {
+        "roles": "user",
+        "protocol": "H_6.json"
+    },
+    "H_7": {
+        "roles": "user",
+        "protocol": "H_7.json"
+    },
+    "H_8": {
+        "roles": "user",
+        "protocol": "H_8.json"
+    },
+    "H_9": {
+        "roles": "user",
+        "protocol": "H_9.json"
+    },
+    "H_10": {
+        "roles": "user",
+        "protocol": "H_10.json"
+    },
+    "H_11": {
+        "roles": "user",
+        "protocol": "H_11.json"
+    },
+    "H_12": {
+        "roles": "user",
+        "protocol": "H_12.json"
+    },
     "AI_0": {
         "roles": "user",
         "protocol": "AI_0.json"
@@ -50,154 +102,6 @@
     "AI_12": {
         "roles": "user",
         "protocol": "AI_12.json"
-    },
-    "AI_13": {
-        "roles": "user",
-        "protocol": "AI_13.json"
-    },
-    "AI_14": {
-        "roles": "user",
-        "protocol": "AI_14.json"
-    },
-    "AI_15": {
-        "roles": "user",
-        "protocol": "AI_15.json"
-    },
-    "AI_16": {
-        "roles": "user",
-        "protocol": "AI_16.json"
-    },
-    "AI_17": {
-        "roles": "user",
-        "protocol": "AI_17.json"
-    },
-    "AI_18": {
-        "roles": "user",
-        "protocol": "AI_18.json"
-    },
-    "AI_19": {
-        "roles": "user",
-        "protocol": "AI_19.json"
-    },
-    "AI_20": {
-        "roles": "user",
-        "protocol": "AI_20.json"
-    },
-    "AI_21": {
-        "roles": "user",
-        "protocol": "AI_21.json"
-    },
-    "AI_22": {
-        "roles": "user",
-        "protocol": "AI_22.json"
-    },
-    "AI_23": {
-        "roles": "user",
-        "protocol": "AI_23.json"
-    },
-    "AI_24": {
-        "roles": "user",
-        "protocol": "AI_24.json"
-    },
-    "AI_25": {
-        "roles": "user",
-        "protocol": "AI_25.json"
-    },
-    "AI_26": {
-        "roles": "user",
-        "protocol": "AI_26.json"
-    },
-    "AI_27": {
-        "roles": "user",
-        "protocol": "AI_27.json"
-    },
-    "AI_28": {
-        "roles": "user",
-        "protocol": "AI_28.json"
-    },
-    "AI_29": {
-        "roles": "user",
-        "protocol": "AI_29.json"
-    },
-    "AI_30": {
-        "roles": "user",
-        "protocol": "AI_30.json"
-    },
-    "AI_31": {
-        "roles": "user",
-        "protocol": "AI_31.json"
-    },
-    "AI_32": {
-        "roles": "user",
-        "protocol": "AI_32.json"
-    },
-    "AI_33": {
-        "roles": "user",
-        "protocol": "AI_33.json"
-    },
-    "AI_34": {
-        "roles": "user",
-        "protocol": "AI_34.json"
-    },
-    "AI_35": {
-        "roles": "user",
-        "protocol": "AI_35.json"
-    },
-    "AI_36": {
-        "roles": "user",
-        "protocol": "AI_36.json"
-    },
-    "AI_37": {
-        "roles": "user",
-        "protocol": "AI_37.json"
-    },
-    "AI_38": {
-        "roles": "user",
-        "protocol": "AI_38.json"
-    },
-    "AI_39": {
-        "roles": "user",
-        "protocol": "AI_39.json"
-    },
-    "AI_40": {
-        "roles": "user",
-        "protocol": "AI_40.json"
-    },
-    "AI_41": {
-        "roles": "user",
-        "protocol": "AI_41.json"
-    },
-    "AI_42": {
-        "roles": "user",
-        "protocol": "AI_42.json"
-    },
-    "AI_43": {
-        "roles": "user",
-        "protocol": "AI_43.json"
-    },
-    "AI_44": {
-        "roles": "user",
-        "protocol": "AI_44.json"
-    },
-    "AI_45": {
-        "roles": "user",
-        "protocol": "AI_45.json"
-    },
-    "AI_46": {
-        "roles": "user",
-        "protocol": "AI_46.json"
-    },
-    "AI_47": {
-        "roles": "user",
-        "protocol": "AI_47.json"
-    },
-    "AI_48": {
-        "roles": "user",
-        "protocol": "AI_48.json"
-    },
-    "AI_49": {
-        "roles": "user",
-        "protocol": "AI_49.json"
     },
     "XAI_SHAP_0": {
         "roles": "user",
@@ -251,154 +155,6 @@
         "roles": "user",
         "protocol": "XAI_SHAP_12.json"
     },
-    "XAI_SHAP_13": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_13.json"
-    },
-    "XAI_SHAP_14": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_14.json"
-    },
-    "XAI_SHAP_15": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_15.json"
-    },
-    "XAI_SHAP_16": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_16.json"
-    },
-    "XAI_SHAP_17": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_17.json"
-    },
-    "XAI_SHAP_18": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_18.json"
-    },
-    "XAI_SHAP_19": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_19.json"
-    },
-    "XAI_SHAP_20": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_20.json"
-    },
-    "XAI_SHAP_21": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_21.json"
-    },
-    "XAI_SHAP_22": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_22.json"
-    },
-    "XAI_SHAP_23": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_23.json"
-    },
-    "XAI_SHAP_24": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_24.json"
-    },
-    "XAI_SHAP_25": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_25.json"
-    },
-    "XAI_SHAP_26": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_26.json"
-    },
-    "XAI_SHAP_27": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_27.json"
-    },
-    "XAI_SHAP_28": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_28.json"
-    },
-    "XAI_SHAP_29": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_29.json"
-    },
-    "XAI_SHAP_30": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_30.json"
-    },
-    "XAI_SHAP_31": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_31.json"
-    },
-    "XAI_SHAP_32": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_32.json"
-    },
-    "XAI_SHAP_33": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_33.json"
-    },
-    "XAI_SHAP_34": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_34.json"
-    },
-    "XAI_SHAP_35": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_35.json"
-    },
-    "XAI_SHAP_36": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_36.json"
-    },
-    "XAI_SHAP_37": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_37.json"
-    },
-    "XAI_SHAP_38": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_38.json"
-    },
-    "XAI_SHAP_39": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_39.json"
-    },
-    "XAI_SHAP_40": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_40.json"
-    },
-    "XAI_SHAP_41": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_41.json"
-    },
-    "XAI_SHAP_42": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_42.json"
-    },
-    "XAI_SHAP_43": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_43.json"
-    },
-    "XAI_SHAP_44": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_44.json"
-    },
-    "XAI_SHAP_45": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_45.json"
-    },
-    "XAI_SHAP_46": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_46.json"
-    },
-    "XAI_SHAP_47": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_47.json"
-    },
-    "XAI_SHAP_48": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_48.json"
-    },
-    "XAI_SHAP_49": {
-        "roles": "user",
-        "protocol": "XAI_SHAP_49.json"
-    },
     "XAI_CF_0": {
         "roles": "user",
         "protocol": "XAI_CF_0.json"
@@ -450,154 +206,6 @@
     "XAI_CF_12": {
         "roles": "user",
         "protocol": "XAI_CF_12.json"
-    },
-    "XAI_CF_13": {
-        "roles": "user",
-        "protocol": "XAI_CF_13.json"
-    },
-    "XAI_CF_14": {
-        "roles": "user",
-        "protocol": "XAI_CF_14.json"
-    },
-    "XAI_CF_15": {
-        "roles": "user",
-        "protocol": "XAI_CF_15.json"
-    },
-    "XAI_CF_16": {
-        "roles": "user",
-        "protocol": "XAI_CF_16.json"
-    },
-    "XAI_CF_17": {
-        "roles": "user",
-        "protocol": "XAI_CF_17.json"
-    },
-    "XAI_CF_18": {
-        "roles": "user",
-        "protocol": "XAI_CF_18.json"
-    },
-    "XAI_CF_19": {
-        "roles": "user",
-        "protocol": "XAI_CF_19.json"
-    },
-    "XAI_CF_20": {
-        "roles": "user",
-        "protocol": "XAI_CF_20.json"
-    },
-    "XAI_CF_21": {
-        "roles": "user",
-        "protocol": "XAI_CF_21.json"
-    },
-    "XAI_CF_22": {
-        "roles": "user",
-        "protocol": "XAI_CF_22.json"
-    },
-    "XAI_CF_23": {
-        "roles": "user",
-        "protocol": "XAI_CF_23.json"
-    },
-    "XAI_CF_24": {
-        "roles": "user",
-        "protocol": "XAI_CF_24.json"
-    },
-    "XAI_CF_25": {
-        "roles": "user",
-        "protocol": "XAI_CF_25.json"
-    },
-    "XAI_CF_26": {
-        "roles": "user",
-        "protocol": "XAI_CF_26.json"
-    },
-    "XAI_CF_27": {
-        "roles": "user",
-        "protocol": "XAI_CF_27.json"
-    },
-    "XAI_CF_28": {
-        "roles": "user",
-        "protocol": "XAI_CF_28.json"
-    },
-    "XAI_CF_29": {
-        "roles": "user",
-        "protocol": "XAI_CF_29.json"
-    },
-    "XAI_CF_30": {
-        "roles": "user",
-        "protocol": "XAI_CF_30.json"
-    },
-    "XAI_CF_31": {
-        "roles": "user",
-        "protocol": "XAI_CF_31.json"
-    },
-    "XAI_CF_32": {
-        "roles": "user",
-        "protocol": "XAI_CF_32.json"
-    },
-    "XAI_CF_33": {
-        "roles": "user",
-        "protocol": "XAI_CF_33.json"
-    },
-    "XAI_CF_34": {
-        "roles": "user",
-        "protocol": "XAI_CF_34.json"
-    },
-    "XAI_CF_35": {
-        "roles": "user",
-        "protocol": "XAI_CF_35.json"
-    },
-    "XAI_CF_36": {
-        "roles": "user",
-        "protocol": "XAI_CF_36.json"
-    },
-    "XAI_CF_37": {
-        "roles": "user",
-        "protocol": "XAI_CF_37.json"
-    },
-    "XAI_CF_38": {
-        "roles": "user",
-        "protocol": "XAI_CF_38.json"
-    },
-    "XAI_CF_39": {
-        "roles": "user",
-        "protocol": "XAI_CF_39.json"
-    },
-    "XAI_CF_40": {
-        "roles": "user",
-        "protocol": "XAI_CF_40.json"
-    },
-    "XAI_CF_41": {
-        "roles": "user",
-        "protocol": "XAI_CF_41.json"
-    },
-    "XAI_CF_42": {
-        "roles": "user",
-        "protocol": "XAI_CF_42.json"
-    },
-    "XAI_CF_43": {
-        "roles": "user",
-        "protocol": "XAI_CF_43.json"
-    },
-    "XAI_CF_44": {
-        "roles": "user",
-        "protocol": "XAI_CF_44.json"
-    },
-    "XAI_CF_45": {
-        "roles": "user",
-        "protocol": "XAI_CF_45.json"
-    },
-    "XAI_CF_46": {
-        "roles": "user",
-        "protocol": "XAI_CF_46.json"
-    },
-    "XAI_CF_47": {
-        "roles": "user",
-        "protocol": "XAI_CF_47.json"
-    },
-    "XAI_CF_48": {
-        "roles": "user",
-        "protocol": "XAI_CF_48.json"
-    },
-    "XAI_CF_49": {
-        "roles": "user",
-        "protocol": "XAI_CF_49.json"
     },
     "XAI_GRADCAM_0": {
         "roles": "user",
@@ -651,154 +259,6 @@
         "roles": "user",
         "protocol": "XAI_GRADCAM_12.json"
     },
-    "XAI_GRADCAM_13": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_13.json"
-    },
-    "XAI_GRADCAM_14": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_14.json"
-    },
-    "XAI_GRADCAM_15": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_15.json"
-    },
-    "XAI_GRADCAM_16": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_16.json"
-    },
-    "XAI_GRADCAM_17": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_17.json"
-    },
-    "XAI_GRADCAM_18": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_18.json"
-    },
-    "XAI_GRADCAM_19": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_19.json"
-    },
-    "XAI_GRADCAM_20": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_20.json"
-    },
-    "XAI_GRADCAM_21": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_21.json"
-    },
-    "XAI_GRADCAM_22": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_22.json"
-    },
-    "XAI_GRADCAM_23": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_23.json"
-    },
-    "XAI_GRADCAM_24": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_24.json"
-    },
-    "XAI_GRADCAM_25": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_25.json"
-    },
-    "XAI_GRADCAM_26": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_26.json"
-    },
-    "XAI_GRADCAM_27": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_27.json"
-    },
-    "XAI_GRADCAM_28": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_28.json"
-    },
-    "XAI_GRADCAM_29": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_29.json"
-    },
-    "XAI_GRADCAM_30": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_30.json"
-    },
-    "XAI_GRADCAM_31": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_31.json"
-    },
-    "XAI_GRADCAM_32": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_32.json"
-    },
-    "XAI_GRADCAM_33": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_33.json"
-    },
-    "XAI_GRADCAM_34": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_34.json"
-    },
-    "XAI_GRADCAM_35": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_35.json"
-    },
-    "XAI_GRADCAM_36": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_36.json"
-    },
-    "XAI_GRADCAM_37": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_37.json"
-    },
-    "XAI_GRADCAM_38": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_38.json"
-    },
-    "XAI_GRADCAM_39": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_39.json"
-    },
-    "XAI_GRADCAM_40": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_40.json"
-    },
-    "XAI_GRADCAM_41": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_41.json"
-    },
-    "XAI_GRADCAM_42": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_42.json"
-    },
-    "XAI_GRADCAM_43": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_43.json"
-    },
-    "XAI_GRADCAM_44": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_44.json"
-    },
-    "XAI_GRADCAM_45": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_45.json"
-    },
-    "XAI_GRADCAM_46": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_46.json"
-    },
-    "XAI_GRADCAM_47": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_47.json"
-    },
-    "XAI_GRADCAM_48": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_48.json"
-    },
-    "XAI_GRADCAM_49": {
-        "roles": "user",
-        "protocol": "XAI_GRADCAM_49.json"
-    },
     "XAI_LLM_0": {
         "roles": "user",
         "protocol": "XAI_LLM_0.json"
@@ -850,153 +310,5 @@
     "XAI_LLM_12": {
         "roles": "user",
         "protocol": "XAI_LLM_12.json"
-    },
-    "XAI_LLM_13": {
-        "roles": "user",
-        "protocol": "XAI_LLM_13.json"
-    },
-    "XAI_LLM_14": {
-        "roles": "user",
-        "protocol": "XAI_LLM_14.json"
-    },
-    "XAI_LLM_15": {
-        "roles": "user",
-        "protocol": "XAI_LLM_15.json"
-    },
-    "XAI_LLM_16": {
-        "roles": "user",
-        "protocol": "XAI_LLM_16.json"
-    },
-    "XAI_LLM_17": {
-        "roles": "user",
-        "protocol": "XAI_LLM_17.json"
-    },
-    "XAI_LLM_18": {
-        "roles": "user",
-        "protocol": "XAI_LLM_18.json"
-    },
-    "XAI_LLM_19": {
-        "roles": "user",
-        "protocol": "XAI_LLM_19.json"
-    },
-    "XAI_LLM_20": {
-        "roles": "user",
-        "protocol": "XAI_LLM_20.json"
-    },
-    "XAI_LLM_21": {
-        "roles": "user",
-        "protocol": "XAI_LLM_21.json"
-    },
-    "XAI_LLM_22": {
-        "roles": "user",
-        "protocol": "XAI_LLM_22.json"
-    },
-    "XAI_LLM_23": {
-        "roles": "user",
-        "protocol": "XAI_LLM_23.json"
-    },
-    "XAI_LLM_24": {
-        "roles": "user",
-        "protocol": "XAI_LLM_24.json"
-    },
-    "XAI_LLM_25": {
-        "roles": "user",
-        "protocol": "XAI_LLM_25.json"
-    },
-    "XAI_LLM_26": {
-        "roles": "user",
-        "protocol": "XAI_LLM_26.json"
-    },
-    "XAI_LLM_27": {
-        "roles": "user",
-        "protocol": "XAI_LLM_27.json"
-    },
-    "XAI_LLM_28": {
-        "roles": "user",
-        "protocol": "XAI_LLM_28.json"
-    },
-    "XAI_LLM_29": {
-        "roles": "user",
-        "protocol": "XAI_LLM_29.json"
-    },
-    "XAI_LLM_30": {
-        "roles": "user",
-        "protocol": "XAI_LLM_30.json"
-    },
-    "XAI_LLM_31": {
-        "roles": "user",
-        "protocol": "XAI_LLM_31.json"
-    },
-    "XAI_LLM_32": {
-        "roles": "user",
-        "protocol": "XAI_LLM_32.json"
-    },
-    "XAI_LLM_33": {
-        "roles": "user",
-        "protocol": "XAI_LLM_33.json"
-    },
-    "XAI_LLM_34": {
-        "roles": "user",
-        "protocol": "XAI_LLM_34.json"
-    },
-    "XAI_LLM_35": {
-        "roles": "user",
-        "protocol": "XAI_LLM_35.json"
-    },
-    "XAI_LLM_36": {
-        "roles": "user",
-        "protocol": "XAI_LLM_36.json"
-    },
-    "XAI_LLM_37": {
-        "roles": "user",
-        "protocol": "XAI_LLM_37.json"
-    },
-    "XAI_LLM_38": {
-        "roles": "user",
-        "protocol": "XAI_LLM_38.json"
-    },
-    "XAI_LLM_39": {
-        "roles": "user",
-        "protocol": "XAI_LLM_39.json"
-    },
-    "XAI_LLM_40": {
-        "roles": "user",
-        "protocol": "XAI_LLM_40.json"
-    },
-    "XAI_LLM_41": {
-        "roles": "user",
-        "protocol": "XAI_LLM_41.json"
-    },
-    "XAI_LLM_42": {
-        "roles": "user",
-        "protocol": "XAI_LLM_42.json"
-    },
-    "XAI_LLM_43": {
-        "roles": "user",
-        "protocol": "XAI_LLM_43.json"
-    },
-    "XAI_LLM_44": {
-        "roles": "user",
-        "protocol": "XAI_LLM_44.json"
-    },
-    "XAI_LLM_45": {
-        "roles": "user",
-        "protocol": "XAI_LLM_45.json"
-    },
-    "XAI_LLM_46": {
-        "roles": "user",
-        "protocol": "XAI_LLM_46.json"
-    },
-    "XAI_LLM_47": {
-        "roles": "user",
-        "protocol": "XAI_LLM_47.json"
-    },
-    "XAI_LLM_48": {
-        "roles": "user",
-        "protocol": "XAI_LLM_48.json"
-    },
-    "XAI_LLM_49": {
-        "roles": "user",
-        "protocol": "XAI_LLM_49.json"
     }
 }

@@ -2,7 +2,7 @@
 {
     "type": "p-instruction",
     "title": "<h3> Start of the comprehension test </h3>",
-    "body_text": "<div class='text-start'> <p> The comprehension test task will start now. Your submission will not be rejected because of this task, but please try to answer the best you can to demonstrate that you understand what is expected of you. This task <b>does count</b> towards your bonus remuneration, thus you will earn £0.040 for each correct answer.</p></div>",
+    "body_text": "<div class='text-start'> <p> The comprehension test task will start now. Your submission will not be rejected because of this task, but please try to answer the best you can to demonstrate that you understand what is expected of you. This task <b>does count</b> towards your bonus remuneration, thus you will earn £0.043 for each correct answer.</p></div>",
     "button_text": "Continue",
     "with_button": "True"
 }
