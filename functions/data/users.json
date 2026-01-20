@@ -51,6 +51,14 @@
         "roles": "user",
         "protocol": "H_12.json"
     },
+    "H_13": {
+        "roles": "user",
+        "protocol": "H_13.json"
+    },
+    "H_14": {
+        "roles": "user",
+        "protocol": "H_14.json"
+    },
     "AI_0": {
         "roles": "user",
         "protocol": "AI_0.json"
@@ -102,6 +110,14 @@
     "AI_12": {
         "roles": "user",
         "protocol": "AI_12.json"
+    },
+    "AI_13": {
+        "roles": "user",
+        "protocol": "AI_13.json"
+    },
+    "AI_14": {
+        "roles": "user",
+        "protocol": "AI_14.json"
     },
     "XAI_SHAP_0": {
         "roles": "user",
@@ -155,6 +171,14 @@
         "roles": "user",
         "protocol": "XAI_SHAP_12.json"
     },
+    "XAI_SHAP_13": {
+        "roles": "user",
+        "protocol": "XAI_SHAP_13.json"
+    },
+    "XAI_SHAP_14": {
+        "roles": "user",
+        "protocol": "XAI_SHAP_14.json"
+    },
     "XAI_CF_0": {
         "roles": "user",
         "protocol": "XAI_CF_0.json"
@@ -206,6 +230,14 @@
     "XAI_CF_12": {
         "roles": "user",
         "protocol": "XAI_CF_12.json"
+    },
+    "XAI_CF_13": {
+        "roles": "user",
+        "protocol": "XAI_CF_13.json"
+    },
+    "XAI_CF_14": {
+        "roles": "user",
+        "protocol": "XAI_CF_14.json"
     },
     "XAI_GRADCAM_0": {
         "roles": "user",
@@ -259,6 +291,14 @@
         "roles": "user",
         "protocol": "XAI_GRADCAM_12.json"
     },
+    "XAI_GRADCAM_13": {
+        "roles": "user",
+        "protocol": "XAI_GRADCAM_13.json"
+    },
+    "XAI_GRADCAM_14": {
+        "roles": "user",
+        "protocol": "XAI_GRADCAM_14.json"
+    },
     "XAI_LLM_0": {
         "roles": "user",
         "protocol": "XAI_LLM_0.json"
@@ -310,5 +350,13 @@
     "XAI_LLM_12": {
         "roles": "user",
         "protocol": "XAI_LLM_12.json"
+    },
+    "XAI_LLM_13": {
+        "roles": "user",
+        "protocol": "XAI_LLM_13.json"
+    },
+    "XAI_LLM_14": {
+        "roles": "user",
+        "protocol": "XAI_LLM_14.json"
     }
 }
