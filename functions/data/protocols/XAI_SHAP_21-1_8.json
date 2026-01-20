@@ -1,0 +1,1980 @@
+[
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "<h3> Participation to a Study of the impact of AI and explainable AI on Human Performance</h3><br/>",
+                "secondary_text": "<header></header><section><b>Project Objectives</b><p>The aim of this project is to study the impact of Artificial Intelligence (AI) and explainable AI on human performance in carrying out a decision-making task.</p></section> <hr> <section><b>What Is Expected of You</b><p>You will need to take decisions related to the content of images of geometrical symbols. For each image presented to you, will have to answer a question within a limited time.</p><p>You are expected to perform as well as possible. <b>Your performance will be evaluated based on the number of correct answers to evaluated tasks, and your bonus remuneration will be calculated based on this performance.</b> You will be informed when a task is evaluated or not.</p></p> Depending on your random assignment into a group, you might receive the assistance of an AI to perform the tasks.</p></section> <hr> <section><b>Your Right to Withdraw from the Study</b><p>You have the right to withdraw from the study at any time.</p></section> <hr> <section><b>Reporting issues</b><p>You can report issues at the email adress given at the end of the study, if you detect any.</p></section> <hr> <section><b>Confidentiality and Privacy</b><p>The information collected in this form is recorded in a file by Jules Leguy for research purposes, specifically to study human performance in a decision making task. The legal basis for this data processing is your consent.</p><p>The collected data will only be shared with the following recipients:</p><ul><li>Jules Leguy</li><li>Andon Tchechmedjiev</li></ul><p>The data will be kept for five years after the scientific publication (expected in 2026). You may request access to your personal data, request corrections, or exercise your right to restrict the processing of your data. </p><p>To exercise your rights or ask questions regarding data processing within this framework, you may contact: <a href='mailto:andon.tchechmedjiev@mines-ales.fr'>andon.tchechmedjiev@mines-ales.fr</a>.</p></section> <hr> <section><b>Expected Benefits of the Study</b><p>Your remuneration will include a <b>fixed part and a variable part.</b></p> <p>The fixed part is a payment at an <b>hourly rate of \u00a36</b>. The expected duration of the experiment is 20 minutes, so it should correspond to a \u00a32.0 payment. The actual time used for this calculation will be the median completion time across all participants.</p> <p>The variable part depends solely on your performance during the experiment. <b>You will receive \u00a30.04 for each correct answer to an evaluated question (not all question will be evaluated, and you will know which ones are evaluated or not). There will be 53 evaluated questions, giving a minimum of \u00a30 and a maximum of \u00a32.12.</b></p><p>In case the measured time is effectively 20 minutes, <b>your remuneration would range from \u00a32.0 to \u00a34.12 depending on your performance</b>. This would correspond to an <b>effective hourly rate ranging between \u00a36 and \u00a312.36</b>.</p></section> <hr> <section><b>Possible Risks</b><p>The risks involved in these tests are no different from those encountered when performing a standard computer task.</p></section> <hr> <section><b>Right to Withdraw Consent</b><p>I understand that my participation in this research is voluntary and that I may refuse to participate. If I choose so, I am free to stop participating at any time, without having to provide justification. I will inform the Scientific Supervisor in writing at the following address: <a href='mailto:jules.leguy@mines-ales.fr'>jules.leguy@mines-ales.fr</a>.</section> <hr> <section><b>Color Vision Requirement</b><p>This study requires accurate color perception, as the tasks involve distinguishing symbols based on color. For this reason, the protocol screens out participants with colorblindness. You have indicated to Prolific that you are not colorblind. Please only accept this form if that is effectively the case.</p></section><section><b>Consent</b></section>",
+                "answers": [
+                    "I have read and understand the information contained in this document, and I freely and knowingly consent to participate to this research project. I also confirm that I am not colorblind, as I have indicated on my Prolific profile.",
+                    "I do not consent to participate to this research project or I am colorblind."
+                ]
+            }
+        ],
+        "break": {
+            "index": 1,
+            "text": "Use the following link to end the experiment and come back to Prolific : <a href='https://app.prolific.com/submissions/complete?cc=C16YLJGE'>https://app.prolific.com/submissions/complete?cc=C16YLJGE</a>. If it doesn't work, use the code C16YLJGE."
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Pattern identification tasks</h3>",
+        "body_text": "<div class='text-start'> <p> The tasks of this protocol will consist in searching whether a pattern (or its rotations) can be found in an image or not.</p> <p> Below is an example. The pattern to search for contains several symbols, and an empty cell with a question mark. <b>When searching for the pattern, the cell with the question mark can be matched with any symbol </b> (as in the image B), <b>or it can also be matched with an empty cell</b> (as in the image A). In addition, the task consists in searching for rotations of the pattern. The rotations considered are a rotation to the right (symbolized by \u21bb, as in the image C) or a rotation to the left (symbolized by \u21ba, as in the image D). In the image E, the pattern or its rotations do not appear. </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-9 d-flex flex-column align-items-center'><img src='assets/res/img/example_patternsearch.png' class='img-fluid' alt='Explanation for the pattern task'> </div> </div> </div> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Let's jump in</h3>",
+        "body_text": "<div class='text-start'> <p>You will now perform a first training task. It consists in answering a single question relative to the content of images of symbols of colors. You must answer the question for 4 different images. This task will <b>NOT</b> count towards your bonus remuneration.</p> <p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Adjustment of page zoom</h3>",
+        "body_text": "<div class='text-start'> <p>When you will perform the task, please make sure all elements of the page fit on your monitor, without needing to scroll the page. If it does not fit fully, please use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page so that all elements of the page can be seen at once. Below is an example of display where all elements are visible at once.</p><img src='assets/res/img/example_fit_interface.png' class='img-fluid' alt='page where all elements are visible at once'></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "intro_discovery_rule",
+        "title": "<h3>New task (training)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f863cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, there is no time limit to answer the questions.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/med1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/med1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (training)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "intro_discovery_task",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f863cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": -1,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": true,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med1_find_pattern_rot/15.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med1_find_pattern_rot/174.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med1_find_pattern_rot/95.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med1_find_pattern_rot/170.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3> Protocol outline </h3>",
+        "body_text": "<div class='text-start'> <p> The protocol will last about 20 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_exp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/>  <p><u>Introduction</u><br/> First, you will must perform a task that will be used to verify that you understand the instructions. This task will contribute to your bonus remuneration (you will earn \u00a30.04 for each correct answer). It will be the only task of the introduction that does contribute to the bonus remuneration.</p> <p>To finalize the training, you will then start the preparation phase, which consists in solving a task which will closely resemble those of the main experimental phase. </p> <p> <u>Main experiment</u><br/>Then, the main experiment will start. It will be divided into 4 tasks, that will count towards your score and bonus remuneration. Right after each task, you will have to take a survey to give feedback about the task you just performed.</p><p> <u>Closing</u><br/> Finally, you will enter the closing phase, in which you will have to answer a final survey to conclude the protocol.</p><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3> Start of the comprehension test </h3>",
+        "body_text": "<div class='text-start'> <p> The comprehension test task will start now. Your submission will not be rejected because of this task, but please try to answer the best you can to demonstrate that you understand what is expected of you. This task <b>does count</b> towards your bonus remuneration, thus you will earn \u00a30.04 for each correct answer.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "intro_comprehension_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/1432cdf4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, there is no time limit to answer the questions.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/xeasy1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/xeasy1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "intro_comprehension_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/1432cdf4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": -1,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/xeasy1_find_pattern_rot/112.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/xeasy1_find_pattern_rot/10.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/xeasy1_find_pattern_rot/85.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/xeasy1_find_pattern_rot/182.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/xeasy1_find_pattern_rot/29.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>AI assistant</h3>",
+        "body_text": "<div class='text-start'><p>To assist you in performing the tasks, you will receive the help of an AI assistant. The AI has access to the same source image as you do, and will provide a suggestion on the decision to be made. Please note that <b>the AI might make mistakes, and that the ultimate decision is always your responsability.</b></p><p> In addition, you will have access to a justification of the AI's prediction. The justification will highlight areas of the image which were important for the prediction. Green areas highlight zones which are leaning towards the decision YES, and red areas highlight zones which are leaning towards the decision NO.</p><p>Here is an example of AI prediction for the search of the pattern below. In this instance, the AI predicts that the pattern was found (YES prediction).</p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-4 d-flex flex-column align-items-center'><img src='assets/res/img/pattern_example.png' class='img-fluid' alt='pattern to search'> </div><br/><div class='col-10 col-md-10 d-flex flex-column align-items-center'><img src='assets/res/img/shap_example.png' class='img-fluid' alt='AI example'> </div> </div> </div> <br/><p><b>Please make sure you understand how the justification works before clicking on the button below.</b></p>",
+        "button_text": "I read and understood the instructions",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_intro_prep.png' class='img-fluid' alt='timeline'></br><hr><h3>Introduction - Main experiment preparation</h3>",
+        "body_text": "<div class='text-start'><p>You are now entering the preparation phase for the Main experiment. You are about to perform a task with 5 questions. It will closely resemble the tasks of the Main experiment and is intended to help you practice and prepare for the next phase.</p><p>As in the main experimental phase, you will have a limited amount of time to respond to each question. <b>Responding faster will not improve your score</b>. However, <b> if you fail to respond within the alloted time, it will be counted as an error.</b> The allotted time for each question during this training phase is 45 seconds, and it will be shorter for the evaluated tasks in the main experiment.<p>As this is still a training phase, your score does <b>not</b> count towards your bonus remuneration.</p><p>Note that these training tasks are a good opportunity to interact with the AI\u2019s outputs, as there will be less time for such analysis during the main experiment.</p> <p>Remember to use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page size if not all elements can be seen at once.</p>",
+        "button_text": "Start training",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "intro_training_1_rule",
+        "title": "<h3>New task (training)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140fce94d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>45 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/med3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/med3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (training)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "intro_training_1_task",
+        "desc": "<div style='font-size:1.2em'> Training task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140fce94d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 45,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med3_find_pattern_rot/172.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/med3_find_pattern_rot/172.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med3_find_pattern_rot/177.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/med3_find_pattern_rot/177.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med3_find_pattern_rot/107.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/med3_find_pattern_rot/107.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med3_find_pattern_rot/198.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/med3_find_pattern_rot/198.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/med3_find_pattern_rot/33.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/med3_find_pattern_rot/33.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment</h3>",
+        "body_text": "<div class='text-start'> <p>The introduction is over. You are now entering the main experimental phase. <b>Your performance during this phase will count towards your bonus remuneration.</b> As a reminder, the structure of the experiment is described in the diagram below.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/diagram_mainexp.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> This phase consists in solving 4 tasks. After each task, you must answer a survey directly related to the task you just performed. There are no right or wrong answers to the survey questions; only your score during the tasks will count towards your bonus remuneration.</p> <p>Please remind that you still have to answer the questions within an alloted time for each image. Responding faster does not improve your score. However, <b> if you fail to respond within the alloted time, it will be counted as an error.</b> <p>Remember to use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page size if not all elements can be seen at once.</p>",
+        "button_text": "Enter the Main experiment",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp_task_1.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 1</h3>",
+        "body_text": "<div class='text-start'> <p>Click on the button below to start Task 1.</p>",
+        "button_text": "Start Task 1",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "mainexp_easy_mild_patrot_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/141040a4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>25 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "mainexp_easy_mild_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/141040a4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 25,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/182.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/182.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/69.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/69.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/66.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/66.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/174.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/174.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/165.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/165.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/15.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/15.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/128.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/128.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/170.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/170.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/158.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/30.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/30.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/152.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/152.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy1_find_pattern_rot/95.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy1_find_pattern_rot/95.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "mainexp_easy_mild_reliance"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ],
+        "view_id": "mainexp_easy_mild_cogload"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>The color of the sky is </b>",
+                "answers": [
+                    "(1) Blue",
+                    "(2) Purple",
+                    "(3) Yellow"
+                ]
+            }
+        ],
+        "view_id": "attentioncheck_1"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp_task_2.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 2 </h3>",
+        "body_text": "<div class='text-start'> <p>The first task is over. Click on the button below to start Task 2.</p>",
+        "button_text": "Start Task 2",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "mainexp_easy_strong_patrot_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>10 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "mainexp_easy_strong_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 10,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/30.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/30.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/135.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/135.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/40.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/40.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/82.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/82.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/71.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/71.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/64.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/64.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/179.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/179.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/104.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/104.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/72.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/72.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/39.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/39.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/106.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/106.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/153.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/easy3_find_pattern_rot/153.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "mainexp_easy_strong_reliance"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ],
+        "view_id": "mainexp_easy_strong_cogload"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp_task_3.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 3 </h3>",
+        "body_text": "<div class='text-start'> <p>The second task is over. Click on the button below to start Task 3.</p>",
+        "button_text": "Start Task 3",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "mainexp_hard_strong_patrot_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f4c08d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>10 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "mainexp_hard_strong_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f4c08d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 10,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/82.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/82.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/64.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/64.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/121.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/121.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/189.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/189.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/106.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/106.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/56.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/56.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/135.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/135.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/40.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/40.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/120.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/120.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/71.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/71.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/104.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/104.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard3_find_pattern_rot/72.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard3_find_pattern_rot/72.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "mainexp_hard_strong_reliance"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ],
+        "view_id": "mainexp_hard_strong_cogload"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp_task_4.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 4 </h3>",
+        "body_text": "<div class='text-start'> <p>The thrid task is over. Click on the button below to start the last Task.</p>",
+        "button_text": "Start Task 4",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "mainexp_hard_mild_patrot_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>25 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "mainexp_hard_mild_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 25,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/165.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/165.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/158.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/158.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/182.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/182.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/66.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/66.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/152.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/152.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/15.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/15.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/115.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/115.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/170.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/170.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/128.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/128.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/30.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/30.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/174.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/174.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/95.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_shap/hard1_find_pattern_rot/95.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "mainexp_hard_mild_reliance"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ],
+        "view_id": "mainexp_hard_mild_cogload"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Main experiment - End</h3>",
+        "body_text": "<div class='text-start'> <p>The main experiment is now terminated. Click on the button below to start the closing phase of the protocol.</p>",
+        "button_text": "Start Closing phase",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_closing.png' class='img-fluid' alt='timeline'></br><hr><h3>Closing phase</h3>",
+        "body_text": "<div class='text-start'>Thank you for completing all the tasks. Before terminating the protocol, you will complete a final survey (several pages).</div>",
+        "button_text": "Start the final survey",
+        "with_button": "True"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures how you used the AI's justifications. Please rate your level of agreement with each statement.<hr>",
+                "secondary_text": "<b>I think the justifications were helpful to verify the answers to the questions.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>I think the justifications were helpful to understand the AI's decision processes.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>I think the justifications were helpful to detect the AI's errors.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "closing_quest_use_xai"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>The tasks you had to perfom consisted in </b>",
+                "answers": [
+                    "(1) Searching for patterns and their rotations",
+                    "(2) Counting the number of symbols and colors",
+                    "(3) Searching for lines or columns which had an odd number of symbols"
+                ]
+            }
+        ],
+        "view_id": "attentioncheck_2"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Please answer the question below.<hr>",
+                "secondary_text": "<b>Which sentence would best describe the strategy you used to maximize your score and monetary bonus?</b>",
+                "answers": [
+                    "I largely relied on the AI\u2019s predictions, because I think they were correct all the time or almost all the time.",
+                    "I largely relied on the AI\u2019s predictions, because I perceived them as imperfect but sufficiently accurate, and not worth the effort to surpass.",
+                    "I sometimes or often relied on the AI\u2019s predictions, but due to limited trust in the AI, I made efforts to answer independently or to verify its predictions for many questions.",
+                    "I barely relied or did not rely at all on the AI\u2019s predictions, because I had a very limited trust in the predictions.",
+                    "I barely relied or did not rely at all on the AI\u2019s predictions, because I wanted to do the task by myself, independently of my assessment of the reliability of the AI.",
+                    "I did not have a consistent strategy, or my strategy was not described in the propositions above."
+                ]
+            }
+        ],
+        "view_id": "closing_quest_strategy"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>End of the protocol</h3>",
+        "body_text": "<div class='text-start'> <div> <p>The protocol is now over.</p> <p>Use the following link to come back to Prolific : <a href='https://app.prolific.com/submissions/complete?cc=C13X3WJS'>https://app.prolific.com/submissions/complete?cc=C13X3WJS</a>. If it doesn't work, use the code C13X3WJS.</p><p>In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:jules.leguy@mines-ales.fr'>jules.leguy@mines-ales.fr</a>.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div><div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imtbs.png' class='img-fluid w-100' alt='IMT BS logo'> </div> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='ENFIELD logo'> </div> </div></div>"
+    }
+]
