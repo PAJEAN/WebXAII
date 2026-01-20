@@ -1902,7 +1902,8 @@
                     "(3) Searching for lines or columns which had an odd number of symbols"
                 ]
             }
-        ]
+        ],
+        "view_id": "attentioncheck_2"
     },
     {
         "type": "p-questionnaire",
