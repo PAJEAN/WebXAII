@@ -370,403 +370,6 @@
     },
     {
         "type": "p-instruction",
-        "view_id": "mainexp_hard_mild_patrot_rule",
-        "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>25 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
-        "with_button": true,
-        "button_text": "Start the task (evaluated)"
-    },
-    {
-        "type": "p-task",
-        "view_id": "mainexp_hard_mild_patrot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
-        "show_progression_bar": true,
-        "randomize": true,
-        "timer": 25,
-        "time_exceeded_timer": 3,
-        "feedback_answer_activated": false,
-        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
-        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
-        "feedback_answer_show_expected": false,
-        "feedback_answer_expected_text": "Expected answer : ",
-        "instances": [
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/165.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/165.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/158.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/158.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/182.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/182.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/66.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/66.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/152.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/152.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/15.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/15.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/115.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/115.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/170.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/170.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/128.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/128.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/30.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/30.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/174.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/174.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/hard1_find_pattern_rot/95.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/95.png",
-                        "title": "AI"
-                    }
-                ]
-            }
-        ],
-        "question": {
-            "type": "button",
-            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
-            "answers": [
-                "Yes",
-                "No"
-            ],
-            "options": {
-                "css_class_colors": [
-                    "btn-success",
-                    "btn-danger"
-                ]
-            }
-        }
-    },
-    {
-        "type": "p-questionnaire",
-        "questions": [
-            {
-                "type": "radio",
-                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
-                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
-                "answers": [
-                    "(1) Strongly Disagree",
-                    "(2) Disagree",
-                    "(3) Somewhat Disagree",
-                    "(4) Neutral",
-                    "(5) Somewhat Agree",
-                    "(6) Agree",
-                    "(7) Strongly Agree"
-                ]
-            }
-        ],
-        "view_id": "mainexp_hard_mild_reliance"
-    },
-    {
-        "type": "p-questionnaire",
-        "questions": [
-            {
-                "type": "radio",
-                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
-                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
-                "answers": [
-                    "Very low",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Very high"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
-                "answers": [
-                    "Very low",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Very high"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
-                "answers": [
-                    "Very low",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Very high"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
-                "answers": [
-                    "Perfect",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Failure"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
-                "answers": [
-                    "Very low",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Very high"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            },
-            {
-                "type": "radio",
-                "primary_text": "",
-                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
-                "answers": [
-                    "Very low",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "Very high"
-                ],
-                "options": {
-                    "inline": "",
-                    "limit_values": ""
-                }
-            }
-        ],
-        "view_id": "mainexp_hard_mild_cogload"
-    },
-    {
-        "type": "p-instruction",
-        "view_id": null,
-        "title": "<h3>Task score</h3>",
-        "body_text": "On the previous task, you achieved a score of",
-        "with_button": true,
-        "button_text": "Next",
-        "score": true
-    },
-    {
-        "type": "p-questionnaire",
-        "questions": [
-            {
-                "type": "radio",
-                "primary_text": "This survey measures important information. Please answer as required.<hr>",
-                "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
-                "answers": [
-                    "(1) Strongly Disagree",
-                    "(2) Disagree",
-                    "(3) Somewhat Disagree",
-                    "(4) Neutral",
-                    "(5) Somewhat Agree",
-                    "(6) Agree",
-                    "(7) Strongly Agree"
-                ]
-            },
-            {
-                "type": "radio",
-                "secondary_text": "<b>The color of the sky is </b>",
-                "answers": [
-                    "(1) Blue",
-                    "(2) Purple",
-                    "(3) Yellow"
-                ]
-            }
-        ],
-        "view_id": "attentioncheck_1"
-    },
-    {
-        "type": "p-instruction",
-        "title": "<img src='assets/res/img/timeline_mainexp_task_2.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 2 </h3>",
-        "body_text": "<div class='text-start'> <p>The first task is over. Click on the button below to start Task 2.</p>",
-        "button_text": "Start Task 2",
-        "with_button": "True"
-    },
-    {
-        "type": "p-instruction",
         "view_id": "mainexp_hard_strong_patrot_rule",
         "title": "<h3>New task (evaluated)<h3>",
         "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f4c08d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>10 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
@@ -1116,6 +719,403 @@
             }
         ],
         "view_id": "mainexp_hard_strong_cogload"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task score</h3>",
+        "body_text": "On the previous task, you achieved a score of",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>The color of the sky is </b>",
+                "answers": [
+                    "(1) Blue",
+                    "(2) Purple",
+                    "(3) Yellow"
+                ]
+            }
+        ],
+        "view_id": "attentioncheck_1"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/timeline_mainexp_task_2.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment - Task 2 </h3>",
+        "body_text": "<div class='text-start'> <p>The first task is over. Click on the button below to start Task 2.</p>",
+        "button_text": "Start Task 2",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": "mainexp_easy_strong_patrot_rule",
+        "title": "<h3>New task (evaluated)<h3>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>10 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "with_button": true,
+        "button_text": "Start the task (evaluated)"
+    },
+    {
+        "type": "p-task",
+        "view_id": "mainexp_easy_strong_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": 10,
+        "time_exceeded_timer": 3,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_wrong": "This is not the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/30.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/30.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/135.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/135.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/40.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/40.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/82.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/82.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/71.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/71.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/64.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/64.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/179.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/179.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/104.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/104.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/72.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/72.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/39.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/39.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/106.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/106.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/easy3_find_pattern_rot/153.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/153.png",
+                        "title": "AI"
+                    }
+                ]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below, before the timer ends.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+                "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            }
+        ],
+        "view_id": "mainexp_easy_strong_reliance"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ],
+        "view_id": "mainexp_easy_strong_cogload"
     },
     {
         "type": "p-instruction",
@@ -1503,19 +1503,19 @@
     },
     {
         "type": "p-instruction",
-        "view_id": "mainexp_easy_strong_patrot_rule",
+        "view_id": "mainexp_hard_mild_patrot_rule",
         "title": "<h3>New task (evaluated)<h3>",
-        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>10 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/easy3_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
+        "body_text": "\u26a0\ufe0f New question \u26a0\ufe0f<br/><br/><div class='text-start'><p>The question is : <b>Is the pattern or any of its left or right rotations in the image?</b> </p><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div><p> For this task, you will have <b>25 seconds</b> at most to answer each question.</p><br/><br/><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/pos_example.png' class='img-fluid w-70' alt='Example of image with answer Yes'> Example of image with answer <b>Yes</b> </div> <div class='col-12 col-md-5 d-flex flex-column align-items-center'> <img src='assets/res/input/hard1_find_pattern_rot/neg_example.png' class='img-fluid w-100' alt='Example of image with answer No'> Example of image with answer <b>No</b> </div> </div> </div>",
         "with_button": true,
         "button_text": "Start the task (evaluated)"
     },
     {
         "type": "p-task",
-        "view_id": "mainexp_easy_strong_patrot_task",
-        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/14104ff4d25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
+        "view_id": "mainexp_hard_mild_patrot_task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>Is the pattern or any of its left or right rotations in the image? </b></div><div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-9 col-md-3 d-flex flex-column align-items-center'><img src='assets/res/tasks/140f282cd25511f088b412a439d55952.png' class='img-fluid' alt='Pattern to search for'> </div> </div> </div>",
         "show_progression_bar": true,
         "randomize": true,
-        "timer": 10,
+        "timer": 25,
         "time_exceeded_timer": 3,
         "feedback_answer_activated": false,
         "feedback_answer_correct": "This is the correct answer. Please remind to adjust the zoom of the page in case all elements are not visible at once (using ctrl and mouse scroll or ctrl and +/- keys).",
@@ -1526,44 +1526,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/30.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/30.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/135.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 0,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/135.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/40.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/165.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/40.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/165.png",
                         "title": "AI"
                     }
                 ]
@@ -1571,14 +1541,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/82.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/158.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/82.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/158.png",
                         "title": "AI"
                     }
                 ]
@@ -1586,14 +1556,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/71.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/182.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/71.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/182.png",
                         "title": "AI"
                     }
                 ]
@@ -1601,14 +1571,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/64.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/66.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/64.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/66.png",
                         "title": "AI"
                     }
                 ]
@@ -1616,14 +1586,29 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/179.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/152.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/152.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/15.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/179.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/15.png",
                         "title": "AI"
                     }
                 ]
@@ -1631,29 +1616,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/104.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/104.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/72.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/115.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/72.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/115.png",
                         "title": "AI"
                     }
                 ]
@@ -1661,14 +1631,14 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/39.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/170.png",
                     "title": "Image to analyze"
                 },
                 "expected": 1,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/39.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/170.png",
                         "title": "AI"
                     }
                 ]
@@ -1676,29 +1646,59 @@
             {
                 "input": {
                     "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/106.png",
-                    "title": "Image to analyze"
-                },
-                "expected": 1,
-                "explanations": [
-                    {
-                        "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/106.png",
-                        "title": "AI"
-                    }
-                ]
-            },
-            {
-                "input": {
-                    "is_image": true,
-                    "label": "assets/res/input/easy3_find_pattern_rot/153.png",
+                    "label": "assets/res/input/hard1_find_pattern_rot/128.png",
                     "title": "Image to analyze"
                 },
                 "expected": 0,
                 "explanations": [
                     {
                         "is_image": true,
-                        "label": "assets/res/xai_LLM/easy3_find_pattern_rot/153.png",
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/128.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/30.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/30.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/174.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/174.png",
+                        "title": "AI"
+                    }
+                ]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/hard1_find_pattern_rot/95.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [
+                    {
+                        "is_image": true,
+                        "label": "assets/res/xai_LLM/hard1_find_pattern_rot/95.png",
                         "title": "AI"
                     }
                 ]
@@ -1737,7 +1737,7 @@
                 ]
             }
         ],
-        "view_id": "mainexp_easy_strong_reliance"
+        "view_id": "mainexp_hard_mild_reliance"
     },
     {
         "type": "p-questionnaire",
@@ -1851,7 +1851,7 @@
                 }
             }
         ],
-        "view_id": "mainexp_easy_strong_cogload"
+        "view_id": "mainexp_hard_mild_cogload"
     },
     {
         "type": "p-instruction",

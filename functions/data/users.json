@@ -123,6 +123,14 @@
         "roles": "user",
         "protocol": "H_21-2_30.json"
     },
+    "H_31": {
+        "roles": "user",
+        "protocol": "H_21-2_31.json"
+    },
+    "H_32": {
+        "roles": "user",
+        "protocol": "H_21-2_32.json"
+    },
     "AI_0": {
         "roles": "user",
         "protocol": "AI_21-2_0.json"
@@ -246,6 +254,14 @@
     "AI_30": {
         "roles": "user",
         "protocol": "AI_21-2_30.json"
+    },
+    "AI_31": {
+        "roles": "user",
+        "protocol": "AI_21-2_31.json"
+    },
+    "AI_32": {
+        "roles": "user",
+        "protocol": "AI_21-2_32.json"
     },
     "XAI_SHAP_0": {
         "roles": "user",
@@ -371,6 +387,14 @@
         "roles": "user",
         "protocol": "XAI_SHAP_21-2_30.json"
     },
+    "XAI_SHAP_31": {
+        "roles": "user",
+        "protocol": "XAI_SHAP_21-2_31.json"
+    },
+    "XAI_SHAP_32": {
+        "roles": "user",
+        "protocol": "XAI_SHAP_21-2_32.json"
+    },
     "XAI_CF_0": {
         "roles": "user",
         "protocol": "XAI_CF_21-2_0.json"
@@ -494,6 +518,14 @@
     "XAI_CF_30": {
         "roles": "user",
         "protocol": "XAI_CF_21-2_30.json"
+    },
+    "XAI_CF_31": {
+        "roles": "user",
+        "protocol": "XAI_CF_21-2_31.json"
+    },
+    "XAI_CF_32": {
+        "roles": "user",
+        "protocol": "XAI_CF_21-2_32.json"
     },
     "XAI_GRADCAM_0": {
         "roles": "user",
@@ -619,6 +651,14 @@
         "roles": "user",
         "protocol": "XAI_GRADCAM_21-2_30.json"
     },
+    "XAI_GRADCAM_31": {
+        "roles": "user",
+        "protocol": "XAI_GRADCAM_21-2_31.json"
+    },
+    "XAI_GRADCAM_32": {
+        "roles": "user",
+        "protocol": "XAI_GRADCAM_21-2_32.json"
+    },
     "XAI_LLM_0": {
         "roles": "user",
         "protocol": "XAI_LLM_21-2_0.json"
@@ -742,5 +782,13 @@
     "XAI_LLM_30": {
         "roles": "user",
         "protocol": "XAI_LLM_21-2_30.json"
+    },
+    "XAI_LLM_31": {
+        "roles": "user",
+        "protocol": "XAI_LLM_21-2_31.json"
+    },
+    "XAI_LLM_32": {
+        "roles": "user",
+        "protocol": "XAI_LLM_21-2_32.json"
     }
 }
