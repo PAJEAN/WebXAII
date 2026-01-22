@@ -1,2 +1,5 @@
 {
+  "test": {
+    "protocol": "XAI_LLM_21-2_7.json"
+  }
 }
