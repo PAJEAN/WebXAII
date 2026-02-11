@@ -1,2 +1,5 @@
 {
+  "development": {
+    "protocol": "XAI_GRADCAM_28-1_2.json"
+  }
 }

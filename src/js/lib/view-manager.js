@@ -76,7 +76,7 @@ export function nextView() {
 
     console.log(store.state[keys.s_save])
     
-    if (process.env.NODE_ENV == 'production') {
+    if (process.env.NODE_ENV == 'production') { // || process.env.NODE_ENV == 'development') {
         // @ts-ignore
         axios.patch(DATA_URL, {
             uid: store.state.uid,
