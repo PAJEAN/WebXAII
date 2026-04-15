@@ -167,7 +167,7 @@ try {
                         
                         
                         this._connectUser(user_id.value);
-                    });
+                    }, { once: true });
                 } else {
                     login_content.style.display  = 'none';
                     logout_content.style.display = 'block';
@@ -202,7 +202,7 @@ try {
                 /* Setup the page */
                 this._init();
                 /* Update UI */
-                this.unsubscribe = store.events.subscribe('stateChange', this._init.bind(this));
+                // this.unsubscribe = store.events.subscribe('stateChange', this._init.bind(this));
                 /* Check if user is given on url parameters */
                 if (this.hasAttribute('user-id')) {
                     console.log(this.getAttribute('user-id'));
@@ -215,7 +215,7 @@ try {
             }
           
             disconnectedCallback () {
-                this.unsubscribe();
+                // this.unsubscribe();
             }
         });
     })();

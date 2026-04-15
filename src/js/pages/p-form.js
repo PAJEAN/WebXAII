@@ -90,7 +90,7 @@ try {
 
             _init() {
                 let btn = this.content.querySelector('#next-btn');
-                btn.addEventListener('click', this._submit);
+                btn.addEventListener('click', this._submit, { once: true });
             }
          
             connectedCallback () {

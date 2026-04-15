@@ -310,7 +310,7 @@ try {
                 next_btn.textContent = 'Next';
                 next_btn.addEventListener('click', () => {
                     this._transition();
-                });
+                }, { once: true });
                 next_btn.style.display = 'none';
                 submit_btn.parentElement.appendChild(next_btn);
             }
