@@ -101,7 +101,7 @@ try {
                     let btn = document.createElement('button');
                     btn.textContent = this.current_view.button_text;
                     btn.classList.add('btn', 'btn-primary', 'btn-lg', 'text-uppercase', 'mt-3', 'w-100');
-                    btn.addEventListener('click', this._submit);
+                    btn.addEventListener('click', this._submit, { once: true });
                     btn_container.appendChild(btn);
                 }
                 if (this.current_view.countdown) {

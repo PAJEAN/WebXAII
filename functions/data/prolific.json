@@ -1,5 +1,8 @@
 {
   "development": {
     "protocol": "XAI_GRADCAM_28-1_2.json"
+  },
+  "H_28-1_5": {
+    "protocol": "XAI_CF_28-1_1.json"
   }
 }
