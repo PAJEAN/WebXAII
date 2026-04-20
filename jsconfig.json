@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "strict": false,
     "target": "ES6",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
         "JS/*": ["src/js/*"],
         "CSS/*": ["src/css/*"]

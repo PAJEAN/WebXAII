@@ -1,6 +1,43 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
-
+    {
+        "type": "p-chain-task",
+        "images": [
+            "assets/datasets/single-kingfisher-bird_xai.jpg",
+            "assets/datasets/single-kingfisher-bird_xai.jpg"
+        ],
+        "labels": [
+            [
+                "label1_1",
+                "label1_2",
+            ],
+            [
+                "label2_1",
+                "label2_2",
+                "label3_2",
+            ],
+        ],
+        "timer": -1
+    },
+    {
+        "type": "p-chain-task",
+        "images": [
+            "assets/datasets/single-kingfisher-bird_xai.jpg",
+            "assets/datasets/single-kingfisher-bird_xai.jpg"
+        ],
+        "labels": [
+            [
+                "label1_1_b",
+                "label1_2_b",
+            ],
+            [
+                "label2_1",
+                "label2_2",
+                "label3_2",
+            ],
+        ],
+        "timer": -1
+    },
     {
         "type": "p-task",
         "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",

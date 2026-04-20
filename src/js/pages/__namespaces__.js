@@ -1,11 +1,12 @@
 // @ts-check
 
-import { Desc, Experiment, Form } from "JS/store/modules/view-classes";
+import { Desc, ChainExperiment, Experiment, Form } from "JS/store/modules/view-classes";
 
 export const PAGE_NAMES = {
     AUTHENTICATION: 'p-authentication',
     DESC:           'p-instruction',
     EXPE:           'p-task',
+    CHAIN_EXPE:     'p-chain-task',
     FORM:           'p-questionnaire',
 }
 
@@ -30,6 +31,13 @@ export const PAGES_INFO = {
             title: 'Task'
         },
         class_type: Experiment
+    },
+    [PAGE_NAMES.CHAIN_EXPE]: {
+        route: {
+            path: '/chain-expe',
+            title: 'Chain experiment'
+        },
+        class_type: ChainExperiment
     },
     [PAGE_NAMES.FORM]: {
         route: {
