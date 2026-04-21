@@ -65,7 +65,8 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
     :param view_id: id of the results view to extract
     :param protocol_d: protocol dictionary corresponding to the given result dictionary. If specified, this function
     also returns the text value of the choices made by the user.
-    :return: answers_idx_vect, answers_text_vect (None if protocol_d not specified), time_vect, time_exceeded_vect
+    :return: answers_idx_vect, answers_text_vect (None if protocol_d not specified),
+    quest_participant_order_vect, time_vect, time_exceeded_vect
     """
 
     # Getting the task results
@@ -76,18 +77,20 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
 
     answers_idx_vect = np.zeros((nb_quest,), dtype=float)
     answers_text_vect = np.zeros((nb_quest,), dtype="U1000") if protocol_d is not None else None
+    quest_participant_order_vect = np.zeros((nb_quest,), dtype=int) if protocol_d is not None else None
     time_vect = np.zeros((nb_quest,), dtype=float)
     time_exceeded_vect = np.zeros((nb_quest,), dtype=bool)
 
     if protocol_d is not None:
         protocol_entry = get_protocol_entry_from_key(protocol_d, view_id)
 
-    for question_entry in view_dict["instances"]:
+    for idx, question_entry in enumerate(view_dict["instances"]):
 
         actual_idx = question_entry["order_index"]
         answer_idx = question_entry["answers"][0][0] if question_entry["answers"][0] else None
         # try:
         answers_idx_vect[actual_idx] = answer_idx
+        quest_participant_order_vect[actual_idx] = idx
         # # Happens if the task was incomplete
         # except IndexError:
         #     continue
@@ -98,7 +101,8 @@ def extract_p_task_results(results_d, view_id, protocol_d=None):
         time_vect[actual_idx] = question_entry["time"]
         time_exceeded_vect[actual_idx] = question_entry["is_time_exceeded"]
 
-    return answers_idx_vect, answers_text_vect, time_vect, time_exceeded_vect, _time_on_view(view_dict)
+    return (answers_idx_vect, answers_text_vect, quest_participant_order_vect, time_vect, time_exceeded_vect,
+            _time_on_view(view_dict))
 
 
 def extract_p_questionnaire_results(results_d, view_id, protocol_d=None):

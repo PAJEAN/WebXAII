@@ -7,6 +7,7 @@ import 'JS/components/wc-loading';
 
 /*** Pages ***/
 import 'JS/pages/p-auth';
+import 'JS/pages/p-chain-exp';
 import 'JS/pages/p-desc';
 import 'JS/pages/p-form';
 import 'JS/pages/p-exp';

@@ -302,6 +302,44 @@ export class Experiment extends View {
     get feedback_answer_expected_text() { return this._feedback_answer_expected_text; }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  ChainExp                                  */
+/* -------------------------------------------------------------------------- */
+
+export class ChainExperiment extends View {
+    
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        return true;
+    }
+
+    /**
+     * @param {object} view
+    */
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
+        /** @type {string[]} */
+        this._images = view.hasOwnProperty('images') ? view['images']: [];
+        /** @type {string[][]} */
+        this._labels = view.hasOwnProperty('labels') ? view['labels']: [];
+        /** @type {number} */
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        this._current_image_index = 0;
+    }
+
+    get images() { return this._images; }
+    get labels() { return this._labels; }
+    get timer() { return this._timer; }
+
+    get current_image_index() { return this._current_image_index; }
+    set current_image_index(index) { this._current_image_index = index; }
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                    Form                                    */
