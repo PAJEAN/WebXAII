@@ -3,39 +3,28 @@ export const TEST_VIEW = [
     {
         "type": "p-chain-task",
         "images": [
-            "assets/datasets/single-kingfisher-bird_xai.jpg",
+            "assets/datasets/single-kingfisher-bird.jpg",
             "assets/datasets/single-kingfisher-bird_xai.jpg"
         ],
         "labels": [
-            [
-                "label1_1",
-                "label1_2",
-            ],
-            [
-                "label2_1",
-                "label2_2",
-                "label3_2",
-            ],
+            "label1_1",
+            "label1_2",
         ],
-        "timer": -1
+        "truth": 0,
+        "timer": 6
     },
     {
         "type": "p-chain-task",
         "images": [
-            "assets/datasets/single-kingfisher-bird_xai.jpg",
-            "assets/datasets/single-kingfisher-bird_xai.jpg"
+            "assets/datasets/1.png",
+            "assets/datasets/2.png"
         ],
         "labels": [
-            [
-                "label1_1_b",
-                "label1_2_b",
-            ],
-            [
-                "label2_1",
-                "label2_2",
-                "label3_2",
-            ],
+            "label1_1_b",
+            "label1_2_b",
+            "label1_3_b",
         ],
+        "truth": 1,
         "timer": -1
     },
     {

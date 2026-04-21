@@ -14,6 +14,7 @@ try {
         labels_list: 'labels-list-div',
         next_btn: 'next-btn',
         timer: 'timer-div',
+        error: 'error-div',
     };
 
     (function() {
@@ -25,7 +26,7 @@ try {
             <style></style>
 
             <div id="${TAG_IDS.main_page}" class="vh-100">
-                <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+                <div class="d-flex flex-column justify-content-center align-items-center h-100">
                     <div class="row align-items-stretch">
                         <div id="${TAG_IDS.image}" class="col d-flex align-items-center">
                             <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="icon rounded img-thumbnail" alt="...">
@@ -68,7 +69,8 @@ try {
                             <button id="${TAG_IDS.next_btn}" type="button" class="btn btn-primary btn-lg text-uppercase w-100 mt-4">Next</button>
                         </div>
                     </div>
-                    <div id="${TAG_IDS.timer}" class="my-4"> Timer : 20 secondes </div>
+                    <div id="${TAG_IDS.timer}" class="my-4 fs-2"></div>
+                    <div id="${TAG_IDS.error}" class="text-center text-danger"></div>
                 </div>
             </div>
 
@@ -77,6 +79,11 @@ try {
         window.customElements.define(PAGE_NAME, class extends HTMLElement {
             constructor() {
                 super();
+            }
+
+            _clear_error() {
+                let error_tag = this.content.querySelector(`#${TAG_IDS.error}`);
+                error_tag.innerHTML = '';
             }
 
             _images() {
@@ -97,24 +104,26 @@ try {
 
                 let labels_tag = this.content.querySelector(`#${TAG_IDS.labels_list}`);
                 labels_tag.innerHTML = '';
-                let current_labels = this.current_view.labels[this.current_view.current_image_index]
-                for (let i = 0; i < current_labels.length; i++) {
-                    let label = current_labels[i];
-                    let label_tag = document.createElement('div');
-                    label_tag.classList.add('form-check');
-                    let label_input = document.createElement('input');
-                    label_input.classList.add('form-check-input');
-                    label_input.type = 'radio';
-                    label_input.name = 'labels';
-                    label_input.id = `label${i + 1}`;
-                    label_input.value = i.toString();
-                    label_tag.appendChild(label_input);
-                    let label_label = document.createElement('label');
-                    label_label.classList.add('form-check-label');
-                    label_label.htmlFor = `label${i + 1}`;
-                    label_label.textContent = label;
-                    label_tag.appendChild(label_label);
-                    labels_tag.appendChild(label_tag);
+                for (let i = 0; i < this.current_view.labels.length; i++) {
+                    let container = document.createElement('div');
+                    container.classList.add('form-check');
+
+                    let input = document.createElement('input');
+                    input.classList.add('form-check-input');
+                    input.type = 'radio';
+                    input.name = 'labels';
+                    input.id = `label${i + 1}`;
+                    input.value = i.toString();
+
+                    container.appendChild(input);
+
+                    let label_tag = document.createElement('label');
+                    label_tag.classList.add('form-check-label');
+                    label_tag.htmlFor = `label${i + 1}`;
+                    label_tag.textContent = this.current_view.labels[i];
+
+                    container.appendChild(label_tag);
+                    labels_tag.appendChild(container);
                 }
             }
 
@@ -143,17 +152,29 @@ try {
             }
 
             _submit() {
-                this.current_view.current_image_index += 1;
-                
                 /** @type {HTMLFormElement} */
                 let form = this.content.querySelector(`#${TAG_IDS.labels_list}`);
-                let form_data = new FormData(form);
-                console.log(form_data.get('labels')); // Index of the response.
-                
-                
-                if (this.current_view.current_image_index >= this.current_view.images.length) {
-                    /* Save */
-                    // ...
+                let form_data = new FormData(form); // Index of the response (ou null).
+
+                if (form_data.get('labels') == null && !this.time_exceeded_timer) {
+                    let error_tag = this.content.querySelector(`#${TAG_IDS.error}`);
+                    error_tag.textContent = 'Please select a label';
+                    return;
+                }
+
+                /* Save */
+                store.dispatch(keys.a_update_save, {
+                    instances: [{
+                        answers: form_data.get('labels') == null ? null : parseInt(form_data.get('labels')),
+                        time: this.current_time,
+                        is_time_exceeded: this.time_exceeded_timer,
+                        expected: this.current_view.truth
+                    }]
+                });           
+
+                this.current_view.current_image_index += 1;
+
+                if (this.current_view.current_image_index >= this.current_view.images.length || (form_data.get('labels') != null && parseInt(form_data.get('labels')) == this.current_view.truth)) {
                     nextView();
                 } else {
                     this._init();
@@ -164,10 +185,13 @@ try {
              * Displays a timer if required.
              */
             _timer() {
+                function timer_text(time) {
+                    return `Timer : ${time} secondes`;
+                }
                 let tag = this.content.querySelector(`#${TAG_IDS.timer}`);
                 
                 if (this.current_view.timer >= 0) {
-                    tag.textContent = this.current_view.timer.toFixed(0);
+                    tag.textContent = timer_text(this.current_view.timer.toFixed(0));
                     tag.classList.remove('text-danger');
                 }
 
@@ -183,19 +207,22 @@ try {
                     }
                     if (this.current_view.timer >= 0) {
                         if (current_time_second % 1 == 0) {
-                            tag.textContent = (Math.round(remaining_time * 100) / 100).toFixed(0);
+                            tag.textContent = timer_text((Math.round(remaining_time * 100) / 100).toFixed(0));
                         }
                         if (current_time_second >= this.current_view.timer) {
+                            this.time_exceeded_timer = true;
                             this._submit(true);
                         }
                     }
                 }, delta_time);
-            }
+            }            
 
             _init() {
                 this.timer_id && clearInterval(this.timer_id);
                 this.current_time = 0;
+                this.time_exceeded_timer = false;
 
+                this._clear_error();
                 this._images();
                 this._labels();
                 this._secure_timer();
@@ -223,7 +250,7 @@ try {
                 this.timer_id = undefined;
                 this.current_time = 0;
                 /** @type {number | undefined} */
-                this.time_exceeded_timer = undefined;
+                this.time_exceeded_timer = false;
 
                 this._init();
                 this._init_events();
