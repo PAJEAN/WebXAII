@@ -323,6 +323,8 @@ export class ChainExperiment extends View {
     */
     constructor(view) {
         super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
+        /** @type {string} */
+        this._desc = view.hasOwnProperty('desc') ? view['desc']: '';
         /** @type {string[]} */
         this._images = view.hasOwnProperty('images') ? view['images']: [];
         /** @type {string[]} */
@@ -331,9 +333,12 @@ export class ChainExperiment extends View {
         this._truth = view.hasOwnProperty('truth') ? view['truth']: -1; // Index of the correct label.
         /** @type {number} */
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
         this._current_image_index = 0;
     }
 
+    get confidence() { return this._confidence; }
     get images() { return this._images; }
     get labels() { return this._labels; }
     get timer() { return this._timer; }

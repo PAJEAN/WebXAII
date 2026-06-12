@@ -1,31 +1,60 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
+        "desc": "Second Task: Please select the correct category for the image",
         "type": "p-chain-task",
         "images": [
-            "assets/datasets/single-kingfisher-bird.jpg",
-            "assets/datasets/single-kingfisher-bird_xai.jpg"
+            "assets/datasets/felipe/cat.JPEG",
         ],
         "labels": [
-            "label1_1",
-            "label1_2",
+            "Airplane",
+            "Truck",
+            "Car",
+            "Ship",
+            "Cat",
+            "Equine",
+            "Deer",
+            "Frog",
+            "Dog",
+            "Bird"
         ],
-        "truth": 0,
-        "timer": 6
+        "truth": 4,
+        "timer": -1,
+        "confidence": false
     },
     {
+        "desc": "Third Task: Please select the correct category for the image",
         "type": "p-chain-task",
         "images": [
-            "assets/datasets/1.png",
-            "assets/datasets/2.png"
+            "assets/datasets/felipe/dog_s_1.JPEG",
+            "assets/datasets/felipe/dog_s_2.JPEG",
+            "assets/datasets/felipe/dog_s_3.JPEG",
+            "assets/datasets/felipe/dog_s_4.JPEG",
+            "assets/datasets/felipe/dog.JPEG",
         ],
         "labels": [
-            "label1_1_b",
-            "label1_2_b",
-            "label1_3_b",
+            "Airplane",
+            "Truck",
+            "Car",
+            "Ship",
+            "Cat",
+            "Equine",
+            "Deer",
+            "Frog",
+            "Dog",
+            "Bird"
         ],
-        "truth": 1,
-        "timer": -1
+        "truth": 8,
+        "timer": 15,
+        "confidence": true
+    },
+    {
+        view_id: 'my-desc-view',
+        score: true,
+        type: 'p-instruction',
+        title: '<h3><i>Congrats</i></h3',
+        body_text: "You've just achieved the last task",
+        with_button: false
     },
     {
         "type": "p-task",

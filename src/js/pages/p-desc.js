@@ -77,12 +77,25 @@ try {
                 card_body.appendChild(tag);
             }
 
-            _score() {
+            _score_exp() {
                 let experiment_scores = store.state[keys.s_experiment_scores];
                 if (experiment_scores.length > 0) {
                     let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
                     let score = experiment_scores.reduce((acc, value) => acc + value, 0) / experiment_scores.length;
                     score_tag.textContent = `${(score * 100).toFixed(2)}%`;
+                    store.dispatch(keys.a_reset_experiment_scores, {});
+                }
+            }
+
+            _score() {
+                let experiment_scores = store.state[keys.s_experiment_scores];
+                if (experiment_scores.length > 0) {
+                    let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
+                    let score_content = [];
+                    for (let i = 0; i < experiment_scores.length; i++) {
+                        score_content.push(`Good prediction at: ${experiment_scores[i]}`);
+                    }
+                    score_tag.innerHTML = score_content.join('<br>');
                     store.dispatch(keys.a_reset_experiment_scores, {});
                 }
             }

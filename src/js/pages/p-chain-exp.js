@@ -15,6 +15,10 @@ try {
         next_btn: 'next-btn',
         timer: 'timer-div',
         error: 'error-div',
+        desc: 'desc-div',
+        confidence: 'confidence-div',
+        slider: 'slider-input',
+        slider_value: 'slider-value-span'
     };
 
     (function() {
@@ -23,54 +27,123 @@ try {
         const TEMPLATE = document.createElement('template');
         TEMPLATE.innerHTML = /* html */`
 
-            <style></style>
+            <style>
+                .image-container {
+                    width: 300px;
+                    aspect-ratio: 1 / 1;
+                    overflow: hidden;
+                }
 
-            <div id="${TAG_IDS.main_page}" class="vh-100">
-                <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                    <div class="row align-items-stretch">
-                        <div id="${TAG_IDS.image}" class="col d-flex align-items-center">
-                            <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="icon rounded img-thumbnail" alt="...">
+                .image-container img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .confidence-value {
+                    font-weight: bold;
+                    min-width: 40px;
+                    text-align: center;
+                }
+            </style>
+
+            <div id="${TAG_IDS.main_page}" class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+                <div class="container">
+                    
+                    <!-- <div class="d-flex justify-content-between mb-4">
+                        <div>Completion %</div>
+                        <div>Time left: 7:00</div>
+                    </div> -->
+
+                    <h1 id="${TAG_IDS.desc}" class="mb-5 text-center">
+                        Second Task: Please select the correct category for the image
+                    </h1>
+
+                    <div class="row g-4 align-items-stretch mt-5">
+
+                        <!-- Image -->
+                        <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center">
+                            <div id="${TAG_IDS.image}" class="image-container">
+                                <img src="assets/datasets/felipe/dog.JPEG" alt="Image à classifier">
+                            </div>
                         </div>
-                        <div class="col d-flex flex-column justify-content-between">
-                            <form id="${TAG_IDS.labels_list}" class="d-flex flex-column gap-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label1">
-                                    <label class="form-check-label" for="label1">Label 1</label>
+
+                        <!-- Liste des catégories -->
+                        <form id="${TAG_IDS.labels_list}" class="col-12 col-lg-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="airplane">
+                                <label class="form-check-label" for="airplane">Airplane</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="truck">
+                                <label class="form-check-label" for="truck">Truck</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="car">
+                                <label class="form-check-label" for="car">Car</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="ship">
+                                <label class="form-check-label" for="ship">Ship</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="cat">
+                                <label class="form-check-label" for="cat">Cat</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category" id="dog">
+                                <label class="form-check-label" for="dog">Dog</label>
+                            </div>
+                        </form>
+
+                        <!-- Confiance + validation -->
+                        <div class="col-12 col-lg-5 d-flex flex-column justify-content-between">
+
+                            <div id="${TAG_IDS.confidence}">
+                                <h4 class="text-center mb-4">
+                                    Confidence on Answer
+                                </h4>
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    
+                                    <span>0</span>
+    
+                                    <input
+                                        type="range"
+                                        class="form-range"
+                                        min="0"
+                                        max="100"
+                                        value="15"
+                                        id="${TAG_IDS.slider}"
+                                    >
+    
+                                    <span>100</span>
+    
+                                    <span id="${TAG_IDS.slider_value}"
+                                        class="confidence-value">
+                                        15
+                                    </span>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label2">
-                                    <label class="form-check-label" for="label2">Label 2</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label3">
-                                    <label class="form-check-label" for="label3">Label 3</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label4">
-                                    <label class="form-check-label" for="label4">Label 4</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label5">
-                                    <label class="form-check-label" for="label5">Label 5</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label6">
-                                    <label class="form-check-label" for="label6">Label 6</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label7">
-                                    <label class="form-check-label" for="label7">Label 7</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="labels" id="label8">
-                                    <label class="form-check-label" for="label8">Label 8</label>
-                                </div>
-                            </form>
-                            <button id="${TAG_IDS.next_btn}" type="button" class="btn btn-primary btn-lg text-uppercase w-100 mt-4">Next</button>
+                            </div>
+
+                            <div class="d-grid">
+                                <button id="${TAG_IDS.next_btn}" class="btn btn-outline-secondary btn-lg">
+                                    Validate
+                                </button>
+                            </div>
+
                         </div>
+
                     </div>
-                    <div id="${TAG_IDS.timer}" class="my-4 fs-2"></div>
+
+                    <div id="${TAG_IDS.timer}" class="text-center mt-5 fs-3"></div>
+
                     <div id="${TAG_IDS.error}" class="text-center text-danger"></div>
+
                 </div>
             </div>
 
@@ -87,7 +160,7 @@ try {
             }
 
             _images() {
-                if (this.current_view.current_image_index >= this.current_view.images.length) { 
+                if (this.current_view.current_image_index >= this.current_view.images.length) {
                     this._submit();
                     return;
                 }
@@ -162,19 +235,27 @@ try {
                     return;
                 }
 
+                let confidence = -1;
+                if (this.current_view.confidence) {
+                    let slider = this.content.querySelector(`#${TAG_IDS.slider}`);
+                    confidence = parseInt(slider.value);
+                }
+
                 /* Save */
                 store.dispatch(keys.a_update_save, {
                     instances: [{
                         answers: form_data.get('labels') == null ? null : parseInt(form_data.get('labels')),
+                        confidence: confidence,
                         time: this.current_time,
                         is_time_exceeded: this.time_exceeded_timer,
                         expected: this.current_view.truth
                     }]
-                });           
+                });
 
                 this.current_view.current_image_index += 1;
 
                 if (this.current_view.current_image_index >= this.current_view.images.length || (form_data.get('labels') != null && parseInt(form_data.get('labels')) == this.current_view.truth)) {
+                    store.dispatch(keys.a_update_experiment_scores, this.current_view.current_image_index - 1); // Number of the images seen.
                     nextView();
                 } else {
                     this._init();
@@ -186,7 +267,7 @@ try {
              */
             _timer() {
                 function timer_text(time) {
-                    return `Timer : ${time} secondes`;
+                    return `Time left: ${time} secondes`;
                 }
                 let tag = this.content.querySelector(`#${TAG_IDS.timer}`);
                 
@@ -202,7 +283,7 @@ try {
 
                     let remaining_time = this.current_view.timer - current_time_second;
                     
-                    if (remaining_time <= 5) {
+                    if (remaining_time <= 3) {
                         tag.classList.add('text-danger');
                     }
                     if (this.current_view.timer >= 0) {
@@ -234,6 +315,19 @@ try {
                     e.preventDefault();
                     this._submit();
                 });
+                
+                console.log(this.current_view.confidence);
+                
+                if (this.current_view.confidence) {
+                    const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
+                    const value = this.content.querySelector(`#${TAG_IDS.slider_value}`);
+    
+                    slider.addEventListener('input', () => {
+                        value.textContent = slider.value;
+                    });
+                } else {
+                    this.content.querySelector(`#${TAG_IDS.confidence}`).innerHTML = '';
+                }
             }
          
             connectedCallback () {
