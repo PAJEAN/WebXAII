@@ -335,12 +335,15 @@ export class ChainExperiment extends View {
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
         /** @type {boolean} */
         this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
+        /** @type {boolean} */
+        this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
         this._current_image_index = 0;
     }
 
     get confidence() { return this._confidence; }
     get images() { return this._images; }
     get labels() { return this._labels; }
+    get show_rewards() { return this._show_rewards; }
     get timer() { return this._timer; }
 
     get current_image_index() { return this._current_image_index; }

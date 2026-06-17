@@ -20,7 +20,8 @@ export const TEST_VIEW = [
         ],
         "truth": 4,
         "timer": -1,
-        "confidence": false
+        "confidence": false,
+        "show_rewards": false
     },
     {
         "desc": "Third Task: Please select the correct category for the image",
@@ -46,7 +47,8 @@ export const TEST_VIEW = [
         ],
         "truth": 8,
         "timer": 15,
-        "confidence": true
+        "confidence": true,
+        "show_rewards": true
     },
     {
         view_id: 'my-desc-view',

@@ -18,7 +18,10 @@ try {
         desc: 'desc-div',
         confidence: 'confidence-div',
         slider: 'slider-input',
-        slider_value: 'slider-value-span'
+        slider_value: 'slider-value-span',
+        rewards: 'rewards-div',
+        rewards_correct: 'rewards-correct-span',
+        rewards_incorrect: 'rewards-incorrect-span'
     };
 
     (function() {
@@ -130,6 +133,11 @@ try {
                                 </div>
                             </div>
 
+                            <div id="${TAG_IDS.rewards}" class="text-body-secondary fs-5 d-none">
+                                <div>Correct: Rrec - 1/2*(Rrec - conf*Rrec) = <span id="${TAG_IDS.rewards_correct}">0</span></div>
+                                <div>Incorrect: Rrec - 1/2*(Rrec + conf*Rrec) = <span id="${TAG_IDS.rewards_incorrect}">0</span></div>
+                            </div>
+
                             <div class="d-grid">
                                 <button id="${TAG_IDS.next_btn}" class="btn btn-outline-secondary btn-lg">
                                     Validate
@@ -198,6 +206,14 @@ try {
                     container.appendChild(label_tag);
                     labels_tag.appendChild(container);
                 }
+            }
+
+            _correct_rewards(cts, confidence) {
+                return (cts - 0.5 * (cts - confidence / 100 * cts)).toFixed(2);
+            }
+
+            _incorrect_rewards(cts, confidence) {
+                return (cts - 0.5 * (cts + confidence / 100 * cts)).toFixed(2);
             }
 
             /**
@@ -316,14 +332,27 @@ try {
                     this._submit();
                 });
                 
-                console.log(this.current_view.confidence);
+                if (this.current_view.show_rewards) {
+                    this.content.querySelector(`#${TAG_IDS.rewards}`).classList.toggle('d-none');
+                }
                 
                 if (this.current_view.confidence) {
                     const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
                     const value = this.content.querySelector(`#${TAG_IDS.slider_value}`);
+
+                    const REWARD_CTS = 3;
+                    const correct_rewards = this.content.querySelector(`#${TAG_IDS.rewards_correct}`);
+                    const incorrect_rewards = this.content.querySelector(`#${TAG_IDS.rewards_incorrect}`);
+                    correct_rewards.textContent = this._correct_rewards(REWARD_CTS, parseInt(slider.value));
+                    incorrect_rewards.textContent = this._incorrect_rewards(REWARD_CTS, parseInt(slider.value));
     
                     slider.addEventListener('input', () => {
                         value.textContent = slider.value;
+
+                        if (this.current_view.show_rewards) {
+                            correct_rewards.textContent = this._correct_rewards(REWARD_CTS, parseInt(slider.value));
+                            incorrect_rewards.textContent = this._incorrect_rewards(REWARD_CTS, parseInt(slider.value));
+                        }
                     });
                 } else {
                     this.content.querySelector(`#${TAG_IDS.confidence}`).innerHTML = '';
