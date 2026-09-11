@@ -1,5 +1,52 @@
 // @ts-check
 
+export class EnumQuestionOptions {
+    static #_INLINE = 'inline'; // Checkbox, radio.
+    static #_LIMIT_VALUES = 'limit_values'; // Checkbox, radio, range.
+    static #_DISPLAY_VALUE = 'display_value'; // Range.
+    static #_MAX = 'max'; // Range.
+    static #_MIN = 'min'; // Range.
+    static #_STEP = 'step'; // Range.
+    static #_COLORS = 'css_class_colors'; // Buttons.
+
+    // Accessors for "get" functions only (no "set" functions)
+    static get INLINE() { return this.#_INLINE; }
+    static get LIMIT_VALUES() { return this.#_LIMIT_VALUES; }
+    static get DISPLAY_VALUE() { return this.#_DISPLAY_VALUE; }
+    static get MAX() { return this.#_MAX; }
+    static get MIN() { return this.#_MIN; }
+    static get STEP() { return this.#_STEP; }
+    static get COLORS() { return this.#_COLORS; }
+}
+
+class BreakForm {
+
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!view.hasOwnProperty('index')) {
+            console.warn('BreakForm has no index');
+            return false;
+        }
+        return true
+    }
+
+    /**
+     * @param {number} index 
+     * @param {string} text
+     */
+    constructor(index, text = '') {
+        this._index = index;
+        this._text = text;
+    }
+
+    get index() { return this._index; }
+    get text() { return this._text; }
+}
+
 class LabelOrImage {
 
     /**
@@ -57,12 +104,14 @@ export class Question {
         this._answers = view['answers'];
         this._primary_text = view['primary_text'] ? view['primary_text']: '';
         this._secondary_text = view['secondary_text'] ? view['secondary_text']: '';
+        this._options = view['options'] ? view['options']: {};
     }
 
     get type() { return this._type; }
+    get answers() { return this._answers; }
     get primary_text() { return this._primary_text; }
     get secondary_text() { return this._secondary_text; }
-    get answers() { return this._answers; }
+    get options() { return this._options; }
 }
 
 class Task {
@@ -137,12 +186,15 @@ export class View {
 
     /**
      * @param {string} type 
+     * @param {string} id 
      */
-    constructor(type) {
+    constructor(type, id = '') {
+        this._id = id;
         this._type = type;
     }
 
     get type() { return this._type; }
+    get id() { return this._id; }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -179,7 +231,7 @@ export class Experiment extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         /** @type {Question} */
         this._question = new Question(view['question']);
         /** @type {string} */
@@ -192,6 +244,8 @@ export class Experiment extends View {
         this._show_progression_bar = view.hasOwnProperty('show_progression_bar') ? view['show_progression_bar']: false;
         /** @type {number} */
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {number} */
+        this._time_exceeded_timer = view.hasOwnProperty('time_exceeded_timer') ? parseInt(view['time_exceeded_timer']): -1; // -1 if no timer (otherwise it's the max timer).
         /** @type {boolean} */
         this._randomize = view.hasOwnProperty('randomize') ? view['randomize']: false;
         /** @type {boolean} */
@@ -239,12 +293,116 @@ export class Experiment extends View {
     get show_progression_bar() { return this._show_progression_bar; }
     get tasks() { return this._tasks; }
     get timer() { return this._timer; }
+    get time_exceeded_timer() { return this._time_exceeded_timer; }
     get title() { return this._title; }
     get feedback_answer_activated() { return this._feedback_answer_activated; }
     get feedback_answer_correct() { return this._feedback_answer_correct; }
     get feedback_answer_wrong() { return this._feedback_answer_wrong; }
     get feedback_answer_show_expected() { return this._feedback_answer_show_expected; }
     get feedback_answer_expected_text() { return this._feedback_answer_expected_text; }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SingleExperiment                              */
+/* -------------------------------------------------------------------------- */
+
+export class SingleExperiment extends View {
+    
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        if (!view.hasOwnProperty('images')) {
+            // console.warn('SingleExperiment has no images property'); <--- REMOVE OR COMMENT OUT
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @param {object} view
+    */
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
+        /** @type {string} */
+        this._desc = view.hasOwnProperty('desc') ? view['desc']: '';
+        /** @type {string} */
+        this._image = (Array.isArray(view['images']) && view['images'].length > 0) 
+            ? view['images'][0] 
+            : '';
+        /** @type {string[]} */
+        this._labels = view.hasOwnProperty('labels') ? view['labels']: [];
+        /** @type {number} */
+        this._truth = view.hasOwnProperty('truth') ? parseInt(view['truth']): -1; // Index of the correct label.
+        /** @type {number} */
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
+        /** @type {boolean} */
+        this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
+    }
+    
+    get desc() { return this._desc; }
+    get confidence() { return this._confidence; }
+    get image() { return this._image; }
+    get labels() { return this._labels; }
+    get show_rewards() { return this._show_rewards; }
+    get timer() { return this._timer; }
+    get truth() { return this._truth; }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  ChainExp                                  */
+/* -------------------------------------------------------------------------- */
+
+export class ChainExperiment extends View {
+    
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        return true;
+    }
+
+    /**
+     * @param {object} view
+    */
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
+        /** @type {string} */
+        this._desc = view.hasOwnProperty('desc') ? view['desc']: '';
+        /** @type {string[]} */
+        this._images = view.hasOwnProperty('images') ? view['images']: [];
+        /** @type {string[]} */
+        this._labels = view.hasOwnProperty('labels') ? view['labels']: [];
+        /** @type {number} */
+        this._truth = view.hasOwnProperty('truth') ? view['truth']: -1; // Index of the correct label.
+        /** @type {number} */
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
+        /** @type {boolean} */
+        this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
+        this._current_image_index = 0;
+    }
+    
+    get desc() { return this._desc; }
+    get confidence() { return this._confidence; }
+    get images() { return this._images; }
+    get labels() { return this._labels; }
+    get show_rewards() { return this._show_rewards; }
+    get timer() { return this._timer; }
+
+    get current_image_index() { return this._current_image_index; }
+    set current_image_index(index) { this._current_image_index = index; }
+
+    get truth() { return this._truth; }
 }
 
 
@@ -268,6 +426,9 @@ export class Form extends View {
         for (let question of view['questions']) {
             if (!Question.guard(question)) { return false; }
         }
+        if (view.hasOwnProperty('break')) {
+            if (!BreakForm.guard(view['break'])) { return false; }
+        }
         return true;
     }
 
@@ -275,11 +436,14 @@ export class Form extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         /** @type {Array<Question>} */
         this._questions = view['questions'].map(q => new Question(q));
+        /** @type {BreakForm} */
+        this._break = view.hasOwnProperty('break') ? view['break']: undefined;
     }
 
+    get break() { return this._break; }
     get questions() { return this._questions; }
 }
 
@@ -303,7 +467,7 @@ export class Desc extends View {
      * @param {object} view
      */
     constructor(view) {
-        super(view['type']);
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
         this._body_text   = view.hasOwnProperty('body_text') ? view['body_text']: '';
         this._button_text = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
         this._countdown   = view.hasOwnProperty('countdown') ? 

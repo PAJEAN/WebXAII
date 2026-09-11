@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<img src='assets/res/img/timeline_intro_prep.png' class='img-fluid' alt='timeline'></br><hr><h3>Introduction - Main experiment preparation</h3>",
+      "body_text": "<div class='text-start'><p>You are now entering the preparation phase for the Main experiment. You are about to perform a task with 6 questions. It will closely resemble the tasks of the Main experiment and is intended to help you practice and prepare for the next phase.</p><p>As in the main experimental phase, you will have a limited amount of time to respond to each question. <b>Responding faster will not improve your score</b>. However, <b> if you fail to respond within the alloted time, it will be counted as an error.</b> The allotted time for each question during this training phase is 45 seconds, and it will be shorter for the evaluated tasks in the main experiment.<p>As this is still a training phase, your score does <b>not</b> count towards your bonus remuneration.</p><p>Note that these training tasks are a good opportunity to interact with the AI’s outputs, as there will be less time for such analysis during the main experiment.</p>",
+      "button_text": "Start training",
+      "with_button": "True"
+}

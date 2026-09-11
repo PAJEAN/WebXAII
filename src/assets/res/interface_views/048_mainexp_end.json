@@ -1,0 +1,7 @@
+{
+    "type": "p-instruction",
+    "title": "<h3>Main experiment - End</h3>",
+      "body_text": "<div class='text-start'> <p>The main experiment is now terminated. Click on the button below to start the closing phase of the protocol.</p>",
+      "button_text": "Start Closing phase",
+      "with_button": "True"
+}

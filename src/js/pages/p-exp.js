@@ -15,6 +15,7 @@ import { FormComponent } from 'JS/components/wc-form';
 try {
     const TAG_IDS = {
         alert_placeholder: 'alert-placeholder',
+        alert_timer_placeholder: 'alert-timer-placeholder',
         current_status: 'current-status',
         desc_text: 'desc-text',
         explanation: 'explanation',
@@ -37,9 +38,10 @@ try {
             <style>
                 #main-page {
                     min-height: 100vh;
+                    font-size: 1.2rem;
                 }
                 .container-decoration {
-                    border-radius: 10px;
+                    border-radius: 1rem;
                     box-shadow: var(--box-shadow);
                 }
                 .row {
@@ -53,78 +55,70 @@ try {
                     margin-top: 1rem;
                 }
                 .icon {
-                    max-height: 300px;
-                    margin: auto;
+                    width: 70%;
                 }
             </style>
 
             <div id="${TAG_IDS.main_page}" class="d-flex flex-column justify-content-center">
 
-                <div class="container container-decoration mt-2 p-2" id="${TAG_IDS.task_title_container}">
-                    <h3 id="${TAG_IDS.task_title}" class="container">Task</h3>
+                <div class="container-decoration mx-4 px-4 py-1" id="${TAG_IDS.task_title_container}">
+                    <div id="${TAG_IDS.task_title}">Task view</div>
     
-                    <div id="${TAG_IDS.desc_text}" class="container fs-5">
-                        Rule: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <div id="${TAG_IDS.desc_text}">
+                        There was an error when parsing the JSON entry, so the page cannot be rendered
                     </div>
                 </div>
                 
-                <div id="${TAG_IDS.alert_placeholder}" class="container"></div>
+                <div id="${TAG_IDS.alert_placeholder}" class="mx-4"></div>
 
-                <div class="container mt-2">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <div class="row" id="${TAG_IDS.source_model}">
+                <div id="${TAG_IDS.alert_timer_placeholder}" class="mx-4"></div>
+
+                <div class="">
+                    <div id="${TAG_IDS.current_status}" class="mx-4 m-0 container-decoration d-flex justify-content-center"></div>
+
+                    <div class="mx-4 container-decoration">
+                        <div id="${TAG_IDS.timer}" class="text-center fs-2 mt-1"></div>
+                    </div>
+
+                    <div class="row mt-1 mx-4">
+                        <!-- <div class="col px-0"> -->
+                        <div class="row mt-2" id="${TAG_IDS.source_model}">
                                 <!-- <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
+                                    <div class="card h-100">
+                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Source image
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
+                                    <div class="card h-100">
                                         <div class="card-body">
-                                            <h5 class="card-title text-center">Model</h5>
+                                            <p class="card-text d-flex flex-column align-items-center justify-content-center h-100">
+                                                Une explication à propos de la donnée.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Explanation
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="card h-100">
+                                        <img src="assets/datasets/single-kingfisher-bird_xai.jpg" class="card-img-top icon" alt="...">
+                                        <div class="card-footer text-body-secondary text-center">
+                                            Model
                                         </div>
                                     </div>
                                 </div> -->
-                            </div>
-                            <div class="row card-explanation mb-2" id="${TAG_IDS.explanation}">
-                                <!-- <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <img src="assets/datasets/2.jpg" class="card-img-top icon" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-center">Source image</h5>
-                                        </div>
-                                    </div>
-                                </div> -->
-                            </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div id="${TAG_IDS.current_status}" class="container container-decoration d-flex justify-content-center"></div>
-
-                            <div id="${TAG_IDS.timer}" class="text-center fs-2 my-2"></div>
-
+                        <!-- </div> -->
+                    </div>
+                    <div class="row mt-2 mx-4">
+                        <div class="col-sm px-0">
                             <${COMPONENT_NAMES.FORM} id="${TAG_IDS.form}"></${COMPONENT_NAMES.FORM}>
-
+                        </div>
+                        <div class="px-0">
                             <button id="${TAG_IDS.submit_btn}" type="button" class="btn btn-info btn-lg text-uppercase w-100 mt-4">Submit</button>
                         </div>
                     </div>
@@ -145,6 +139,7 @@ try {
              */
             _checkAnswers(answers) {
                 let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
+                
                 if (expected.length != answers.length) {
                     return false;
                 }
@@ -160,13 +155,14 @@ try {
                 let alert_container = this._getElementById(TAG_IDS.alert_placeholder);
                 alert_container.textContent = '';
                 let alert = document.createElement('div');
-                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'my-3');
+                alert.classList.add('alert', is_correct ? 'alert-success': 'alert-danger', 'm-0', 'mt-2', 'p-1');
                 alert.setAttribute('role', 'alert');
                 let alert_title = document.createElement('h5');
                 alert_title.textContent = `${is_correct ? this.current_view.feedback_answer_correct: this.current_view.feedback_answer_wrong}`;
                 alert.appendChild(alert_title);
                 if (!is_correct && this.current_view._feedback_answer_show_expected) {
                     let alert_hr = document.createElement('hr');
+                    alert_hr.classList.add('my-0')
                     alert.appendChild(alert_hr);
                     let alert_expected = document.createElement('div');
                     let expected = this.current_view.tasks[store.state[keys.s_current_task_index]].expected;
@@ -178,16 +174,37 @@ try {
             }
 
             /**
+             * @param {number} remaining_time 
+             */
+            _createAlertTimer(remaining_time) {
+                let alert_container = this._getElementById(TAG_IDS.alert_timer_placeholder);
+                alert_container.textContent = '';
+                let alert = document.createElement('div');
+                alert.classList.add('alert', 'alert-danger', 'my-3');
+                alert.setAttribute('role', 'alert');
+                alert.textContent = `You did not answer on time. The next view will appear in ${remaining_time} seconds.`;
+                alert_container.appendChild(alert);
+            }
+
+            /**
              * @param {string} body_title_text 
              * @param {string} text 
              * @param {boolean} is_image 
              * @returns HTMLDivElement
              */
-            _createCard(body_title_text, text, is_image) {
+            _createCard(body_title_text, text, is_image, only_source = false, is_explanation = false) {
                 let col = document.createElement('div');
-                col.classList.add('col-sm');
+                if (!only_source) {
+                    if (!is_explanation) {
+                        col.classList.add('col-5');
+                    } else {
+                        col.classList.add('col-7');
+                    }
+                } else {
+                    col.classList.add('col-5');
+                }
                 let card = document.createElement('div');
-                card.classList.add('card');
+                card.classList.add('card', 'h-100', 'd-flex', 'justify-content-between', 'align-items-center');
                 if (is_image) {
                     let image = document.createElement('img');
                     image.setAttribute('src', text);
@@ -198,15 +215,15 @@ try {
                 card_body.classList.add('card-body');
                 if (!is_image) {
                     let body_text = document.createElement('div');
-                    body_text.classList.add('mb-4')
+                    body_text.classList.add('card-text', 'd-flex', 'flex-column', 'align-items-center', 'justify-content-center', 'h-100');
                     body_text.textContent = text;
                     card_body.appendChild(body_text);
+                    card.appendChild(card_body);
                 }
-                let body_title = document.createElement('h5');
-                body_title.classList.add('card-title', 'text-center');
+                let body_title = document.createElement('div');
+                body_title.classList.add('card-footer', 'text-body-secondary', 'text-center', 'fw-normal', 'w-100');
                 body_title.textContent = body_title_text;
-                card_body.appendChild(body_title);
-                card.appendChild(card_body);
+                card.appendChild(body_title);
                 col.appendChild(card);
                 return col;
             }
@@ -217,12 +234,12 @@ try {
             _currentStatus() {
                 if (this.current_view.show_progression_bar) {
                     let tag = this._getElementById(TAG_IDS.current_status);
-                    tag.classList.add('p-2');
+                    tag.classList.add('p-2', 'mt-2');
                     tag.textContent = '';
                     for (let i = 0; i < this.current_view.tasks.length; i++) {
                         let div = document.createElement('div');
                         div.classList.add('mr-1');
-                        div.textContent = i < store.state[keys.s_current_task_index] ? '🟢': '⚪'; // If not undefined.
+                        div.textContent = i < store.state[keys.s_current_task_index] ? '🔵': '⚪'; // If not undefined.
                         tag.appendChild(div);
                     }
                 }
@@ -234,12 +251,12 @@ try {
             _dataset() {
                 let tag_source_model = this._getElementById(TAG_IDS.source_model);
                 tag_source_model.textContent = '';
-                let tag_explanation = this._getElementById(TAG_IDS.explanation);
-                tag_explanation.textContent = '';
+                // let tag_explanation = this._getElementById(TAG_IDS.explanation);
+                // tag_explanation.textContent = '';
                 let task = this.current_view.tasks[store.state[keys.s_current_task_index]];
                 
                 if (task.source) {
-                    let div = this._createCard(task.source.title, task.source.label, task.source.is_image);
+                    let div = this._createCard(task.source.title, task.source.label, task.source.is_image, (task.model == undefined && task.explanations.length == 0) ? true: false);
                     tag_source_model.appendChild(div);
                 }
                 if (task.model) {
@@ -247,13 +264,14 @@ try {
                     tag_source_model.appendChild(div);
                 }
                 if (task.explanations) {
-                    if (task.explanations.length > 1) {
-                        tag_explanation.classList.add('row-cols-sm-2');
-                    }
+                    // if (task.explanations.length > 1) {
+                    //     tag_explanation.classList.add('row-cols-sm-2');
+                    // }
                     let i = 1;
                     for (let item of task.explanations) {
-                        let div = this._createCard(item.title, item.label, item.is_image);
-                        tag_explanation.appendChild(div);
+                        let div = this._createCard(item.title, item.label, item.is_image, false, true);
+                        // tag_explanation.appendChild(div);
+                        tag_source_model.appendChild(div);
                         i++;
                     }
                 }
@@ -264,7 +282,7 @@ try {
              */
             _desc() {
                 let tag = this._getElementById(TAG_IDS.desc_text);
-                tag.textContent = `${this.current_view.desc}`;
+                tag.innerHTML = `${this.current_view.desc}`;
             }
 
             /**
@@ -292,9 +310,25 @@ try {
                 next_btn.textContent = 'Next';
                 next_btn.addEventListener('click', () => {
                     this._transition();
-                });
+                }, { once: true });
                 next_btn.style.display = 'none';
                 submit_btn.parentElement.appendChild(next_btn);
+            }
+
+            _observer(mutationsList) {
+                for(const mutation of mutationsList) { // List of detected mutations.
+                    if (mutation.type === 'attributes') { // Check if it's an attribute modification.
+                        if (mutation.attributeName == 'data-response') {
+                            this._submit();
+                        }
+                    }
+                }
+            }
+
+            _observing() {
+                /** @type {FormComponent} */
+                let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                this.observer.observe(form, { attributes: true });
             }
 
             /**
@@ -303,6 +337,8 @@ try {
             _resetAlert() {
                 let alert_container = this._getElementById(TAG_IDS.alert_placeholder);
                 alert_container.textContent = '';
+                let alert_timer_container = this._getElementById(TAG_IDS.alert_timer_placeholder);
+                alert_timer_container.textContent = '';
             }
 
             /**
@@ -313,6 +349,46 @@ try {
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
                 form.enable();
                 form.unchecked();
+                form.style.display = 'block';
+            }
+
+            /**
+             * Waiting the loading of images before start the timer.
+             */
+            _secure_timer() {
+                if (this.current_view.timer >= 0) {
+                    let tag = this._getElementById(TAG_IDS.timer);
+                    tag.textContent = this.current_view.timer.toFixed(0);
+                    tag.classList.remove('text-danger');
+
+                    let tag_source_model = this._getElementById(TAG_IDS.source_model);
+                    let imgs = Array.from(tag_source_model.querySelectorAll('img'));
+                    
+                    Promise.all(imgs.map(async (img) => {
+                        await img.decode();
+                        return img;
+                    })).then(() => {
+                        this._timer();
+                    }).catch((err) => {
+                        console.error(err);
+                        this._timer();
+                    });
+                }
+            }
+
+            _scroll_to_bottom() {
+                let tag_source_model = this._getElementById(TAG_IDS.source_model);
+                let imgs = Array.from(tag_source_model.querySelectorAll('img'));
+                
+                Promise.all(imgs.map(async (img) => {
+                    await img.decode();
+                    return img;
+                })).then(() => {
+                    window.scrollTo({ top: document.documentElement.scrollHeight });
+                }).catch((err) => {
+                    console.error(err);
+                    window.scrollTo({ top: document.documentElement.scrollHeight });
+                });
             }
 
             /**
@@ -320,21 +396,26 @@ try {
              * @param {boolean} is_time_exceeded 
              */
             _submit(is_time_exceeded = false) {
+                if (this.is_submit) { return; }
+                this.is_submit = true;                
+
                 /** @type {FormComponent} */
                 let form = this.content.querySelector(`#${TAG_IDS.form}`);
-                let answers = form.submit();
+                let answers = form.submit();                
                 // At least one answer.
                 if (!form.someEmptyQuestion() || (this.current_view.timer >= 0 && (this.current_time / 1000) >= this.current_view.timer)) {
                     clearInterval(this.timer_id);
                     // Save answers if not training.
                     if (!this.current_view.is_training) {
                         store.dispatch(keys.a_update_save, {
-                            [`task_${store.state[keys.s_current_task_index]}`]: {
+                            // [`task_${store.state[keys.s_current_task_index]}`]: {
+                            instances: [{
                                 answers: answers,
                                 time: this.current_time,
                                 is_time_exceeded: is_time_exceeded,
-                                order_index: this.current_view.order[store.state[keys.s_current_task_index]]
-                            }
+                                order_index: this.current_view.order[store.state[keys.s_current_task_index]],
+                                expected: this.current_view.tasks[store.state[keys.s_current_task_index]].expected
+                            }]
                         });
                     }
                     
@@ -343,6 +424,12 @@ try {
                         this.good_answers += 1;
                     }
 
+                    /** @type {FormComponent} */
+                    let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                    form.disable();
+                    form.style.display = 'none';
+                    this.observer && this.observer.disconnect();
+
                     if (this.current_view.feedback_answer_activated) {
                         this._createAlert(answers[0]);
                         /** @type {HTMLElement} */
@@ -350,12 +437,23 @@ try {
                         next_btn.style.display = 'block';
                         let submit_btn = this._getElementById(TAG_IDS.submit_btn);
                         submit_btn.setAttribute('disabled', '');
-                        /** @type {FormComponent} */
-                        let form = this.content.querySelector(`#${TAG_IDS.form}`);
-                        form.disable();
                     } else {
-                        this._transition();
+                        if (is_time_exceeded && this.current_view.time_exceeded_timer > 0) {
+                            this._createAlertTimer(this.current_view.time_exceeded_timer);
+                            this.time_exceeded_timer = window.setInterval(() => {
+                                this.time_exceeded_current_time += 1;
+                                this._createAlertTimer(this.current_view.time_exceeded_timer - this.time_exceeded_current_time);
+                            }, 1000);
+                            setTimeout(() => {
+                                clearInterval(this.time_exceeded_timer);
+                                this._transition();
+                            }, this.current_view.time_exceeded_timer * 1000);
+                        } else {
+                            this._transition();
+                        }
                     }                    
+                } else {
+                    this.is_submit = false;
                 }
             }
 
@@ -364,7 +462,7 @@ try {
              */
             _task() {
                 let tag = this._getElementById(TAG_IDS.task_title);
-                tag.textContent = this.current_view.title;
+                tag.innerHTML = this.current_view.title;
                 let tag_desc_title = this._getElementById(TAG_IDS.desc_text);
 
                 if (!tag.textContent && !tag_desc_title.textContent) {
@@ -382,16 +480,23 @@ try {
                 let tag = this._getElementById(TAG_IDS.timer);
                 
                 if (this.current_view.timer >= 0) {
-                    tag.textContent = this.current_view.timer.toFixed(2);
+                    tag.textContent = this.current_view.timer.toFixed(0);
+                    tag.classList.remove('text-danger');
                 }
 
                 let delta_time = 100;
                 this.timer_id = window.setInterval(() => {
                     this.current_time += delta_time;
                     let current_time_second = this.current_time / 1000;
+
+                    let remaining_time = this.current_view.timer - current_time_second;
+                    
+                    if (remaining_time <= 5) {
+                        tag.classList.add('text-danger');
+                    }
                     if (this.current_view.timer >= 0) {
                         if (current_time_second % 1 == 0) {
-                            tag.textContent = (Math.round((this.current_view.timer - current_time_second) * 100) / 100).toFixed(2);
+                            tag.textContent = (Math.round(remaining_time * 100) / 100).toFixed(0);
                         }
                         if (current_time_second >= this.current_view.timer) {
                             this._submit(true);
@@ -411,11 +516,13 @@ try {
                 } else {
                     store.dispatch(keys.a_update_current_task_index, {index: store.state[keys.s_current_task_index] + 1});
                     this._init();
-                }      
+                }
             }
 
             _init() {
                 this.current_time = 0;
+                this.time_exceeded_current_time = 0;
+
                 this._currentStatus();
                 this._dataset();
                 this._desc();
@@ -423,15 +530,35 @@ try {
                 this._resetAlert();
                 this._resetForm();
                 this._task();
-                this._timer();
+                // this._timer();
+                this._secure_timer();
+
+                this._scroll_to_bottom();
+
+                this.is_submit = false;
+                this.observer && this._observing();
             }
 
             _initEvents() {
+                /** @type {FormComponent} */
+                let form = this.content.querySelector(`#${TAG_IDS.form}`);
+                
+                if (form.questions.length == 0) {
+                    return;
+                }
+
                 let submit_btn = this._getElementById(TAG_IDS.submit_btn);
-                if (submit_btn) {
-                    submit_btn.addEventListener('click', () => {
-                        this._submit();
-                    });
+                if (form.questions[0].type == 'button') {
+                    this.observer = new MutationObserver(this._observer.bind(this));
+                    this._observing();
+                    submit_btn.style.display = 'none';
+                } else {
+                    if (submit_btn) {
+                        submit_btn.addEventListener('click', () => {
+                            this._submit();
+                        });
+                        submit_btn.style.display = 'block';
+                    }
                 }
             }
             
@@ -444,15 +571,19 @@ try {
                 this.appendChild(TEMPLATE.content.cloneNode(true));
 
                 /* Attributes */
+                this.is_submit = false;
                 /** @type {HTMLElement} */
                 this.content = this.querySelector(`#${TAG_IDS.main_page}`);
                 /** @type {Experiment} */
                 this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
                 this.current_time = 0;
+                this.time_exceeded_current_time = 0;
                 this.good_answers = 0;
                 /** @type {number | undefined} */
                 this.timer_id = undefined;
-
+                /** @type {number | undefined} */
+                this.time_exceeded_timer = undefined;
+                this.observer = undefined;
                 /* Methods */
                 this._init();
                 this._initEvents();
@@ -462,6 +593,8 @@ try {
                 if(this.timer_id) {
                     clearInterval(this.timer_id);
                 }
+                this.time_exceeded_timer && clearInterval(this.time_exceeded_timer);
+                this.observer && this.observer.disconnect();
             }
         });
     })();

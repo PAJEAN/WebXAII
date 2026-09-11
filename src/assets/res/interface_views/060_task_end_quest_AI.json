@@ -1,0 +1,19 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey evaluates your opinions towards the AI that assisted you during the task. Rate your level of agreement with the statement below.<hr>",
+          "secondary_text": "<b>I trust the AI to detect the pattern and its rotations.</b>",
+           "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        }
+      ]
+}

@@ -1,0 +1,28 @@
+{
+      "type": "p-questionnaire",
+      "questions": [
+        {
+          "type": "radio",
+          "primary_text": "This survey measures important information. Please answer as required.<hr>",
+          "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
+          "answers": [
+            "(1) Strongly Disagree",
+            "(2) Disagree",
+            "(3) Somewhat Disagree",
+            "(4) Neutral",
+            "(5) Somewhat Agree",
+            "(6) Agree",
+            "(7) Strongly Agree"
+          ]
+        },
+        {
+          "type": "radio",
+          "secondary_text": "<b>The color of the sky is </b>",
+          "answers": [
+            "(1) Blue",
+            "(2) Purple",
+            "(3) Yellow"
+          ]
+        }
+      ]
+}

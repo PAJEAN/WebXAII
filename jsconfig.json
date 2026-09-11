@@ -1,11 +1,11 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-        "baseUrl": ".",
-        "paths": {
-            "JS/*": ["src/js/*"],
-            "CSS/*": ["src/css/*"]
-        }
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": ".",
+    "paths": {
+        "JS/*": ["src/js/*"],
+        "CSS/*": ["src/css/*"]
+    }
   },
   "include": [
     "src"

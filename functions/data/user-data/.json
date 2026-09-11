@@ -1,0 +1,20 @@
+{
+  "first_connection": "2026-07-15T07:16:37.653Z",
+  "last_modification": "2026-09-11T10:51:56.885Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 1393
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 4338,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    }
+  ]
+}

@@ -1,6 +1,307 @@
 export const TEST_VIEW = [
     // {}, // Authentication.
     {
+        "desc": "Second Task: Please select the correct category for the image",
+        "type": "p-chain-task",
+        "images": [
+            "assets/datasets/felipe/cat.JPEG",
+        ],
+        "labels": [
+            "Airplane",
+            "Truck",
+            "Car",
+            "Ship",
+            "Cat",
+            "Equine",
+            "Deer",
+            "Frog",
+            "Dog",
+            "Bird"
+        ],
+        "truth": 4,
+        "timer": -1,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "desc": "Third Task: Please select the correct category for the image",
+        "type": "p-chain-task",
+        "images": [
+            "assets/datasets/felipe/dog_s_1.JPEG",
+            "assets/datasets/felipe/dog_s_2.JPEG",
+            "assets/datasets/felipe/dog_s_3.JPEG",
+            "assets/datasets/felipe/dog_s_4.JPEG",
+            "assets/datasets/felipe/dog.JPEG",
+        ],
+        "labels": [
+            "Airplane",
+            "Truck",
+            "Car",
+            "Ship",
+            "Cat",
+            "Equine",
+            "Deer",
+            "Frog",
+            "Dog",
+            "Bird"
+        ],
+        "truth": 8,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true
+    },
+    {
+        view_id: 'my-desc-view',
+        score: true,
+        type: 'p-instruction',
+        title: '<h3><i>Congrats</i></h3',
+        body_text: "You've just achieved the last task",
+        with_button: false
+    },
+    {
+        "type": "p-task",
+        "desc": "<div style='font-size:1.2em'> Task question: <b>In the image, is there a triangle in every row (1, ..., 6)? </b></div>",
+        "show_progression_bar": true,
+        "randomize": true,
+        "timer": -1,
+        "feedback_answer_activated": false,
+        "feedback_answer_correct": "This is the right answer",
+        "feedback_answer_wrong": "This is not the right answer",
+        "feedback_answer_show_expected": false,
+        "feedback_answer_expected_text": "Expected answer : ",
+        "instances": [
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/48.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [{
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/48.png",
+                    "title": "AI"
+                }]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/28.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [{
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/28.png",
+                    "title": "AI"
+                }]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/42.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [{
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/42.png",
+                    "title": "AI"
+                }]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/85.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 0,
+                "explanations": [{
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/85.png",
+                    "title": "AI"
+                }]
+            },
+            {
+                "input": {
+                    "is_image": true,
+                    "label": "assets/res/input/disc_1_triangle_all_2/9.png",
+                    "title": "Image to analyze"
+                },
+                "expected": 1,
+                "explanations": [{
+                    "is_image": true,
+                    "label": "assets/res/xai_shap/disc_1_triangle_all_2/9.png",
+                    "title": "AI"
+                }]
+            }
+        ],
+        "question": {
+            "type": "button",
+            "primary_text": "<div style='font-size:0.8em'>Select the answer using the buttons below.</div>",
+            "answers": [
+                "Yes",
+                "No"
+            ],
+            "options": {
+                "css_class_colors": [
+                    "btn-success",
+                    "btn-danger"
+                ]
+            }
+        }
+    },
+    {
+        view_id: 'my-exp-view',
+        type: 'p-task',
+        title: '<i>Title task</i>',
+        desc: '<b>Description</b>',
+        show_progression_bar: true, // opt.
+        is_training: false, // opt.
+        timer: -1, // opt.
+        time_exceeded_timer: 3, // opt.
+        randomize: false,
+        feedback_answer_activated: false, // opt.
+        feedback_answer_correct: 'You were correct.', // opt.
+        feedback_answer_wrong: 'You were wrong.', // opt.
+        feedback_answer_show_expected: true, // opt.
+        feedback_answer_expected_text: 'Expected answer was: ', // opt.
+        instances: [
+            {
+                input: {
+                    is_image: true,
+                    label: 'assets/datasets/1.png',
+                    title: 'Source'
+                },
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model",
+                //     title: 'Model'
+                // },
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/2.png',
+                //         title: 'Explanation'
+                //     }
+                // ],
+                expected: 0
+            },
+            {
+                input: {
+                    is_image: true,
+                    label: 'assets/datasets/1.png',
+                    title: 'Source'
+                },
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model n°2",
+                //     title: 'Model'
+                // },
+                explanations: [
+                    {
+                        is_image: true,
+                        label: 'assets/datasets/2.png',
+                        title: 'Explanation'
+                    }
+                ],
+                expected: 1
+            },
+        ],
+        question: {
+            type: 'button',
+            primary_text: '<div class="w-100 text-center">Title</div>',
+            secondary_text: '<div class="w-100 text-center">Here is a longer text</div>',
+            answers: [
+                'choix A',
+                'choix B',
+            ],
+            options: {
+                css_class_colors: ['btn-success', 'btn-danger']
+            }
+        }
+    },
+    {
+        view_id: 'my-exp-view',
+        type: 'p-task',
+        title: '<i>Title task</i>',
+        desc: '<b>Description</b>',
+        show_progression_bar: true, // opt.
+        is_training: false, // opt.
+        timer: 5, // opt.
+        time_exceeded_timer: 3, // opt.
+        randomize: false,
+        feedback_answer_activated: true, // opt.
+        feedback_answer_correct: 'You were correct.', // opt.
+        feedback_answer_wrong: 'You were wrong.', // opt.
+        feedback_answer_show_expected: true, // opt.
+        feedback_answer_expected_text: 'Expected answer was: ', // opt.
+        instances: [
+            {
+                input: {
+                    is_image: true,
+                    label: 'assets/datasets/1.png',
+                    title: 'Source'
+                },
+                // model: {
+                //     is_image: false,
+                //     label: "This is a text for the model",
+                //     title: 'Model'
+                // },
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/2.png',
+                //         title: 'Explanation'
+                //     }
+                // ],
+                expected: 0
+            },
+            {
+                input: {
+                    is_image: true,
+                    label: 'assets/datasets/1.png',
+                    title: 'Source'
+                },
+                model: {
+                    is_image: false,
+                    label: "This is a text for the model n°2",
+                    title: 'Model'
+                },
+                // explanations: [
+                //     {
+                //         is_image: true,
+                //         label: 'assets/datasets/2.png',
+                //         title: 'Explanation'
+                //     }
+                // ],
+                expected: 1
+            },
+        ],
+        question: {
+            type: 'button',
+            primary_text: '<div class="w-100 text-center">Title</div>',
+            secondary_text: '<div class="w-100 text-center">Here is a longer text</div>',
+            answers: [
+                'choix A',
+                'choix B',
+            ],
+            options: {
+                css_class_colors: ['btn-success', 'btn-danger']
+            }
+        }
+    },
+    {
+        view_id: 'my-desc-view',
+        score: true,
+        type: 'p-instruction',
+        title: '<h3><i>Task</i></h3',
+        body_text: '<h4>Instruction</h4><p>C\'est du HTML!<img width="500px" src="assets/datasets/single-kingfisher-bird.jpg"></p>',
+        button_text: 'Next',
+        with_button: true,
+        countdown: 260 // opt.
+    },
+    {
         type: 'p-questionnaire',
         questions: [
             {
@@ -11,10 +312,33 @@ export const TEST_VIEW = [
                     'choix1',
                     'choix2',
                 ]
+            }
+        ],
+        break: {
+            index: 1,
+            text: 'Thank you for you participation, bye.'
+        }
+    },
+    {
+        type: 'p-questionnaire',
+        questions: [
+            {
+                type: 'radio',
+                primary_text: '',
+                secondary_text: '<i>Here is a longer text</i>',
+                answers: [
+                    'choix1',
+                    '',
+                    'choix2',
+                ],
+                options: {
+                    'inline': '',
+                    'limit_values': []
+                }
             },
             {
                 type: 'checkbox',
-                primary_text: 'Title 2',
+                primary_text: '<i>Title 2</i>',
                 secondary_text: 'Sub title 2',
                 answers: [
                     'choix1',
@@ -25,7 +349,12 @@ export const TEST_VIEW = [
                 type: 'slider',
                 primary_text: 'Title 3',
                 secondary_text: 'Sub title 3',
-                answers: ['Slider 1']
+                answers: [''],
+                options: {
+                    'limit_values': ['---', '+++'],
+                    'step': 10,
+                    'display_value': ''
+                }
             },
             {
                 type: 'textfield',
@@ -34,73 +363,6 @@ export const TEST_VIEW = [
                 answers: ['']
             }
         ]
-    },
-        {
-        type: 'p-questionnaire',
-        questions: [
-            {
-                type: 'radio',
-                primary_text: '',
-                secondary_text: 'Here is a longer text',
-                answers: [
-                    'choix1',
-                    'choix2',
-                ]
-            }
-        ]
-    },
-    {
-        type: 'p-task',
-        title: 'Title task',
-        desc: 'Description',
-        show_progression_bar: true, // opt.
-        is_training: false, // opt.
-        timer: 10, // opt.
-        randomize: true,
-        feedback_answer_activated: true, // opt.
-        feedback_answer_correct: 'You were correct.', // opt.
-        feedback_answer_wrong: 'You were wrong.', // opt.
-        feedback_answer_show_expected: true, // opt.
-        feedback_answer_expected_text: 'Expected answer was: ', // opt.
-        instances: [
-            {
-                input: {
-                    is_image: true,
-                    label: 'assets/datasets/single-kingfisher-bird.jpg',
-                    title: 'Source'
-                },
-                model: {
-                    is_image: false,
-                    label: "This is a text for the model",
-                    title: 'Model'
-                },
-                explanations: [
-                    {
-                        is_image: true,
-                        label: 'assets/datasets/single-kingfisher-bird_xai.jpg',
-                        title: 'Explanation'
-                    }
-                ],
-                expected: 0
-            },
-        ],
-        question: {
-            type: 'radio',
-            primary_text: 'Title',
-            secondary_text: 'Here is a longer text',
-            answers: [
-                'choix A',
-                'choix B',
-            ]
-        }
-    },
-    {
-        type: 'p-instruction',
-        title: 'Task',
-        body_text: 'Instruction',
-        button_text: 'Next',
-        with_button: true,
-        countdown: 90 // opt.
     },
     {
         type: 'p-questionnaire',

@@ -1,0 +1,1 @@
+{"question": "Is the pattern or any of its left or right rotations in the image?", "pos_example": "assets/res/input/easy1_find_pattern_rot/pos_example.png", "neg_example": "assets/res/input/easy1_find_pattern_rot/neg_example.png"}

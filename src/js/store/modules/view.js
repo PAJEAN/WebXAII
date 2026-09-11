@@ -4,9 +4,11 @@
 import { viewToObject } from 'JS/lib/view-manager';
 /* Namespaces */
 import { VIEW as NS } from './__namespaces__';
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
 /* Utils */
 import { TEST_VIEW } from 'JS/utils/test_data';
 import { DATA_URL } from 'JS/utils/constants';
+import { View } from './view-classes';
 
 
 /* -------------------------------------------------------------------------- */
@@ -40,11 +42,13 @@ export const keys = {
     /* -------------------------- experiment & task ------------------------- */
     a_update_current_task_index: `${NS}_update_current_index_task`,      // Update task index.
     a_update_experiment_scores:  `${NS}_update_experiment_scores`,       // Update scores.
+    a_reset_experiment_scores:   `${NS}_reset_experiment_scores`,        // Reset scores.
     
     /*** GETTERS ***/
-    g_view_length:        `${NS}_view_length`,       // Length of view.
-    g_current_view:       `${NS}_current_view`,      // Get current view info.
-    g_experiment_length:  `${NS}_experiment_length`, // Length of completed experiment.
+    g_view_length:         `${NS}_view_length`,         // Length of view.
+    g_current_view:        `${NS}_current_view`,        // Get current view info.
+    g_current_view_object: `${NS}_current_view_object`, // Get current view object.
+    g_experiment_length:   `${NS}_experiment_length`,   // Length of completed experiment.
 }
 
 
@@ -120,6 +124,9 @@ export const module = {
         [keys.a_update_experiment_scores](context, payload) {
             context.commit(`${NS}_UPDATE_EXPERIMENT_SCORES`, payload);
         },
+        [keys.a_reset_experiment_scores](context, payload) {
+            context.commit(`${NS}_RESET_EXPERIMENT_SCORES`, payload);
+        },
     },
     
     /*** Mutations ***/
@@ -140,7 +147,19 @@ export const module = {
         },
         [`${NS}_UPDATE_SAVE`](state, payload) {
             if (state[keys.s_current_view_index] == state[keys.s_save].length - 1) { // Update current.
-                state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
+                // state[keys.s_save][state[keys.s_current_view_index]] = {...state[keys.s_save][state[keys.s_current_view_index]], ...payload};
+
+                for (let key in payload) {                    
+                    if (Array.isArray(payload[key])) {
+                        if (!state[keys.s_save][state[keys.s_current_view_index]].hasOwnProperty(key)) {
+                            state[keys.s_save][state[keys.s_current_view_index]][key] = []
+                        }                        
+                        state[keys.s_save][state[keys.s_current_view_index]][key] = [...state[keys.s_save][state[keys.s_current_view_index]][key], ...payload[key]];
+                    } else {
+                        state[keys.s_save][state[keys.s_current_view_index]][key] = payload[key];
+                    }
+                }
+                
             } else { // New entry.
                 state[keys.s_save][state[keys.s_current_view_index]] = payload;
             }
@@ -155,11 +174,15 @@ export const module = {
         [`${NS}_UPDATE_EXPERIMENT_SCORES`](state, payload) {
             state[keys.s_experiment_scores].push(payload);
         },
+        [`${NS}_RESET_EXPERIMENT_SCORES`](state, payload) {
+            state[keys.s_experiment_scores] = [];
+        }
     },
     
     /*** Getters ***/
     getters: {
         [keys.g_view_length]:  (state, key) => state[keys.s_view].length,
-        [keys.g_current_view]: (state, key) => state[keys.s_view][state[keys.s_current_view_index]]
+        [keys.g_current_view]: (state, key) => state[keys.s_view][state[keys.s_current_view_index]],
+        [keys.g_current_view_object]: (state, key) => state[keys.s_view_objects][state[keys.s_current_view_index]]
     }
 }
