@@ -1,0 +1,1122 @@
+[
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "<h3>Participation on a study on the impact of explainable AI on Human Visual recognition</h3><br/>",
+                "secondary_text": "<header></header><section><b>Project Objectives</b><p>The aim of this survey is to assess the impact of explanations of visual systems derived from Artificial Intelligence (AI) on human performance on the task of image recognition while subjected to different degrees of information.</p></section> <hr> <section><b>What Is Expected of You</b><p>You will need to correctly categorize different images at different reconstruction levels. You will be required to correctly predict the category depicted on the image. For each image presented to you, will have to answer a question within a limited time.</p><p> You are expected to perform as well as possible. <b> Your performance will be evaluated based on your capacity to correctly classify an input image, you will receive a bonus reward based on how confidently you report your answers.</b> You will be informed when a task is evaluated or not.</p></p> Depending on your random assignment into a group, you might observe the information in different orders of importance.</p></section> <hr> <section><b>Your Right to Withdraw from the Study</b><p>You have the right to withdraw from the study at any time.</p></section> <hr> <section><b>Reporting issues</b><p>You can report issues at the email adress given at the end of the study, if you detect any.</p></section> <hr> <section><b>Confidentiality and Privacy</b><p>The information collected in this form is recorded in a file by Felipe Torres for research purposes, specifically to study human performance in an accountability setting. The legal basis for this data processing is your consent.</p><p>The collected data will only be shared with the following recipients:</p><ul><li>Felipe Torres</li><li>Nicolas Soulie</li></ul><p>The data will be kept for five years after the scientific publication (expected in 2026). You may request access to your personal data, request corrections, or exercise your right to restrict the processing of your data. </p><p>To exercise your rights or ask questions regarding data processing within this framework, you may contact: <a href='mailto:felipe.torres_figueroa@imt-bs.eu'>nicolas.soulie@imt-bs.eu</a>.</p></section> <hr><section>CHECK AFTERWARDS FROM HERE</section><hr><section><b>Expected Benefits of the Study</b><p>Your remuneration will include a <b>fixed part and a variable part.</b></p> <p>The fixed part is a payment at an <b>hourly rate of \u00a3(CHECK)</b>. The expected duration of the experiment is 12 minutes, so it should correspond to a \u00a3(CHECK) payment. The actual time used for this calculation will be the median completion time across all participants.</p> <p>The variable part depends solely on your performance during the experiment. <b>You will receive \u00a30.04 for each correct answer to an evaluated question (not all question will be evaluated, and you will know which ones are evaluated or not). There will be 53 evaluated questions, giving a minimum of \u00a30 and a maximum of \u00a32.12.</b></p><p>In case the measured time is effectively 20 minutes, <b>your remuneration would range from \u00a32.0 to \u00a34.12 depending on your performance</b>. This would correspond to an <b>effective hourly rate ranging between \u00a36 and \u00a312.36</b>.</p></section> <hr> <section><b>Possible Risks</b><p>The risks involved in these tests are no different from those encountered when performing a standard computer task.</p></section> <hr> <section><b>Right to Withdraw Consent</b><p>I understand that my participation in this research is voluntary and that I may refuse to participate. If I choose so, I am free to stop participating at any time, without having to provide justification. I will inform the Scientific Supervisor in writing at the following address: <a href='mailto:felipe.torres_figueroa.leguy@imt-bs.eu'>felipe.torres_figueroa@imt-bs.eu</a>.</section> <hr> <section><b>Color Vision Requirement</b><p>This study requires accurate color perception, as the tasks involve distinguishing symbols based on color. For this reason, the protocol screens out participants with colorblindness. You have indicated to Prolific that you are not colorblind. Please only accept this form if that is effectively the case.</p></section><section><b>Consent</b></section>",
+                "answers": [
+                    "I have read and understand the information contained in this document, and I freely and knowingly consent to participate to this research project. I also confirm that I am not colorblind, as I have indicated on my Prolific profile.",
+                    "I do not consent to participate to this research project or I am colorblind."
+                ]
+            }
+        ],
+        "break": {
+            "index": 1,
+            "text": "Use the following link to end the experiment and come back to Prolific : <a href='https://app.prolific.com/submissions/complete?cc=C16YLJGE'>https://app.prolific.com/submissions/complete?cc=C16YLJGE</a>. If it doesn't work, use the code C16YLJGE."
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Adjustment of page zoom</h3>",
+        "body_text": "<div class='text-start'> <p>When you will perform the task, please make sure all elements of the page fit on your monitor, without needing to scroll the page. If it does not fit fully, please use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page so that all elements of the page can be seen at once. Below is an example of display where all elements are visible at once.</p><img src='assets/res/img/SufficientInfo/zoom_ex.png' class='img-fluid' alt='page where all elements are visible at once'></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following categories:<table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'> <b style='color:green;'>Correct</b></span>/<span class='incorrect'><b style='color:red;'>Incorrect.</b></span><strong> For category: Bike.</strong></p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00015839.JPEG' alt='Training Image'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Bike</b></li><li><b style='color:red;'>Bird</b></li></ul></td></tr></table>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following categories:<table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'> <b style='color:green;'>Correct</b></span>/<span class='incorrect'><b style='color:red;'>Incorrect.</b></span><strong> For category: Bird.</strong></p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00031086.JPEG' alt='Training Image'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Bird</b></li><li><b style='color:red;'>Cat</b></li></ul></td></tr></table>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following categories:<table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'> <b style='color:green;'>Correct</b></span>/<span class='incorrect'><b style='color:red;'>Incorrect.</b></span><strong> For category: Airplane.</strong></p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00047865.JPEG' alt='Training Image'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Airplane</b></li><li><b style='color:red;'>Cat</b></li></ul></td></tr></table>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following categories:<table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'> <b style='color:green;'>Correct</b></span>/<span class='incorrect'><b style='color:red;'>Incorrect.</b></span><strong> For category: Airplane.</strong></p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00030069.JPEG' alt='Training Image'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Airplane</b></li><li><b style='color:red;'>Dog</b></li></ul></td></tr></table>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following categories:<table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'> <b style='color:green;'>Correct</b></span>/<span class='incorrect'><b style='color:red;'>Incorrect.</b></span><strong> For category: Truck.</strong></p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00029961.JPEG' alt='Training Image'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Truck</b></li><li><b style='color:red;'>Car</b></li></ul></td></tr></table>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>First Task: Image Classification</h3>",
+        "body_text": "<div class='text-start'> <p align='justify'>For this task you must identify an object in an image from one of the previously introduced categories alongside the definition of a correct classification</p> <p align='justify'> You will repeat this 5 times. You must respond within 15 seconds for each image; otherwise your answer will be considered incorrect.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00016506.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 0,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00021549.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 5,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00042924.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 9,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00001274.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 2,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/ILSVRC2012_val_00049316.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 7,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": false
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3> Protocol outline </h3>",
+        "body_text": "<div class='text-start'> <p> The protocol will last about 20 minutes and is organized as follows. </p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/SufficientInfo/survey_outline.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/>  <p><u>Introduction</u><br/> First, you will must perform a task that will be used to verify that you understand the instructions. This task will contribute to your bonus remuneration (you will earn \u00a30.04 for each correct answer). It will be the only task of the introduction that does contribute to the bonus remuneration.</p> <p>To finalize the training, you will then start the preparation phase, which consists in solving a task which will closely resemble those of the main experimental phase. </p> <p> <u>Main experiment</u><br/>Then, the main experiment will start. It will be divided into 4 tasks, that will count towards your score and bonus remuneration. Right after each task, you will have to take a survey to give feedback about the task you just performed.</p><p> <u>Closing</u><br/> Finally, you will enter the closing phase, in which you will have to answer a final survey to conclude the protocol.</p><p> Please read the information above carefully, as you will not be able to return to this page once you click the button below.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/5_timeline_hTraining.png' class='img-fluid' alt='timeline'><h3 align='left'>Second Task: Recognition with Incomplete Information</h3>",
+        "body_text": "<p align='justify'>Following the previous task, you will now identify the main object in images shown in progressively cleaner versions. You have 15 seconds per image to respond, otherwise your answer will be marked incorrect</p> <p align='justify'><strong>For each image, provide a category prediction and your confidence in that prediction. Your confidence affects your reward: reporting high confidence reduces the impact of a correct answer only slightly, but it leads to a larger penalty when your answer is incorrect. Therefore, use higher confidence only when you are truly certain.</strong></p>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00029094.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00029094.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 3,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00036915.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00036915.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 7,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00048111.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00048111.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 0,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00044872.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00044872.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 9,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": false
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>Paris is the capital of </b>",
+                "answers": [
+                    "(1) France",
+                    "(2) Germany",
+                    "(3) Italy"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/2_timeline_hMainExp.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment</h3>",
+        "body_text": "<div class='text-start'> <p>The introduction is over. You are now entering the main experimental phase. <b>Your performance during this phase will count towards your bonus remuneration.</b> As a reminder, the structure of the experiment is described in the diagram below.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/SufficientInfo/mainexp_diagram.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> This phase consists in solving 4 tasks. After each task, you must answer a survey directly related to the task you just performed. There are no right or wrong answers to the survey questions; only your score during the tasks will count towards your bonus remuneration.</p> <p>Please remind that you still have to answer the questions within an alloted time for each image. Responding faster does not improve your score. However, <b> if you fail to respond within the alloted time, it will be counted as an error.</b> <p>Remember to use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page size if not all elements can be seen at once.</p>",
+        "button_text": "Enter the Main experiment",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00002213.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00002213.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 9,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00011630.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00011630.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 3,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00046770.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00046770.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 4,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Familiarization",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00032804.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00032804.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 0,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": false
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>Paris is the capital of </b>",
+                "answers": [
+                    "(1) France",
+                    "(2) Germany",
+                    "(3) Italy"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/2_timeline_hMainExp.png' class='img-fluid' alt='timeline'></br><hr><h3>Main experiment</h3>",
+        "body_text": "<div class='text-start'> <p>The introduction is over. You are now entering the main experimental phase. <b>Your performance during this phase will count towards your bonus remuneration.</b> As a reminder, the structure of the experiment is described in the diagram below.</p> <div class='container-fluid text-center'> <div class='row justify-content-center'> <div class='col-10 col-md-6 d-flex flex-column align-items-center'><img src='assets/res/img/SufficientInfo/mainexp_diagram.png' class='img-fluid' alt='Diagram of experiment'> </div> </div> </div> <br/> <p> This phase consists in solving 4 tasks. After each task, you must answer a survey directly related to the task you just performed. There are no right or wrong answers to the survey questions; only your score during the tasks will count towards your bonus remuneration.</p> <p>Please remind that you still have to answer the questions within an alloted time for each image. Responding faster does not improve your score. However, <b> if you fail to respond within the alloted time, it will be counted as an error.</b> <p>Remember to use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page size if not all elements can be seen at once.</p>",
+        "button_text": "Enter the Main experiment",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00006981.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00006981.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 6,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00049672.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00049672.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 6,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00027293.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00027293.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 3,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00047737.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00047737.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 6,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Reconstructing from high relevance information",
+                "secondary_text": "How often were the early key focal details sufficient on their own to identify the category without needing the surrounding context?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did the initial high-saliency stages contain the most diagnostic information for your decision?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Could you anticipate what surrounding context or background scene would be revealed after seeing the primary focal details?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Did identifying a focal feature early lock you into a category choice before seeing the rest of the scene context?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did an isolated key detail out of context lead you toward an incorrect category choice?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00019236.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00019236.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 2,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00012248.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00012248.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 7,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00038850.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00038850.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 8,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-task",
+        "desc": "<h1 align 'left'> Explanation Reconstruction: Evaluation</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_1_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_2_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_3_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_4_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_5_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_6_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_7_ILSVRC2012_val_00027012.JPEG",
+            "assets/datasets/ImageNet_Val/8steps_mixed_60start/step_8_ILSVRC2012_val_00027012.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 5,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": true
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Reconstructing from low relevance information",
+                "secondary_text": "How often did you rely on background context to form your initial hypothesis before key details appeared?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did the initial reconstruction stages contain enough useful information to guess the correct category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Could you anticipate what main object or feature would appear as the reconstruction progressed from background to focal areas?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Did an early guess based on background context make it harder to change your mind when specific details were finally revealed?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did early background features mislead you toward an incorrect category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Rarely",
+                    "(3) Sometimes",
+                    "(4) Often",
+                    "(5) Very Often"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Somewhat Disagree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>The color of the sky is </b>",
+                "answers": [
+                    "(1) Blue",
+                    "(2) Purple",
+                    "(3) Yellow"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/3_timeline_hClosing.png' class='img-fluid' alt='timeline'><h3 align='left'>Closing Phase</h3>",
+        "body_text": "<p align='justify'>Thank you for following our instructions and completing all the tasks. Before terminating the survey, yo will complete a final questionnaire.</strong></p>",
+        "button_text": "Start the final survey",
+        "with_button": "True"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Overall Paradigm Comparison<hr>",
+                "secondary_text": "In which reconstruction sequence did you feel confident in your category choice earlier in the trial?",
+                "answers": [
+                    "(1) Strongly when key details appeared first",
+                    "(2) Slightly when key details appeared first",
+                    "(3) No difference between sequence types",
+                    "(4) Slightly when background context appeared first",
+                    "(5) Strongly when background context appeared first"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Which reconstruction sequence required less overall mental effort to categorize correctly?",
+                "answers": [
+                    "(1) High-to-Low required significantly less effort",
+                    "(2) High-to-Low required slightly less effort",
+                    "(3) Both required equal effort",
+                    "(4) Low-to-High required slightly less effort",
+                    "(5) Low-to-High required significantly less effort"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>End of the protocol</h3>",
+        "body_text": "<div class='text-start'> <div><p>The protocol is now over.</p><p>Use the following <a href='LinkProlific'>link</a> to come back to Prolific: If it doesn't work, use the code C13X3WJS.</p><p>In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:felipe.torres_figueroa@imt-bs.eu'>felipe.torres_figueroa@imt-bs.eu</a>.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div><div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imtbs.png' class='img-fluid w-100' alt='IMT BS logo'> </div> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='ENFIELD logo'> </div></div></div>"
+    }
+]

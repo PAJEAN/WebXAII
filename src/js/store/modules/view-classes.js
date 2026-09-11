@@ -303,6 +303,58 @@ export class Experiment extends View {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                              SingleExperiment                              */
+/* -------------------------------------------------------------------------- */
+
+export class SingleExperiment extends View {
+    
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        if (!view.hasOwnProperty('images')) {
+            // console.warn('SingleExperiment has no images property'); <--- REMOVE OR COMMENT OUT
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @param {object} view
+    */
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
+        /** @type {string} */
+        this._desc = view.hasOwnProperty('desc') ? view['desc']: '';
+        /** @type {string} */
+        this._image = (Array.isArray(view['images']) && view['images'].length > 0) 
+            ? view['images'][0] 
+            : '';
+        /** @type {string[]} */
+        this._labels = view.hasOwnProperty('labels') ? view['labels']: [];
+        /** @type {number} */
+        this._truth = view.hasOwnProperty('truth') ? parseInt(view['truth']): -1; // Index of the correct label.
+        /** @type {number} */
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']): -1; // -1 if no timer (otherwise it's the max timer).
+        /** @type {boolean} */
+        this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
+        /** @type {boolean} */
+        this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
+    }
+    
+    get desc() { return this._desc; }
+    get confidence() { return this._confidence; }
+    get image() { return this._image; }
+    get labels() { return this._labels; }
+    get show_rewards() { return this._show_rewards; }
+    get timer() { return this._timer; }
+    get truth() { return this._truth; }
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                  ChainExp                                  */
 /* -------------------------------------------------------------------------- */
 
@@ -339,7 +391,8 @@ export class ChainExperiment extends View {
         this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
         this._current_image_index = 0;
     }
-
+    
+    get desc() { return this._desc; }
     get confidence() { return this._confidence; }
     get images() { return this._images; }
     get labels() { return this._labels; }
