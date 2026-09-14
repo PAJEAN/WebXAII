@@ -1,0 +1,282 @@
+{
+  "first_connection": "2026-09-12T08:20:07.015Z",
+  "last_modification": "2026-09-12T08:22:35.796Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 70888
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 7504,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 5103,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 3666,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1620,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1286,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1112,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 6261,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 3024,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 0,
+          "confidence": -1,
+          "time": 4700,
+          "is_time_exceeded": false,
+          "expected": 0
+        }
+      ],
+      "time_on_page": 4917,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 4,
+          "confidence": -1,
+          "time": 4800,
+          "is_time_exceeded": false,
+          "expected": 4
+        }
+      ],
+      "time_on_page": 4885,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 9,
+          "confidence": -1,
+          "time": 4600,
+          "is_time_exceeded": false,
+          "expected": 8
+        }
+      ],
+      "time_on_page": 4729,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 5,
+          "confidence": -1,
+          "time": 3200,
+          "is_time_exceeded": false,
+          "expected": 5
+        }
+      ],
+      "time_on_page": 3279,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 5,
+          "confidence": -1,
+          "time": 3000,
+          "is_time_exceeded": false,
+          "expected": 5
+        }
+      ],
+      "time_on_page": 3149,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "time_on_page": 3919,
+      "view_id": null,
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 10644,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 5082,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 0,
+          "confidence": 0,
+          "time": 14500,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 3300,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 2600,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 1800,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 1500,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 2100,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 2300,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "time": 6800,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 35679,
+      "view_id": "",
+      "view_type": "p-chain-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 3,
+          "confidence": 0,
+          "time": 6200,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 100,
+          "time": 12000,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "time": 2700,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 69,
+          "time": 4200,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0
+        },
+        {
+          "answers": 9,
+          "confidence": 73,
+          "time": 5200,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.03
+        },
+        {
+          "answers": 9,
+          "confidence": 89,
+          "time": 3500,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.03
+        },
+        {
+          "answers": 9,
+          "confidence": 73,
+          "time": 4400,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.03
+        },
+        {
+          "answers": 9,
+          "confidence": 74,
+          "time": 4000,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.03
+        }
+      ],
+      "time_on_page": 42922,
+      "view_id": "",
+      "view_type": "p-chain-task"
+    }
+  ]
+}

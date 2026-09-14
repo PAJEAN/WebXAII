@@ -1,0 +1,45 @@
+{
+  "first_connection": "2026-09-11T15:00:08.077Z",
+  "last_modification": "2026-09-11T15:01:54.452Z",
+  "is_completed": false,
+  "data": [
+    {
+      "time_on_page": 5200
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 4024,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 3102,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 4938,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 872,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 92772,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 723,
+      "view_id": "",
+      "view_type": "p-instruction"
+    }
+  ]
+}
