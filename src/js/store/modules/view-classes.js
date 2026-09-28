@@ -389,6 +389,11 @@ export class ChainExperiment extends View {
         this._confidence = view.hasOwnProperty('confidence') ? view['confidence']: false;
         /** @type {boolean} */
         this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards']: false;
+        /** @type {number} */
+        this._reward_cts = view.hasOwnProperty('reward_cts') ? parseFloat(view['reward_cts']): 0.03;
+        /** @type {boolean} */
+        this._is_training = view.hasOwnProperty('is_training') ? Boolean(view['is_training']): false;
+        
         this._current_image_index = 0;
     }
     
@@ -397,6 +402,8 @@ export class ChainExperiment extends View {
     get images() { return this._images; }
     get labels() { return this._labels; }
     get show_rewards() { return this._show_rewards; }
+    get reward_cts() { return this._reward_cts; }
+    get is_training() { return this._is_training; }
     get timer() { return this._timer; }
 
     get current_image_index() { return this._current_image_index; }
@@ -468,15 +475,19 @@ export class Desc extends View {
      */
     constructor(view) {
         super(view['type'], view.hasOwnProperty('view_id') ? view['view_id']: '');
-        this._body_text   = view.hasOwnProperty('body_text') ? view['body_text']: '';
-        this._button_text = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
-        this._countdown   = view.hasOwnProperty('countdown') ? 
-                                typeof view['countdown'] == 'number' ? view['countdown']: 60
-                            : undefined;
+        this._body_text        = view.hasOwnProperty('body_text') ? view['body_text']: '';
+        this._button_text      = view.hasOwnProperty('button_text') ? view['button_text']: 'Next';
+        this._countdown        = view.hasOwnProperty('countdown') ? 
+                                    typeof view['countdown'] == 'number' ? view['countdown']: 60
+                                : undefined;
         /** @type {boolean|undefined} */                    
-        this._score       = view.hasOwnProperty('score') ? view['score']: undefined;
-        this._title       = view.hasOwnProperty('title') ? view['title']: '';
-        this._with_button = view.hasOwnProperty('with_button') ? view['with_button']: false;
+        this._score            = view.hasOwnProperty('score') ? view['score']: undefined;
+        this._title            = view.hasOwnProperty('title') ? view['title']: '';
+        this._with_button      = view.hasOwnProperty('with_button') ? view['with_button']: false;
+        
+        /* Reward configuration flags */
+        this._show_rewards     = view.hasOwnProperty('show_rewards') ? view['show_rewards'] : false;
+        this._show_as_potential = view.hasOwnProperty('show_as_potential') ? view['show_as_potential'] : false;
     }
     
     get body_text() { return this._body_text; }
@@ -485,4 +496,8 @@ export class Desc extends View {
     get score() { return this._score; }
     get title() { return this._title; }
     get with_button() { return this._with_button; }
+    
+    /* Getters for reward parameters */
+    get show_rewards() { return this._show_rewards; }
+    get show_as_potential() { return this._show_as_potential; }
 }

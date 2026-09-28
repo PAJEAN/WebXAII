@@ -1,3 +1,5 @@
+// @ts-check
+
 /* Lib */
 import { guardView, nextView } from 'JS/lib/view-manager';
 /* Namespaces */
@@ -20,6 +22,7 @@ try {
         slider: 'slider-input',
         slider_value: 'slider-value-span',
         rewards: 'rewards-div',
+        rewards_header: 'rewards-header-p',
         rewards_correct: 'rewards-correct-span',
         rewards_incorrect: 'rewards-incorrect-span'
     };
@@ -79,7 +82,7 @@ try {
                                 <h4 class="text-center mb-4">
                                     Answer Confidence
                                 </h4>
-                                <b style='color:red;' align='center'> Please remember to adjust your confidence level</b>
+                                <b style='color:red;' class="d-block text-center mb-2">Please remember to adjust your confidence level</b>
                                 <div class="d-flex align-items-center gap-3 mb-4">
                                     <span>0</span>
                                     <input
@@ -99,10 +102,10 @@ try {
                                 </div>
                             </div>
 
-                            <div id="${TAG_IDS.rewards}" class="text-body-secondary fs-5 d-none">
-                                <p style='color:red;' align='center'> This is your potential bonus reward</p>
-                                <div>Correct: <span id="${TAG_IDS.rewards_correct}">0</span></div>
-                                <div>Incorrect: <span id="${TAG_IDS.rewards_incorrect}">0</span></div>
+                            <div id="${TAG_IDS.rewards}" class="text-body-secondary fs-5 d-none mb-3 text-center">
+                                <p id="${TAG_IDS.rewards_header}" style='color:red;' class="mb-1"></p>
+                                <div>Correctly: <span id="${TAG_IDS.rewards_correct}"></span></div>
+                                <div>Incorrectly: <span id="${TAG_IDS.rewards_incorrect}"></span></div>
                             </div>
 
                             <div class="d-grid">
@@ -117,7 +120,7 @@ try {
 
                     <div id="${TAG_IDS.timer}" class="text-center mt-5 fs-3"></div>
 
-                    <div id="${TAG_IDS.error}" class="text-center text-danger"></div>
+                    <div id="${TAG_IDS.error}" class="text-center text-danger mt-2"></div>
 
                 </div>
             </div>
@@ -131,11 +134,27 @@ try {
                     this.correct_step_index = -1;
                     this.total_earned = 0;
                     this.total_max = 0;
+                    /** @type {number | undefined} */
+                    this.timer_id = undefined;
+                    this.current_time = 0;
+                    this.time_exceeded_timer = false;
+                }
+
+                _get_reward_cts() {
+                    // Defaults to 0.03 (£0.03) unless provided in view config
+                    return (this.current_view && typeof this.current_view.reward_cts === 'number') 
+                        ? this.current_view.reward_cts 
+                        : 0.03;
+                }
+
+                _is_training() {
+                    // Returns true if explicit true, otherwise defaults to false
+                    return (this.current_view && this.current_view.is_training === true);
                 }
 
                 _clear_error() {
                     let error_tag = this.content.querySelector(`#${TAG_IDS.error}`);
-                    error_tag.innerHTML = '';
+                    if (error_tag) { error_tag.innerHTML = ''; }
                 }
 
                 _images() {
@@ -181,15 +200,36 @@ try {
 
                 _desc() {
                     let desc_tag = this.content.querySelector(`#${TAG_IDS.desc}`);
-                    desc_tag.innerHTML = this.current_view.desc;
+                    if (desc_tag) { desc_tag.innerHTML = this.current_view.desc; }
                 }
 
                 _correct_rewards(cts, confidence) {
-                    return (cts - 0.5 * (cts - confidence / 100 * cts)).toFixed(2);
+                    const pence_val = (cts - 0.5 * (cts - (confidence / 100) * cts)) * 100;
+                    return pence_val.toFixed(2);
                 }
 
                 _incorrect_rewards(cts, confidence) {
-                    return (cts - 0.5 * (cts + confidence / 100 * cts)).toFixed(2);
+                    const pence_val = (cts - 0.5 * (cts + (confidence / 100) * cts)) * 100;
+                    return pence_val.toFixed(2);
+                }
+
+                _update_reward_displays(confidence_val) {
+                    if (!this.current_view.show_rewards) { return; }
+                    
+                    const reward_cts = this._get_reward_cts();
+                    const correct_rewards = this.content.querySelector(`#${TAG_IDS.rewards_correct}`);
+                    const incorrect_rewards = this.content.querySelector(`#${TAG_IDS.rewards_incorrect}`);
+
+                    if (correct_rewards && incorrect_rewards) {
+                        const correct_cts = this._correct_rewards(reward_cts, confidence_val);
+                        const incorrect_cts = this._incorrect_rewards(reward_cts, confidence_val);
+
+                        const correct_pounds = (parseFloat(correct_cts) / 100).toFixed(3);
+                        const incorrect_pounds = (parseFloat(incorrect_cts) / 100).toFixed(3);
+
+                        correct_rewards.textContent = `${correct_cts} cents (£${correct_pounds})`;
+                        incorrect_rewards.textContent = `${incorrect_cts} cents (£${incorrect_pounds})`;
+                    }
                 }
 
                 _secure_timer() {
@@ -224,27 +264,26 @@ try {
                         return;
                     }
 
-                    let selected_label = form_data.get('labels') == null ? null : parseInt(form_data.get('labels'));
+                    let selected_label = form_data.get('labels') == null ? null : parseInt(/** @type {string} */ (form_data.get('labels')), 10);
                     const expected_truth = parseInt(this.current_view.truth, 10);
 
-                    let confidence = 50;
+                    let confidence = 0; // Default fallback to 0
                     if (this.current_view.confidence) {
                         let slider = this.content.querySelector(`#${TAG_IDS.slider}`);
-                        confidence = parseInt(slider.value, 10);
+                        confidence = slider ? parseInt(slider.value, 10) : 0;
                     }
 
-                    // Calculate step reward
-                    const REWARD_CTS = 0.03;
+                    const REWARD_CTS = this._get_reward_cts();
                     const is_correct = (selected_label === expected_truth);
                     
                     let step_reward = 0;
                     if (is_correct) {
-                        step_reward = parseFloat(this._correct_rewards(REWARD_CTS, confidence));
+                        step_reward = parseFloat(this._correct_rewards(REWARD_CTS, confidence)) / 100;
                         if (this.correct_step_index === -1) {
                             this.correct_step_index = this.current_view.current_image_index;
                         }
                     } else {
-                        step_reward = parseFloat(this._incorrect_rewards(REWARD_CTS, confidence));
+                        step_reward = parseFloat(this._incorrect_rewards(REWARD_CTS, confidence)) / 100;
                     }
 
                     // Accumulate totals for this sample
@@ -268,14 +307,6 @@ try {
                     if (this.current_view.current_image_index >= this.current_view.images.length) {
                         this._finish_task();
                     } else {
-                        if (this.current_view.confidence) {
-                            const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
-                            const value_tag = this.content.querySelector(`#${TAG_IDS.slider_value}`);
-                            if (slider && value_tag) {
-                                slider.value = '0';
-                                value_tag.textContent = '0';
-                            }
-                        }
                         this._init();
                     }
                 }
@@ -332,47 +363,69 @@ try {
                 }            
 
                 _init() {
-                    this.timer_id && clearInterval(this.timer_id);
+                    if (this.timer_id) {
+                        clearInterval(this.timer_id);
+                    }
                     this.current_time = 0;
                     this.time_exceeded_timer = false;
                     this._clear_error();
                     this._desc();
                     this._images();
                     this._labels();
+
+                    // Update Reward visibility and Header text dynamically per step
+                    const rewards_div = this.content.querySelector(`#${TAG_IDS.rewards}`);
+                    if (rewards_div) {
+                        if (this.current_view.show_rewards) {
+                            rewards_div.classList.remove('d-none');
+                            
+                            const header_tag = this.content.querySelector(`#${TAG_IDS.rewards_header}`);
+                            if (header_tag) {
+                                header_tag.textContent = this._is_training()
+                                    ? 'Practice Reward (Simulated) if you respond:'
+                                    : 'Bonus Reward (Accumulative) if you respond:';
+                            }
+                        } else {
+                            rewards_div.classList.add('d-none');
+                        }
+                    }
+
+                    // Reset confidence slider and calculated reward outputs to 0
+                    if (this.current_view.confidence) {
+                        const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
+                        const value_tag = this.content.querySelector(`#${TAG_IDS.slider_value}`);
+                        if (slider && value_tag) {
+                            slider.value = '0';
+                            value_tag.textContent = '0';
+                        }
+                        this._update_reward_displays(0);
+                    }
+
                     this._secure_timer();
                 }
 
                 _init_events() {
                     let next_btn = this.content.querySelector(`#${TAG_IDS.next_btn}`);
-                    next_btn.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        this._submit();
-                    });
-                    
-                    if (this.current_view.show_rewards) {
-                        this.content.querySelector(`#${TAG_IDS.rewards}`).classList.toggle('d-none');
+                    if (next_btn) {
+                        next_btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            this._submit();
+                        });
                     }
                     
                     if (this.current_view.confidence) {
                         const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
                         const value = this.content.querySelector(`#${TAG_IDS.slider_value}`);
 
-                        const REWARD_CTS = 3;
-                        const correct_rewards = this.content.querySelector(`#${TAG_IDS.rewards_correct}`);
-                        const incorrect_rewards = this.content.querySelector(`#${TAG_IDS.rewards_incorrect}`);
-                        correct_rewards.textContent = this._correct_rewards(REWARD_CTS, parseInt(slider.value));
-                        incorrect_rewards.textContent = this._incorrect_rewards(REWARD_CTS, parseInt(slider.value));
-        
-                        slider.addEventListener('input', () => {
-                            value.textContent = slider.value;
-
-                            if (this.current_view.show_rewards) {
-                                correct_rewards.textContent = this._correct_rewards(REWARD_CTS, parseInt(slider.value));
-                                incorrect_rewards.textContent = this._incorrect_rewards(REWARD_CTS, parseInt(slider.value));
-                            }
-                        });
+                        if (slider && value) {
+                            slider.addEventListener('input', () => {
+                                value.textContent = slider.value;
+                                this._update_reward_displays(parseInt(slider.value, 10));
+                            });
+                        }
                     } else {
-                        this.content.querySelector(`#${TAG_IDS.confidence}`).innerHTML = '';
+                        const conf_container = this.content.querySelector(`#${TAG_IDS.confidence}`);
+                        if (conf_container) { conf_container.innerHTML = ''; }
                     }
                 }
              
@@ -386,19 +439,17 @@ try {
                     this.content = this.querySelector(`#${TAG_IDS.main_page}`);
                     /** @type {ChainExperiment} */
                     this.current_view = store.state[keys.s_view_objects][store.state[keys.s_current_view_index]];
-                    /** @type {number | undefined} */
                     this.timer_id = undefined;
                     this.current_time = 0;
-                    /** @type {number | undefined} */
                     this.time_exceeded_timer = false;
 
-                    // Reset counters
+                    // Reset cumulative counters
                     this.correct_step_index = -1;
                     this.total_earned = 0;
                     this.total_max = 0;
 
-                    this._init();
                     this._init_events();
+                    this._init();
                 }         
 
                 disconnectedCallback () {

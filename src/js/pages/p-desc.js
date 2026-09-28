@@ -130,9 +130,13 @@ try {
 
                             // Append total remuneration sum ONLY if show_rewards is true on the view config
                             if (has_rewards && this.current_view.show_rewards) {
+                                const is_potential = Boolean(this.current_view.show_as_potential);
+                                const label = is_potential ? "Potential Remuneration" : "Remuneration";
+                                const textColorClass = is_potential ? "text-danger" : "text-success";
+
                                 score_content.push(
-                                    `<div class="mt-3 fs-4 text-success fw-bold">` +
-                                    `Total Remuneration: £${grand_total_earned.toFixed(2)} / £${grand_total_max.toFixed(2)}` +
+                                    `<div class="mt-3 fs-4 ${textColorClass} fw-bold">` +
+                                    `${label}: £${grand_total_earned.toFixed(2)} / £${grand_total_max.toFixed(2)}` +
                                     `</div>`
                                 );
                             }
