@@ -1,5 +1,7 @@
 // @ts-check
 
+import { PAGE_NAMES } from 'JS/pages/__namespaces__';
+
 export class EnumQuestionOptions {
     static #_INLINE = 'inline'; // Checkbox, radio.
     static #_LIMIT_VALUES = 'limit_values'; // Checkbox, radio, range.
@@ -500,4 +502,61 @@ export class Desc extends View {
     /* Getters for reward parameters */
     get show_rewards() { return this._show_rewards; }
     get show_as_potential() { return this._show_as_potential; }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Discrete Desc                                */
+/* -------------------------------------------------------------------------- */
+export class DescDiscr extends Desc {
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        return view['type'] === PAGE_NAMES.DESC_DISCR;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        Discrete Chain Experiment                           */
+/* -------------------------------------------------------------------------- */
+
+export class ChainExperimentDiscr extends View {
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        return view['type'] === PAGE_NAMES.CHAIN_EXPE_DISCR;
+    }
+
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id'] : '');
+        this._desc = view.hasOwnProperty('desc') ? view['desc'] : '';
+        this._images = view.hasOwnProperty('images') ? view['images'] : [];
+        this._labels = view.hasOwnProperty('labels') ? view['labels'] : [];
+        this._truth = view.hasOwnProperty('truth') ? view['truth'] : -1;
+        this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']) : -1;
+        this._confidence = view.hasOwnProperty('confidence') ? view['confidence'] : false;
+        this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards'] : false;
+        this._reward_cts = view.hasOwnProperty('reward_cts') ? parseFloat(view['reward_cts']) : 0.03;
+        this._is_training = view.hasOwnProperty('is_training') ? Boolean(view['is_training']) : false;
+        
+        this._current_image_index = 0;
+    }
+
+    get desc() { return this._desc; }
+    get confidence() { return this._confidence; }
+    get images() { return this._images; }
+    get labels() { return this._labels; }
+    get show_rewards() { return this._show_rewards; }
+    get reward_cts() { return this._reward_cts; }
+    get is_training() { return this._is_training; }
+    get timer() { return this._timer; }
+
+    get current_image_index() { return this._current_image_index; }
+    set current_image_index(index) { this._current_image_index = index; }
+
+    get truth() { return this._truth; }
 }

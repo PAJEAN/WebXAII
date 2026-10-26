@@ -12,6 +12,8 @@ import 'JS/pages/p-desc';
 import 'JS/pages/p-form';
 import 'JS/pages/p-exp';
 import 'JS/pages/p-single-exp';
+import 'JS/pages/p-chain-exp-discr';
+import 'JS/pages/p-desc-discr';
 
 
 /*** CSS ***/

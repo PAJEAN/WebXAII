@@ -1,0 +1,1086 @@
+[
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "<h3>Participation in a study on Human Visual recognition</h3><br/>",
+                "secondary_text": "<header></header><section><b>Project Objectives</b><p>In this study, you will classify images into one of 10 categories. Each image will be presented across a few steps with <b>gradually increasing clarity</b>.</p></section><hr><section><b>Your Task & Earnings</b><p>Your total payment consists of two parts:</p><ul><li><b>Fixed Payment:</b> Based on an hourly rate of \u00a3(CHECK) (estimated duration: 12 minutes \u2192 \u00a3(CHECK) total, calculated using the median completion time).</li><li><b>Performance Bonus:</b> Earned by classifying images correctly <i>and</i> reporting your confidence accurately.</li></ul><p><b>How the bonus works:</b> Being right with high confidence maximizes your reward. However, guessing incorrectly while claiming high confidence results in a severe penalty. If you are unsure, it is safer to report low confidence for a smaller, baseline reward rather than risking an overconfident error.</p></section><hr><section><b>Requirements & Participation</b><p><b>Color Vision:</b> This task requires distinguishing photographs of objects. You must have normal color vision (as you indicated to Prolific).</p><p><b>Right to Withdraw:</b> Participation is entirely voluntary. You may stop at any time without penalty, though you must complete the survey to receive your payment. To withdraw or ask questions, contact Felipe Torres Figueroa at <a href='mailto:felipe.torres_figueroa@imt-bs.eu'>felipe.torres_figueroa@imt-bs.eu</a>.</p></section><hr><section><b>Privacy & Data Protection</b><p>Data is collected by Felipe Torres for academic research on human performance. Recipients include Felipe Torres and Nicolas Soulie. Data will be stored securely for five years post-publication (expected 2027). You have the right to access, correct, or restrict your data by contacting <a href='mailto:felipe.torres_figueroa@imt-bs.eu'>felipe.torres_figueroa@imt-bs.eu</a>. Legal basis: your consent.</p></section><hr><section><b>Consent</b><p>By proceeding, you confirm that you meet the color vision requirements, understand the terms, and consent to participate in this study.</p></section><section><b>Consent</b></section>",
+                "answers": [
+                    "I have read and understand the information contained in this document, and I freely and knowingly consent to participate to this research project. I also confirm that I am not colorblind, as I have indicated on my Prolific profile.",
+                    "I do not consent to participate to this research project or I am colorblind."
+                ]
+            }
+        ],
+        "break": {
+            "index": 1,
+            "text": "Use the following link to end the experiment and come back to Prolific : <a href='https://app.prolific.com/submissions/complete?cc=C16YLJGE'>https://app.prolific.com/submissions/complete?cc=C16YLJGE</a>. If it doesn't work, use the code C16YLJGE."
+        }
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>Adjustment of page zoom</h3>",
+        "body_text": "<div class='text-start'> <p>When you will perform the task, please make sure all elements of the page fit on your monitor, without needing to scroll the page. If it does not fit fully, please use the in-navigator zoom (ctrl and mouse scroll or ctrl and +/- keys) to adjust the page so that all elements of the page can be seen at once. Below is an example of display where all elements are visible at once.</p><img src='assets/res/img/SufficientInfo/zoom_ex.png' class='img-fluid' alt='page where all elements are visible at once'></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following 10 categories:</p><table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></tr></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'><b style='color:green;'>Correct</b></span> / <span class='incorrect'><b style='color:red;'>Incorrect</b></span> <strong>for category: Truck</strong>.</p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00030427.JPEG' alt='Training Image' style='max-width:100%;'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Truck</b></li><li><b style='color:red;'>Ship</b></li></ul></td></tr></table></section>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>Task Introduction</h3>",
+        "body_text": "<p align='justify'>Image classification is a task that involves assigning a category describing an input image. Consider the following 10 categories:</p><table width='100%'><tr><td valign='top' align='left'><ul><li>Airplane</li><li>Bike</li><li>Bird</li><li>Car</li><li>Cat</li></ul></td><td valign='top' align='left'><ul><li>Deer</li><li>Dog</li><li>Frog</li><li>Ship</li><li>Truck</li></ul></td></tr></table><section class='examples'><p class='example-title'>Examples of classification pairs: <span class='correct'><b style='color:green;'>Correct</b></span> / <span class='incorrect'><b style='color:red;'>Incorrect</b></span> <strong>for category: Cat</strong>.</p><table width='100%'><tr><td width='50%' valign='top'><img src='assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00009683.JPEG' alt='Training Image' style='max-width:100%;'></td><td width='50%' valign='middle' align='left'><ul><li><b style='color:green;'>Cat</b></li><li><b style='color:red;'>Frog</b></li></ul></td></tr></table></section>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3 align='left'>First Task: Image Recognition</h3>",
+        "body_text": "<div class='text-start'><p align='justify'>Identify the object in each image choosing from the 10 categories introduced earlier.</p><p align='justify'>You will repeat this process 5 times. You must submit your response within <b>15 seconds</b> per image; otherwise, it will be marked as incorrect.</p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00038939.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 0,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false,
+        "is_training": true
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00044097.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 4,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false,
+        "is_training": true
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00007004.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 0,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false,
+        "is_training": true
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00046964.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 4,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false,
+        "is_training": true
+    },
+    {
+        "type": "p-single-task",
+        "desc": "<h1 align='left'> Image Classification </h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/ILSVRC2012_val_00026755.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 2,
+        "timer": 15,
+        "confidence": false,
+        "show_rewards": false,
+        "is_training": true
+    },
+    {
+        "type": "p-instruction",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": false,
+        "show_as_potential": false
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3> Protocol outline </h3>",
+        "body_text": "<div class='text-start'><p>This study takes about 10 minutes and follows the structure outlined below:</p><div class='container-fluid text-center my-3'><div class='row justify-content-center'><div class='col-10 col-md-6 d-flex flex-column align-items-center'></div></div></div><p><u>1. Training & Practice:</u><br/>You will complete a quick comprehension check and a practice task. This stage does not count toward your bonus remuneration.</p><p><u>2. Main Experiment (2 Phases):</u><br/>The main study is split into 2 phases (4 tasks each) that count toward your score and bonus. A short feedback survey follows each phase.</p><p><u>3. Conclusion:</u><br/>A brief wrap-up survey completes the study protocol.</p><p class='text-muted mt-3'><em>Please review this information carefully\u2014you will not be able to return to this page once you continue.</em></p></div>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/5_timeline_hTraining.png' class='img-fluid' alt='timeline'><h3 align='left'>Second Task: Recognition with Increasing Levels of Clarity</h3>",
+        "body_text": "<p align='justify'>You are now in the <b>Training Phase</b> (see timeline above). You will practice identifying images across 6 levels of clarity while reporting your confidence. <b>Note: Rewards shown in this training are simulated/hypothetical to help you get used to the interface.</b></p><p align='justify'>In the upcoming main experiment, your bonus will depend on both accuracy and confidence according to this payoff rule:</p><table class='table table-bordered table-sm text-center my-3' style='font-size: 0.85rem;'><thead class='table-light'><tr><th>Your Guess</th><th>Your Confidence</th><th>Result</th><th>Payout Impact</th></tr></thead><tbody><tr><td><b>Correct</b></td><td>High (100%)</td><td>Right</td><td class='text-success'><b>Maximum Bonus </b></td></tr><tr><td><b>Correct</b></td><td>Low (0%)</td><td>Right</td><td>Small Baseline</td></tr><tr><td><b>Incorrect</b></td><td>Low (0%)</td><td>Wrong</td><td>Small Penalty (Safe)</td></tr><tr><td><b>Incorrect</b></td><td>High (100%)</td><td>Wrong</td><td class='text-danger'><b>Severe Penalty </b></td></tr></tbody></table><p style='font-size: 0.9rem;'><b>Rule of thumb:</b> If you are unsure, use low confidence. Only claim high confidence when you are certain.</p>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Recognition with Increasing Levels of Clarity - Preparation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00021567_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00021567_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00021567_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00021567_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00021567_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00021567_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 9,
+        "timer": -1,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Recognition with Increasing Levels of Clarity - Preparation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00020075_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00020075_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00020075_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00020075_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00020075_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00020075_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 8,
+        "timer": -1,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": true,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Recognition with Increasing Levels of Clarity - Preparation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00018304_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00018304_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00018304_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00018304_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00018304_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00018304_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 1,
+        "timer": -1,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Recognition with Increasing Levels of Clarity - Preparation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00017138_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00017138_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00017138_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00017138_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00017138_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00017138_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 7,
+        "timer": -1,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": true,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-desc-discr",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": true,
+        "show_as_potential": true
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures important information. Please answer as required.<hr>",
+                "secondary_text": "<b>Please select 'Strongly Agree' to show that you are paying attention to this question.</b>",
+                "answers": [
+                    "(1) Strongly Disagree",
+                    "(2) Disagree",
+                    "(3) Somewhat Disagree",
+                    "(4) Neutral",
+                    "(5) Somewhat Agree",
+                    "(6) Agree",
+                    "(7) Strongly Agree"
+                ]
+            },
+            {
+                "type": "radio",
+                "secondary_text": "<b>The colour of the grass is </b>",
+                "answers": [
+                    "Green",
+                    "Blue",
+                    "Red"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/2_timeline_hMainExp.png' class='img-fluid' alt='timeline'><h3 align='left'>Second Task: Recognition with Increasing Levels of Clarity</h3>",
+        "body_text": "<div class='text-start'><p>The practice section is over\u2014you are now entering the <b>Main Experiment</b> (see timeline above). From this point forward, <b>your performance counts toward your bonus remuneration (\u00a3)</b>.</p><p>This phase consists of <b>2 parts (4 tasks each)</b>, followed by short feedback surveys. Survey answers do not affect your bonus\u2014only your image classification accuracy and confidence calibration do.</p><p><b>Important Reminder:</b> Submit your answer before the 15-second timer runs out. Running out of time counts as an incorrect answer.</p><p><b>Warning:</b> Random guessing combined with high confidence will heavily penalize your bonus. If you are unsure, use low confidence.</p><p class='text-muted mt-2'><em>Tip: If any elements are cut off on your screen, use your browser zoom (Ctrl + mouse scroll or Ctrl and +/- keys) to adjust fit.</em></p></div>",
+        "button_text": "Enter the Main experiment",
+        "with_button": "True"
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/6_timeline_hSample1.png' class='img-fluid' alt='timeline'><h3 align='left'>Second Task: First Phase</h3>",
+        "body_text": "<p align='justify'>You will now observe images with increasing 6 levels of clarity. <b>Your performance in this phase counts toward your bonus remuneration.</b></p><p align='justify'>Remember: Earn maximum bonus with correct, high-confidence guesses, or play it safe with low confidence if you are unsure. <b>Incorrect guesses with high confidence carry a heavy penalty.</b></p>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 1: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00044359_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00044359_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00044359_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00044359_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00044359_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00044359_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 3,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 1: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00012809_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00012809_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00012809_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00012809_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00012809_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00012809_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 3,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 1: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00026887_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00026887_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00026887_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00026887_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00026887_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00026887_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 6,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 1: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00047308_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00047308_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00047308_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00047308_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00047308_ascend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00047308_ascend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 5,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "ascend"
+    },
+    {
+        "type": "p-desc-discr",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": true,
+        "show_as_potential": false
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Survey - Phase 1",
+                "secondary_text": "How often did you use the background to guess the category before the main object became visible?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did the very first, low-clarity steps give you enough information to guess the right category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "If you made an early guess based on the background, was it hard to change your mind once the main object became clear?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did background details in the early steps trick you into picking the wrong category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did early background features mislead you toward an incorrect category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/8_timeline_hSample3.png' class='img-fluid' alt='timeline'><h3 align='left'>Second Task: Second Phase</h3>",
+        "body_text": "<p align='justify'>You will now observe images with increasing 6 levels of clarity. <b>Your performance in this phase counts toward your bonus remuneration.</b></p><p align='justify'>Remember: Earn maximum bonus with correct, high-confidence guesses, or play it safe with low confidence if you are unsure. <b>Incorrect guesses with high confidence carry a heavy penalty.</b></p>",
+        "button_text": "Continue",
+        "with_button": "True"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 2: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00019744_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00019744_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00019744_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00019744_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00019744_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00019744_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 2,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 2: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00040230_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00040230_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00040230_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00040230_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00040230_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00040230_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 1,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 2: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00044972_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00044972_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00044972_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00044972_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00044972_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00044972_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 8,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-chain-exp-discr",
+        "desc": "<h1 align='left'> Phase 2: Recognition with increasing levels of clarity - Evaluation.</h1>",
+        "images": [
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_1_ILSVRC2012_val_00013354_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_2_ILSVRC2012_val_00013354_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_3_ILSVRC2012_val_00013354_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_4_ILSVRC2012_val_00013354_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_5_ILSVRC2012_val_00013354_descend.JPEG",
+            "assets/datasets/ImageNet_Val/6steps_balanced_60start/step_6_ILSVRC2012_val_00013354_descend.JPEG"
+        ],
+        "labels": [
+            "Airplane",
+            "Bike",
+            "Bird",
+            "Car",
+            "Cat",
+            "Deer",
+            "Dog",
+            "Frog",
+            "Ship",
+            "Truck"
+        ],
+        "truth": 7,
+        "timer": 15,
+        "confidence": true,
+        "show_rewards": true,
+        "is_training": false,
+        "task_mode": "descend"
+    },
+    {
+        "type": "p-desc-discr",
+        "view_id": null,
+        "title": "<h3>Task Results</h3>",
+        "body_text": "On the previous task, your results:",
+        "with_button": true,
+        "button_text": "Next",
+        "score": true,
+        "show_rewards": true,
+        "show_as_potential": false
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "Survey - Phase 2",
+                "secondary_text": "How often were the early details of the main object enough to guess the category without needing the background?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did the very first, clearest parts of the image give you all the information you needed to decide?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "After seeing the main subject, how easily could you guess what the background would look like before it was revealed?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Did spotting a detail early make you commit to a category choice before seeing the rest of the image?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "How often did seeing a single detail on its own mislead you into picking the wrong category?",
+                "answers": [
+                    "(1) Never",
+                    "(2) Almost Never",
+                    "(3) Rarely",
+                    "(4) Sometimes",
+                    "(5) Often",
+                    "(6) Very Often",
+                    "(7) Always"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "This survey measures the workload you experienced while completing the task. Please rate each factor on the scale provided.<hr>",
+                "secondary_text": "<b>Mental Demand</b> \u2014 How mentally demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Physical Demand</b> \u2014 How physically demanding was the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Temporal Demand</b> \u2014 How hurried or rushed was the pace of the task?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Performance</b> \u2014 How successful were you in accomplishing what you were asked to do?",
+                "answers": [
+                    "Perfect",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Failure"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Effort</b> \u2014 How hard did you have to work to accomplish your level of performance?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "<b>Frustration</b> \u2014 How insecure, discouraged, irritated, stressed, and annoyed were you?",
+                "answers": [
+                    "Very low",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Very high"
+                ],
+                "options": {
+                    "inline": "",
+                    "limit_values": ""
+                }
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<img src='assets/res/img/SufficientInfo/3_timeline_hClosing.png' class='img-fluid' alt='timeline'><h3 align='left'>Closing Phase</h3>",
+        "body_text": "<p align='justify'>Thank you for following our instructions and completing all the tasks. Before terminating the survey, yo will complete a final questionnaire.</strong></p>",
+        "button_text": "Start the final survey",
+        "with_button": "True"
+    },
+    {
+        "type": "p-questionnaire",
+        "questions": [
+            {
+                "type": "radio",
+                "primary_text": "<b>Final Comparison & Feedback</b><p>Please answer these final questions comparing both parts of the experiment you just completed.</p><hr>",
+                "secondary_text": "Comparing both parts of the experiment, which image reveal style made it easier for you to correctly classify the images?",
+                "answers": [
+                    "(1) Main object details first, then background",
+                    "(2) Background context first, then main object",
+                    "(3) Both were equally clear/difficult"
+                ]
+            },
+            {
+                "type": "radio",
+                "primary_text": "",
+                "secondary_text": "Which reconstruction sequence required less overall mental effort to categorize correctly?",
+                "answers": [
+                    "(1) Phase 1 required significantly less effort",
+                    "(2) Phase 1 required slightly less effort",
+                    "(3) Both required equal effort",
+                    "(4) Phase 2 required slightly less effort",
+                    "(5) Phase 2 required significantly less effort"
+                ]
+            },
+            {
+                "type": "checkbox",
+                "primary_text": "",
+                "secondary_text": "Across the entire study, what factor caused you to make incorrect choices most often?",
+                "answers": [
+                    "(1) Misleading background or context details",
+                    "(2) Ambiguous or incomplete object(s) details",
+                    "(3) Running out of time before the image became clear",
+                    "(4) Being overconfident on an early guess",
+                    "(5) None of the above"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "p-instruction",
+        "title": "<h3>End of the protocol</h3>",
+        "body_text": "<div class='text-start'> <div><p>The protocol is now over.</p><p>Use the following <a href='LinkProlific'>link</a> to come back to Prolific: If it doesn't work, use the code C13X3WJS.</p><p>In case you want to report issues or if you have questions, you can contact the organizer of the study at <a href='mailto:felipe.torres_figueroa@imt-bs.eu'>felipe.torres_figueroa@imt-bs.eu</a>.</p><br/><div class='row justify-content-center'> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imt.png' class='img-fluid w-70' alt='IMT logo'></div><div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/imtbs.png' class='img-fluid w-100' alt='IMT BS logo'> </div> <div class='col-12 col-md-3 d-flex flex-column align-items-center'> <img src='assets/res/img/enfield.png' class='img-fluid w-100' alt='ENFIELD logo'> </div></div></div>"
+    }
+]

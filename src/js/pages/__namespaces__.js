@@ -1,6 +1,6 @@
 // @ts-check
 
-import { Desc, ChainExperiment, Experiment, Form, SingleExperiment} from "JS/store/modules/view-classes";
+import { Desc, ChainExperiment, Experiment, Form, SingleExperiment, ChainExperimentDiscr, DescDiscr} from "JS/store/modules/view-classes";
 
 export const PAGE_NAMES = {
     AUTHENTICATION: 'p-authentication',
@@ -8,7 +8,9 @@ export const PAGE_NAMES = {
     EXPE:           'p-task',
     CHAIN_EXPE:     'p-chain-task',
     FORM:           'p-questionnaire',
-    SINGLE_EXPE:    'p-single-task'
+    SINGLE_EXPE:    'p-single-task',
+    CHAIN_EXPE_DISCR:    'p-chain-exp-discr',
+    DESC_DISCR: 'p-desc-discr'
 }
 
 export const PAGES_INFO = {
@@ -53,5 +55,19 @@ export const PAGES_INFO = {
             title: 'Single experiment'
         },
         class_type: SingleExperiment
-    }
+    },
+    [PAGE_NAMES.CHAIN_EXPE_DISCR]: {
+        route: {
+            path: '/chain-expe-discr',
+            title: 'Chain experiment'
+        },
+        class_type: ChainExperimentDiscr
+    },
+    [PAGE_NAMES.DESC_DISCR]: {
+        route: {
+            path: '/desc-discrete',
+            title: 'Instruction'
+        },
+        class_type: DescDiscr
+    },
 }

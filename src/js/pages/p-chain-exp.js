@@ -13,6 +13,7 @@ try {
     const TAG_IDS = {
         main_page: 'main-page',
         image: 'image-div',
+        image_clarity: 'image-clarity-p',
         labels_list: 'labels-list-div',
         next_btn: 'next-btn',
         timer: 'timer-div',
@@ -61,11 +62,12 @@ try {
 
                     <div id="task-content-row" class="row g-4 align-items-stretch mt-5">
 
-                        <!-- Image -->
-                        <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center">
+                        <!-- Image + Clarity Level -->
+                        <div class="col-12 col-lg-5 d-flex flex-column align-items-center justify-content-center">
                             <div id="${TAG_IDS.image}" class="image-container">
                                 <img src="assets/datasets/felipe/dog.JPEG" alt="Image à classifier">
                             </div>
+                            <p id="${TAG_IDS.image_clarity}" class="fw-bold mt-2 text-center text-secondary mb-0"></p>
                         </div>
 
                         <!-- Liste des catégories -->
@@ -138,17 +140,17 @@ try {
                     this.timer_id = undefined;
                     this.current_time = 0;
                     this.time_exceeded_timer = false;
+                    /** @type {number} Remember confidence level across steps */
+                    this.last_confidence_value = 0;
                 }
 
                 _get_reward_cts() {
-                    // Defaults to 0.03 (£0.03) unless provided in view config
                     return (this.current_view && typeof this.current_view.reward_cts === 'number') 
                         ? this.current_view.reward_cts 
                         : 0.03;
                 }
 
                 _is_training() {
-                    // Returns true if explicit true, otherwise defaults to false
                     return (this.current_view && this.current_view.is_training === true);
                 }
 
@@ -165,6 +167,13 @@ try {
 
                     let images_tag = this.content.querySelector(`#${TAG_IDS.image}`);
                     images_tag.innerHTML = `<img src="${this.current_view.images[this.current_view.current_image_index]}" class="icon rounded img-thumbnail" alt="...">`;
+
+                    let clarity_tag = this.content.querySelector(`#${TAG_IDS.image_clarity}`);
+                    if (clarity_tag) {
+                        const current_stage = this.current_view.current_image_index + 1;
+                        const total_steps = this.current_view.images.length;
+                        clarity_tag.textContent = `Clarity level ${current_stage}/${total_steps}`;
+                    }
                 }
 
                 _labels() {
@@ -204,12 +213,16 @@ try {
                 }
 
                 _correct_rewards(cts, confidence) {
-                    const pence_val = (cts - 0.5 * (cts - (confidence / 100) * cts)) * 100;
+                    const conf = confidence / 100;
+                    const reward_val = cts + 0.5 * (-cts + cts * conf);
+                    const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }
 
                 _incorrect_rewards(cts, confidence) {
-                    const pence_val = (cts - 0.5 * (cts + (confidence / 100) * cts)) * 100;
+                    const conf = confidence / 100;
+                    const reward_val = cts + 0.5 * (-cts - cts * conf);
+                    const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }
 
@@ -267,10 +280,11 @@ try {
                     let selected_label = form_data.get('labels') == null ? null : parseInt(/** @type {string} */ (form_data.get('labels')), 10);
                     const expected_truth = parseInt(this.current_view.truth, 10);
 
-                    let confidence = 0; // Default fallback to 0
+                    let confidence = 0;
                     if (this.current_view.confidence) {
                         let slider = this.content.querySelector(`#${TAG_IDS.slider}`);
                         confidence = slider ? parseInt(slider.value, 10) : 0;
+                        this.last_confidence_value = confidence;
                     }
 
                     const REWARD_CTS = this._get_reward_cts();
@@ -286,11 +300,9 @@ try {
                         step_reward = parseFloat(this._incorrect_rewards(REWARD_CTS, confidence)) / 100;
                     }
 
-                    // Accumulate totals for this sample
                     this.total_earned += step_reward;
                     this.total_max += REWARD_CTS;
 
-                    /* Save step data */
                     store.dispatch(keys.a_update_save, {
                         instances: [{
                             answers: selected_label,
@@ -319,7 +331,6 @@ try {
                     const earned_formatted = parseFloat(this.total_earned.toFixed(2));
                     const max_formatted = parseFloat(this.total_max.toFixed(2));
 
-                    // Dispatch overall sample scores to store
                     store.dispatch(keys.a_update_experiment_scores, {
                         first_correct_index: this.correct_step_index,
                         earned_reward: earned_formatted,
@@ -373,7 +384,6 @@ try {
                     this._images();
                     this._labels();
 
-                    // Update Reward visibility and Header text dynamically per step
                     const rewards_div = this.content.querySelector(`#${TAG_IDS.rewards}`);
                     if (rewards_div) {
                         if (this.current_view.show_rewards) {
@@ -390,15 +400,14 @@ try {
                         }
                     }
 
-                    // Reset confidence slider and calculated reward outputs to 0
                     if (this.current_view.confidence) {
                         const slider = this.content.querySelector(`#${TAG_IDS.slider}`);
                         const value_tag = this.content.querySelector(`#${TAG_IDS.slider_value}`);
                         if (slider && value_tag) {
-                            slider.value = '0';
-                            value_tag.textContent = '0';
+                            slider.value = this.last_confidence_value.toString();
+                            value_tag.textContent = this.last_confidence_value.toString();
                         }
-                        this._update_reward_displays(0);
+                        this._update_reward_displays(this.last_confidence_value);
                     }
 
                     this._secure_timer();
@@ -419,8 +428,10 @@ try {
 
                         if (slider && value) {
                             slider.addEventListener('input', () => {
+                                const current_val = parseInt(slider.value, 10);
                                 value.textContent = slider.value;
-                                this._update_reward_displays(parseInt(slider.value, 10));
+                                this.last_confidence_value = current_val;
+                                this._update_reward_displays(current_val);
                             });
                         }
                     } else {
@@ -443,10 +454,10 @@ try {
                     this.current_time = 0;
                     this.time_exceeded_timer = false;
 
-                    // Reset cumulative counters
                     this.correct_step_index = -1;
                     this.total_earned = 0;
                     this.total_max = 0;
+                    this.last_confidence_value = 0;
 
                     this._init_events();
                     this._init();
