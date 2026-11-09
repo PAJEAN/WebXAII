@@ -212,16 +212,18 @@ try {
                     if (desc_tag) { desc_tag.innerHTML = this.current_view.desc; }
                 }
 
-                _correct_rewards(cts, confidence) {
+                _correct_rewards(confidence, rwd_var = 0.03) {
                     const conf = confidence / 100;
-                    const reward_val = cts + 0.5 * (-cts + cts * conf);
+                    // Old style correct reward: rwd_var * ((1 + Conf) / 2)
+                    const reward_val = rwd_var * ((1 + conf) / 2);
                     const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }
-
-                _incorrect_rewards(cts, confidence) {
+                
+                _incorrect_rewards(confidence, rwd_var = 0.03) {
                     const conf = confidence / 100;
-                    const reward_val = cts + 0.5 * (-cts - cts * conf);
+                    // Old style incorrect reward: rwd_var * ((1 - Conf) / 2)
+                    const reward_val = rwd_var * ((1 - conf) / 2);
                     const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }

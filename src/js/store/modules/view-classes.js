@@ -540,7 +540,7 @@ export class ChainExperimentDiscr extends View {
         this._timer = view.hasOwnProperty('timer') ? parseInt(view['timer']) : -1;
         this._confidence = view.hasOwnProperty('confidence') ? view['confidence'] : false;
         this._show_rewards = view.hasOwnProperty('show_rewards') ? view['show_rewards'] : false;
-        this._reward_cts = view.hasOwnProperty('reward_cts') ? parseFloat(view['reward_cts']) : 0.03;
+        this._reward_cts = view.hasOwnProperty('reward_cts') ? parseFloat(view['reward_cts']) : 0.02;
         this._is_training = view.hasOwnProperty('is_training') ? Boolean(view['is_training']) : false;
         
         this._current_image_index = 0;

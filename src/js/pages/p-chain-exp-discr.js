@@ -185,7 +185,7 @@ try {
                 _get_reward_cts() {
                     return (this.current_view && typeof this.current_view.reward_cts === 'number') 
                         ? this.current_view.reward_cts 
-                        : 0.03;
+                        : 0.02; // rwd_var set to 2 cents (0.02)
                 }
 
                 _is_training() {
@@ -251,25 +251,25 @@ try {
                 }
 
                 /**
-                 * Implements: Rwd = rwd_var + 0.5 * (-rwd_var + rwd_var * Conf) for y_hat = y
+                 * Implements: Rwd = offset + rwd_var for y_hat = y
                  * @param {number} rwd_var 
                  * @param {number} confidence_pct 
+                 * @param {number} offset 
                  */
-                _correct_rewards(rwd_var, confidence_pct) {
-                    const conf = confidence_pct / 100;
-                    const reward_val = rwd_var + 0.5 * (-rwd_var + rwd_var * conf);
+                _correct_rewards(rwd_var = 0.02, confidence_pct = 0, offset = 0.01) {
+                    const reward_val = offset + (rwd_var*confidence_pct/100); // offset (1 cent) + rwd_var (2 cents) = 3 cents constant reward
                     const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }
 
                 /**
-                 * Implements: Rwd = rwd_var + 0.5 * (-rwd_var - rwd_var * Conf) for y_hat != y
+                 * Implements: Rwd = -offset - rwd_var * Conf for y_hat != y
                  * @param {number} rwd_var 
                  * @param {number} confidence_pct 
+                 * @param {number} offset 
                  */
-                _incorrect_rewards(rwd_var, confidence_pct) {
-                    const conf = confidence_pct / 100;
-                    const reward_val = rwd_var + 0.5 * (-rwd_var - rwd_var * conf);
+                _incorrect_rewards(rwd_var = 0.02, confidence_pct = 0, offset = 0.01) {
+                    const reward_val = -offset - (rwd_var * confidence_pct / 100);
                     const pence_val = reward_val * 100;
                     return pence_val.toFixed(2);
                 }
@@ -286,8 +286,8 @@ try {
                         const correct_cts = this._correct_rewards(reward_cts, confidence_pct);
                         const incorrect_cts = this._incorrect_rewards(reward_cts, confidence_pct);
 
-                        const correct_pounds = (parseFloat(correct_cts) / 100).toFixed(3);
-                        const incorrect_pounds = (parseFloat(incorrect_cts) / 100).toFixed(3);
+                        const correct_pounds = (parseFloat(correct_cts) / 100).toFixed(2);
+                        const incorrect_pounds = (parseFloat(incorrect_cts) / 100).toFixed(2);
 
                         correct_rewards.textContent = `${correct_cts} cents (£${correct_pounds})`;
                         incorrect_rewards.textContent = `${incorrect_cts} cents (£${incorrect_pounds})`;
@@ -356,7 +356,7 @@ try {
                     }
 
                     this.total_earned += step_reward;
-                    this.total_max += REWARD_CTS;
+                    this.total_max += (0.01 + REWARD_CTS);
 
                     store.dispatch(keys.a_update_save, {
                         instances: [{
