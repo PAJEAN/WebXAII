@@ -93,9 +93,9 @@ try {
 
                     score_tag.innerHTML = `
                         <div class="mb-2 text-secondary">Initial Participation Budget: £${baseBudget.toFixed(2)}</div>
-                        <div class="mb-2 text-secondary">Performance Bonus Earned: £${total_earned_bonus.toFixed(2)} / £${total_max_bonus.toFixed(2)}</div>
+                        <div class="mb-2 text-secondary">Performance Bonus Earned: £${total_earned_bonus.toFixed(2)}</div>
                         <div class="mt-4 fs-4 text-success fw-bold">
-                            Total Payout: £${finalEarnedTotal.toFixed(2)} / £${finalMaxPossible.toFixed(2)}
+                            Total Payout: £${finalEarnedTotal.toFixed(2)}
                         </div>
                     `;
                 }

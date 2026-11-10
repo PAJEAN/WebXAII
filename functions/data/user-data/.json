@@ -1,10 +1,1004 @@
 {
   "first_connection": "2026-07-15T07:16:37.653Z",
-  "last_modification": "2026-10-26T13:01:22.264Z",
+  "last_modification": "2026-11-10T10:43:04.087Z",
   "is_completed": false,
   "data": [
     {
-      "time_on_page": 1057
+      "time_on_page": 14035
+    },
+    {
+      "answers": [
+        [
+          0
+        ]
+      ],
+      "time_on_page": 4702,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 1353,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 844,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1135,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1077,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 3,
+          "confidence": -1,
+          "time": 4800,
+          "is_time_exceeded": false,
+          "expected": 3
+        }
+      ],
+      "time_on_page": 4938,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 5,
+          "confidence": -1,
+          "time": 2400,
+          "is_time_exceeded": false,
+          "expected": 5
+        }
+      ],
+      "time_on_page": 2524,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 4,
+          "confidence": -1,
+          "time": 4400,
+          "is_time_exceeded": false,
+          "expected": 4
+        }
+      ],
+      "time_on_page": 4486,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 5,
+          "confidence": -1,
+          "time": 2100,
+          "is_time_exceeded": false,
+          "expected": 5
+        }
+      ],
+      "time_on_page": 2209,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "instances": [
+        {
+          "answers": 0,
+          "confidence": -1,
+          "time": 3500,
+          "is_time_exceeded": false,
+          "expected": 0
+        }
+      ],
+      "time_on_page": 3592,
+      "view_id": "",
+      "view_type": "p-single-task"
+    },
+    {
+      "time_on_page": 772,
+      "view_id": null,
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1199,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 1010,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 9854,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 15458,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 3,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 11960,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 0,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 10799,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "time_on_page": 931,
+      "view_id": null,
+      "view_type": "p-desc-discr"
+    },
+    {
+      "answers": [
+        [
+          6
+        ],
+        [
+          0
+        ]
+      ],
+      "time_on_page": 23613,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 1098,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "time_on_page": 2897,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 5700,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2000,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1500,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1800,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 4600,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1700,
+          "is_time_exceeded": false,
+          "expected": 1,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 17727,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 0,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2700,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1100,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1800,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1400,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 800,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2300,
+          "is_time_exceeded": false,
+          "expected": 9,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 10468,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 3700,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1400,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2100,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1400,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2600,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1900,
+          "is_time_exceeded": false,
+          "expected": 2,
+          "earned_reward": -0.01
+        }
+      ],
+      "time_on_page": 13645,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2800,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1300,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1700,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2000,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1000,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1200,
+          "is_time_exceeded": false,
+          "expected": 7,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 10446,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "time_on_page": 1048,
+      "view_id": null,
+      "view_type": "p-desc-discr"
+    },
+    {
+      "answers": [
+        [
+          6
+        ],
+        [
+          0
+        ],
+        [
+          2
+        ],
+        [
+          5
+        ],
+        [
+          1
+        ]
+      ],
+      "time_on_page": 9075,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "answers": [
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "time_on_page": 8741,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 2194,
+      "view_id": "",
+      "view_type": "p-instruction"
+    },
+    {
+      "instances": [
+        {
+          "answers": 4,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 5200,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1300,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 8,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1300,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1800,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 4,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2500,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 4,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1500,
+          "is_time_exceeded": false,
+          "expected": 4,
+          "earned_reward": 0.01
+        }
+      ],
+      "time_on_page": 13923,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 13000,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1900,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1100,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1100,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1700,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1100,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        }
+      ],
+      "time_on_page": 20308,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 5,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1500,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 6,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1200,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": 0.01
+        },
+        {
+          "answers": 7,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1200,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 8,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1000,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1300,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 4,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1500,
+          "is_time_exceeded": false,
+          "expected": 6,
+          "earned_reward": -0.01
+        }
+      ],
+      "time_on_page": 7938,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "instances": [
+        {
+          "answers": 3,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1400,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 2,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1300,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 1,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 1600,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2700,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2400,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        },
+        {
+          "answers": 9,
+          "confidence": 0,
+          "confidence_likert": 1,
+          "time": 2800,
+          "is_time_exceeded": false,
+          "expected": 8,
+          "earned_reward": -0.01
+        }
+      ],
+      "time_on_page": 12622,
+      "view_id": "",
+      "view_type": "p-chain-exp-discr"
+    },
+    {
+      "time_on_page": 11804,
+      "view_id": null,
+      "view_type": "p-desc-discr"
+    },
+    {
+      "answers": [
+        [
+          6
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          3
+        ],
+        [
+          0
+        ]
+      ],
+      "time_on_page": 13161,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "answers": [
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          5
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          5
+        ]
+      ],
+      "time_on_page": 28768,
+      "view_id": "",
+      "view_type": "p-questionnaire"
+    },
+    {
+      "time_on_page": 937,
+      "view_id": null,
+      "view_type": "p-total-reward"
+    },
+    {
+      "time_on_page": 13785,
+      "view_id": "",
+      "view_type": "p-instruction"
     }
   ]
 }
