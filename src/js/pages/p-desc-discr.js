@@ -122,7 +122,18 @@ try {
                         }
                     }
 
-                    // Append total remuneration calculation
+                    // 1. UPDATE VALUES WITH RELU FIRST (cannot be negative)
+                    let relu_earned_total = Math.max(0, grand_total_earned);
+
+                    // 2. STORE THEM NEXT (Saving to state/audit log)
+                    if (has_rewards) {
+                        store.dispatch(keys.a_update_save, {
+                            phase_earned_reward: relu_earned_total,
+                            phase_max_reward: grand_total_max
+                        });
+                    }
+
+                    // 3. PRINT THEM LAST (Appending the non-negative total to the display HTML)
                     if (has_rewards && this.current_view && this.current_view.show_rewards) {
                         const is_potential = Boolean(this.current_view.show_as_potential);
                         const label = is_potential ? "Potential Remuneration" : "Remuneration";
@@ -130,7 +141,7 @@ try {
 
                         score_content.push(
                             `<div class="mt-4 fs-4 ${textColorClass} fw-bold">` +
-                            `${label}: £${grand_total_earned.toFixed(2)} / £${grand_total_max.toFixed(2)}` +
+                            `${label}: £${relu_earned_total.toFixed(2)} / £${grand_total_max.toFixed(2)}` +
                             `</div>`
                         );
                     }
@@ -140,7 +151,6 @@ try {
                     // Reset experiment scores in store after presentation
                     store.dispatch(keys.a_reset_experiment_scores, {});
                 }
-
                 _init() {
                     let tag_title = this.content.querySelector(`#${TAG_IDS.title}`);
                     if (this.current_view && this.current_view.title) {

@@ -71,26 +71,28 @@ try {
                 _render_total_rewards() {
                     let permanent_scores = store.state[keys.s_permanent_eval_scores] || [];
                     let score_tag = this.content.querySelector(`#${TAG_IDS.score}`);
-
+                
                     if (!score_tag) return;
-
+                
                     let total_earned_bonus = 0;
                     let total_max_bonus = 0;
-
+                
                     permanent_scores.forEach(scoreObj => {
                         if (scoreObj && typeof scoreObj.earned_reward === 'number') {
                             total_earned_bonus += scoreObj.earned_reward;
                             total_max_bonus += scoreObj.max_reward;
                         }
                     });
-
+                
+                    // Apply ReLU over the total bonus as well (cannot be negative)
+                    total_earned_bonus = Math.max(0, total_earned_bonus);
+                
                     const baseBudget = (this.current_view && typeof this.current_view.base_budget === 'number') 
                         ? this.current_view.base_budget 
                         : 1.00;
-
+                
                     const finalEarnedTotal = baseBudget + total_earned_bonus;
-                    const finalMaxPossible = baseBudget + total_max_bonus;
-
+                
                     score_tag.innerHTML = `
                         <div class="mb-2 text-secondary">Initial Participation Budget: £${baseBudget.toFixed(2)}</div>
                         <div class="mb-2 text-secondary">Performance Bonus Earned: £${total_earned_bonus.toFixed(2)}</div>
