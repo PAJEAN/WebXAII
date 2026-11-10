@@ -378,21 +378,30 @@ try {
                         this._init();
                     }
                 }
-
+                
                 _finish_task() {
                     if (this.timer_id) {
                         clearInterval(this.timer_id);
                     }
-
+                
                     const earned_formatted = parseFloat(this.total_earned.toFixed(2));
                     const max_formatted = parseFloat(this.total_max.toFixed(2));
-
+                
+                    // 1. Push to standard experiment scores (for intermediate p-desc-discr screens)
                     store.dispatch(keys.a_update_experiment_scores, {
                         first_correct_index: this.correct_step_index,
                         earned_reward: earned_formatted,
                         max_reward: max_formatted
                     });
-
+                
+                    // 2. IF IT IS AN EVALUATION TASK, push to the permanent store for the final summary
+                    if (!this._is_training()) {
+                        store.dispatch(keys.a_update_permanent_eval_scores, {
+                            earned_reward: earned_formatted,
+                            max_reward: max_formatted
+                        });
+                    }
+                
                     nextView();
                 }
 

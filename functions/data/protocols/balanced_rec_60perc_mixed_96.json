@@ -1033,6 +1033,15 @@
         ]
     },
     {
+        "type": "p-total-reward",
+        "view_id": null,
+        "title": "<h3>Total Performance & Reward Summary</h3>",
+        "body_text": "You have successfully completed both phases of the main experiment. Here is your final summary:",
+        "button_text": "Proceed to Final Questionnaire",
+        "with_button": true,
+        "base_budget": 1.0
+    },
+    {
         "type": "p-instruction",
         "title": "<img src='assets/res/img/SufficientInfo/3_timeline_hClosing.png' class='img-fluid' alt='timeline'><h3 align='left'>Closing Phase</h3>",
         "body_text": "<p align='justify'>Thank you for following our instructions and completing all the tasks. Before terminating the survey, yo will complete a final questionnaire.</strong></p>",

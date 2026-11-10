@@ -560,3 +560,39 @@ export class ChainExperimentDiscr extends View {
 
     get truth() { return this._truth; }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Total Reward                                */
+/* -------------------------------------------------------------------------- */
+
+export class TotalReward extends View {
+    /**
+     * Check if json is compatible.
+     * @param {object} view 
+     */
+    static guard(view) {
+        if (typeof view !== 'object') { return false; }
+        if (!View.guard(view)) { return false; }
+        return view['type'] === PAGE_NAMES.TOTAL_REWARD;
+    }
+
+    /**
+     * @param {object} view
+     */
+    constructor(view) {
+        super(view['type'], view.hasOwnProperty('view_id') ? view['view_id'] : '');
+        /** @type {string} */
+        this._title = view.hasOwnProperty('title') ? view['title'] : 'Congratulations, you finished your tasks!';
+        /** @type {string} */
+        this._body_text = view.hasOwnProperty('body_text') ? view['body_text'] : '';
+        /** @type {string} */
+        this._button_text = view.hasOwnProperty('button_text') ? view['button_text'] : 'Proceed to Final Questionnaire';
+        /** @type {number} Base fixed budget in pounds (e.g., 1.00) */
+        this._base_budget = view.hasOwnProperty('base_budget') ? parseFloat(view['base_budget']) : 1.00;
+    }
+
+    get title() { return this._title; }
+    get body_text() { return this._body_text; }
+    get button_text() { return this._button_text; }
+    get base_budget() { return this._base_budget; }
+}

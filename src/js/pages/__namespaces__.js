@@ -1,6 +1,6 @@
 // @ts-check
 
-import { Desc, ChainExperiment, Experiment, Form, SingleExperiment, ChainExperimentDiscr, DescDiscr} from "JS/store/modules/view-classes";
+import { Desc, ChainExperiment, Experiment, Form, SingleExperiment, ChainExperimentDiscr, DescDiscr, TotalReward} from "JS/store/modules/view-classes";
 
 export const PAGE_NAMES = {
     AUTHENTICATION: 'p-authentication',
@@ -10,7 +10,8 @@ export const PAGE_NAMES = {
     FORM:           'p-questionnaire',
     SINGLE_EXPE:    'p-single-task',
     CHAIN_EXPE_DISCR:    'p-chain-exp-discr',
-    DESC_DISCR: 'p-desc-discr'
+    DESC_DISCR:     'p-desc-discr',
+    TOTAL_REWARD:   'p-total-reward'
 }
 
 export const PAGES_INFO = {
@@ -69,5 +70,12 @@ export const PAGES_INFO = {
             title: 'Instruction'
         },
         class_type: DescDiscr
+    },
+    [PAGE_NAMES.TOTAL_REWARD]: {
+        route: {
+            path: '/total-reward',
+            title: 'Total Reward'
+        },
+        class_type: TotalReward
     },
 }

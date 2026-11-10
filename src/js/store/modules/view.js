@@ -27,6 +27,7 @@ export const keys = {
     /* -------------------------- experiment & task ------------------------- */
     s_current_task_index:       `${NS}_current_index_task`,       // Annotation task index (each annotation in an experiment).
     s_experiment_scores:        `${NS}_experiment_scores`,         // Compute score for each experiment
+    s_permanent_eval_scores:    `${NS}_permanent_eval_scores`,     // Permanent store for evaluation scores (Phase 1 & 2)
    /* -------------------------------- global ------------------------------- */
     s_max_timer: `${NS}_max_timer`, // Time for one item.
     
@@ -43,6 +44,7 @@ export const keys = {
     a_update_current_task_index: `${NS}_update_current_index_task`,      // Update task index.
     a_update_experiment_scores:  `${NS}_update_experiment_scores`,       // Update scores.
     a_reset_experiment_scores:   `${NS}_reset_experiment_scores`,        // Reset scores.
+    a_update_permanent_eval_scores: `${NS}_update_permanent_eval_scores`, // Update permanent eval scores.
     
     /*** GETTERS ***/
     g_view_length:         `${NS}_view_length`,         // Length of view.
@@ -69,6 +71,7 @@ export const module = {
         /* -------------------------- experiment & task ------------------------- */
         [keys.s_current_task_index]: 0,
         [keys.s_experiment_scores]: [],
+        [keys.s_permanent_eval_scores]: [],
         /* ------------------------------- global ------------------------------- */
         [keys.s_max_timer]: 10
     },
@@ -127,6 +130,9 @@ export const module = {
         [keys.a_reset_experiment_scores](context, payload) {
             context.commit(`${NS}_RESET_EXPERIMENT_SCORES`, payload);
         },
+        [keys.a_update_permanent_eval_scores](context, payload) {
+            context.commit(`${NS}_UPDATE_PERMANENT_SCORES`, payload);
+        },
     },
     
     /*** Mutations ***/
@@ -176,6 +182,9 @@ export const module = {
         },
         [`${NS}_RESET_EXPERIMENT_SCORES`](state, payload) {
             state[keys.s_experiment_scores] = [];
+        },
+        [`${NS}_UPDATE_PERMANENT_SCORES`](state, payload) {
+            state[keys.s_permanent_eval_scores].push(payload);
         }
     },
     
