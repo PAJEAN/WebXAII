@@ -89,7 +89,7 @@ try {
                 
                     const baseBudget = (this.current_view && typeof this.current_view.base_budget === 'number') 
                         ? this.current_view.base_budget 
-                        : 1.00;
+                        : 1.50;
                 
                     const finalEarnedTotal = baseBudget + total_earned_bonus;
                 

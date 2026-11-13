@@ -588,7 +588,7 @@ export class TotalReward extends View {
         /** @type {string} */
         this._button_text = view.hasOwnProperty('button_text') ? view['button_text'] : 'Proceed to Final Questionnaire';
         /** @type {number} Base fixed budget in pounds (e.g., 1.00) */
-        this._base_budget = view.hasOwnProperty('base_budget') ? parseFloat(view['base_budget']) : 1.00;
+        this._base_budget = view.hasOwnProperty('base_budget') ? parseFloat(view['base_budget']) : 1.50;
     }
 
     get title() { return this._title; }
